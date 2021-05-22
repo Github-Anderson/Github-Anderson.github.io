@@ -169,8 +169,7 @@ blockquote {
 }
 
 code {
-	/* font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback"; */
-	font-family: "Google Sans" ,serif;
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
 	font-size: 14px;
 	line-height: 19px;
 }
