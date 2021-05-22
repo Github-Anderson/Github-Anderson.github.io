@@ -1,13 +1,6 @@
-p {
+p{
     font-family:"Google Sans", serif;
 }
-title {
+head{
     font-family:"Google Sans", serif;
-}
-#rcorners2 {
-    border-radius: 15px;
-    border: 2px solid #777777;
-    padding: 10px; 
-    width: 300px;
-    height: 50px;    
 }
