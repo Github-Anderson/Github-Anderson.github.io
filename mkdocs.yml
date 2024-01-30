@@ -9,9 +9,16 @@ theme:
 
 # [Navigtion]
 nav:
-  - 文档:
+  - 博客:
     - 文章:
-      - ESSAY/articles/SI100B-report.md
+      - BLOG/articles/SI100B-report.md
+  - 学习:
+    - 数学分析 GEMA1009 & 1010:
+      # - LESSON/GEMA10XX/int.md
+      - LESSON/GEMA10XX/int-application.md
+    # - 线性代数 MATH1112:
+      
+  - 随笔:
     - 胡思乱想:
       - ESSAY/thoughts/230828-from-mac-to-mac.md
       - ESSAY/thoughts/231002-refl-online.md

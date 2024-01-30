@@ -1,6 +1,7 @@
 # SI100B-Report
 
-*This is a modified version from* [SI100B-Report](https://github.com/Github-Anderson/SI100B-Report/blob/main/README.md)
+!!! tip
+    This is a modified version from [SI100B-Report](https://github.com/Github-Anderson/SI100B-Report/blob/main/README.md)
 
 ## Team members and Division of Work
 
