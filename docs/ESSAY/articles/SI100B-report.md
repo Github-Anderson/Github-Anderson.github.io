@@ -36,7 +36,7 @@ Through these operations, we can manipulate the Raspberry Pi through the remote 
 
 Note that the Raspberry Pi Board and its camera is rather fragile. When assembling devices, we have to make sure the power is off. What's more, ***only after shutting down*** the board completely can we power the board off. If not so, it will do harm to the transmission of data.
 
-<img src="img/VNC.png" style="zoom:20%;" />
+![](img/VNC.png)
 
 #### Part 2: The Establishment of the Training Set
 
@@ -101,7 +101,7 @@ First we know that the white part of a gray scale picture is actually determined
 
 Through this process, we change the gray scale picture into a ***binary*** one.
 
-<img src="img/binary.png" style="zoom:15%;" />
+![](img/binary.png)
 
 OK. Now we have a matrix, whose elements can only be 0 or 255. What to do next is quite clear. We have to scan the matrix from left to the right, detecting where the 0 changes into 255 (type 1) and where the 255 change into 0 (type 2). Not all changes of this kind should be recorded. When the change of type 1 is detected, what we seek for should be a change of type 2. The area between the columns of the indexes recorded in pair is in fact the number! Record the indexes of the column required, and this will help us split the matrix vertically. As for the rows, we do the similar things like that, so as to correctly split the matrix horizontally. First split the whole matrix vertically, then split every unit horizontally, and we will get the number matrix we want!
 
@@ -201,7 +201,7 @@ def imgSqua(img):
 
 As for the ***threshold***, there is an important point: we have to avoid ***'noise white dots'*** (we create this term ourselves). If the threshold isn't set properly, some noise dots will turn white, bringing huge trouble to the segmentation. The situation is shown below with an example.
 
-<img src="img/e1.png" style="zoom:15%;" />
+![](img/e1.png)
 
 So we have to pick the right threshold value. But the question is how? A fixed value can't just work fine, for the reason that when it comes to the practical use, the pictures can be taken under different light environment. So we have to use a function to calculate the "appropriate" value of the threshold. Later, we found that this value is not actually the best. Normally, we have do an additional subtraction, like minus 25 or so, to reduce the noise white dots.
 
@@ -225,11 +225,11 @@ The picture of more information related to the GPIO is presented below.
 
 After knowing what to do with the GPIO ports, we also have to learn more knowledge of the LED digital tube and the switch.  As for the switch, we have to know the inner structure of this device. The code of operation and the inner circuit is illustrated below.
 
-![](img/camera.png)
+![](img/Camera.png)
 
 As for the digital tube, it's more complex in comparison. After knowing the control relationship between the LED and the port, we have to establish combinations of LEDs to represent different numbers. The relationship will be presented in the code of ***'my_function.py '*** and the circuit structure of the digital tube will be shown in the following picture. 
 
-<img src="img/digital tube.png" style="zoom:50%;" />
+![](img/digital tube.png)
 
 
 
@@ -566,33 +566,33 @@ led_display(show_list)
 
 The pictures of the circuit are presented below:
 
-<img src="img/IMG_4266.JPG" style="zoom:10%;" />
+![](img/IMG_4266.JPG)
 
-<img src="img/IMG_4267.JPG" style="zoom:10%;" />
+![](img/IMG_4267.JPG)
 
-<img src="img/IMG_4265.JPG" style="zoom: 10%;" />
+![](img/IMG_4265.JPG)
 
 The scene of demonstration:
 
-<img src="img/IMG_4263.JPG" style="zoom: 10%;" />
+![](img/IMG_4263.JPG)
 
 Finally, we completed our mission successfully, with the ***accuracy of 80%***, i.e, eight correct out of ten. Though during the demonstration we have to make one adjustment to the ***threshold*** due to the ***noise white dot***, in a whole, the demonstration was a total success. The accuracy was 80% and the digital tube presented the number correctly. We will show more details in the following pictures:
 
 The picture taken is shown below:
 
-<img src="img/input.png" style="zoom:30%;" />
+![](img/input.png)
 
 The gray scale image is shown below:
 
-<img src="img/output1.png" style="zoom: 30%;" />
+![](img/output1.png)
 
 The binary image is shown below:
 
-<img src="img/output2.png" style="zoom: 30%;" />
+![](img/output2.png)
 
 The recognition result is shown below:
 
-<img src="img/output3.png" style="zoom: 40%;" />
+![](img/output3.png)
 
 So far, we have finished the whole project. Well Done!
 
@@ -616,7 +616,7 @@ So far, we have finished the whole project. Well Done!
 
   This process can be shown as follows:
   
-  <img src="img/Blur.png" style="zoom:12%;" />
+  ![](img/Blur.png)
   
   In addition, we make a little adjustment to the training data as well. Mentioned that the left half of the picture used for training is actually ***a little bit too illegible***, we only choose the right half as the training samples for ***avoiding the left half samples contaminating the training model***. This adjustment works well, with the increase of roughly 20% in accuracy.  That's why the training model used in the ***ultimate_code.ipynb*** is ***"OPENCV_data_Beta.npz"***.
 
