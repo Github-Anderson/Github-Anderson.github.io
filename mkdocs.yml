@@ -4,59 +4,31 @@ site_url: https://Github-Anderson.github.io
 site_author: Anderson_Yang
 site_description: Anderson_Yang 的个人网站
 
-# [Navigtion]
-nav:
-  - 博客:
-    - BLOG/index.md
-    - 课程:
-      - 信息科技导论 SI100B:
-        - BLOG/SI100B/SI100B-report.md
-      - 数学分析 GEMA1009 & 10:
-        - BLOG/GEMA10XX/links.md
-        - BLOG/GEMA10XX/int.md
-        - BLOG/GEMA10XX/int-application.md
-      - 线性代数 MATH1112:
-        - BLOG/MATH1112/links.md
-    # - 文章:
-      
-  - 随笔:
-    - ESSAY/index.md
-    - 文章:
-      - ESSAY/thoughts/230828-from-mac-to-mac.md
-      - ESSAY/thoughts/231002-refl-online.md
-    - 记录:
-      - ESSAY/logs/240127-thoughts.md
-  - 我:
-    - ME/index.md
-
-
 # [UI]
 # [top]
 theme:
   name: material
-  # [切换日间模式和夜间模式]
-  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-palette-toggle
   palette:
-    # 日间模式
-    - scheme: default
-      # 主颜色
-      # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
-      primary: indigo
-      # 链接等可交互元件的高亮色
-      # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#accent-color
-      accent: blue
-      toggle:
-        # 图标
-        icon: material/weather-night
-        # 鼠标悬浮提示
-        name: 切换至夜间模式
-    # 夜间模式
-    - scheme: slate
-      primary: indigo
-      accent: orange
-      toggle:
-        icon: material/weather-sunny
-        name: 切换至日间模式
+  # Palette toggle for automatic mode
+  - media: "(prefers-color-scheme)"
+    toggle:
+      icon: material/link
+      name: 切换至日间模式
+
+  # Palette toggle for light mode
+  - media: "(prefers-color-scheme: light)"
+    scheme: default 
+    toggle:
+      icon: material/toggle-switch-off-outline
+      name: 切换至暗黑模式
+
+  # Palette toggle for dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    toggle:
+      icon: material/toggle-switch
+      name: 切换至系统默认
+      
   features:
     # 使用 Tab 来进行分类
     # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#navigation-tabs
@@ -82,6 +54,9 @@ theme:
     # [点击按钮跳转至 GitHub 修改 Markdown 源文件]
     # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
     - content.action.edit
+
+    - content.tooltips
+
   language: zh # 一些提示性的文字会变成中文
   icon:
     # [添加 GitHub 仓库]
@@ -98,10 +73,25 @@ repo_name: Github-Anderson.github.io
 # [bottom-left corner]
 # [版权说明]
 # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#copyright-notice
-copyright: Anderson_Yang
+copyright: Copyright &copy; Anderson_Yang
 # [bottom-right corner]
 
 extra:
+  analytics: 
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
   # [添加社交网络图标和链接]
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links
   # 搜索图标：https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search
@@ -128,6 +118,12 @@ plugins:
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/
   # https://squidfunk.github.io/mkdocs-material/plugins/tags/#meta.tags
   # - tags
+  - git-revision-date-localized:
+      # enable_creation_date: true
+      type: date
+    
+
+
 markdown_extensions:
   - pymdownx.critic
   - pymdownx.caret
@@ -170,6 +166,8 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/reference/footnotes/
   - footnotes
 
+  - abbr
+
 extra_javascript:
   # [数学公式支持]
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
@@ -185,3 +183,30 @@ extra_css:
   - mkdocs/css/no-footer.css
   # 无序列表符号自定义
   - mkdocs/css/unordered-list-symbols.css
+
+  - mkdocs/css/extra.css
+
+# [Navigtion]
+nav:
+  - 博客:
+    - BLOG/index.md
+    - 课程:
+      - 信息科技导论 SI100B:
+        - BLOG/SI100B/SI100B-report.md
+      - 数学分析 GEMA1009 & 10:
+        - BLOG/GEMA10XX/links.md
+        - BLOG/GEMA10XX/int.md
+        - BLOG/GEMA10XX/int-application.md
+      - 线性代数 MATH1112:
+        - BLOG/MATH1112/links.md
+    # - 文章:
+      
+  - 随笔:
+    - ESSAY/index.md
+    - 文章:
+      - ESSAY/thoughts/230828-from-mac-to-mac.md
+      - ESSAY/thoughts/231002-refl-online.md
+    - 记录:
+      - ESSAY/logs/240127-thoughts.md
+  - 我:
+    - ME/index.md
