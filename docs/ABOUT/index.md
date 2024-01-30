@@ -3,5 +3,4 @@ hide:
   - feedback
 ---
 
-# 我
-
+# 关于
