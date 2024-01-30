@@ -15,6 +15,6 @@ I'm now study in high school in China, so if you want to contact me, please emai
 If you want to know more, please visit <https://github.com/Github-anderson/>
 
 ```
-Mail: anderson.yang@qq.com
-QQ: 2455788720
+Mail: 
+QQ: 
 ````
