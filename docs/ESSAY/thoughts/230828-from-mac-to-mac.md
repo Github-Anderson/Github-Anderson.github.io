@@ -1,4 +1,4 @@
-# 从 Mac 到 Mac.
+# 从 Mac 到 Mac
 
 ### 序言
 
