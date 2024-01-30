@@ -1,3 +1,3 @@
-# 欢迎。
+# 你好
 
-- This is a clean and simple website for Anderson_Yang.
+欢迎来到 Anderson_Yang 的个人网站。
