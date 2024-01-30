@@ -7,10 +7,12 @@ site_description: Anderson_Yang 的个人网站
 theme:
   name: material
 
+# [Navigtion]
 nav:
-  - 关于我:
+  - 我:
     - ME/index.md
-    
+  # - 随笔:
+
 
 # [UI]
 # [top]
