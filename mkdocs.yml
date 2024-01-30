@@ -9,9 +9,14 @@ theme:
 
 # [Navigtion]
 nav:
+  - 文档:
+    - 文章:
+      - ESSAY/articles/SI100B-report.md
+    - 胡思乱想:
+      - ESSAY/thoughts/230828-from-mac-to-mac.md
+      - ESSAY/thoughts/231002-refl-online.md
   - 我:
     - ME/index.md
-  # - 随笔:
 
 
 # [UI]
