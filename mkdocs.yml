@@ -4,9 +4,6 @@ site_url: https://Github-Anderson.github.io
 site_author: Anderson_Yang
 site_description: Anderson_Yang 的个人网站
 
-theme:
-  name: material
-
 # [Navigtion]
 nav:
   - 博客:
@@ -14,7 +11,7 @@ nav:
       - BLOG/articles/SI100B-report.md
   - 学习:
     - 数学分析 GEMA1009 & 1010:
-      # - LESSON/GEMA10XX/int.md
+      - LESSON/GEMA10XX/int.md
       - LESSON/GEMA10XX/int-application.md
     # - 线性代数 MATH1112:
       
@@ -125,6 +122,11 @@ plugins:
   # https://squidfunk.github.io/mkdocs-material/plugins/tags/#meta.tags
   # - tags
 markdown_extensions:
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
   # [数学公式支持]
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
   - pymdownx.arithmatex:
