@@ -79,19 +79,17 @@ copyright: Copyright &copy; Anderson_Yang
 extra:
   analytics: 
     feedback:
-      title: Was this page helpful?
+      title: 这篇文章有用吗？
       ratings:
         - icon: material/emoticon-happy-outline
-          name: This page was helpful
+          name: 有用！
           data: 1
-          note: >-
-            Thanks for your feedback!
+          note: 感谢反馈！
         - icon: material/emoticon-sad-outline
-          name: This page could be improved
+          name: 需要改善
           data: 0
-          note: >- 
-            Thanks for your feedback! Help us improve this page by
-            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+          note: 感谢反馈！我会尽量改善此页面！
+
   # [添加社交网络图标和链接]
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links
   # 搜索图标：https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search
@@ -120,6 +118,11 @@ plugins:
   # - tags
   - git-revision-date-localized:
       # enable_creation_date: true
+      exclude:
+        - index.md
+        - ESSAY/index.md
+        - BLOG/index.md
+        - ME/index.md
       type: date
     
 
@@ -174,6 +177,7 @@ extra_javascript:
   - mkdocs/javascripts/katex.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  - mkdocs/javascripts/feedback.js
 extra_css:
   # [数学公式支持]
   # https://squidfunk.github.io/mkdocs-material/reference/math/#katex
