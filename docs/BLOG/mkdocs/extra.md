@@ -168,7 +168,7 @@ MarkDown拓展，使用 `:xx:` 以插入 Emoji 或 Material icons
 
 === ":octicons-file-code-16: `../extra.css`"
 
-    ``` css
+    ``` css title=""
     .md-typeset .admonition,
     .md-typeset details {
       border-width: 0;
@@ -178,7 +178,7 @@ MarkDown拓展，使用 `:xx:` 以插入 Emoji 或 Material icons
 
 === ":octicons-file-code-16: `mkdocs.yml`"
 
-    ``` yaml
+    ``` yaml title=""
     extra_css:
       - ../extra.css
     ```
