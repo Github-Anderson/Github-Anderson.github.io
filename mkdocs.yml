@@ -101,6 +101,15 @@ extra:
       icon: fontawesome/brands/bilibili
       link: https://space.bilibili.com/24705427
 
+  # consent:
+  #   actions:
+  #     - manage
+  #     - accept
+  #     - reject
+  #   analytics: false
+  #   title: Cookie 选项
+  #   description: 我们使用 Cookies 来识别您的重复访问和偏好设置，以及衡量我们文档的有效性和用户是否找到他们正在搜索的内容。您的同意有助于我们改善我们的文档。
+
 # [Extensions]
 plugins:
   # [搜索功能]

@@ -50,7 +50,7 @@
   |**DXVK**|基于Vulkan的翻译层，支持 DirectX 10/11 游戏。启用后，使用DXVK代替wined3d默认值 :material-information-outline:{ title="与 D3DMetal 不可同时开启" }|
   |**ESync**|基于 Eventfd 的同步，可提高帧率 :material-information-outline:{ title="与 MSync 不可同时开启" }|
   |**MSync**|更好的同步，可提高帧率 :material-information-outline:{ title="与 ESync 不可同时开启" }|
-  |**高分辨率模式**|启用HiDPI来运行游戏，无需开启|
+  |**高分辨率模式**|启用 HiDPI 来运行游戏，无需开启|
 
 - 现在可以成功运行 CS2 了！
 
