@@ -183,5 +183,5 @@ MarkDown拓展，使用 `:xx:` 以插入 Emoji 或 Material icons
 
     ``` yaml
     extra_css:
-      - stylesheets/extra.css
+      - ../extra.css
     ```
