@@ -87,7 +87,7 @@ extra:
         - icon: material/emoticon-sad-outline
           name: 需要改善
           data: 0
-          note: 感谢反馈！我会尽量改善此页面！<a href="https://127.0.0.1" target="_blank" rel="noopener">我要吐槽</a>
+          note: 感谢反馈！我会尽量改善此页面！<a href="https://github.com/Github-Anderson/Github-Anderson.github.io/issues" target="_blank" rel="noopener">我要吐槽</a>
 
   # [添加社交网络图标和链接]
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links
