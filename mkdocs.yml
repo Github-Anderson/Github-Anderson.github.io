@@ -116,7 +116,7 @@ plugins:
   # https://squidfunk.github.io/mkdocs-material/plugins/tags/#meta.tags
   # - tags
   - git-revision-date-localized:
-      # enable_creation_date: true
+      enable_creation_date: true
       exclude:
         - index.md
         - ESSAY/index.md
