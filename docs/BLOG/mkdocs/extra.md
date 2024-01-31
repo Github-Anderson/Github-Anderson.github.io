@@ -137,7 +137,7 @@ MarkDown拓展，使用 `:xx:` 以插入 Emoji 或 Material icons
             - icon: material/emoticon-happy-outline
               name: 有用！
               data: 1
-              note: 感谢反馈！
+              note: 我很高兴能帮到你！
             - icon: material/emoticon-sad-outline
               name: 需要改善
               data: 0
