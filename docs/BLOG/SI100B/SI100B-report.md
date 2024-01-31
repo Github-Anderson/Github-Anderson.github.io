@@ -43,7 +43,7 @@ Note that the Raspberry Pi Board and its camera is rather fragile. When assembli
 
 KNN algorithm requires training data. But before that, we must know how to process our pictures. The photo taken is colorful, but this is not what we want. First, we have to change our colorful pictures into the gray one. Picture is actually a matrix, containing the RGB information of every pixel. But we don't want the RGB colors, all we want is to use a gray level value to represent the pixel. Using the algorithm in the library OpenCV, it is easy to realize this:
 
-````python 
+````python linenums="1"
 grayImg = cv2.cvtColor(src, code)
 # code can be  `cv2.COLOR_BGR2GRAY`,
 # `cv2.COLOR_BGR2RGB`,`cv2.COLOR_BGR2HSV`.
@@ -51,7 +51,7 @@ grayImg = cv2.cvtColor(src, code)
 
 After that, the colorful picture is converted to a ***gray scale picture***. To use the converted picture to generate training data set, we have to provide samples which contain the picture of each digit and the attached label to tell the true answer.  To split the picture into samples like that, we use the ***numpy*** library to realize that. With labels attached, the data are finally set up, ready to be used in the KNN algorithm. 
 
-````python
+````python linenums="1"
 # number detected related
 import cv2
 import os
@@ -108,7 +108,7 @@ OK. Now we have a matrix, whose elements can only be 0 or 255. What to do next i
 
 Note that to further increase the accuracy, we make some adjustment to increase the width of  the black margin. All these functions are written in the file ***'my_function.py'*** .
 
-````python
+````python  linenums="1"
 # Note that we make some adjustment in the code so as to increase the margin
 def image_split_column(img:np.ndarray)->list:
     # find out the number of columns in the original image
@@ -188,7 +188,7 @@ This is a harsh question: How can we improve the accuracy?  In the class, teache
 
  As for the ***segmentation***, let's take a look back at the training data set. It's not hard to find that the samples have a black margin, which means that it is not going to be a single extraction. Yes, we have to add some black margin for the number extracted manually. Here we reach the goal through defining a ***function 'imgSqua()'***. The code is presented below.
 
-````python 
+````python linenums="1"
 # add black margin and change the matrix into a square one.
 def imgSqua(img):
     (row,col) = img.shape
@@ -206,7 +206,7 @@ As for the ***threshold***, there is an important point: we have to avoid ***'no
 
 So we have to pick the right threshold value. But the question is how? A fixed value can't just work fine, for the reason that when it comes to the practical use, the pictures can be taken under different light environment. So we have to use a function to calculate the "appropriate" value of the threshold. Later, we found that this value is not actually the best. Normally, we have do an additional subtraction, like minus 25 or so, to reduce the noise white dots.
 
-````python
+````python linenums="1"
 _threshold , imgBin1 = cv2.threshold(imgGray, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 t = _threshold - 32
 _threshold , imgBin = cv2.threshold(imgGray, t, 255, cv2.THRESH_BINARY_INV)
@@ -236,7 +236,7 @@ As for the digital tube, it's more complex in comparison. After knowing the cont
 
 
 
-````python
+````python linenums="1"
 def led_display(numList:list)->None:
     # step 1:
     # Clarify the relationship between led pins and GPIO pins
@@ -290,7 +290,7 @@ Besides these two devices, we add an additional LED in combination with the swit
 
 Note that the returned result of this function is the path where the picture is saved.
 
-````python
+````python linenums="1"
 def take_photo()->str:
     # step 1: 
     #set a GPIO as an input channel for detecting
@@ -337,7 +337,7 @@ We will present the complete code and the circuit built for our project.
 
 The ***my_function.py*** is presented below: 
 
-````python
+````python linenums="1"
 # General purpose
 import os
 import numpy as np
@@ -483,7 +483,7 @@ def take_photo()->str:
 
 The ***ultimate_code.ipynb*** is presented below:
 
-````python
+````python linenums="1"
 %load_ext autoreload
 %autoreload 1
 # number detected related
@@ -609,7 +609,7 @@ So far, we have finished the whole project. Well Done!
 
 - **Solution:** Notice that the numbers in given images are too thin to be reshaped, it leaves us to process them to match the train set. We used several methods, including cropping to retain suitable margins, adjusting binary thresholds, and applying blur filters, which are shown in the following code:
 
-  ```python
+  ```python linenums="1"
   # Applying blur filters
   imgResize = cv2.blur(imgResize, (2,2))
   _,imgResize = cv2.threshold(imgResize,127,255,cv2.THRESH_BINARY)

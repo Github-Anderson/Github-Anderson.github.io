@@ -54,7 +54,6 @@ theme:
     # [点击按钮跳转至 GitHub 修改 Markdown 源文件]
     # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#code-actions
     - content.action.edit
-
     - content.tooltips
 
   language: zh # 一些提示性的文字会变成中文
@@ -88,7 +87,7 @@ extra:
         - icon: material/emoticon-sad-outline
           name: 需要改善
           data: 0
-          note: 感谢反馈！我会尽量改善此页面！
+          note: 感谢反馈！我会尽量改善此页面！<a href="https://127.0.0.1" target="_blank" rel="noopener">我要吐槽</a>
 
   # [添加社交网络图标和链接]
   # https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links
@@ -122,10 +121,8 @@ plugins:
         - index.md
         - ESSAY/index.md
         - BLOG/index.md
-        - ME/index.md
+        - ABOUT/index.md
       type: date
-    
-
 
 markdown_extensions:
   - pymdownx.critic
@@ -140,7 +137,11 @@ markdown_extensions:
   # [图片功能支持]
   # https://squidfunk.github.io/mkdocs-material/reference/images/
   # 给 Markdown 图片语法后面添加 `{width="300"}` 设置大小
+  - abbr
   - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - md_in_html
   # [给标题添加链接]
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#+toc.permalink
@@ -151,7 +152,7 @@ markdown_extensions:
   # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#highlight
   - pymdownx.highlight:
       # 显示行号
-      linenums: true
+      # linenums: true
       # 显示编程语言名称
       auto_title: true
       # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#+pymdownx.highlight.line_spans
@@ -161,6 +162,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   # [Markdown 提示]
   # https://squidfunk.github.io/mkdocs-material/reference/admonitions/
   - admonition
@@ -168,8 +171,6 @@ markdown_extensions:
   # [Markdown footnote 语法支持]
   # https://squidfunk.github.io/mkdocs-material/reference/footnotes/
   - footnotes
-
-  - abbr
 
 extra_javascript:
   # [数学公式支持]
@@ -187,7 +188,7 @@ extra_css:
   - mkdocs/css/no-footer.css
   # 无序列表符号自定义
   - mkdocs/css/unordered-list-symbols.css
-
+  # 使用旧版注意标识
   - mkdocs/css/extra.css
 
 # [Navigtion]
