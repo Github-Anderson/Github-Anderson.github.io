@@ -14,27 +14,24 @@
 
     ``` yaml title=""
     theme:
-    name: material
-    palette:
-    # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
-        toggle:
-        icon: material/link
-        name: 切换至日间模式
+      name: material
+      palette:
+      - media: "(prefers-color-scheme)"
+          toggle:
+          icon: material/link
+          name: 切换至日间模式
 
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-        scheme: default 
-        toggle:
-        icon: material/toggle-switch-off-outline
-        name: 切换至暗黑模式
+      - media: "(prefers-color-scheme: light)"
+          scheme: default 
+          toggle:
+          icon: material/toggle-switch-off-outline
+          name: 切换至暗黑模式
 
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-        scheme: slate
-        toggle:
-        icon: material/toggle-switch
-        name: 切换至系统默认
+      - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          toggle:
+          icon: material/toggle-switch
+          name: 切换至系统默认
     ```
 
 ### 2. Emoji/Material Icons 支持 :smile:
