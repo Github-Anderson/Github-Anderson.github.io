@@ -46,7 +46,7 @@
 
   |选项|介绍|
   |:--:|:--:|
-  |**D3DMetal**|Game Porting Toolkit 中的图形API翻译层，支持 DirectX 11/12 游戏。<br />启用后，使用D3DMetal代替DXVK或wined3d默认值。 :material-information-outline:{ title="与 DXVK 不可同时开启" }|
+  |**D3DMetal**|Game Porting Toolkit 中的图形API翻译层，支持 DirectX 11/12 游戏。<br />启用后，使用D3DMetal代替DXVK或wined3d默认值 :material-information-outline:{ title="与 DXVK 不可同时开启" }|
   |**DXVK**|基于Vulkan的翻译层，支持 DirectX 10/11 游戏。启用后，使用DXVK代替wined3d默认值 :material-information-outline:{ title="与 D3DMetal 不可同时开启" }|
   |**ESync**|基于 Eventfd 的同步，可提高帧率 :material-information-outline:{ title="与 MSync 不可同时开启" }|
   |**MSync**|基于 Memory 的同步，可提高帧率 :material-information-outline:{ title="与 ESync 不可同时开启" }|
