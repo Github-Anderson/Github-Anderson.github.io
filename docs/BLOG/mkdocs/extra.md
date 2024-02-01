@@ -6,7 +6,9 @@
 
 ### 1. 自动启用/关闭暗黑模式 :material-link:
 
-> 来自：[System preference](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#system-preference)
+!!! quote ""
+
+    来自：[System preference](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#system-preference)
 
 在网站顶栏显示暗黑模式切换按钮，分为自动/日间/暗黑。
 
@@ -36,7 +38,9 @@
 
 ### 2. Emoji/Material Icons 支持 :smile:
 
-> 来自：[Icons, Emojis](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/)
+!!! quote ""
+
+    来自：[Icons, Emojis](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/)
 
 MarkDown拓展，使用 `:xx:` 以插入 Emoji 或 Material icons
 
@@ -52,7 +56,9 @@ MarkDown拓展，使用 `:xx:` 以插入 Emoji 或 Material icons
 
 ### 3. 美观的提示标签 :material-information-outline:{ title="我是一个标签！" }
 
-> 来自：[Tooltips](https://squidfunk.github.io/mkdocs-material/reference/tooltips/ "我也是一个标签！")
+!!! quote ""
+
+    来自：[Tooltips](https://squidfunk.github.io/mkdocs-material/reference/tooltips/ "我也是一个标签！")
 
 取代浏览器自带鼠标停留显示标签，使用 Material for MkDocs 提供的样式。
 
@@ -71,7 +77,9 @@ MarkDown拓展，使用 `:xx:` 以插入 Emoji 或 Material icons
 
 ### 4. 文档 Git 创建时间
 
-> 来自：[Document dates](https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates)
+!!! quote ""
+
+    来自：[Document dates](https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/#document-dates)
 
 显示该文章的创建时间和修改时间。
 
@@ -97,7 +105,9 @@ MarkDown拓展，使用 `:xx:` 以插入 Emoji 或 Material icons
 
 ### 5. "这篇文章有用吗？"
 
-> 来自：[Was this page helpful?](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/?h=page+helpful%3F#was-this-page-helpful)
+!!! quote ""
+
+    来自：[Was this page helpful?](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-analytics/?h=page+helpful%3F#was-this-page-helpful)
 
 在文章末尾添加一个互动模块，用以收集用户对文章的反馈，官方教程中则是配合 Google Analysis 来统计数量，我这里只是做了一个壳，如果需要可以加入问卷链接等等。
 
@@ -146,7 +156,9 @@ MarkDown拓展，使用 `:xx:` 以插入 Emoji 或 Material icons
 
 ### 6. 使用旧版警告提示
 
-> 来自：[Classic admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#classic-admonitions)
+!!! quote ""
+
+    来自：[Classic admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#classic-admonitions)
 
 将警告提示样式换为旧版。
 
