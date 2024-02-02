@@ -108,6 +108,6 @@ $$A = PDP^{T}$$
 
 !!! tip "Tip"
 
-    $P$ is a orthogonal matrix, that is, $P^{-1} = P^{T}$.
+    $P$ is an orthogonal matrix, that is, $P^{-1} = P^{T}$.
 
 ### Singular Value Decomposition
