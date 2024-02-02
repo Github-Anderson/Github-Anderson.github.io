@@ -86,12 +86,9 @@ $$\mathbf{v}_{3} = \mathbf{u}_{3} - proj_{W_{2}} \mathbf{u}_{3} = \mathbf{u}_{3}
 
 $$A = QR$$
 
-Firstly, $A = \begin{bmatrix}\mathbf{u}_{1} \vert \mathbf{u}_{2} \vert \cdots \vert \mathbf{u}_{n} \end{bmatrix}$ and $Q = \begin{bmatrix}\mathbf{q}_{1} \vert \mathbf{q}_{2} \vert \cdots \vert \mathbf{q}_{n} \end{bmatrix}$
+- $A = \begin{bmatrix}\mathbf{u}_{1} \vert \mathbf{u}_{2} \vert \cdots \vert \mathbf{u}_{n} \end{bmatrix}$ and $Q = \begin{bmatrix}\mathbf{q}_{1} \vert \mathbf{q}_{2} \vert \cdots \vert \mathbf{q}_{n} \end{bmatrix}$
 
-
-
-With Gram–Schmidt Process
-
+- 
 
 ### Orthogonally diagonalization
 
