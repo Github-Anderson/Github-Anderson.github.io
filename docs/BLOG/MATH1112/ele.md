@@ -106,4 +106,8 @@ $$A = PDP^{T}$$
 & & \ddots & \\
 & & & \lambda_n\end{bmatrix}$
 
+!!! tip "Tip"
+
+    $P$ is a orthogonal matrix, that is, $P^{-1} = P^{T}$.
+
 ### Singular Value Decomposition
