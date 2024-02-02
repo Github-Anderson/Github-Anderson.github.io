@@ -61,12 +61,12 @@ This is called the characteristic equation of A.
 
 $$A = PDP^{-1}$$
 
-in which $P = \begin{bmatrix} \mathbf{p}_{1} & \mathbf{p}_{2} & \dots & \mathbf{p}_{n}\end{bmatrix}$ and $D = \begin{bmatrix} \lambda_1 & & \\
+- $P = \begin{bmatrix} \mathbf{p}_{1} & \mathbf{p}_{2} & \dots & \mathbf{p}_{n}\end{bmatrix}$ and $D = \begin{bmatrix} \lambda_1 & & \\
 & \lambda_2 & \\
 & & \ddots & \\
 & & & \lambda_n\end{bmatrix}$
 
-also, $\mathbf{p}_{i}$ are eigenvectors corresponding to $\lambda_{i}$
+- $\mathbf{p}_{i}$ are eigenvectors corresponding to $\lambda_{i}$
 
 ### QR Decomposition
 
@@ -88,7 +88,12 @@ $$A = QR$$
 
 - $A = \begin{bmatrix}\mathbf{u}_{1} \vert \mathbf{u}_{2} \vert \cdots \vert \mathbf{u}_{n} \end{bmatrix}$ and $Q = \begin{bmatrix}\mathbf{q}_{1} \vert \mathbf{q}_{2} \vert \cdots \vert \mathbf{q}_{n} \end{bmatrix}$
 
-- 
+- $R = \begin{bmatrix}
+\left\langle\mathbf{u}_1, q_1\right\rangle & \left\langle\mathbf{u}_2, q_1\right\rangle & \cdots & \left\langle\mathbf{u}_n, q_1\right\rangle \\
+0                   & \left\langle\mathbf{u}_2, q_2\right\rangle & \cdots & \left\langle\mathbf{u}_n, q_2\right\rangle \\
+\vdots              & \vdots              & \ddots & \vdots              \\
+0                   & 0                   & \cdots & \left\langle\mathbf{u}_n, q_n\right\rangle
+\end{bmatrix}$
 
 ### Orthogonally diagonalization
 
