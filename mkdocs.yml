@@ -199,7 +199,7 @@ nav:
       - ESSAY/thoughts/230828-from-mac-to-mac.md
       - ESSAY/thoughts/231002-refl-online.md
     - 记录:
-      - ESSAY/logs/240127-thoughts.md
+      # - ESSAY/logs/240127-thoughts.md
   - 关于:
     - ABOUT/index.md
     - ABOUT/me.md
