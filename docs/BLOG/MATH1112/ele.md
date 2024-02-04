@@ -13,11 +13,11 @@
     *If* $A$ *is an* $n \times n$ *matrix, then the following statements are equivalent.*
 
     1. $A$ *is invertible*.
-    2. $Ax = 0$ *has only the trivial solution*.
+    2. $A\mathbf{x} = 0$ *has only the trivial solution*.
     3. *The reduced row echelon form of* $A$ *is* $I_n$.
     4. $A$ is expressible as a product of elementary matrices.
-    5. $Ax = b$ *is consistent for every* $n \times 1$ *matrix* $b$.
-    6. $Ax = b$ *has exactly one solution for every* $n \times 1$ *matrix* $b$.
+    5. $A\mathbf{x} = \mathbf{b}$ *is consistent for every* $n \times 1$ *matrix* $\mathbf{x}$.
+    6. $A\mathbf{x} = \mathbf{b}$ *has exactly one solution for every* $n \times 1$ *matrix* $b$.
     7. $\det(A) \neq 0$.
     8. *The column vectors of* $A$ *are linearly independent*.
     9. *The row vectors of* $A$ *are linearly independent*.
@@ -51,9 +51,27 @@ This is called the characteristic equation of A.
 
 ## Best Approximation
 
+If $A\mathbf{x} = \mathbf{b}$ is an *inconsistent* linear system,
+
+$$A^{T}A\mathbf{x} = A^{T}\mathbf{b}$$
+
 ## Matrix Transformations
 
 ## Quadratic Forms
+
+$$Q_{A}(\mathbf{x}) = \mathbf{x}^{T}A\mathbf{x}$$
+
+- If $P$ orthogonally diagonalizes $A$, let $\mathbf{x} = P\mathbf{y}$, in which $A = PDP^T$, we have: 
+
+$$\begin{aligned}
+\mathbf{x}^{T}A\mathbf{x} = \mathbf{y}^{T}D\mathbf{y} &= \begin{bmatrix} y_1 & y_2 &\dots & y_n\end{bmatrix}
+\begin{bmatrix} \lambda_1 & & \\
+& \lambda_2 & \\
+& & \ddots & \\
+& & & \lambda_n\end{bmatrix}
+\begin{bmatrix} y_1 \\ y_2 \\ \vdots \\ y_n \end{bmatrix} \\
+&= \lambda_{1}y_{1}^{2} + \lambda_{2}y_{2}^{2} + \dots + \lambda_{n}y_{n}^{2}
+\end{aligned}$$
 
 ## Decompositions
 
@@ -111,3 +129,22 @@ $$A = PDP^{T}$$
     $P$ is an orthogonal matrix, that is, $P^{-1} = P^{T}$.
 
 ### Singular Value Decomposition
+
+If $A$ is an $m \times n$ matrix, and if $\lambda_{1}, \lambda_{2}, \dots, \lambda_{n}$ are the eigenvalues of $A^{T}A$, then the numbers
+
+$$\sigma_{1} = \sqrt{\lambda_{1}},\quad\sigma_{2} = \sqrt{\lambda_{2}},\quad\dots ,\quad\sigma_{n} = \sqrt{\lambda_{n}}$$
+
+are called the ***singular values*** of $A$.
+
+$$A = U \Sigma V^{T}$$
+
+- $U = \begin{bmatrix} \mathbf{u}_{1}, \mathbf{u}_{2}, \dots, \mathbf{u}_{n}\end{bmatrix}, V = \begin{bmatrix} \mathbf{v}_{1}, \mathbf{v}_{2}, \dots, \mathbf{v}_{n}\end{bmatrix}$
+
+- $\Sigma = \begin{bmatrix} \sigma_1 & & \\
+& \sigma_2 & \\
+& & \ddots & \\
+& & & \sigma_n\end{bmatrix}$
+
+!!! Tip
+
+    If $A$ is not a square matrix ($e.g.$ an $m \times n$ matrix), then $\Sigma$ needs to extent into an $m \times n$ matrix.
