@@ -162,11 +162,11 @@ MarkDown拓展，使用 `:xx:` 以插入 Emoji 或 Material icons
 
 将警告提示样式换为旧版。
 
-!!! classic "笔记"
+!!! note "笔记"
 
     这是新版
 
-!!! note "笔记"
+!!! classic "笔记"
 
     这是旧版
 
@@ -174,7 +174,8 @@ MarkDown拓展，使用 `:xx:` 以插入 Emoji 或 Material icons
 
 <style>
   .md-typeset .admonition.classic {
-    border-width: 1.5px;
+    border-width: 0;
+    border-left-width: 4px;
   }
 </style>
 
