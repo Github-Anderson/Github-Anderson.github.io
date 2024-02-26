@@ -15,6 +15,7 @@ theme:
 
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      accent: blue
       primary: white
       toggle:
         icon: material/toggle-switch-off-outline

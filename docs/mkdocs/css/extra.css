@@ -1,5 +1,5 @@
-.md-typeset .admonition,
-.md-typeset details {
-  border-width: 0;
-  border-left-width: 4px;
+:root {
+    --md-primary-fg-color:        #00b3ff;
+    --md-primary-fg-color--light: #b7dbec;
+    --md-primary-fg-color--dark:  #034790;
 }
