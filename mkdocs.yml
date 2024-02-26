@@ -8,22 +8,24 @@ site_description: Anderson_Yang 的个人网站
 theme:
   name: material
   palette:
-  - media: "(prefers-color-scheme)"
-    toggle:
-      icon: material/link
-      name: 切换至日间模式
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: 切换至日间模式
 
-  - media: "(prefers-color-scheme: light)"
-    scheme: default 
-    toggle:
-      icon: material/toggle-switch-off-outline
-      name: 切换至暗黑模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: 切换至暗黑模式
 
-  - media: "(prefers-color-scheme: dark)"
-    scheme: slate
-    toggle:
-      icon: material/toggle-switch
-      name: 切换至系统默认
+    - media: "(prefers-color-scheme: dark)"
+      primary: black
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: 切换至系统默认
       
   features:
     # 使用 Tab 来进行分类

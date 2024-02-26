@@ -2,7 +2,7 @@
 
 ## 基础语法
 
-??? quote "标题"
+!!! quote "标题"
 
     ```markdown title=""
     # 一级标题
@@ -18,7 +18,7 @@
 
     ### 三级标题
 
-??? quote "列表"
+!!! quote "列表"
 
     ```markdown title=""
     - 无需列表1
@@ -42,7 +42,7 @@
 
     *剩下三种网页无法渲染*
 
-??? quote "格式"
+!!! quote "格式"
 
     ```markdown title=""
     > 引用
@@ -81,7 +81,7 @@
     \sum_{n = 0}^{\infty} \frac{x^{n}}{n!} = e^{x}
     $$
 
-??? quote "文本"
+!!! quote "文本"
 
     ```markdown title=""
     *斜体* **粗体** ***斜粗体***
