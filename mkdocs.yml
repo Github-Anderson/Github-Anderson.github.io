@@ -174,41 +174,41 @@ extra_css:
 # [Navigtion]
 nav:
   - 博客:
-    - BLOG/index.md
+    - blog/index.md
     - 教程:
       - MarkDown:
-        - BLOG/md/markdown.md
+        - blog/md/markdown.md
       - Material for MkDocs:
-        - BLOG/mkdocs/first.md
-        - BLOG/mkdocs/extra.md
+        - blog/mkdocs/first.md
+        - blog/mkdocs/extra.md
       - 游戏:
-        - BLOG/games/cs2onmac.md
+        - blog/games/cs2onmac.md
     - 学习:
       - 信息科技导论 SI100B:
-        - BLOG/SI100B/SI100B-report.md
-        - BLOG/SI100B/fb.md
+        - blog/SI100B/SI100B-report.md
+        - blog/SI100B/fb.md
       - 数学分析 GEMA1009 & 10:
-        - BLOG/GEMA10XX/links.md
-        - BLOG/GEMA10XX/int.md
-        - BLOG/GEMA10XX/int-application.md
+        - blog/GEMA10XX/links.md
+        - blog/GEMA10XX/int.md
+        - blog/GEMA10XX/int-application.md
       - 线性代数 MATH1112:
-        - BLOG/MATH1112/links.md
-        - BLOG/MATH1112/ele.md
+        - blog/MATH1112/links.md
+        - blog/MATH1112/ele.md
       - 设计思维 ARTS1701:
-        - BLOG/ARTS1701/main.md
-        - BLOG/ARTS1701/notes.md
+        - blog/ARTS1701/main.md
+        - blog/ARTS1701/notes.md
     # - 文章:
       
   - 随笔:
-    - ESSAY/index.md
+    - essay/index.md
     - 文章:
-      - ESSAY/thoughts/230828-from-mac-to-mac.md
-      - ESSAY/thoughts/231002-refl-online.md
+      - essay/thoughts/230828-from-mac-to-mac.md
+      - essay/thoughts/231002-refl-online.md
     - 记录:
-      - ESSAY/logs/240127-thoughts.md
-      - ESSAY/logs/240206-thoughts.md
-      - ESSAY/logs/240303-thoughts.md
+      - essay/logs/240127-thoughts.md
+      - essay/logs/240206-thoughts.md
+      - essay/logs/240303-thoughts.md
   - 关于:
-    - ABOUT/index.md
-    - ABOUT/me.md
-    - ABOUT/contact.md
+    - about/index.md
+    - about/me.md
+    - about/contact.md
