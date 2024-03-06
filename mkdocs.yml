@@ -177,6 +177,9 @@ nav:
   
     - blog/index.md
     - 教程:
+      - Visual Studio Code:
+        - blog/code/env.md
+        - blog/code/tips.md
       - MarkDown:
         - blog/md/markdown.md
       - Material for MkDocs:
@@ -192,6 +195,7 @@ nav:
         - blog/GEMA10XX/links.md
         - blog/GEMA10XX/int.md
         - blog/GEMA10XX/int-application.md
+        - blog/GEMA10XX/hlnhl.md
       - 线性代数 MATH1112:
         - blog/MATH1112/links.md
         - blog/MATH1112/ele.md
@@ -214,5 +218,5 @@ nav:
       - essay/logs/240303-thoughts.md
   - 关于:
     - about/index.md
-    - about/me.md
+    # - about/me.md
     - about/contact.md
