@@ -49,8 +49,10 @@ theme:
 
   language: zh # 一些提示性的文字会变成中文
   icon:
+    logo: octicons/terminal-16
     # [添加 GitHub 仓库]
     repo: fontawesome/brands/github
+  favicon: octicons/terminal-16
 # [点击按钮跳转至 GitHub 修改 Markdown 源文件]
 edit_uri: edit/main/docs/
 
@@ -202,6 +204,8 @@ nav:
       - 设计思维 ARTS1701:
         - blog/ARTS1701/main.md
         # - blog/ARTS1701/notes.md
+      - 离散数学 SI120:
+        - blog/SI120/code.md
       - 中华文明通论 GEHA1050:
         - blog/GEHA1050/notes.md
         

@@ -150,3 +150,4 @@ $$\lambda^2 + p\lambda + q = 0$$
 |相异实根 $\lambda_1, \lambda_2$|$c_1 e^{\lambda_1x}+c_2 e^{\lambda_2x}$|
 |相同实根 $\lambda$|$c_1 e^{\lambda x}+c_2x e^{\lambda x}$|
 |共轭复根 $\alpha \pm i\beta$|$c_1e^{\alpha x}\cos \beta x+c_2e^{\alpha x}\sin \beta x$|
+
