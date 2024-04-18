@@ -63,7 +63,7 @@ $$\left| \begin{matrix} \frac{\partial y}{\partial C_1} & \frac{\partial y}{\par
 
     **解法**：设 $\begin{aligned}y' = p \Rightarrow \frac{\mathrm{d}p}{\mathrm{d}x} = f(x, p)\end{aligned}$
 
-=== "$y''= f(x, y')$ 型方程（缺 $x$ 型）"
+=== "$y''= f(y, y')$ 型方程（缺 $x$ 型）"
 
     **解法**：设 $\begin{aligned}y' = p \Rightarrow p\frac{\mathrm{d}p}{\mathrm{d}y} = f(y, p)\end{aligned}$
 
