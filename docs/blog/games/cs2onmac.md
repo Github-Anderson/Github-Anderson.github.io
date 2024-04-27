@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # 在 macOS 上畅玩 CS2
 
 !!! warning "请勿过度玩梗！"

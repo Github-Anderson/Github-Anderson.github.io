@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # 使用 Material for MkDocs 建立你的个人网站
 
 !!! info "提示"

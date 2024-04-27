@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # 一些小细节
 
 !!! info "提示"

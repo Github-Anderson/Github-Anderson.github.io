@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # 常用积分表
 
 $$\int 0dx=C$$

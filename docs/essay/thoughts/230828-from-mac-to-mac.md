@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # 从 Mac 到 Mac
 
 !!! info "提示"

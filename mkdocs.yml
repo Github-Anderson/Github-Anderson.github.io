@@ -7,6 +7,7 @@ site_description: Anderson_Yang 的个人网站
 # [UI]
 theme:
   name: material
+  custom_dir: overrides
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
@@ -14,7 +15,7 @@ theme:
         name: 切换至日间模式
 
     - media: "(prefers-color-scheme: light)"
-      scheme: default
+      scheme: dsefault
       accent: blue
       primary: white
       toggle:
@@ -55,7 +56,6 @@ theme:
   favicon: octicons/terminal-16
 # [点击按钮跳转至 GitHub 修改 Markdown 源文件]
 edit_uri: edit/main/docs/
-
 # [GitHub 仓库]
 repo_url: https://github.com/Github-Anderson/Github-Anderson.github.io
 repo_name: Github-Anderson.github.io
@@ -65,17 +65,18 @@ copyright: Copyright &copy; Anderson_Yang
 # [文章末尾反馈]
 extra:
   analytics: 
-    feedback:
-      title: 这篇文章有用吗？
-      ratings:
-        - icon: material/emoticon-happy-outline
-          name: 有用！
-          data: 1
-          note: 很高兴能帮到你！
-        - icon: material/emoticon-sad-outline
-          name: 需要改善
-          data: 0
-          note: 感谢反馈！我会尽量改善此页面！<a href="https://github.com/Github-Anderson/Github-Anderson.github.io/issues" target="_blank" rel="noopener">我要吐槽</a>
+    comments: true
+    # feedback:
+    #   title: 这篇文章有用吗？
+    #   ratings:
+    #     - icon: material/emoticon-happy-outline
+    #       name: 有用！
+    #       data: 1
+    #       note: 很高兴能帮到你！
+    #     - icon: material/emoticon-sad-outline
+    #       name: 需要改善
+    #       data: 0
+    #       note: 感谢反馈！我会尽量改善此页面！<a href="https://github.com/Github-Anderson/Github-Anderson.github.io/issues" target="_blank" rel="noopener">我要吐槽</a>
 
   # [社交网络图标和链接]
   social: # icons
@@ -157,14 +158,20 @@ markdown_extensions:
 
 extra_javascript:
   # [数学公式支持]
-  - mkdocs/javascripts/katex.js
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  - mkdocs/javascripts/mathjax.js #mathjax的相对目录（不用写/docs/）
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # - mkdocs/javascripts/katex.js
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
   # [反馈模块样式]
   - mkdocs/javascripts/feedback.js
+  # [评论区支持]
+  - 'https://utteranc.es/client.js'
+  # - mkdocs/javascripts/comment.js
 extra_css:
   # [数学公式支持]
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
   # [自定义 css]
   # 不使用底部的翻页
   - mkdocs/css/no-footer.css

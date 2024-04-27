@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # DESIGN THINKING
 
 **ARTS1701 - 设计思维：产品与交互设计的创新方案**

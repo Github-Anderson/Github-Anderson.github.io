@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # 一些本来想写在 CourseBench 上的话
 
 #### 省流01：建议提前自学

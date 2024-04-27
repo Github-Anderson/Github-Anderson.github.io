@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # SI100B-Report
 
 !!! tip
