@@ -224,9 +224,10 @@ nav:
       - essay/thoughts/230828-from-mac-to-mac.md
       - essay/thoughts/231002-refl-online.md
     - 记录:
-      - essay/logs/240127-thoughts.md
-      - essay/logs/240206-thoughts.md
-      - essay/logs/240303-thoughts.md
+      - essay/logs/240127.md
+      - essay/logs/240206.md
+      - essay/logs/240303.md
+      - essay/logs/240420.md
   - 关于:
     - about/index.md
     # - about/me.md
