@@ -158,12 +158,12 @@ markdown_extensions:
 
 extra_javascript:
   # [数学公式支持]
-  - mkdocs/javascripts/mathjax.js #mathjax的相对目录（不用写/docs/）
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  # - mkdocs/javascripts/katex.js
-  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
-  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  # - mkdocs/javascripts/mathjax.js #mathjax的相对目录（不用写/docs/）
+  # - https://polyfill.io/v3/polyfill.min.js?features=es6
+  # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - mkdocs/javascripts/katex.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
   # [反馈模块样式]
   - mkdocs/javascripts/feedback.js
   # [评论区支持]
@@ -171,7 +171,7 @@ extra_javascript:
   # - mkdocs/javascripts/comment.js
 extra_css:
   # [数学公式支持]
-  # - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
   # [自定义 css]
   # 不使用底部的翻页
   - mkdocs/css/no-footer.css
