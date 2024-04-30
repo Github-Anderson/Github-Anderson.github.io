@@ -62,10 +62,11 @@ repo_name: Github-Anderson.github.io
 # [版权说明]
 copyright: Copyright &copy; Anderson_Yang
 
-# [文章末尾反馈]
 extra:
   analytics: 
+    # [评论区]
     comments: true
+    # [文章末尾表情反馈]
     # feedback:
     #   title: 这篇文章有用吗？
     #   ratings:
@@ -157,14 +158,14 @@ markdown_extensions:
   - footnotes
 
 extra_javascript:
-  # [数学公式支持]
-  # - mkdocs/javascripts/mathjax.js #mathjax的相对目录（不用写/docs/）
+  # [数学公式支持MathJax/KaTeX]
+  # - mkdocs/javascripts/mathjax.js
   # - https://polyfill.io/v3/polyfill.min.js?features=es6
   # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - mkdocs/javascripts/katex.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
-  # [反馈模块样式]
+  # [表情反馈模块]
   - mkdocs/javascripts/feedback.js
   # [评论区支持]
   - 'https://utteranc.es/client.js'
@@ -205,6 +206,7 @@ nav:
         - blog/GEMA10XX/int.md
         - blog/GEMA10XX/int-application.md
         - blog/GEMA10XX/ode.md
+        - blog/GEMA10XX/iint.md
       - 线性代数 MATH1112:
         - blog/MATH1112/links.md
         - blog/MATH1112/ele.md

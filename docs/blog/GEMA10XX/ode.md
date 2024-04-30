@@ -18,11 +18,9 @@ comments: true
 
 - **方程通解**：解 $y = y(x, C_1, C_2, \dots, C_n)$​ 中含独立任意常数, 且“个数 = 阶数”.
 
-- 函数 $y = y(x, C_1, C_2)$ 中任意常数 $C_1, C_2$ 独立，即
-
-$$\left| \begin{matrix} \frac{\partial y}{\partial C_1} & \frac{\partial y}{\partial C_2} \\
+    函数 $y = y(x, C_1, C_2)$ 中任意常数 $C_1, C_2$ 独立，即 $\begin{aligned} \begin{vmatrix} \frac{\partial y}{\partial C_1} & \frac{\partial y}{\partial C_2} \\
 \frac{\partial y'}{\partial C_1} & \frac{\partial y'}{\partial C_2}
-\end{matrix}\right| \neq 0.$$
+\end{vmatrix}\end{aligned} \neq 0.$
 
 - **方程特解**：通解中任意常数被确定;
 - **定解条件**：用于确定通解中任意常数的条件
