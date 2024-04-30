@@ -6,7 +6,7 @@ comments: true
 
 ## C/C++
 
-=== "Windows 10/11"
+=== ":fontawesome-brands-windows: Windows"
 
 	1. 下载安装 [mingw64](https://winlibs.com/)，在解压后放在 `C:\` 或 `D:\` 均可
 
@@ -76,7 +76,7 @@ comments: true
 
 	6. 完成，现在可以编译运行你的代码了！
 
-=== "macOS"
+=== ":material-apple: macOS"
 
 	1. 运行 App Store，搜索下载 [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
 

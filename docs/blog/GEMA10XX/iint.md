@@ -66,7 +66,7 @@ $$\iint_Df(x,y)\text{d}x\text{d}y=\iint_{D'}f(r\cos\theta,r\sin\theta)r\text{d}r
 
 $$\iint_{D'}f(r\cos\theta,r\sin\theta)r\text{d}r\text{d}\theta = \int_{\alpha}^{\beta}\text{d}\theta\int_{r_1(\theta)}^{r_2(\theta)}f(r\cos\theta,r\sin\theta)r\text{d}r$$
 
-!!! info
+!!! info "注意"
 
 	由于 $r\neq 0$，显然这里的 $D'$ 并不包括 $z$ 轴，即 $\mathbf{F}: (x,y) \mapsto (r,\theta)$ 并不是一对一的。
 
@@ -137,7 +137,7 @@ z=z
 
 $$\iiint_{\Omega}f(x,y,z)\text{d}V=\iiint_{\Omega'}f(r\cos\theta,r\sin\theta,z)r\text{d}r\text{d}\theta\text{d}z$$
 
-!!! info
+!!! info "注意"
 
 	同二重积分，由于 $r\neq 0$，显然这里的 $\Omega'$ 并不包括 $z$ 轴，即 $\mathbf{T}: (x,y,z) \mapsto (r,\theta,z)$ 并不是一对一的。
 
@@ -152,5 +152,93 @@ z=\rho\cos\varphi
 $$\iiint_{\Omega}f(x,y,z)\text{d}V = 
 \iiint_{\Omega'}f(\rho\sin\varphi\cos\theta,\rho\sin\varphi\sin\theta,\rho\cos\varphi)\rho^2\sin\varphi\text{d}\rho\text{d}\varphi\text{d}\theta$$
 
+### 注
+
+1. $V_{椭球} = \frac{4\pi abc}{3}$
+
+2. (轮换对称性) $\begin{aligned}
+\iiint_{\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}\leq 1} z^2\text{d}V = \frac{4\pi abc^3}{15}\quad \iiint_{\frac{y^2}{b^2}+\frac{z^2}{c^2}+\frac{x^2}{a^2}\leq 1} x^2\text{d}V = \frac{4\pi a^3bc}{15}
+\end{aligned}$
+
+3. 令 $V:x^2+y^2+z^2\leq R^2$ 则
+
+$$\iiint_Vx^2\text{d}V = \iiint_Vy^2\text{d}V = \iiint_Vz^2\text{d}V = \frac{1}{3}\iiint_V(x^2+y^2+z^2)\text{d}V = \frac{4\pi R^5}{15}$$
+
 ## $n$ 重积分
 
+### 计算
+
+#### 长方体区域
+
+设 $f$ 在 $\Omega=[a_1,b_1]\times [a_2,b_2]\times\cdots\times [a_n,b_n]$ 上连续，则
+
+$$\begin{aligned}
+&\int_{\Omega}f(x_1,x_2,\dots,x_n)\text{d}x_1\text{d}x_2\cdots \text{d}x_n\\
+=& \int_{a_1}^{b_1}\text{d}x_1\int_{[a_2,b_2]\times\cdots\times [a_n,b_n]}f(x_1,x_2,\dots,x_n)\text{d}x_2\cdots \text{d}x_n\\
+=& \int_{[a_1,b_1]\times\cdots\times [a_{n-1},b_{n-1}]}\text{d}x_1\cdots \text{d}x_{n-1}\int_{a_n}^{b_n}f(x_1,x_2,\dots,x_n)\text{d}x_n
+\end{aligned}$$
+
+#### $n$ 维单纯形
+
+$T_n=\{(x_1,x_2,\dots,x_n)\mid x_1+x_2+\cdots +x_n\leq h, x_i\geq 0(i=1,2,\dots,n)\}$ 的体积 
+
+$$V_n = \frac{h^n}{n!}$$
+
+#### $n$ 维球体积
+
+!!! tip "提示"
+
+	换元为多维球面坐标系推导
+
+=== "3维球"
+
+	$T_3 = \{(x,y,z)\mid x^2+y^2+z^2\leq R^2\}$
+
+	$\begin{cases}x = \rho\sin\varphi\cos\theta\newline
+	y = \rho\sin\varphi\sin\theta\newline
+	z = \rho\cos\varphi
+	\end{cases}
+	\quad
+	\textbf{J} = \begin{aligned}\frac{\partial (x,y,z)}{\partial (\rho,\varphi,\theta)}
+	 = \rho^2\sin\varphi\end{aligned}$
+
+	$\begin{aligned}
+	\iiint_{\Omega}\text{d}V = \iiint_{\Omega'}|\textbf{J}|\text{d}\rho\text{d}\varphi\text{d}\theta = \int_0^{2\pi}\text{d}\theta\int_0^{\pi}\sin\varphi\text{d}\varphi\int_0^{R}\rho^2\text{d}\rho = \frac{4\pi R^3}{3}
+	\end{aligned}$
+
+=== "4维球"
+
+	$T_4 = \{(x_1,x_2,x_3,x_4)\mid x_1^2+x_2^2+x_3^2+x_4^2\leq R^2\}$
+
+	$\begin{cases}x_1 = \rho\sin\psi\sin\varphi\cos\theta\newline
+	x_2 = \rho\sin\psi\sin\varphi\sin\theta\newline
+	x_3 = \rho\sin\psi\cos\varphi\newline
+	x_4 = \rho\cos\psi
+	\end{cases}
+	\quad
+	\textbf{J} = \begin{aligned}\frac{\partial (x_1,x_2,x_3,x_4)}{\partial (\rho,\psi,\varphi,\theta)}
+	 = \rho^3\sin\psi^2\sin\varphi\end{aligned}$
+
+	$\begin{aligned}
+	\int_{\Omega}\text{d}V = \int_{\Omega'}|\textbf{J}|\text{d}\rho\text{d}\varphi\text{d}\theta = \int_0^{2\pi}\text{d}\theta\int_0^{\pi}\sin^2\psi\text{d}\psi\int_0^{\pi}\sin\varphi\text{d}\varphi\int_0^{R}\rho^2\text{d}\rho = \frac{\pi^2 R^4}{2}
+	\end{aligned}$
+
+=== "$n$ 维球"
+
+	$T_n = \{(x_1,x_2,\dots,x_n)\mid x_1^2+x_2^2+\cdots+x_n^2\leq R^2\}$
+
+	$\begin{cases}x_1 = \rho\sin\theta_1\sin\theta_2\cdots\cos\theta_{n-1}\newline
+	x_2 = \rho\sin\theta_1\sin\theta_2\cdots\sin\theta_{n-1}\newline
+	\ \vdots\newline
+	x_4 = \rho\cos\theta_1
+	\end{cases}
+	\textbf{J} = \begin{aligned}\frac{\partial (x_1,x_2,\dots,x_n)}{\partial (\rho,\theta_1,\theta_2,\dots,\theta_{n-1})} = \rho^n\sin^{n-1}\theta_1\cdots\sin\theta_{n-1}\end{aligned}$
+
+	$\begin{aligned}
+	&\int_{\Omega}\text{d}V = \int_{\Omega'}|\textbf{J}|\text{d}\rho\text{d}\theta_1\cdots\text{d}\theta_{n-1}\\
+	=& \int_0^{2\pi}\text{d}\theta_{n-1}\int_0^{\pi}\sin^{n-1}\theta_1\text{d}\theta_1\cdots\int_0^{\pi}\sin\theta_{n-2}\text{d}\theta_{n-2}\int_0^{R}\rho^2\text{d}\rho\newline
+	=& \begin{cases}\begin{aligned}
+	&2\pi\cdot 2\cdot \frac{\pi}{2}\cdots\frac{2(n-1)!!}{n!!},  &n\text{为偶数}\\
+	&2\pi\cdot 2\cdot \frac{\pi}{2}\cdots\frac{2(n-1)!!}{n!!}\cdot \frac{\pi}{2}, &n\text{为奇数}
+	\end{aligned}\end{cases}
+	\end{aligned}$
