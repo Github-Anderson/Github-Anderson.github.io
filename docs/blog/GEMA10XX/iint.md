@@ -154,7 +154,7 @@ $$\iiint_{\Omega}f(x,y,z)\text{d}V =
 
 ### 注
 
-1. $V_{椭球} = \frac{4\pi abc}{3}$
+1. $V_{椭球} = \begin{aligned}\frac{4\pi abc}{3}\end{aligned}$
 
 2. (轮换对称性) $\begin{aligned}
 \iiint_{\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}\leq 1} z^2\text{d}V = \frac{4\pi abc^3}{15}\quad \iiint_{\frac{y^2}{b^2}+\frac{z^2}{c^2}+\frac{x^2}{a^2}\leq 1} x^2\text{d}V = \frac{4\pi a^3bc}{15}
