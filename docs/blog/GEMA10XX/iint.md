@@ -238,7 +238,7 @@ $$V_n = \frac{h^n}{n!}$$
 	&\int_{\Omega}\text{d}V = \int_{\Omega'}|\textbf{J}|\text{d}\rho\text{d}\theta_1\cdots\text{d}\theta_{n-1}\\
 	=& \int_0^{2\pi}\text{d}\theta_{n-1}\int_0^{\pi}\sin^{n-1}\theta_1\text{d}\theta_1\cdots\int_0^{\pi}\sin\theta_{n-2}\text{d}\theta_{n-2}\int_0^{R}\rho^2\text{d}\rho\newline
 	=& \begin{cases}\begin{aligned}
-	&2\pi\cdot 2\cdot \frac{\pi}{2}\cdots\frac{2(n-1)!!}{n!!},  &n\text{为偶数}\\
-	&2\pi\cdot 2\cdot \frac{\pi}{2}\cdots\frac{2(n-1)!!}{n!!}\cdot \frac{\pi}{2}, &n\text{为奇数}
+	&2\pi\cdot 2\cdot \frac{\pi}{2}\cdots\frac{2(n-1)!!}{n!!}\cdot \frac{\pi}{2},  &n\text{为偶数}\\
+	&2\pi\cdot 2\cdot \frac{\pi}{2}\cdots\frac{2(n-1)!!}{n!!}, &n\text{为奇数}
 	\end{aligned}\end{cases}
 	\end{aligned}$
