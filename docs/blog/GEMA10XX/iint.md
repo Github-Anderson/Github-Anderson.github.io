@@ -230,7 +230,7 @@ $$V_n = \frac{h^n}{n!}$$
 	$\begin{cases}x_1 = \rho\sin\theta_1\sin\theta_2\cdots\cos\theta_{n-1}\newline
 	x_2 = \rho\sin\theta_1\sin\theta_2\cdots\sin\theta_{n-1}\newline
 	\ \vdots\newline
-	x_4 = \rho\cos\theta_1
+	x_n = \rho\cos\theta_1
 	\end{cases}
 	\textbf{J} = \begin{aligned}\frac{\partial (x_1,x_2,\dots,x_n)}{\partial (\rho,\theta_1,\theta_2,\dots,\theta_{n-1})} = \rho^n\sin^{n-1}\theta_1\cdots\sin\theta_{n-1}\end{aligned}$
 
