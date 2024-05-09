@@ -115,6 +115,7 @@ plugins:
         - index.md
         - essay/index.md
         - blog/index.md
+        - lessons/index.md
         - about/index.md
       type: date
 
@@ -186,39 +187,39 @@ nav:
   # - index.md
   - 博客:
     - blog/index.md
-    - 教程:
-      - Visual Studio Code:
-        - blog/code/env.md
-        - blog/code/tips.md
-      - MarkDown:
-        - blog/md/markdown.md
-      - Material for MkDocs:
-        - blog/mkdocs/first.md
-        - blog/mkdocs/extra.md
-      - 游戏:
-        - blog/games/cs2onmac.md
-    - 学习:
-      - 信息科技导论 SI100B:
-        - blog/SI100B/SI100B-report.md
-        - blog/SI100B/fb.md
-      - 数学分析 GEMA1009 & 10:
-        - blog/GEMA10XX/links.md
-        - blog/GEMA10XX/int.md
-        - blog/GEMA10XX/int-application.md
-        - blog/GEMA10XX/ode.md
-        - blog/GEMA10XX/iint.md
-      - 线性代数 MATH1112:
-        - blog/MATH1112/links.md
-        - blog/MATH1112/ele.md
-      - 设计思维 ARTS1701:
-        - blog/ARTS1701/main.md
-        # - blog/ARTS1701/notes.md
-      - 离散数学 SI120:
-        - blog/SI120/links.md
-        - blog/SI120/code.md
-      - 中华文明通论 GEHA1050:
-        - blog/GEHA1050/notes.md
-        
+    - Visual Studio Code:
+      - blog/code/env.md
+      - blog/code/tips.md
+    - MarkDown:
+      - blog/md/markdown.md
+    - Material for MkDocs:
+      - blog/mkdocs/first.md
+      - blog/mkdocs/extra.md
+    - 游戏:
+      - blog/games/cs2onmac.md
+  - 课程:
+    - lessons/index.md
+    - 信息科技导论 SI100B:
+      - lessons/SI100B/SI100B-report.md
+      - lessons/SI100B/fb.md
+    - 数学分析 GEMA1009 & 10:
+      - lessons/GEMA10XX/links.md
+      - lessons/GEMA10XX/int.md
+      - lessons/GEMA10XX/int-application.md
+      - lessons/GEMA10XX/ode.md
+      - lessons/GEMA10XX/iint.md
+    - 线性代数 MATH1112:
+      - lessons/MATH1112/links.md
+      - lessons/MATH1112/ele.md
+    - 设计思维 ARTS1701:
+      - lessons/ARTS1701/main.md
+      # - blog/ARTS1701/notes.md
+    - 离散数学 SI120:
+      - lessons/SI120/links.md
+      - lessons/SI120/code.md
+    - 中华文明通论 GEHA1050:
+      - lessons/GEHA1050/notes.md
+      
     # - 文章:
       
   - 随笔:
