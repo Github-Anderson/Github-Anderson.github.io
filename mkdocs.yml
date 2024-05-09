@@ -183,8 +183,8 @@ extra_css:
 
 # [Navigtion]
 nav:
+  # - index.md
   - 博客:
-  
     - blog/index.md
     - 教程:
       - Visual Studio Code:
