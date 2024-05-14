@@ -15,8 +15,9 @@ comments: true
 #### 中值定理
 
 设 $D$ 是连通有界闭集，$f(x,y)\in C(D)$，则 $\exists (\xi ,\eta)\in D$ 使得
-
-$$\iint_Df(x,y)d\sigma = f(\xi ,\eta)A_D$$
+$$
+\iint_Df(x,y)d\sigma = f(\xi ,\eta)A_D
+$$
 
 ### 计算
 
@@ -24,10 +25,15 @@ $$\iint_Df(x,y)d\sigma = f(\xi ,\eta)A_D$$
 
 若 $f(x,y)$ 在 $[a,b]\times [c,d]$ 可积且连续，则有
 
-$$\iint_{[a,b]\times [c,d]} f(x,y)\text{d}\sigma = \int_{a}^{b}\text{d}x\int_{c}^{d}f(x,y)\text{d}y=\int_{c}^{d}\text{d}y\int_{a}^{b}f(x,y)\text{d}x$$
+$$
+\iint_{[a,b]\times [c,d]} f(x,y)\text{d}\sigma = \int_{a}^{b}\text{d}x\int_{c}^{d}f(x,y)\text{d}y=\int_{c}^{d}\text{d}y\int_{a}^{b}f(x,y)\text{d}x
+$$
 
 设 $f\in C[a,b],g\in C[c,d]$，则有
-$$\iint_{[a,b]\times [c,d]} f(x,y)\text{d}x\text{d}y = \int_a^bf(x)\text{d}x\cdot \int_c^dg(y)\text{d}y$$
+
+$$
+\iint_{[a,b]\times [c,d]} f(x,y)\text{d}x\text{d}y = \int_a^bf(x)\text{d}x\cdot \int_c^dg(y)\text{d}y
+$$
 
 #### $x$ 型区域
 

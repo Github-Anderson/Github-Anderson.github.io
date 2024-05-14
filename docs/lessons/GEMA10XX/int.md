@@ -4,9 +4,13 @@ comments: true
 
 # 常用积分表
 
-$$\int 0dx=C$$
+$$
+\int 0dx=C
+$$
 
-$$\int x^{\alpha}dx=\frac{1}{\alpha+1}x^{\alpha+1}+C$$
+$$
+\int x^{\alpha}dx=\frac{1}{\alpha+1}x^{\alpha+1}+C
+$$
 
 $$\int a^{x}dx=\frac{1}{\ln a}a^{x}+C$$
 
