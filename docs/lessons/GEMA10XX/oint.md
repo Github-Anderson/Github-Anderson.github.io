@@ -14,14 +14,17 @@ comments: true
 
 设 $f(x,y)$ 在光滑曲线 $L$ 上连续，$L$ 的参数方程为
 $$
-r = r(t) = x(t)\mathbf{i} + y(t)\mathbf{j}, \quad t \in [\alpha, \beta]
+r = r(t) = x(t)\mathbf{i} + y(t)\mathbf{j}, \quad t \in [\alpha, \beta]$$
 $$
+\text{d}s = \sqrt{x'^2(t) + y'^2(t)} \, \text{d}t
+$$
+
 则有
 $$
 \int_L f(x,y) \, \text{d}s = \int_\alpha^\beta f(x(t), y(t)) \sqrt{x'^2(t) + y'^2(t)} \, \text{d}t
 $$
 
-**注意** 由于 $ds$ 是弧长，取正值，故定积分限应 $\alpha < \beta$
+**注意** 由于 $\text{d}s$ 是弧长，取正值，故定积分限应 $\alpha < \beta$
 
 若曲线 $L$ 的方程为 $y = y(x)$，$x \in [a, b]$，则
 $$
@@ -31,6 +34,19 @@ $$
 ## 第一型曲面积分
 
 ### 计算
+
+设有光滑参数曲面 $S$:
+$$
+\bm{r} = \bm{r}(u,v) = x(u,v)\bm{i} + y(u,v)\bm{j} + z(u,v)\bm{k},\quad (u,v)\in D$$
+$$
+\text{d}S = |\bm{r}_u'(u,v)\times \bm{r}_v'(u,v)|\text{d}u\text{d}v$$
+
+故曲面面积:
+
+\[
+S = \iint_D\sqrt{A^2+B^2+C^2}\text{d}u\text{d}v
+\]
+
 
 ## 第二型曲线积分
 

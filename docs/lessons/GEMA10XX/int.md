@@ -4,22 +4,15 @@ comments: true
 
 # 常用积分表
 
-$$
-\int 0dx=C
-$$
+$$\int 0dx=C$$
 
-$$
-\int x^{\alpha}dx=\frac{1}{\alpha+1}x^{\alpha+1}+C
-$$
+$$\int x^{\alpha}dx=\frac{1}{\alpha+1}x^{\alpha+1}+C$$
 
 $$\int a^{x}dx=\frac{1}{\ln a}a^{x}+C$$
 
 $$\int \frac{1}{x}dx=\ln x+C$$
 
-$$\begin{aligned}
-        \int \sin xdx&=-\cos x+C \quad \int \cos xdx=\sin x+C\\
-        \int \sec^{2}xdx&=\tan x+C \quad \int \csc^{2}xdx=\cot x+C
-    \end{aligned}$$
+$$\begin{aligned}\int \sin xdx&=-\cos x+C \quad \int \cos xdx=\sin x+C\\\int \sec^{2}xdx&=\tan x+C \quad \int \csc^{2}xdx=\cot x+C\end{aligned}$$
 
 $$\int \frac{1}{a^2+x^2}dx=\frac{1}{a}\arctan \frac{x}{a}+C$$
 

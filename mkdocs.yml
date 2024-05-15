@@ -180,7 +180,8 @@ extra_css:
   # 无序列表符号自定义
   - mkdocs/css/unordered-list-symbols.css
   # 使用旧版注意标识
-  # - mkdocs/css/extra.css
+  # - mkdocs/css/classic.css
+  - mkdocs/css/extra.css
 
 # [Navigtion]
 nav:

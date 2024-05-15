@@ -4,3 +4,8 @@
     --md-primary-fg-color--dark:  #034790;
 }
 
+body .katex-display {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 0.1 !important; /* 根据需要调整这个值 */
+}
