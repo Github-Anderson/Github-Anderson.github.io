@@ -210,14 +210,14 @@ $$
 
 ### 特例
 
-**1)** 若曲面 $S$ 的方程为 $z = f(x, y)$，$(x, y) \in D$，则
+- 若曲面 $S$ 的方程为 $z = f(x, y)$，$(x, y) \in D$，则
 
 $$
 \iint_S P \text{d}y \text{d}z + Q \text{d}z \text{d}x + R \text{d}x \text{d}y = \pm \iint_D (-P f_x' - Q f_y' + R) \text{d}x \text{d}y
 $$
 （合一投影法）
 
-**2)** 当 $P = Q = 0$ ，曲面 $S$ 为 $z = f(x, y)$，$(x, y) \in D$ 时
+- 当 $P = Q = 0$ ，曲面 $S$ 为 $z = f(x, y)$，$(x, y) \in D$ 时
 
 $$
 \iint_S R(x, y, z) \text{d}x \text{d}y = \pm \iint_D R(x, y, f(x, y)) \text{d}x \text{d}y
@@ -225,7 +225,7 @@ $$
 
 当曲面 $S$ 指定上侧时，选 $+$ 号，指定下侧时，选 $-$ 号。
 
-**3)** 当曲面 $S$ 为母线平行于z轴的柱面时
+- 当曲面 $S$ 为母线平行于z轴的柱面时
 
 $$
 \iint_S R(x, y, z) \text{d}x \text{d}y = 0
