@@ -7,5 +7,5 @@
 body .katex-display {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
-    line-height: 0.1 !important; /* 根据需要调整这个值 */
+    line-height: 1 !important; /* 根据需要调整这个值 */
 }
