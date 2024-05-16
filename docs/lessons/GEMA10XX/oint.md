@@ -165,6 +165,13 @@ $$
 
 $$\varphi(x,y)=\int_{(x_0,y_0)}^{x,y}P\text{d}x+Q\text{d}y$$
 
+若 $P(x, y)\text{d}x + Q(x, y)\text{d}y$ 是某函数的全微分，则称方程 $P\text{d}x + Q\text{d}y = 0$ 为**全微分方程**。
+
+**判别式** $\begin{aligned}\frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y}\end{aligned}$
+
+**解法** 求出原函数 $\varphi(x, y)$，则通解为 $\varphi(x, y) = C$
+
+
 ## 第二型曲面积分
 
 ### 定义
@@ -228,35 +235,45 @@ $$
 
 !!! abstract "Gauss 公式"
 
-	坐标形式
+	设 $v = (P, Q, R)$ 为空间有界闭域 $V$ 上的**光滑向量场**，$\partial V$ 是**分片光滑**闭曲面，则有
+
 	$$
-	\oiint_{\partial V^+}P\text{d}y\text{d}z+Q\text{d}z\text{d}x+R\text{d}x\text{d}y = \iiint_V\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\right)\text{d}V$$
+	\oiint_{\partial V^+}P\text{d}y\text{d}z+Q\text{d}z\text{d}x+R\text{d}x\text{d}y = \iiint_V\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\right)\text{d}V
+	$$
 
 	向量形式
 	$$
-	\oiint_{\partial V+}\bm{v}\cdot\text{d}\bm{S} = \iiint_V\nabla \cdot \bm{v}\text{d}V = \iiint_V\text{div }{\bm{v}}\text{d}V$$
+	\oiint_{\partial V+}\bm{v}\cdot\text{d}\bm{S} = \iiint_V\nabla \cdot \bm{v}\text{d}V = \iiint_V\text{div }{\bm{v}}\text{d}V
+	$$
 
-**散度物理意义** $\begin{aligned}\text{div }\bm{v}(M) = \lim_{V\to M}\frac{1}{\text{Vol}(V)}\oiint_{\partial V^+}\bm{v}\cdot \text{d}\bm{S}\end{aligned}$
+- 设空间有界闭域 $V$ 的边界分片光滑, 则其体积
+
+    $$V = \frac{1}{3}\oiint_{\partial V^+}x\text{d}y\text{d}z+y\text{d}z\text{d}x+z\text{d}x\text{d}y$$
+
+- **散度物理意义** $\begin{aligned}\text{div }\bm{v}(M) = \lim_{V\to M}\frac{1}{\text{Vol}(V)}\oiint_{\partial V^+}\bm{v}\cdot \text{d}\bm{S}\end{aligned}$
 
 !!! abstract "Stokes 公式"
 
-	坐标形式
+	设 \( \mathbf{v} = (P, Q, R) \) 为空间光滑曲面 \( S \) 上的光滑向量场， \( \partial S \) 是分段光滑闭曲线，则有
 
 	$$\begin{aligned}&\oint_{\partial S}P\text{d}x+Q\text{d}y+R\text{d}z\\
 	=& \iint_S\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)\text{d}\text{d}+\left(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)\text{d}\text{d}+\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\text{d}x\text{d}y\\
 	=& \iint_S
 	\begin{vmatrix}
 	\text{d}y\text{d}z & \text{d}z\text{d}x & \text{d}x\text{d}y\\
-	\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+	\dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z}\\
 	P & Q & R
 	\end{vmatrix} 
 	= \iint_S
 	\begin{vmatrix}
 	\cos\alpha & \cos\beta & \cos\gamma\\
-	\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z}\\
+	\dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z}\\
 	P & Q & R
 	\end{vmatrix}\text{d}S
 	\end{aligned}$$
+
+	其中 $\partial S$ 定向与 $(\cos\alpha, \cos\beta, \cos\gamma)$ 按右手法则联系
+
 
 	向量形式
 
@@ -265,4 +282,6 @@ $$
 	&=\iint_S\text{rot }\bm{v}\cdot \bm{n}^{\circ}\text{d}S
 	\end{aligned}$$
 
-**旋度物理意义** $\begin{aligned}\text{rot }\bm{v}\cdot \bm{n}^{\circ} \mid_M = \lim_{S\to M}\frac{1}{\text{Area}(V)}\oint_{\partial S}\bm{v}\cdot \text{d}\bm{r}\end{aligned}$
+
+
+- **旋度物理意义** $\begin{aligned}\text{rot }\bm{v}\cdot \bm{n}^{\circ} \mid_M = \lim_{S\to M}\frac{1}{\text{Area}(V)}\oint_{\partial S}\bm{v}\cdot \text{d}\bm{r}\end{aligned}$
