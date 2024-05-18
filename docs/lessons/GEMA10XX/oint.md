@@ -163,7 +163,7 @@ $$
 
 则存在二元函数 \( \varphi \) 使得 \( \text{d}\varphi = P\text{d}x + Q\text{d}y \)，即 \( P\text{d}x + Q\text{d}y \) 是 \( \varphi \) 的**全微分**，此时称 \( \varphi \) 为 \( P\text{d}x + Q\text{d}y \) 的**原函数**。已知
 
-$$\varphi(x,y)=\int_{(x_0,y_0)}^{x,y}P\text{d}x+Q\text{d}y$$
+$$\varphi(x,y)=\int_{(x_0,y_0)}^{(x,y)}P\text{d}x+Q\text{d}y$$
 
 若 $P(x, y)\text{d}x + Q(x, y)\text{d}y$ 是某函数的全微分，则称方程 $P\text{d}x + Q\text{d}y = 0$ 为**全微分方程**。
 
