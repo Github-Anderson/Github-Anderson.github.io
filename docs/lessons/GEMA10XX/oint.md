@@ -145,7 +145,7 @@ S=\frac{1}{2}\oint_{\partial D^+}x\text{d}y-y\text{d}x$$
 	3. 向量场是某函数的**梯度场**，即存在 $\varphi(x,y)$，使得
 	$\mathbf{v} = \nabla\varphi(x,y) \text{ or } \text{d}\varphi = P\text{d}x+Q\text{d}y$
 
-	4. $\begin{aligned}\frac{\partial Q}{\partial x}\equiv \frac{\partial P}{\partial x}\end{aligned}$ 在 $D$ 内恒成立
+	4. $\begin{aligned}\frac{\partial Q}{\partial x}\equiv \frac{\partial P}{\partial y}\end{aligned}$ 在 $D$ 内恒成立
 
 设 $v$ 在 $D$ 内的曲线积分与路径无关, 则对 $\forall A, B\in D$, 有
 
