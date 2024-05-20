@@ -235,7 +235,7 @@ $$
 
 !!! abstract "Gauss 公式"
 
-	设 $v = (P, Q, R)$ 为空间有界闭域 $V$ 上的**光滑向量场**，$\partial V$ 是**分片光滑**闭曲面，则有
+	设 $\bm{v} = (P, Q, R)$ 为空间有界闭域 $V$ 上的**光滑向量场**，$\partial V$ 是**分片光滑**闭曲面，则有
 
 	$$
 	\oiint_{\partial V^+}P\text{d}y\text{d}z+Q\text{d}z\text{d}x+R\text{d}x\text{d}y = \iiint_V\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\right)\text{d}V
@@ -254,7 +254,7 @@ $$
 
 !!! abstract "Stokes 公式"
 
-	设 \( \mathbf{v} = (P, Q, R) \) 为空间光滑曲面 \( S \) 上的光滑向量场， \( \partial S \) 是分段光滑闭曲线，则有
+	设 \( \bm{v} = (P, Q, R) \) 为空间光滑曲面 \( S \) 上的光滑向量场， \( \partial S \) 是分段光滑闭曲线，则有
 
 	$$\begin{aligned}&\oint_{\partial S}P\text{d}x+Q\text{d}y+R\text{d}z\\
 	=& \iint_S\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)\text{d}\text{d}+\left(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)\text{d}\text{d}+\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\text{d}x\text{d}y\\
