@@ -121,7 +121,7 @@ $$\int_LP\text{d}x+Q\text{d}y=\int_a^b[P(x,y(x))+Q(x,y(x))y'(x)]\text{d}x$$
 
 !!! abstract "公式"
 
-	设 $\mathbf{v} = (P(x,y),Q(x,y))$ 是有界闭域 $D$ 内的光滑向量场，则有
+	设 $\bm{v} = (P(x,y),Q(x,y))$ 是有界闭域 $D$ 内的光滑向量场，则有
 
 	$$\oint_{\partial D^+}P\text{d}x+Q\text{d}y=\iint_D\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\text{d}x\text{d}y$$
 
@@ -135,7 +135,7 @@ S=\frac{1}{2}\oint_{\partial D^+}x\text{d}y-y\text{d}x$$
 
 !!! tip "定理"
 
-	设 $\mathbf{v} = (P(x,y),Q(x,y))$ 是单连通区域 $D$ 内的光滑向量场，则下面四条等价：
+	设 $bm{v} = (P(x,y),Q(x,y))$ 是单连通区域 $D$ 内的光滑向量场，则下面四条等价：
 
 	1. 在 $D$ 内的任一条分段光滑闭曲线 $L$ 上
 	$\begin{aligned}\oint_LP\text{d}x+Q\text{d}y=0\end{aligned}$
@@ -143,7 +143,7 @@ S=\frac{1}{2}\oint_{\partial D^+}x\text{d}y-y\text{d}x$$
 	2. 在 $D$ 内曲线积分 $\begin{aligned}\oint_LP\text{d}x+Q\text{d}y\end{aligned}$ 与路径无关，即值仅与 $A,B$ 有关, 而与 $L$ 无关
 
 	3. 向量场是某函数的**梯度场**，即存在 $\varphi(x,y)$，使得
-	$\mathbf{v} = \nabla\varphi(x,y) \text{ or } \text{d}\varphi = P\text{d}x+Q\text{d}y$
+	$\bm{v} = \nabla\varphi(x,y) \text{ or } \text{d}\varphi = P\text{d}x+Q\text{d}y$
 
 	4. $\begin{aligned}\frac{\partial Q}{\partial x}\equiv \frac{\partial P}{\partial y}\end{aligned}$ 在 $D$ 内恒成立
 
