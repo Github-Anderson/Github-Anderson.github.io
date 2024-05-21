@@ -133,25 +133,50 @@ $$\int_LP\text{d}x+Q\text{d}y=\int_a^b[P(x,y(x))+Q(x,y(x))y'(x)]\text{d}x$$
 $$
 S=\frac{1}{2}\oint_{\partial D^+}x\text{d}y-y\text{d}x$$
 
-!!! tip "定理"
+=== "二维形式"
 
-	设 $bm{v} = (P(x,y),Q(x,y))$ 是单连通区域 $D$ 内的光滑向量场，则下面四条等价：
+	!!! tip "定理"
 
-	1. 在 $D$ 内的任一条分段光滑闭曲线 $L$ 上
-	$\begin{aligned}\oint_LP\text{d}x+Q\text{d}y=0\end{aligned}$
+		设 $\bm{v} = (P(x,y),Q(x,y))$ 是单连通区域 $D$ 内的光滑向量场，则下面四条等价：
 
-	2. 在 $D$ 内曲线积分 $\begin{aligned}\oint_LP\text{d}x+Q\text{d}y\end{aligned}$ 与路径无关，即值仅与 $A,B$ 有关, 而与 $L$ 无关
+		1. 在 $D$ 内的任一条分段光滑闭曲线 $L$ 上
+		$\begin{aligned}\oint_LP\text{d}x+Q\text{d}y=0\end{aligned}$
 
-	3. 向量场是某函数的**梯度场**，即存在 $\varphi(x,y)$，使得
-	$\bm{v} = \nabla\varphi(x,y) \text{ or } \text{d}\varphi = P\text{d}x+Q\text{d}y$
+		2. 在 $D$ 内曲线积分 $\begin{aligned}\oint_LP\text{d}x+Q\text{d}y\end{aligned}$ 与路径无关，即值仅与 $A,B$ 有关, 而与 $L$ 无关
 
-	4. $\begin{aligned}\frac{\partial Q}{\partial x}\equiv \frac{\partial P}{\partial y}\end{aligned}$ 在 $D$ 内恒成立
+		3. 向量场是某函数的**梯度场**，即存在 $\varphi(x,y)$，使得
+		$\bm{v} = \nabla\varphi(x,y) \text{ or } \text{d}\varphi = P\text{d}x+Q\text{d}y$
 
-设 $v$ 在 $D$ 内的曲线积分与路径无关, 则对 $\forall A, B\in D$, 有
+		4. $\begin{aligned}\frac{\partial Q}{\partial x}\equiv \frac{\partial P}{\partial y}\end{aligned}$ 在 $D$ 内恒成立
+	
+	设 $v$ 在 $D$ 内的曲线积分与路径无关, 则对 $\forall A, B\in D$, 有
 
-$$\int_A^B\bm{v}\cdot\text{d}\bm{r}=\varphi(B)-\varphi(A)$$
+	$$\int_A^B\bm{v}\cdot\text{d}\bm{r}=\varphi(B)-\varphi(A)$$
 
-其中 $\varphi(x,y)$ 满足 $\bm{v}=\nabla\varphi$
+	其中 $\varphi(x,y)$ 满足 $\bm{v}=\nabla\varphi$
+
+
+=== "三维形式"
+
+	!!! tip "定理"
+
+		设 $\bm{v} = (P(x,y,z),Q(x,y,z),R(x,y,z))$ 是一维单连通区域 $V$ 内的光滑向量场，则下面四条等价：
+
+		1. 在 $V$ 内的任一条分段光滑闭曲线 $L$ 上
+		$\begin{aligned}\oint_LP\text{d}x+Q\text{d}y+R\text{d}z=0\end{aligned}$
+
+		2. 在 $V$ 内曲线积分 $\begin{aligned}\oint_LP\text{d}x+Q\text{d}y+R\text{d}z\end{aligned}$ 与路径无关，即值仅与 $A,B$ 有关, 而与 $L$ 无关
+
+		3. 向量场是某函数的**梯度场**，即存在 $\varphi(x,y,z)$，使得
+		$\bm{v} = \nabla\varphi(x,y,z) \text{ or } \text{d}\varphi = P\text{d}x+Q\text{d}y+R\text{d}z$
+
+		4. $\begin{aligned}\frac{\partial R}{\partial y}=\frac{\partial Q}{\partial z},\ \frac{\partial P}{\partial z}=\frac{\partial R}{\partial x},\ \frac{\partial Q}{\partial x}=\frac{\partial P}{\partial y}\end{aligned}$ 在 $D$ 内恒成立
+
+	设 $v$ 在 $D$ 内的曲线积分与路径无关, 则对 $\forall A, B\in D$, 有
+
+	$$\int_A^B\bm{v}\cdot\text{d}\bm{r}=\varphi(B)-\varphi(A)$$
+
+	其中 $\varphi(x,y,z)$ 满足 $\bm{v}=\nabla\varphi$
 
 ### 全微分求积
 
@@ -285,3 +310,24 @@ $$
 
 
 - **旋度物理意义** $\begin{aligned}\text{rot }\bm{v}\cdot \bm{n}^{\circ} \mid_M = \lim_{S\to M}\frac{1}{\text{Area}(V)}\oint_{\partial S}\bm{v}\cdot \text{d}\bm{r}\end{aligned}$
+
+## 保守场
+
+### 定义
+
+- 设 $V$ 为空间区域, 若 $V$ 中的任意闭曲线都可在 $V$ 中 连续收缩为一点, 则称 $V$ 为一维(曲面)单连通.
+
+- 若 $V$ 中的任意闭曲面可在 $V$ 中连续收缩为一点, 则称 $V$ 为二维(空间)单连通.
+
+- 设 \(\bm{v} = (P, Q, R)\) 是连通区域 \(V\) 内光滑向量场，若
+
+	1. 在 \(V\) 内曲线积分 \(\int_L P \text{d}x + Q \text{d}y + R \text{d}z\) 与路径无关，则称 \(\bm{v}\) 为 \(V\) 中的 **保守场**;
+
+	2. \(\text{d} \varphi = P \text{d}x + Q \text{d}y + R \text{d}z\)，则称 \(\varphi\) 是 \(\bm{v}\) 的 **势函数**，\(\bm{v}\) 是 \(\varphi\) 的 **梯度场**，即 \(\bm{v} = \nabla \varphi\);
+
+	3. 在 \(V\) 内恒有 \(\operatorname{rot} \bm{v} = 0\)，则称 \(\bm{v}\) 为 \(V\) 中的 **无旋场**.
+
+- 设 \(\bm{v}\) 为光滑向量场，\(V \subset \mathbb{R}^3\)。若存在向量场 \(\bm{\alpha}\) 使得 \(\bm{v} = \operatorname{rot} \bm{\alpha} = \nabla \times \bm{\alpha}\)，则称 \(\bm{\alpha}\) 为 \(\bm{v}\) 的 **向量势**.
+
+
+- 若 $\bm{v}$ 为光滑向量场, 则 $\bm{v}$ 存在向量势的充要条件是 $\bm{v}$ 为无源场.
