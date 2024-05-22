@@ -97,22 +97,23 @@ extra:
   #   analytics: false
   #   title: Cookie 选项
   #   description: 我们使用 Cookies 来识别您的重复访问和偏好设置，以及衡量我们文档的有效性和用户是否找到他们正在搜索的内容。您的同意有助于我们改善我们的文档。
+  
   status:
     <identifier>: <description>
-# [Extensions]
+
 plugins:
   # [搜索功能]
-  # https://squidfunk.github.io/mkdocs-material/plugins/search/
-  # 之前中文搜索是 Insider 的功能（https://squidfunk.github.io/mkdocs-material/blog/2022/chinese-search-support/），现在好像已经是默认功能了，
   - search:
       lang:
         - zh
         - en
         - ja
+  
   # [给单篇文章添加标签]
   # - tags
+
   - git-revision-date-localized:
-      # enable_creation_date: true
+      enable_creation_date: true
       exclude:
         - index.md
         - essay/index.md
@@ -161,27 +162,28 @@ markdown_extensions:
   - footnotes
 
 extra_javascript:
-  # [数学公式支持MathJax/KaTeX]
+  # [数学公式支持MathJax/KaTeX(JS)]
   # - mkdocs/javascripts/mathjax.js
   # - https://polyfill.io/v3/polyfill.min.js?features=es6
   # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  
   - mkdocs/javascripts/katex.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+  
   # [表情反馈模块]
-  - mkdocs/javascripts/feedback.js
+  # - mkdocs/javascripts/feedback.js
   # [评论区支持]
   - 'https://utteranc.es/client.js'
   # - mkdocs/javascripts/comment.js
 extra_css:
-  # [数学公式支持]
+  # [数学公式支持(CSS)]
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
-  # [自定义 css]
-  # 不使用底部的翻页
-  - mkdocs/css/no-footer.css
-  # 无序列表符号自定义
+  # [不使用底部的翻页]
+  # - mkdocs/css/no-footer.css
+  # [无序列表符号自定义]
   - mkdocs/css/unordered-list-symbols.css
-  # 使用旧版注意标识
+  # [使用旧版注意标识]
   # - mkdocs/css/classic.css
   - mkdocs/css/extra.css
 
