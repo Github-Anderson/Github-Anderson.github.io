@@ -12,10 +12,10 @@ jobs: # 工作流的具体内容
     steps:
       - uses: actions/checkout@v2 # 先checkout到main分支
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # 重要!获取到完整Git记录 便于正确显示 git-revision-date-localized-plugin 的时间
       - uses: actions/setup-python@v2 # 再安装Python3和相关环境
         with:
           python-version: 3.x
-      - run: pip install mkdocs-git-revision-date-localized-plugin
+      - run: pip install mkdocs-git-revision-date-localized-plugin # 安装插件
       - run: pip install mkdocs-material # 使用pip包管理工具安装mkdocs-material
       - run: mkdocs gh-deploy --force # 使用mkdocs-material部署gh-pages分支
