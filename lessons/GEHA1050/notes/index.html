@@ -1,0 +1,2707 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Anderson_Yang 的个人网站">
+      
+      
+        <meta name="author" content="Anderson_Yang">
+      
+      
+        <link rel="canonical" href="https://Github-Anderson.github.io/lessons/GEHA1050/notes/">
+      
+      
+        <link rel="prev" href="../../SI120/code/">
+      
+      
+        <link rel="next" href="../../../essay/">
+      
+      
+      <link rel="icon" href="../../../octicons/terminal-16">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
+    
+    
+      
+        <title>课堂笔记 - Anderson_Yang 的个人网站</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/no-footer.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
+    
+      <link rel="stylesheet" href="../../../mkdocs/css/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="Anderson_Yang 的个人网站" class="md-header__button md-logo" aria-label="Anderson_Yang 的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.749.749 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53Zm1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Anderson_Yang 的个人网站
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              课堂笔记
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8v2m9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1 0 1.71-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="dsefault" data-md-color-primary="white" data-md-color-accent="blue"  aria-label="切换至暗黑模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至暗黑模式" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="切换至系统默认"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="切换至系统默认" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Github-Anderson/Github-Anderson.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Github-Anderson.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  博客
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  课程
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../essay/" class="md-tabs__link">
+          
+  
+    
+  
+  随笔
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../about/" class="md-tabs__link">
+          
+  
+    
+  
+  关于
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Anderson_Yang 的个人网站" class="md-nav__button md-logo" aria-label="Anderson_Yang 的个人网站" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.749.749 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53Zm1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5Z"/></svg>
+
+    </a>
+    Anderson_Yang 的个人网站
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Github-Anderson/Github-Anderson.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Github-Anderson.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    博客
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            博客
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visual Studio Code
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Visual Studio Code
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/code/env/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    环境变量
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/code/tips/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一些小技巧
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MarkDown
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            MarkDown
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/md/markdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    语法速记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Material for MkDocs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Material for MkDocs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/mkdocs/first/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    使用 Material for MkDocs 建立你的个人网站
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/mkdocs/extra/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一些小细节
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    游戏
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            游戏
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/games/cs2onmac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    在 macOS 上畅玩 CS2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    课程
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            课程
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    信息科技导论 SI100B
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            信息科技导论 SI100B
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SI100B/SI100B-report/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SI100B-Report
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SI100B/fb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一些本来想写在 CourseBench 上的话
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数学分析 GEMA1009 & 10
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            数学分析 GEMA1009 & 10
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GEMA10XX/links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一些有用的链接
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GEMA10XX/int/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常用积分表
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GEMA10XX/int-application/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    积分的运用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GEMA10XX/ode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ODE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GEMA10XX/iint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    多元微积分
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GEMA10XX/oint/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    曲线和曲面积分
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../GEMA10XX/fourier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fourier 分析
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--new"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    线性代数 MATH1112
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            线性代数 MATH1112
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MATH1112/links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一些有用的链接
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MATH1112/ele/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    知识点总结
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    设计思维 ARTS1701
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            设计思维 ARTS1701
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ARTS1701/main/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DESIGN THINKING
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    离散数学 SI120
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            离散数学 SI120
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SI120/links/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    一些有用的链接
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../SI120/code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    代码实现
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    中华文明通论 GEHA1050
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            中华文明通论 GEHA1050
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    课堂笔记
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../essay/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    随笔
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            随笔
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    文章
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            文章
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../essay/thoughts/230828-from-mac-to-mac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    从 Mac 到 Mac
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../essay/thoughts/231002-refl-online/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    关于网上舆论的一些思考
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    记录
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            记录
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../essay/logs/240127/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    想法 - 20240127
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../essay/logs/240206/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    想法 - 20240207
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../essay/logs/240303/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    想法 - 20240303
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../essay/logs/240420/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    想法 - 20240420
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../about/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    关于
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            关于
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    联系方式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/Github-Anderson/Github-Anderson.github.io/edit/main/docs/lessons/GEHA1050/notes.md" title="编辑此页" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="_1">课堂笔记<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="l0">l0<a class="headerlink" href="#l0" title="Permanent link">&para;</a></h1>
+<h3 id="_2">何谓文明？<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h4 id="civilization">历史进步论下的Civilization<a class="headerlink" href="#civilization" title="Permanent link">&para;</a></h4>
+<ul>
+<li>近代⻄欧的历史进步论，是基于未启蒙的欧洲逐步到达先进 <strong>CIVILIZATION</strong>的线性时间，也是<strong>CIVILIZED</strong>欧洲、<strong>SEMI- CIVILIZED</strong>亚洲与其他<strong>UNCIVILIZED</strong>地区在地理上的区别。</li>
+<li>启蒙运动相信<strong>CIVILIZATION</strong>能够而且应该征服和灌输野蛮，并 为外国入侵和统治辩护。进化论在<strong>19</strong>世纪发挥了重要作用，催 生了解释<strong>CIVILIZATION</strong>和野蛮的社会进化论。</li>
+</ul>
+<h4 id="civilization_1">从Civilization到“文明”<a class="headerlink" href="#civilization_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>1875</strong>年(明治8年)日本思想家福泽谕吉在《文明论之概略》一 书中将<strong>CIVILIZATION</strong>翻译为“文明”。</li>
+</ul>
+<h4 id="_3">考古学中的文明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>物质文化因素主导的判断标准 考古学家——物质研究者</li>
+<li>伦理观念</li>
+</ul>
+<h4 id="_4">中文中的“文明”<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<ul>
+<li>周易：文明以止，人文也</li>
+<li>王夫之《周易内传》：而风气各殊，止于其所，...各有其美，犁然而别，</li>
+<li>中华的文明是指一种多元共存、和而不同的秩序</li>
+</ul>
+<h4 id="_5">何谓中华文明？<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>中华文明是世界古代文明之一，且延绵至今未曾中断，在人类文明史上占有独特而重要的地位。</li>
+<li>不是封闭的文明：接触印度、日本</li>
+<li>欧亚大陆东部位舞台</li>
+<li>以礼乐为秩序核心</li>
+<li>以汉字位主要表达载体</li>
+<li>融合世界其他文明</li>
+</ul>
+<p>一家之言：中华文明是一个以儒家文化为内核，杂糅百家，维持人与人之间和谐秩序的社会形态</p>
+<h4 id="_6">为何要学习中华文明？<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<ul>
+<li>每个人的诞生不单是生物遗传，亦是一种文明的继承。</li>
+<li>梁启超<strong>“血浓于水，语浓于血”。</strong></li>
+</ul>
+<h4 id="3">思考题 * 3<a class="headerlink" href="#3" title="Permanent link">&para;</a></h4>
+<h3 id="_7">课程安排<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>本课程分为历史、哲学、文学艺术三大板块</li>
+<li>以专题的形式</li>
+</ul>
+<h1 id="l1">l1<a class="headerlink" href="#l1" title="Permanent link">&para;</a></h1>
+<h4 id="_8">中国人的历史撰述<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>梁启超：惟史学为最发达</p>
+<h4 id="_9">史书的种类<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<ul>
+<li>专门进行历史叙事的文章典籍</li>
+<li>分类：十种十二类</li>
+<li>大体而言：通代-断代、天下-地方、群体-个体、综合-专门</li>
+<li>于今日而言，此皆史料。</li>
+</ul>
+<h4 id="_10">史官与史家<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<p>《周礼》</p>
+<ul>
+<li>小史、内史、外史、御史</li>
+<li>史家，进行有自觉的历史叙事之人。</li>
+<li>史家的萌芽：删削《春秋》的孔子</li>
+<li>史家的成立：《春秋》三传的成立</li>
+<li>史家的成熟：司马迁完成《史记》</li>
+</ul>
+<p>司马迁之后</p>
+<h3 id="_11">传统中国的历史精神<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<h4 id="_12">历史是中国人的存在方式<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>三问</p>
+</li>
+<li>
+<p>何为中国人？中国人从哪来？中国人要到哪里去？</p>
+</li>
+</ul>
+<p>可以说“历史人”</p>
+<ul>
+<li>三不朽</li>
+</ul>
+<h4 id="_13">何以造成中国人如此重视历史？<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<ul>
+<li>在中华文明中，历史被看作是过去个人生活经验的结晶。</li>
+<li>
+<p>既不能流芳后世，不足复遗臭万载邪。</p>
+</li>
+<li>
+<p>历史意识</p>
+</li>
+<li>由意识推动</li>
+<li>历史描述具有时间感、方向感</li>
+</ul>
+<h4 id="_14">《春秋》的精神代表着中国传统史学的精神<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<ul>
+<li>史学精神的源头</li>
+</ul>
+<h4 id="_15">何为《春秋精神》？<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<ul>
+<li>即史实而求史义，于史实中衰善贬恶，事实判断与价值制断合而为一。</li>
+<li>隐藏在历史事件之中</li>
+</ul>
+<h4 id="_16">经史贯通<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<ul>
+<li>最能体现中国传统史学、文化精神的是经史贯通这一学术传统</li>
+</ul>
+<h4 id="_17">道德判断之讲求<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<ul>
+<li>史家审视历史的眼光不能偏离伦理，同时更应以完成到的理想为旨归</li>
+<li>中国传统史学的一大特质</li>
+</ul>
+<h4 id="_18">知识与价值<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<ul>
+<li>历史事件具有“知识”与“价值”的属性</li>
+<li>
+<p>事实判断与价值判断</p>
+</li>
+<li>
+<p>儒家历史学实质上是一种广义的道德学或社会科学。这种特性下，儒家历史叙述是一种证立普遍理则的手段。</p>
+</li>
+</ul>
+<h4 id="_19">史学在于经世<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<ul>
+<li>有何目的？经世</li>
+<li>切合人事</li>
+</ul>
+<h4 id="_20">何谓经世？<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<ul>
+<li>“治理天下”，意味着建立通用于整个人类世界的秩序。</li>
+<li>与”政治“观念不同</li>
+</ul>
+<h4 id="_21">治过去之史是为了当下之经世<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<h4 id="_22">传统史学家如何达到经世的目标？<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h4>
+<ul>
+<li>常常采取一种“反事实性的思考方式”</li>
+<li>以“过去如何如何”，表达“现在应该如何如何”</li>
+<li>从“故事”所见世界“应然”之理，批判现在“实然”之状</li>
+<li>注入价值信念</li>
+<li>赋予意义</li>
+<li>作为当前现实的镜子</li>
+<li>撰史过程是一种重构历史的过程</li>
+<li>虚构美化</li>
+</ul>
+<h4 id="_23">中国史学的史论传统<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h4>
+<ul>
+<li>《左传》：君子曰</li>
+<li>《史记》：太史公曰</li>
+<li>。。。</li>
+</ul>
+<p>《伶官传序》：说明国家兴衰败亡不由天命而取决于“人事”</p>
+<h4 id="_24">以人为本<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>在中华文明中，历史也是人性，人性由历史而呈现</p>
+</li>
+<li>
+<p>晋赵盾。。。</p>
+</li>
+</ul>
+<h4 id="_25">纪传体<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h4>
+<ul>
+<li>致力于对人物的刻画，特别重视“善善恶恶，贤贤贱不肖”的著史原则</li>
+<li>与西方历史完全不同</li>
+<li>是由人所缔造的鲜活记忆</li>
+<li>突出特殊的个体</li>
+<li>正史</li>
+</ul>
+<h4 id="_26">秉笔直书<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h4>
+<ul>
+<li>人文主义精神见于对直书传统的持守</li>
+<li>发展了“价值判断”与“事实判断”，并合二为一</li>
+<li>中国史家以仲裁者自居，试图进行公正的评价，给予历史人物适当的惩戒或奖掖</li>
+</ul>
+<h3 id="_27">小结<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h3>
+<ul>
+<li>从公元前841年开始，中国人的历史记载就没有中断，从票时起，中国人就以过去的理想作为指导以评判并规划现实，观今而思古，鉴古而知今，并以审视现实而建立的理想，作为指导以评判过去。历史的撒判在中华文明中具有绝对的严肃性。</li>
+<li>
+<p>强烈的历史意识和发达的历史思维，推动了中国传统社会的发展并盤造了中国传统文化的特质，史学成了支撑中国传统文化和学术的重要支桂和基础，做中国人意味着做一个具有历史感的人，离开历史放无法理解中国人的文化和生命意义。历史为中国人提供了生命的方向，中国人亦在历史中得以安身立命。</p>
+</li>
+<li>
+<p>中国传统史学于史实中褒善贬恶、即史实而求价值，具有经史贯通的特点，而非一种纯粹作为知识活动的历史研究。“史义”作为判定价值的标杆隐藏在历史事件中。
+  因此中国传统史学讲求“抽离史义”，史学家们以此为读史著史的信念，格历史叙速升华为一种创造性的活动。</p>
+</li>
+<li>中国传统史学源于《春秋）的立言精神，有着悠久的经史贯通传统，其史实与史义、事实判断与价值判断合而为一。而对史义的通达具有超越的意义，古人正是借此得以在史学研究活动中安身立命的。</li>
+<li>
+<p>中国传统史学家读史著史活动中强烈的现实关怀和深切的人文精神，以及中国传统史学的经世动机和实学性格，治过去之史乃是为了当下之经世。中国传统史学以经世为目标，传统史学中的反事实性思维方式、史论传统、以人为本、直书传续等都是为了以史为鉴，从而达到鉴古而知今，述往而经世的目标。</p>
+</li>
+<li>
+<p>传统中国史学家之治史，讲求经史贯通，在史学研究中安顿自己的生命、体认出人生意义与价值，这与那种只将历史视为一零碎、客观知识对象的近现代史学家逗然珠途。</p>
+</li>
+<li>在时下“历史相对主义”与“虚无主义“流行之际，回望古代，中国人一直在苦苦寻求如何找到价值。可以说中华文明吧是在虚无的时间长河中，找到了作为人类而努力生存、将虚无的时回转化为历史的生存证据。</li>
+</ul>
+<h1 id="l2">l2<a class="headerlink" href="#l2" title="Permanent link">&para;</a></h1>
+<h3 id="_28">中国古代地理<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<h4 id="_29">中国地理与早期文明形态<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h4>
+<p><em>中国地理</em></p>
+<ul>
+<li>中国占据着东亚大陆拥有多样的地形</li>
+<li>水源</li>
+<li>400mm等降水量线：划分湿润和干旱区域、农业文明和游牧文明的分界线</li>
+</ul>
+<p><em>早期文明形态</em></p>
+<ul>
+<li>被划分成多个相对独立的小区域</li>
+<li>区域文明的兴起与整合：因为气候地理不同，形成了数个文化区，展现文化多元特征</li>
+</ul>
+<h4 id="_30">宅兹中国与古代世界观<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>黄河上游的偏西北地区：畜牧业</p>
+</li>
+<li>
+<p>在全新世气候波动性干燥的影响</p>
+</li>
+<li>
+<p>长江流域：稻作农业的发展</p>
+</li>
+<li>
+<p>三个主要阶段</p>
+</li>
+<li>
+<p><strong>第一阶段</strong>（公元前4000年至前3300年）：</p>
+<ul>
+<li>中原地区的仰解文化进入了庙底沟期，达到了空前的繁荣。</li>
+<li>长江中下游地区，如良请文化也呈现出了相似的繁荣态势。</li>
+</ul>
+</li>
+<li>
+<p><strong>第二阶段</strong>（公元前3300年至前2500年或稍晚）：</p>
+<ul>
+<li>中原地区由于内部结构调整，进入了相对的沉寂期</li>
+<li>长江中下游地区继续保持了良渚文化等的高峰状态。</li>
+<li>黄河下游的海岱文化区保持着稳健发展。</li>
+<li>辽西地区的红山文化更快的速度走向了社会发展的巅峰</li>
+</ul>
+</li>
+<li>
+<p><strong>第三阶段</strong>（公元前2500年至前2000年）：</p>
+<ul>
+<li>长江上游的成都平原突然涌现出一批城址</li>
+<li>辽西、长江中下游地区的社会文明化进程急转而下。</li>
+<li>红山文化和良清文化一北一南相继衰落。</li>
+<li>中原文化在经过一轮调整后再度崛起</li>
+<li>形成了“以中原为中心的历史趋势”。</li>
+</ul>
+</li>
+<li>
+<p>中原地区的地理优势：</p>
+</li>
+<li>
+<p>得天独厚的土地资源条件：黄土</p>
+</li>
+<li>稳定的气候条件：当时中原气温降水较高</li>
+<li>丰富的地貌条件</li>
+<li>地域广大</li>
+<li>环境类型多样</li>
+<li>
+<p>地理位置居中：便于交流</p>
+</li>
+<li>
+<p>特点：文化多样性、包容性</p>
+</li>
+<li>
+<p>中原地区的文明整合：“中原龙山文化”、“<strong>陶寺遗址</strong>”（代表）</p>
+</li>
+<li>陶寺遗址的价值：不同的文明进程</li>
+<li>中原文明 vs 良渚</li>
+<li>文化特征：不强调宗教色彩，没有清晰的等级分化</li>
+<li>军事与暴力的突出：城址使用时间较短</li>
+<li>社会结构：金字塔型 vs 橄榄形、军事贵族为主</li>
+<li>地理位置：中心</li>
+</ul>
+<h4 id="_31">现代中国疆域与“自古以来”<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h4>
+<p><em>绪言</em></p>
+<ul>
+<li>以自身为中心的世界观</li>
+<li>中国的天地模型之：盖天说、...</li>
+</ul>
+<p>中国在哪？</p>
+<ul>
+<li>三十块钱的“中国”</li>
+<li>地中——方之道</li>
+<li>自然地理认识<span class="arithmatex">\(\rightarrow\)</span>人间的秩序</li>
+<li>地中——圈层结构</li>
+<li>五服</li>
+<li>天下——华夷二分</li>
+<li>大地格局</li>
+<li>华夏观念下的边疆：中央与边疆</li>
+<li>华夷的外在表现：宗藩朝贡体系</li>
+<li>要么被直接统治，要么被间接</li>
+<li>上国与下国</li>
+<li>核心：以中国皇帝为中心</li>
+<li>赋予不同地位与称号</li>
+<li>
+<p>近代疆域的形成与领土属性的转变</p>
+</li>
+<li>
+<p>清帝国时期，东亚国际体系：太阳系模型</p>
+</li>
+<li>西方：去中心化</li>
+<li>
+<p>国家主权职能的变化</p>
+</li>
+<li>
+<p>鸦片战争之后，</p>
+<ol>
+<li>中国开始明确自己的国家边界</li>
+<li>外务的产生：对国际范式进行重构</li>
+</ol>
+</li>
+</ul>
+<p>如何理解“<strong>自古以来</strong>”？</p>
+<ul>
+<li>不能简化历史的复杂性</li>
+<li>每个国家都经历了一个从形成到发展的过程。在这个过程中，国家的领土往往会发生变化。</li>
+<li>
+<p>从无到有，从小到大，从模糊到明确</p>
+</li>
+<li>
+<p>应该有明确的时间界限，而不是无限追溯</p>
+</li>
+</ul>
+<h4 id="_32">“历史时期中国”范围的原则<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h4>
+<ul>
+<li>我们应该基于整个历史时期几千年来历史发展自然形成的中国来定义历史上的中国</li>
+<li>现在的中国疆域，已经不是历史上自然形成的那个范围，而是近百年来资本主义列强、帝国主义侵略的结果</li>
+<li>1840年以前：基本微受到外来因素影响——文明内产生的结果</li>
+<li>以后：直接间接受到西方列强势力的影响——外部强加</li>
+</ul>
+<h4 id="_33">结语：历史的回响与未来的挑战<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h4>
+<ul>
+<li>中国现代疆域的形成是历史长河中政治、文化、外交互动等多因素共同作用的产物。从华夏文化的传承到领土属性的转变，中国在历史的回响中塑造了多元而复杂的国家形象。面对未来，中国需要处理好与周边国家的关系，解决历史遗留问题，实现国家统一和社会稳定。这一过程也将在全球化的背景下呈现出新的挑战和机遇。</li>
+</ul>
+<h1 id="l3">l3<a class="headerlink" href="#l3" title="Permanent link">&para;</a></h1>
+<h4 id="_34">古代中国与世界是否交流？<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h4>
+<ul>
+<li>网络：人类、文明、个人</li>
+<li>没有孤立的个人或族群</li>
+<li>人类命运共同体</li>
+<li>国家内部、之间</li>
+<li>迁徙</li>
+</ul>
+<h4 id="_35">为什么要学习中古与世界的关系<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h4>
+<ul>
+<li>中华文明的独特性</li>
+<li>连续性</li>
+<li>血缘</li>
+<li>孝道</li>
+<li>传教士与中国的方块字</li>
+</ul>
+<h4 id="_36">闭关锁国论极其影响<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h4>
+<ul>
+<li>明清时期的海禁政策</li>
+<li>官方政策与民间对策</li>
+<li>物种交换</li>
+<li>人员迁徙</li>
+<li>货币交流</li>
+</ul>
+<h4 id="_37">中国的地形<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h4>
+<ul>
+<li>中原农耕</li>
+<li>草原游牧</li>
+<li>绿洲农业及商业</li>
+</ul>
+<h4 id="_38">中原定居农业<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h4>
+<ul>
+<li>黄土高原</li>
+<li>小米与养猪</li>
+<li>南方种植水稻</li>
+<li>安土重迁</li>
+</ul>
+<h4 id="_39">草原游牧文化<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h4>
+<ul>
+<li>4000年前，畜牲化</li>
+<li>采集、游牧、农业？</li>
+<li>移动</li>
+<li>放牧（），肉类，乳制品</li>
+<li>经济脆弱、难以自足</li>
+<li>环境承载低、人口稀少</li>
+<li>组织松散、部族血缘为单位</li>
+<li>应对定居民</li>
+</ul>
+<h4 id="_40">绿洲经济<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h4>
+<ul>
+<li>水源、山脉</li>
+<li>农业、商业</li>
+<li>无法形成统一国家</li>
+<li>依附于强权</li>
+</ul>
+<h4 id="_41">丝绸之路<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h4>
+<h4 id="_42">中外交流的形式：贸易与商品<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h4>
+<ul>
+<li>贸易的必要性</li>
+<li>农业生活必需品：盐、铁</li>
+<li>理想化的自给自足的小农社会</li>
+<li>农业社会与游牧社会贸易的必要性</li>
+<li>游牧社会的脆弱性</li>
+<li>粮食、茶、铁器、手工艺品</li>
+<li>Trade or Raid</li>
+<li>农耕社会的需求</li>
+<li>马匹、皮毛</li>
+</ul>
+<h4 id="_43">奢饰品贸易：丝绸<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h4>
+<ul>
+<li>丝绸的历史</li>
+<li>养蚕及采桑</li>
+<li>奢侈品贸易的功能</li>
+<li>身份阶层划分</li>
+<li>赏赐</li>
+<li>货币</li>
+</ul>
+<h4 id="_44">商品<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h4>
+<ul>
+<li>瓷器</li>
+<li>五大窑</li>
+<li>天青色与青花瓷的区别</li>
+</ul>
+<h4 id="_45">铜钱<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h4>
+<ul>
+<li>铜钱走私严重</li>
+<li>高丽、日本、交趾（铸币，主要货币）</li>
+<li>东南亚诸国（金银货币为主，不铸币）</li>
+<li>非洲、中东地区</li>
+</ul>
+<h4 id="_46">进口商品<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h4>
+<ul>
+<li>珍宝</li>
+<li>香料</li>
+<li>药材</li>
+<li>日常用品</li>
+<li>军事用品</li>
+</ul>
+<h4 id="_47">技术交流<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h4>
+<ul>
+<li>出口技术</li>
+<li>四大发明：造纸、指南针、火药、活字印刷</li>
+<li>进口技术</li>
+<li>造糖术、棉纺织技术、火器</li>
+</ul>
+<h4 id="_48">文化交流<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h4>
+<ul>
+<li>输入文化</li>
+<li>宗教、佛教、基督教、伊斯兰教</li>
+</ul>
+<h4 id="_49">艺术的交流<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h4>
+<ul>
+<li>乐器</li>
+<li>
+<p>舞蹈</p>
+</li>
+<li>
+<p>中国文化输出</p>
+</li>
+<li>中国绘画</li>
+<li>波斯细密画</li>
+</ul>
+<h4 id="_50">人员的交流<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h4>
+<ul>
+<li>来到中国的外来移民</li>
+<li>中国人移民</li>
+</ul>
+<h1 id="l4">l4<a class="headerlink" href="#l4" title="Permanent link">&para;</a></h1>
+<h4 id="_51">玉石之路<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h4>
+<h4 id="_52">军事与外交人员<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h4>
+<ul>
+<li>张骞（前175—前114年）</li>
+<li>汉朝与匈奴的对抗</li>
+<li>大月氏西迁</li>
+<li>第一次出使西域</li>
+<li>第二次出使西域</li>
+</ul>
+<h4 id="_53">南方丝绸之路的探索<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h4>
+<ul>
+<li>大夏的四川物产</li>
+<li>成都平原—云南—缅甸—印度—阿富汗—中亚</li>
+</ul>
+<h4 id="13711433">郑和（1371年—1433年）<a class="headerlink" href="#13711433" title="Permanent link">&para;</a></h4>
+<h4 id="1409">第三次下西洋 （1409年）<a class="headerlink" href="#1409" title="Permanent link">&para;</a></h4>
+<h4 id="1413-1414">第四次下西洋 （1413-1414）<a class="headerlink" href="#1413-1414" title="Permanent link">&para;</a></h4>
+<h4 id="_54">宗教人士<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h4>
+<ul>
+<li>玄奘（602-664）</li>
+</ul>
+<h4 id="_55">长春真人西游记<a class="headerlink" href="#_55" title="Permanent link">&para;</a></h4>
+<h4 id="_56">马可波罗行纪<a class="headerlink" href="#_56" title="Permanent link">&para;</a></h4>
+<ul>
+<li>马可波罗（1254-1324）</li>
+<li>Nicolas and Matteo</li>
+<li>Travels 1271-1295</li>
+<li>大都</li>
+<li>扬州</li>
+<li>杭州</li>
+<li>海路回国</li>
+<li>Genoa 狱中写作</li>
+<li>Rustichello </li>
+</ul>
+<h4 id="_57">争议<a class="headerlink" href="#_57" title="Permanent link">&para;</a></h4>
+<ul>
+<li>中国史籍没有发现</li>
+<li>襄阳战役</li>
+<li>筷子、汉字、长城、缠足</li>
+<li>质疑</li>
+<li>《经世大典》</li>
+</ul>
+<h4 id="_58">女性<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h4>
+<ul>
+<li>History or her story?</li>
+<li>为什么要研究女性</li>
+<li>不被记录</li>
+<li>被压迫的地位</li>
+<li>胡姬</li>
+</ul>
+<h4 id="_59">中国古代政治制度<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h4>
+<h4 id="_60">政治为什么重要？<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h4>
+<ul>
+<li>中国文化的特点</li>
+<li>世俗性：行政权力主导（皇帝）、无主要宗教、（儒、释、道）仅为权力的补充</li>
+<li>中世纪的欧洲和伊斯兰世界</li>
+<li>君权神授 （上帝的归上帝，凯撒的归凯撒）</li>
+<li>政教合一 （哈里发：国王兼伊玛目）</li>
+</ul>
+<h4 id="_61">中国政治的特点<a class="headerlink" href="#_61" title="Permanent link">&para;</a></h4>
+<ul>
+<li>超大规模</li>
+<li>长期稳定（朝代更迭）</li>
+<li>族群相对单一</li>
+<li>商周革命</li>
+<li>封建到郡县</li>
+<li>唐宋变革</li>
+</ul>
+<h4 id="_62">世俗性政权的产生：商周革命<a class="headerlink" href="#_62" title="Permanent link">&para;</a></h4>
+<ul>
+<li>武王伐纣</li>
+<li>夏商周断代工程</li>
+<li>共和元年（前841年）</li>
+<li>方法：文献、考古、天文、科技</li>
+<li>夏（约前2070年）</li>
+<li>商（约前1600年）</li>
+<li>周（前1046年）</li>
+</ul>
+<h4 id="_63">商代的文化<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h4>
+<ul>
+<li>商王祭司</li>
+<li>上帝祖先</li>
+<li>甲骨文</li>
+<li>祭祀</li>
+<li>夏朝是否存在？</li>
+<li>夏尚忠，商尚鬼，周尚文</li>
+</ul>
+<h4 id="_64">西周的封建制<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h4>
+<ul>
+<li>神国到人国</li>
+<li>上帝与天</li>
+<li>天命观</li>
+<li>敬德保民</li>
+<li>封建宗法体系</li>
+<li>立嫡以长不以贤，立子以贵不以长</li>
+<li>礼乐秩序</li>
+<li>天子驾六，诸侯驾五，卿驾四，大夫三，士二，庶人一</li>
+</ul>
+<h1 id="l5">l5<a class="headerlink" href="#l5" title="Permanent link">&para;</a></h1>
+<h4 id="_65">西周的封建制<a class="headerlink" href="#_65" title="Permanent link">&para;</a></h4>
+<ul>
+<li>神国到人国</li>
+<li>上帝与天</li>
+<li>天命观</li>
+<li>立嫡以长不以贤，立子以贤不以长</li>
+<li>礼乐秩序</li>
+</ul>
+<h4 id="_66">张载：西铭<a class="headerlink" href="#_66" title="Permanent link">&para;</a></h4>
+<h4 id="_67">周代的封建制<a class="headerlink" href="#_67" title="Permanent link">&para;</a></h4>
+<h4 id="_68">分封制的特点<a class="headerlink" href="#_68" title="Permanent link">&para;</a></h4>
+<h4 id="_69">封建到郡县<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h4>
+<ul>
+<li>对内统一战争对需要</li>
+<li>大一统</li>
+<li>郡：守、尉、监</li>
+</ul>
+<h4 id="_70">汉代的郡与国<a class="headerlink" href="#_70" title="Permanent link">&para;</a></h4>
+<ul>
+<li>秦的教训</li>
+</ul>
+<h4 id="_71">皇帝制度的特点<a class="headerlink" href="#_71" title="Permanent link">&para;</a></h4>
+<ul>
+<li>神圣性</li>
+<li>不可让渡性</li>
+<li>最年长的皇帝？</li>
+<li>直系亲属登基最多的皇帝：李隆基的</li>
+<li>两次登基的皇帝：唐中宗李显、唐睿宗李旦</li>
+</ul>
+<h4 id="_72">中国传统政治的特点<a class="headerlink" href="#_72" title="Permanent link">&para;</a></h4>
+<h4 id="_73">皇权与相权<a class="headerlink" href="#_73" title="Permanent link">&para;</a></h4>
+<ul>
+<li>皇帝与官僚集团</li>
+<li>皇家与政府</li>
+<li>三省六部制</li>
+</ul>
+<h4 id="_74">唐宋变革论<a class="headerlink" href="#_74" title="Permanent link">&para;</a></h4>
+<h4 id="_75">清代的军机处<a class="headerlink" href="#_75" title="Permanent link">&para;</a></h4>
+<h4 id="_76">中央与地方的关系<a class="headerlink" href="#_76" title="Permanent link">&para;</a></h4>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="最后更新">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 22, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+  
+
+
+
+
+  <h2 id="__comments">评论</h2>
+  <script src="https://giscus.app/client.js"
+        data-repo="Github-Anderson/Github-Anderson.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzNjk3MjcwNTc="
+        data-category="Announcements"
+        data-category-id="DIC_kwDOFgmWUc4Ce_DC"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Anderson_Yang
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/Github-Anderson" target="_blank" rel="noopener" title="GitHub" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://space.bilibili.com/24705427" target="_blank" rel="noopener" title="Bilibili" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M488.6 104.1c16.7 18.1 24.4 39.7 23.3 65.7v202.4c-.4 26.4-9.2 48.1-26.5 65.1-17.2 17-39.1 25.9-65.5 26.7H92.02c-26.45-.8-48.21-9.8-65.28-27.2C9.682 419.4.767 396.5 0 368.2V169.8c.767-26 9.682-47.6 26.74-65.7C43.81 87.75 65.57 78.77 92.02 78h29.38L96.05 52.19c-5.75-5.73-8.63-13-8.63-21.79 0-8.8 2.88-16.06 8.63-21.797C101.8 2.868 109.1 0 117.9 0s16.1 2.868 21.9 8.603L213.1 78h88l74.5-69.397C381.7 2.868 389.2 0 398 0c8.8 0 16.1 2.868 21.9 8.603 5.7 5.737 8.6 12.997 8.6 21.797 0 8.79-2.9 16.06-8.6 21.79L394.6 78h29.3c26.4.77 48 9.75 64.7 26.1zm-38.8 69.7c-.4-9.6-3.7-17.4-10.7-23.5-5.2-6.1-14-9.4-22.7-9.8H96.05c-9.59.4-17.45 3.7-23.58 9.8-6.14 6.1-9.4 13.9-9.78 23.5v194.4c0 9.2 3.26 17 9.78 23.5s14.38 9.8 23.58 9.8H416.4c9.2 0 17-3.3 23.3-9.8 6.3-6.5 9.7-14.3 10.1-23.5V173.8zm-264.3 42.7c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.2 6.3-14 9.5-23.6 9.5-9.6 0-17.5-3.2-23.6-9.5-6.1-6.3-9.4-14-9.8-23.2v-33.3c.4-9.1 3.8-16.9 10.1-23.2 6.3-6.3 13.2-9.6 23.3-10 9.2.4 17 3.7 23.3 10zm191.5 0c6.3 6.3 9.7 14.1 10.1 23.2V273c-.4 9.2-3.7 16.9-9.8 23.2-6.1 6.3-14 9.5-23.6 9.5-9.6 0-17.4-3.2-23.6-9.5-7-6.3-9.4-14-9.7-23.2v-33.3c.3-9.1 3.7-16.9 10-23.2 6.3-6.3 14.1-9.6 23.3-10 9.2.4 17 3.7 23.3 10z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit", "content.tooltips"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../mkdocs/javascripts/feedback.js"></script>
+      
+        <script src="https://utteranc.es/client.js"></script>
+      
+    
+  </body>
+</html>
