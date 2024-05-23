@@ -1,3 +1,3 @@
-# PDF
+# Cheatsheet
 
-[here](chsh.pdf)
+[chsh.pdf](chsh.pdf)

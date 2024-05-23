@@ -121,8 +121,6 @@ plugins:
         - lessons/index.md
         - about/index.md
       type: date
-  
-  - with-pdf
 
 markdown_extensions:
   - pymdownx.critic
