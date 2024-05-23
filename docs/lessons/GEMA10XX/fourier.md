@@ -23,11 +23,11 @@ $f_e(x)=\begin{cases}f(x), &0\leq x\leq l\\f(-x), &-l\leq x < 0\end{cases}\quad 
 
 函数集合 $\{1, \cos x,\sin x, \cdots ,\cos nx,\sin nx ,\cdots\}$
 
-1. 
+1. $\displaystyle \frac{1}{\pi}\int_{-\pi}^{\pi}\cos mx\cos nx\text{d}x=\begin{cases}0, &m\neq n\\1, &m=n\neq 0\\2, &m=n=0\end{cases}(m,n=1,2,\dots)$
 
-2. 
+2. $\displaystyle \frac{1}{\pi}\int_{-\pi}^{\pi}\sin mx\sin nx\text{d}x=\begin{cases}0, &m\neq n\\1, &m=n\end{cases}(m,n=1,2,\dots)$
 
-3. 
+3. $\displaystyle \frac{1}{\pi}\int_{-\pi}^{\pi}\sin mx\cos nx\text{d}x=0\ (m=1,2,\dots; n=0,1,\dots)$
 
 ### 周期函数的 Fourier 级数
 
