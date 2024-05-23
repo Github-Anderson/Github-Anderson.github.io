@@ -115,7 +115,7 @@ $$\varPhi=\oint_L\bm{v}\cdot\text{d}\bm{r}=\oint_LP\text{d}x+Q\text{d}y$$
 
 $$\int_LP\text{d}x+Q\text{d}y=\int_a^b[P(x,y(x))+Q(x,y(x))y'(x)]\text{d}x$$
 
-- 若 $L$ 为平行 $x$ 轴的定向线段, 则 $\int_LQ\text{d}y=0$
+- 若 $L$ 为平行 $x$ 轴的定向线段, 则 $\displaystyle\int_LQ\text{d}y=0$
 
 ### Green 定理
 
