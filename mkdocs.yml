@@ -121,6 +121,8 @@ plugins:
         - lessons/index.md
         - about/index.md
       type: date
+  
+  - with-pdf
 
 markdown_extensions:
   - pymdownx.critic
@@ -224,6 +226,7 @@ nav:
     - 离散数学 SI120:
       - lessons/SI120/links.md
       - lessons/SI120/code.md
+      - lessons/SI120/chsh.md
     - 中华文明通论 GEHA1050:
       - lessons/GEHA1050/notes.md
       
