@@ -1,6 +1,6 @@
 ---
 comments: true
-status: new
+status: star
 ---
 
 # Fourier 分析
