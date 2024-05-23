@@ -1231,13 +1231,49 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#dirichlet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dirichlet 收敛定理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      正弦和余弦级数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2l-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      周期为 \(2l\) 函数的F氏级数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f" class="md-nav__link">
+    <span class="md-ellipsis">
+      F氏级数的复数形式
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       平方平均收敛
     </span>
@@ -1246,7 +1282,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       收敛性定理
     </span>
@@ -2111,13 +2147,49 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#dirichlet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dirichlet 收敛定理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      正弦和余弦级数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2l-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      周期为 \(2l\) 函数的F氏级数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f" class="md-nav__link">
+    <span class="md-ellipsis">
+      F氏级数的复数形式
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
       平方平均收敛
     </span>
@@ -2126,7 +2198,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       收敛性定理
     </span>
@@ -2202,8 +2274,84 @@ f(x) = \frac{a_0}{2} + \sum_{n=1}^{\infty} (a_n\cos nx+b_n\sin nx)
 f(x)\sim \frac{a_0}{2}+\sum_{n=1}^{\infty} (a_n\cos nx+b_n\sin nx)
 \]</div>
 <p>"<span class="arithmatex">\(\sim\)</span>" 表示级数是由 <span class="arithmatex">\(f\)</span> 写出来的</p>
-<h2 id="_4">平方平均收敛<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h2 id="_5">收敛性定理<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="dirichlet">Dirichlet 收敛定理<a class="headerlink" href="#dirichlet" title="Permanent link">&para;</a></h3>
+<div class="admonition abstract">
+<p class="admonition-title">定理</p>
+<p>设 <span class="arithmatex">\(f\)</span> 以 <span class="arithmatex">\(2\pi\)</span> 为周期，在 <span class="arithmatex">\([-\pi,\pi]\)</span> 上分段可微，则其F氏级数收敛，且</p>
+<div class="arithmatex">\[
+\frac{a_0}{2}+\sum_{n=1}^{\infty} (a_n\cos nx+b_n\sin nx) = \frac{f(x+0)+f(x-0)}{2}
+\]</div>
+</div>
+<h3 id="_4">正弦和余弦级数<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">正弦级数</label><label for="__tabbed_1_2">余弦级数</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>设 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([-\pi,\pi]\)</span> 上可积且绝对可积，且为<strong>奇函数</strong>，则</p>
+<div class="arithmatex">\[
+\begin{cases}
+&amp;a_n=0,\\
+&amp;\displaystyle b_n=\frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\sin nx\text{d}x = \frac{2}{\pi}\int_{0}^{\pi} f(x)\sin nx\text{d}x
+\end{cases}
+\]</div>
+<p><span class="arithmatex">\(\displaystyle f(x) \sim \sum_{n=1}^{\infty} b_n \sin nx\)</span></p>
+</div>
+<div class="tabbed-block">
+<p>设 <span class="arithmatex">\(f\)</span> 在 <span class="arithmatex">\([-\pi,\pi]\)</span> 上可积且绝对可积，且为<strong>偶函数</strong>，则</p>
+<div class="arithmatex">\[
+\begin{cases}
+&amp;\displaystyle a_n=\frac{1}{\pi}\int_{-\pi}^{\pi} f(x)\cos nx\text{d}x = \frac{2}{\pi}\int_{0}^{\pi} f(x)\cos nx\text{d}x,\\
+&amp;b_n=0
+\end{cases}
+\]</div>
+<p><span class="arithmatex">\(\displaystyle f(x) \sim \sum_{n=1}^{\infty} a_n \cos nx\)</span></p>
+</div>
+</div>
+</div>
+<h3 id="2l-f">周期为 <span class="arithmatex">\(2l\)</span> 函数的F氏级数<a class="headerlink" href="#2l-f" title="Permanent link">&para;</a></h3>
+<p>令 <span class="arithmatex">\(x=\dfrac{l}{\pi}t\)</span>，则 <span class="arithmatex">\(g(t)=f(\dfrac{l}{\pi}t)\)</span> 在 <span class="arithmatex">\([-\pi,\pi]\)</span> 上可积且绝对可积，故</p>
+<div class="arithmatex">\[
+g(t)\sim \frac{a_0}{2} + \sum_{n=1}^{\infty} (a_n\cos nt+b_n\sin nt)
+\]</div>
+<div class="arithmatex">\[
+f(x)\sim  \frac{a_0}{2} + \sum_{n=1}^{\infty} (a_n\cos \frac{n\pi}{l}x+b_n\sin \frac{n\pi}{l}x)
+\]</div>
+<p>其中 <span class="arithmatex">\(\displaystyle a_n=\frac{1}{l}\int_{-l}^{l}f(x)\cos \frac{n\pi}{l}x\text{d}x,\  b_n=\frac{1}{l}\int_{-l}^{l}f(x)\sin \frac{n\pi}{l}x\text{d}x\)</span></p>
+<div class="admonition abstract">
+<p class="admonition-title">定理</p>
+<p>设 <span class="arithmatex">\(f\)</span> 以 <span class="arithmatex">\(2l\)</span> 为周期，在 <span class="arithmatex">\([-l,l]\)</span> 上分段可微，则其F氏收敛，且</p>
+<div class="arithmatex">\[
+\frac{a_0}{2} + \sum_{n=1}^{\infty} (a_n\cos \frac{n\pi}{l}x+b_n\sin \frac{n\pi}{l}x) = 
+\begin{cases}
+\dfrac{f(x+0)+f(x-0)}{2}, x\in (-l,l)\\
+\dfrac{f(-l+0)+f(l-0)}{2}, x=\pm l
+\end{cases}
+\]</div>
+</div>
+<h3 id="f">F氏级数的复数形式<a class="headerlink" href="#f" title="Permanent link">&para;</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Euler 公式</p>
+<div class="arithmatex">\[
+\text{e}^{i\theta} = \cos \theta+i\sin\theta \leftrightarrow \cos\theta = \frac{\text{e}^{i\theta} + \text{e}^{-i\theta}}{2},\ \sin\theta = \frac{\text{e}^{i\theta}-\text{e}^{-i\theta}}{2i}
+\]</div>
+</div>
+<p>可导出 <span class="arithmatex">\(f\)</span> 的<strong>复数形式F氏级数</strong>.</p>
+<div class="arithmatex">\[
+f(x)\sim \frac{a_0}{2} + \sum_{n=1}^{\infty}\left(\frac{a_n-ib_n}{2}\text{e}^{in\omega x}+\frac{a_n+ib_n}{2}\text{e}^{-in\omega x}\right)
+\]</div>
+<p>其中 <span class="arithmatex">\(\omega = \dfrac{\pi}{l}\)</span> 为<strong>基频</strong>，<span class="arithmatex">\(\displaystyle a_n=\frac{1}{l}\int_{-l}^{l}f(x)\cos n\omega x\text{d}x,\  b_n=\frac{1}{l}\int_{-l}^{l}f(x)\sin n\omega x\text{d}x\)</span></p>
+<div class="arithmatex">\[
+\begin{aligned}
+f(x)&amp;\sim \frac{a_0}{2} + \sum_{n=1}^{\infty}\left(\frac{a_n-ib_n}{2}\text{e}^{in\omega x}+\frac{a_n+ib_n}{2}\text{e}^{-in\omega x}\right)\\
+&amp;\stackrel{\text{def}}{=} F_0+\sum_{n=1}^{\infty}(F_n\text{e}^{in\omega x}+F_{-n}\text{e}^{-in\omega x})=\sum_{n=-\infty}^{\infty}F_n\text{e}^{in\omega x}
+\end{aligned}
+\]</div>
+<p>其中， <span class="arithmatex">\(\begin{aligned}
+&amp;F_0=\frac{a_0}{2}=\frac{1}{2l}\int_{-l}^{l}f(x)\text{d}x,\\
+&amp;F_n=\frac{a_n-ib_n}{2}=\frac{1}{2l}\int_{-l}^{l}f(x)\text{e}^{-in\omega x}\text{d}x\\
+&amp;F_{-n}=\overline{F_n}
+\end{aligned}\)</span></p>
+<h2 id="_5">平方平均收敛<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h2 id="_6">收敛性定理<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <h2 id="fourier_3">Fourier 变换<a class="headerlink" href="#fourier_3" title="Permanent link">&para;</a></h2>
 
 
