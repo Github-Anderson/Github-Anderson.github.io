@@ -53,7 +53,7 @@ theme:
     logo: octicons/terminal-16
     # [添加 GitHub 仓库]
     repo: fontawesome/brands/github
-  favicon: assets/icon/terminal-16
+  favicon: assets/icon/terminal-16.png
   
 # [点击按钮跳转至 GitHub 修改 Markdown 源文件]
 edit_uri: edit/main/docs/
