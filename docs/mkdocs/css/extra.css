@@ -15,11 +15,4 @@ body .katex-display {
     mask-image: var(--md-status--star);
     -webkit-mask-image: var(--md-status--star);
 }
-
-.md-typeset summary {
-    position: sticky;
-    top: 48px;
-    z-index: 1;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(100px);
-}
+  
