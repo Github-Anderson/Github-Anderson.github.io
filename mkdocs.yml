@@ -47,6 +47,7 @@ theme:
     # [点击按钮跳转至 GitHub 修改 Markdown 源文件]
     - content.action.edit
     - content.tooltips
+    - navigation.footer
 
   language: zh # 一些提示性的文字会变成中文
   icon:

@@ -282,7 +282,7 @@ $$
 	设 \( \bm{v} = (P, Q, R) \) 为空间光滑曲面 \( S \) 上的光滑向量场， \( \partial S \) 是分段光滑闭曲线，则有
 
 	$$\begin{aligned}&\oint_{\partial S}P\text{d}x+Q\text{d}y+R\text{d}z\\
-	=& \iint_S\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)\text{d}\text{d}+\left(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)\text{d}\text{d}+\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\text{d}x\text{d}y\\
+	=& \iint_S\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)\text{d}y\text{d}z+\left(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)\text{d}z\text{d}x+\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\text{d}x\text{d}y\\
 	=& \iint_S
 	\begin{vmatrix}
 	\text{d}y\text{d}z & \text{d}z\text{d}x & \text{d}x\text{d}y\\
