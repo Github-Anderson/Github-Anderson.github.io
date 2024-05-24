@@ -7,7 +7,6 @@ site_description: Anderson_Yang 的个人网站
 # [UI]
 theme:
   name: material
-  custom_dir: overrides
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
