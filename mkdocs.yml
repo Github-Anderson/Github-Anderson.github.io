@@ -48,12 +48,15 @@ theme:
     - content.action.edit
     - content.tooltips
 
+    - navigation.footer
+
   language: zh # 一些提示性的文字会变成中文
   icon:
     logo: octicons/terminal-16
     # [添加 GitHub 仓库]
     repo: fontawesome/brands/github
-  favicon: assets/icon/terminal-16.png
+
+  favicon: assets/icons/terminal-16.png
   
 # [点击按钮跳转至 GitHub 修改 Markdown 源文件]
 edit_uri: edit/main/docs/
@@ -103,6 +106,7 @@ extra:
 
 
 plugins:
+  - info
   # [搜索功能]
   - search:
       lang:
@@ -163,30 +167,30 @@ markdown_extensions:
   - footnotes
 
 extra_javascript:
-  # [数学公式支持MathJax/KaTeX(JS)]
-  # - mkdocs/javascripts/mathjax.js
+  # [数学公式支持(JS)]
+  # - assets/javascripts/mathjax.js
   # - https://polyfill.io/v3/polyfill.min.js?features=es6
   # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   
-  - mkdocs/javascripts/katex.js
+  - assets/javascripts/katex.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
   
   # [表情反馈模块]
-  # - mkdocs/javascripts/feedback.js
+  # - assets/javascripts/feedback.js
   # [评论区支持]
   - 'https://utteranc.es/client.js'
-  # - mkdocs/javascripts/comment.js
+  # - assets/javascripts/comment.js
 extra_css:
   # [数学公式支持(CSS)]
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
   # [不使用底部的翻页]
-  # - mkdocs/css/no-footer.css
+  # - assets/css/no-footer.css
   # [无序列表符号自定义]
-  - mkdocs/css/unordered-list-symbols.css
+  - assets/css/unordered-list-symbols.css
   # [使用旧版注意标识]
-  # - mkdocs/css/classic.css
-  - mkdocs/css/extra.css
+  # - assets/css/classic.css
+  - assets/css/extra.css
 
 # [Navigtion]
 nav:

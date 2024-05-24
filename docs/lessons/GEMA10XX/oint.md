@@ -282,7 +282,7 @@ $$
 	设 \( \bm{v} = (P, Q, R) \) 为空间光滑曲面 \( S \) 上的光滑向量场， \( \partial S \) 是分段光滑闭曲线，则有
 
 	$$\begin{aligned}&\oint_{\partial S}P\text{d}x+Q\text{d}y+R\text{d}z\\
-	=& \iint_S\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)\text{d}\text{d}+\left(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)\text{d}\text{d}+\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\text{d}x\text{d}y\\
+	=& \iint_S\left(\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z}\right)\text{d}y\text{d}z+\left(\frac{\partial P}{\partial z}-\frac{\partial R}{\partial x}\right)\text{d}z\text{d}x+\left(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y}\right)\text{d}x\text{d}y\\
 	=& \iint_S
 	\begin{vmatrix}
 	\text{d}y\text{d}z & \text{d}z\text{d}x & \text{d}x\text{d}y\\
@@ -319,7 +319,9 @@ $$
 
 - 若 $V$ 中的任意闭曲面可在 $V$ 中连续收缩为一点, 则称 $V$ 为二维(空间)单连通.
 
-- 设 \(\bm{v} = (P, Q, R)\) 是连通区域 \(V\) 内光滑向量场，若
+!!! tip "等价关系"
+
+	设 \(\bm{v} = (P, Q, R)\) 是连通区域 \(V\) 内光滑向量场，若
 
 	1. 在 \(V\) 内曲线积分 \(\int_L P \text{d}x + Q \text{d}y + R \text{d}z\) 与路径无关，则称 \(\bm{v}\) 为 \(V\) 中的 **保守场**;
 
@@ -328,6 +330,5 @@ $$
 	3. 在 \(V\) 内恒有 \(\operatorname{rot} \bm{v} = 0\)，则称 \(\bm{v}\) 为 \(V\) 中的 **无旋场**.
 
 - 设 \(\bm{v}\) 为光滑向量场，\(V \subset \mathbb{R}^3\)。若存在向量场 \(\bm{\alpha}\) 使得 \(\bm{v} = \operatorname{rot} \bm{\alpha} = \nabla \times \bm{\alpha}\)，则称 \(\bm{\alpha}\) 为 \(\bm{v}\) 的 **向量势**.
-
 
 - 若 $\bm{v}$ 为光滑向量场, 则 $\bm{v}$ 存在向量势的充要条件是 $\bm{v}$ 为无源场.

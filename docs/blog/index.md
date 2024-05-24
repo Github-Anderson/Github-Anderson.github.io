@@ -1,6 +1,6 @@
 ---
 hide:
-  - feedback
+  - footer
 ---
 
 # 博客
