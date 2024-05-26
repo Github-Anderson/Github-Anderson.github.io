@@ -165,7 +165,7 @@ S=\frac{1}{2}\oint_{\partial D^+}x\text{d}y-y\text{d}x$$
 		1. 在 $V$ 内的任一条分段光滑闭曲线 $L$ 上
 		$\begin{aligned}\oint_LP\text{d}x+Q\text{d}y+R\text{d}z=0\end{aligned}$
 
-		2. 在 $V$ 内曲线积分 $\begin{aligned}\oint_LP\text{d}x+Q\text{d}y+R\text{d}z\end{aligned}$ 与路径无关，即值仅与 $A,B$ 有关, 而与 $L$ 无关
+		2. 在 $V$ 内曲线积分 $\begin{aligned}\int_LP\text{d}x+Q\text{d}y+R\text{d}z\end{aligned}$ 与路径无关，即值仅与 $A,B$ 有关, 而与 $L$ 无关
 
 		3. 向量场是某函数的**梯度场**，即存在 $\varphi(x,y,z)$，使得
 		$\bm{v} = \nabla\varphi(x,y,z) \text{ or } \text{d}\varphi = P\text{d}x+Q\text{d}y+R\text{d}z$
