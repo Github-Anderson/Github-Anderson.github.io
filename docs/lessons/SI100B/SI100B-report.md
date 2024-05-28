@@ -9,15 +9,15 @@ comments: true
 
 ## Team members and Division of Work
 
-- **Zhangzhi Xiong** (熊章智)
+- \****
 
   Coding; Adjusting Parameters (Threshold and Model Related); Building Circuit
 
-- **Tianni Yang** (杨天倪)
+- \****
 
   Adjusting Parameters (Accuracy Related); Building Circuit
 
-- **Yixuan Chen** (陈逸轩)
+- \****
 
   Coding; Experimenting
 

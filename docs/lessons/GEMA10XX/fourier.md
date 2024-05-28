@@ -118,6 +118,18 @@ $$
 	\end{cases}
 	$$
 
+???+ quote "更一般的形式"
+
+	$$f(x)\sim \dfrac{a_0}{2} + \sum_{n=1}^{\infty}\left(a_n\cos (\frac{2\pi nx}{T}) + b_n\sin (\frac{2\pi nx}{T}))\right)$$
+
+	其中，
+
+	$$a_0 = \dfrac{2}{T}\int_{-T/2}^{T/2}f(x)\text{d}x$$
+
+	$$a_n = \dfrac{2}{T}\int_{-T/2}^{T/2}f(x)\cos (\frac{2\pi nx}{T})\text{d}x$$
+
+	$$b_n = \dfrac{2}{T}\int_{-T/2}^{T/2}f(x)\sin (\frac{2\pi nx}{T})\text{d}x$$
+
 ### F氏级数的复数形式
 
 !!! tip "Euler 公式"
@@ -148,6 +160,40 @@ $$
 \end{aligned}$
 
 ## 平方平均收敛
+
+### 基本概念
+
+记 $L^2[a,b] = \{f(x)\mid \text{在 }[a,b]\text{ 上可积且平方可积}\}$
+
+- $L^2[a,b]$ 是一个**线性空间**
+
+- 设 $ f, g \in L^2[a, b] $，其内积定义为
+  $$
+  \langle f, g \rangle = \int_a^b f(x) g(x) \text{d}x
+  $$
+  $$
+  \| f \| = \sqrt{\langle f, f \rangle} = \sqrt{\int_a^b f^2(x) \text{d}x}
+  $$
+
+- $ f, g $ 之间的距离
+  $$
+  \| f - g \| = \sqrt{\langle f - g, f - g \rangle} = \sqrt{\int_a^b [f(x) - g(x)]^2 \text{d}x}
+  $$
+
+- 三角函数系 
+  $\left\{ \dfrac{1}{\sqrt{2\pi}}, \dfrac{\cos x}{\sqrt{\pi}}, \dfrac{\sin x}{\sqrt{\pi}}, \cdots, \dfrac{\cos nx}{\sqrt{\pi}}, \dfrac{\sin nx}{\sqrt{\pi}}, \cdots \right\}$
+
+  	是 $ L^2[-\pi, \pi] $ 的**标准正交系**
+
+### 定义
+
+设 $ f \in L^2[a, b] $，若存在 $ f_n \in L^2[a, b] $ 使得
+  $$
+  \lim_{n \to \infty} \| f_n - f \|^2 = \lim_{n \to \infty} \int_a^b [f_n(x) - f(x)]^2 \text{d}x = 0
+  $$
+  则称 $ f_n $ **平方平均收敛**于 $ f $。
+
+### 
 
 ## 收敛性定理
 
