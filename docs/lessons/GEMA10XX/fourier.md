@@ -7,7 +7,9 @@ status: star
 
 ## 函数的 Fourier 级数
 
-### 周期延拓
+### 基本概念
+
+#### 周期延拓
 
 若 $f$ 是定义在 $[-l,l]$ 上的函数，令 $\begin{aligned}F(x) = 
 \begin{cases}
@@ -15,11 +17,11 @@ f(x-2nl), &(2n-1)l < x < (2n+1)l\\
 \dfrac{f(l)-f(-l)}{2}, & x = (2n+1)l
 \end{cases}\end{aligned}$
 
-### 偶延拓与奇延拓
+#### 偶延拓与奇延拓
 
 $f_e(x)=\begin{cases}f(x), &0\leq x\leq l\\f(-x), &-l\leq x < 0\end{cases}\quad f_o(x)=\begin{cases}f(x), &0< x\leq l\\0, &x=0\\-f(-x), &-l\leq x < 0\end{cases}$
 
-### 三角函数系的正交性
+#### 三角函数系的正交性
 
 函数集合 $\{1, \cos x,\sin x, \cdots ,\cos nx,\sin nx ,\cdots\}$
 
@@ -46,13 +48,13 @@ $$
 	\end{cases}
 	$$
 
-**Fourier 级数(F氏级数)**
+??? warning "Fourier 级数(F氏级数)"
 
-$$
-f(x)\sim \frac{a_0}{2}+\sum_{n=1}^{\infty} (a_n\cos nx+b_n\sin nx)
-$$
+	$$
+	f(x)\sim \frac{a_0}{2}+\sum_{n=1}^{\infty} (a_n\cos nx+b_n\sin nx)
+	$$
 
-"$\sim$" 表示级数是由 $f$ 写出来的
+	"$\sim$" 表示级数是由 $f$ 写出来的，即 $f$ 收敛到F氏级数
 
 ### Dirichlet 收敛定理
 
@@ -193,9 +195,141 @@ $$
   $$
   则称 $ f_n $ **平方平均收敛**于 $ f $。
 
-### 
+### Bessel 不等式
 
+设 $f\in L^2[-\pi, \pi]$，
+
+- **$n$ 阶三角多项式** $\displaystyle g_n(x) = \frac{\alpha_0}{2} + \sum_{k=1}^{n}(\alpha_k\cos kx + \beta_k\sin kx)$
+
+- **$n$ 阶 Fourier 多项式**（最佳逼近） $\displaystyle S_n(x) = \frac{a_0}{2} + \sum_{k=1}^{n}(a_k\cos kx + b_k\sin kx)$
+
+- 对 $\forall g_n\in G = \{g_n\}$ 有 $\|f-S_n(x)\|\leq \|f-g_n(x)\|$
+
+- $\displaystyle \|f-S_n\|^2 = \int_{-\pi}^{\pi} f^2(x)\text{d}x - \pi\left[ \frac{a_0^2}{2} + \sum_{k=1}^n(a_k^2+b_k^2)\right]$
+
+!!! tip "Bessel 不等式"
+
+	设 $f\in L^2[-\pi, \pi]$，则 $f$ 的F式系数满足
+
+	$$\frac{a_0^2}{2} + \sum_{n=1}^{\infty}(a_n^2+b_n^2) \leq \frac{1}{\pi}\int_{-\pi}^{\pi} f^2(x)\text{d}x$$
+
+#### 推论
+
+设 $f \in L^2[-\pi, \pi]$，则级数 $\displaystyle \frac{a_0^2}{2} + \sum_{n=1}^{\infty} (a_n^2 + b_n^2)$收敛，故
+$$
+\lim_{n \to \infty} a_n = 0 = \lim_{n \to \infty} b_n,
+$$
+
+### Parseval 等式
+
+!!! abstract "平方平均收敛定理"
+
+	设 $f\in L^2[-\pi, \pi]$，则$\{S_n(x)\}$ 平方平均收敛于 $f$，即
+
+	$$\lim_{n\to \infty} \|f-S_n\|^2 = 0$$
+
+	该定理证明留到 [收敛性定理](#fourier_proof) 这一节阐述
+
+!!! tip "Parseval 等式"
+
+	设 $f\in L^2[-\pi, \pi]$，则 $f$ 的F式系数满足
+
+	$$\frac{a_0^2}{2} + \sum_{n=1}^{\infty}(a_n^2+b_n^2) = \frac{1}{\pi}\int_{-\pi}^{\pi} f^2(x)\text{d}x$$
+
+#### 推论
+
+1. 设 $f \in C[-\pi, \pi]$，且 $f$ 与三角函数系
+
+	$$
+	\left\{ \frac{1}{\sqrt{2\pi}}, \frac{\cos x}{\sqrt{\pi}}, \frac{\sin x}{\sqrt{\pi}}, \cdots, \frac{\cos nx}{\sqrt{\pi}}, \frac{\sin nx}{\sqrt{\pi}}, \cdots \right\}
+	$$
+
+	中的每一个都正交，则 $f(x) \equiv 0$。
+
+	- 若 $f, g \in C[-\pi, \pi]$，且傅里叶系数相等，则 $f(x) \equiv g(x)$
+
+2. 设 $f, g \in L^2[-\pi, \pi]$，其傅里叶系数分别为 $a_n, b_n$ 和 $\overline{a_n}, \overline{b_n}$，则
+
+	$$
+	\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) g(x) \text{d}x = \frac{a_0 \overline{a_0}}{2} + \sum_{n=1}^{\infty} (a_n \overline{a_n} + b_n \overline{b_n})
+	$$
+
+3. 设 $f \in L^2[-\pi, \pi]$，其傅里叶级数为
+
+	$$
+	f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty} (a_n \cos nx + b_n \sin nx)
+	$$
+
+	则对 $\forall [a, b] \subset [-\pi, \pi]$，有
+
+	$$
+	\int_a^b f(x) \text{d}x = \int_a^b \frac{a_0}{2} \text{d}x + \sum_{n=1}^{\infty} \int_a^b (a_n \cos nx + b_n \sin nx) \text{d}x
+	$$
+
+## 广义 Fourier 级数
+
+### 基本概念
+
+设 $\{\varphi_1(x), \varphi_2(x),\cdots,\varphi_n(x),\cdots\}$ 是 $L^2[a,b]$ 的标准正交系，即
+
+$$\displaystyle \langle \varphi_m(x),\varphi_n(x)\rangle = \int_a^b \varphi_m(x)\varphi_n(x)\text{d}x = \begin{cases}0, &m\neq n\\1, &m=n\end{cases}$$
+
+- **广义F氏系数** $\displaystyle a_n = \int_a^b f(x)\varphi_n(x)\text{d}x$
+
+- **广义F氏级数** $\displaystyle f(x) \sim \sum_{n=1}^{\infty} a_n\varphi_n(x)$
+
+设 $f\in L^2[a,b], \{\varphi(x)\}$ 为标准正交系，
+
+- **$n$ 次 $\varphi$-多项式** $\displaystyle T_n(x) = \sum_{k=1}^n\alpha_k\varphi_k(x)$
+
+- **广义F氏级数前 $n$ 项和**（最佳逼近） $S_n(x) = \sum_{k=1}^na_k\varphi_k(x)$
+
+- $\|f-S_n\|\leq \|f-T_n\|$
+
+- $\displaystyle \|f-S_n\|^2 = \|f\|^2 - \sum_{m=1}^{\infty}a_m^2$
+
+- $\displaystyle \sum_{m=1}^{\infty}a_m^2\leq \|f\|^2$
+
+### 定义
+
+- 设 $\{\varphi_n(x)\}$ 为 $L^2[a, b]$ 的标准正交系，且
+
+  $$
+  \sum_{m=1}^{\infty} a_m^2 = \|f\|^2
+  $$
+
+  则称 $\{\varphi_n(x)\}$ 为 $L^2[a, b]$ 的**完备**标准正交系。
+
+???+ abstract "定理"
+
+	设 $\{\varphi_n(x)\}$ 为 $L^2[a, b]$ 的完备标准正交系，则
+	$$
+	S_n(x) = \sum_{k=1}^n a_k \varphi_k(x)
+	$$
+
+	平方平均收敛于 $f$，即
+	$$
+	\lim_{n \to \infty} \| f - S_n \| = 0
+	$$
+
+???+ abstract "定理"
+
+	设 $\{\varphi_n(x)\}$ 为 $L^2[a, b]$ 的完备标准正交系，则
+
+	1. 若 $f \in C[a, b]$，则 $f(x) \equiv 0$ 当且仅当 $f$ 的广义F氏系数$a_n = 0, (n = 1, 2, \ldots)$
+
+	2. 从 $\{\varphi_n(x)\}$ 中删去任一函数，则剩余函数系不完备；
+
+	3. 若 $\displaystyle\int_a^b \varphi_0^2(x) \text{d}x = 1$，则 $\{\varphi_n(x)\}$ 增加 $\varphi_0(x)$ 所得函数系非正交系。
+
+<a id="fourier_proof"></a>
 ## 收敛性定理
+
+
+
+### Dirichlet 收敛定理
+
+### 平方平均收敛定理
 
 ## Fourier 变换
 
