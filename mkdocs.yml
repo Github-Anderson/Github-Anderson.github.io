@@ -216,6 +216,7 @@ nav:
       - lessons/GEMA10XX/int.md
       - lessons/GEMA10XX/int-application.md
       - lessons/GEMA10XX/ode.md
+      - lessons/GEMA10XX/dint.md
       - lessons/GEMA10XX/iint.md
       - lessons/GEMA10XX/oint.md
       - lessons/GEMA10XX/fourier.md

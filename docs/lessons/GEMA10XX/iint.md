@@ -2,7 +2,7 @@
 comments: true
 ---
 
-# 多元微积分
+# 重积分
 
 ## 二重积分
 
@@ -15,6 +15,7 @@ comments: true
 #### 中值定理
 
 设 $D$ 是连通有界闭集，$f(x,y)\in C(D)$，则 $\exists (\xi ,\eta)\in D$ 使得
+
 $$
 \iint_Df(x,y)d\sigma = f(\xi ,\eta)A_D
 $$
