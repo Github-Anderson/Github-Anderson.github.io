@@ -12,13 +12,13 @@
         <meta name="author" content="Anderson_Yang">
       
       
-        <link rel="canonical" href="https://Github-Anderson.github.io/lessons/SI120/code/">
+        <link rel="canonical" href="https://Github-Anderson.github.io/lessons/GEMA10XX/dint/">
       
       
-        <link rel="prev" href="../links/">
+        <link rel="prev" href="../ode/">
       
       
-        <link rel="next" href="../chsh/">
+        <link rel="next" href="../iint/">
       
       
       <link rel="icon" href="../../../assets/icon/terminal-16.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>代码实现 - Anderson_Yang 的个人网站</title>
+        <title>多元函数微分学 - Anderson_Yang 的个人网站</title>
       
     
     
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              代码实现
+              多元函数微分学
             
           </span>
         </div>
@@ -941,8 +941,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -968,13 +970,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -988,7 +988,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             数学分析 GEMA1009 & 10
@@ -1002,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GEMA10XX/links/" class="md-nav__link">
+      <a href="../links/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1023,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GEMA10XX/int/" class="md-nav__link">
+      <a href="../int/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1044,7 +1044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GEMA10XX/int-application/" class="md-nav__link">
+      <a href="../int-application/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1065,7 +1065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GEMA10XX/ode/" class="md-nav__link">
+      <a href="../ode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1083,10 +1083,38 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../GEMA10XX/dint/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    多元函数微分学
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--star" title="最近更新">
+    </span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1103,6 +1131,218 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      基本概念
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      多变量函数的极限
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多变量函数的极限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      二重极限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      累次极限
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      性质
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      连续性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      可偏导
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      可微
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      隐函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="隐函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      多元隐函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      隐映射存在定理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      逆映射存在定理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taylor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taylor 公式和极值
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Taylor 公式和极值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#taylor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taylor 公式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      极值
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="极值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      驻点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      极值点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lagrange" class="md-nav__link">
+    <span class="md-ellipsis">
+      条件极值（Lagrange乘数法）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1115,7 +1355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GEMA10XX/iint/" class="md-nav__link">
+      <a href="../iint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1136,7 +1376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GEMA10XX/oint/" class="md-nav__link">
+      <a href="../oint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1157,7 +1397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../GEMA10XX/fourier/" class="md-nav__link">
+      <a href="../fourier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1360,10 +1600,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1379,11 +1617,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -1397,7 +1637,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             离散数学 SI120
@@ -1411,7 +1651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../links/" class="md-nav__link">
+      <a href="../../SI120/links/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1429,30 +1669,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    代码实现
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../SI120/code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1461,62 +1681,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      快速幂
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#eea" class="md-nav__link">
-    <span class="md-ellipsis">
-      EEA
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      线性同余方程组
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      生成元
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1529,7 +1693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../chsh/" class="md-nav__link">
+      <a href="../../SI120/chsh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2051,16 +2215,7 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      快速幂
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#eea" class="md-nav__link">
-    <span class="md-ellipsis">
-      EEA
+      基本概念
     </span>
   </a>
   
@@ -2069,18 +2224,183 @@
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      线性同余方程组
+      多变量函数的极限
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="多变量函数的极限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      二重极限
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      生成元
+      累次极限
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      性质
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      连续性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      可偏导
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      可微
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      隐函数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="隐函数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      多元隐函数
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      隐映射存在定理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      逆映射存在定理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taylor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taylor 公式和极值
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Taylor 公式和极值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#taylor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taylor 公式
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      极值
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="极值">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      驻点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      极值点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lagrange" class="md-nav__link">
+    <span class="md-ellipsis">
+      条件极值（Lagrange乘数法）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2099,7 +2419,7 @@
                   
 
   
-    <a href="https://github.com/Github-Anderson/Github-Anderson.github.io/edit/main/docs/lessons/SI120/code.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Github-Anderson/Github-Anderson.github.io/edit/main/docs/lessons/GEMA10XX/dint.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2107,93 +2427,134 @@
   
 
 
-<h1 id="_1">代码实现<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h3 id="_2">快速幂<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-0-1"><span class="k">def</span> <span class="nf">square_and_multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">N</span><span class="p">):</span>
-</span><span id="__span-0-2">    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">%</span> <span class="n">N</span> <span class="c1"># a mod N for the first time.</span>
-</span><span id="__span-0-3">    <span class="n">temp</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># Define a </span>
-</span><span id="__span-0-4">    <span class="k">while</span> <span class="n">e</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-</span><span id="__span-0-5">        <span class="k">if</span> <span class="p">(</span><span class="n">e</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">):</span>
-</span><span id="__span-0-6">            <span class="n">temp</span> <span class="o">=</span> <span class="n">temp</span> <span class="o">*</span> <span class="n">a</span> <span class="o">%</span> <span class="n">N</span>
-</span><span id="__span-0-7">        <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">a</span> <span class="o">%</span> <span class="n">N</span>
-</span><span id="__span-0-8">        <span class="n">e</span> <span class="o">&gt;&gt;=</span> <span class="mi">1</span>
-</span><span id="__span-0-9">    <span class="k">return</span> <span class="n">temp</span>
-</span><span id="__span-0-10">
-</span><span id="__span-0-11"><span class="n">a</span> <span class="o">=</span> <span class="mi">26430018304661698227244889550916468317489455778956328592921983469699792309163665193972706206594036869415691968221117606771494540098970766552365207210568611105852640630040412543297842462434526788081852074542946114404279053789976397875435006094029065093695673255562607050336148424707698012085470002233698228862346738763599120210887024055251199687451392437357330469313875769415203278005429487989371958004062135384988676187092753933346466785135069682592239769739616884935612245424974736666329142491909330198993521032748920319427468193197363789859738402941190883470502934385251934875320122360082927644910373611459923294476</span>
-</span><span id="__span-0-12">
-</span><span id="__span-0-13"><span class="n">e</span> <span class="o">=</span> <span class="mi">14409405982160132058252555071975393865919464165649477935316970889691161917952938338402420626169849869240199817340818785857661040902521177902522865655959315955027296333658575625679171649648237486715107874038848080146760431808160047758267886816563159460881275453304962088598750789947602763231536498803689415008248542306983990585872732303067442760485939483530499206750926623632218337793608305495353477797937055213103722548287089239675029998455237837122665431788486963392282333218897305536581935858534831705616909506614608137265328584496490209976683510539438184418619421230489065033982087166936851293061923363455338233631</span>
-</span><span id="__span-0-14">
-</span><span id="__span-0-15"><span class="n">N</span> <span class="o">=</span> <span class="mi">64543139452648583804777033627501791038942806480746416798824757337964931888296539408775325373896296201833019433336591701850604192958009038518829207716785069084776737389127085606861435151087914978789508354621086437098048489783165288663090667930959738070532371062440986402482696167926970371372070378265809277766155735077364001364843786628965534680520817227913435893489039438222319565950285009689464886596531381136997433211960842826747978689934063604682788246549928760755145469051762866022916315234333425333466441336354964665001026523519003032764174124744508998760069425321286184310908109489080474275209430911312055696378</span>
-</span><span id="__span-0-16">
-</span><span id="__span-0-17"><span class="nb">print</span><span class="p">(</span><span class="n">square_and_multiply</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">N</span><span class="p">))</span>
-</span></code></pre></div>
-<h3 id="eea">EEA<a class="headerlink" href="#eea" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-1-1"><span class="k">def</span> <span class="nf">Exgcd</span><span class="p">(</span><span class="n">a</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-</span><span id="__span-1-2">    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-</span><span id="__span-1-3">        <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
-</span><span id="__span-1-4">    <span class="n">d</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">Exgcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>
-</span><span id="__span-1-5">    <span class="k">return</span> <span class="n">d</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="p">(</span><span class="n">a</span> <span class="o">//</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">y</span>
-</span><span id="__span-1-6">
-</span><span id="__span-1-7"><span class="n">a</span> <span class="o">=</span> <span class="mi">16680223846514478258525934578333599539857711346377301265204970111653892397676043794016150507259410995658188057040712085903607220122413595420007489488405731334280061988395608779010713411287131295428179813333359977034173092335579409810742439731878889187445253126904842513990354679981309972227336575079548411574454057133261948502170654953266704862335547650976687291747849350782598464591428327947848142796066981940848596121777048411057049426221708373813396661449882414643261467806037889440842533384968180620271785010057924587366185944297155319798570577070773474129972107871623872384643401132513116574551025071336188925411</span>
-</span><span id="__span-1-8">
-</span><span id="__span-1-9"><span class="n">b</span> <span class="o">=</span> <span class="mi">17855770299870519367242059681390424418096182155342041137488796879671107478743572864002383145021454681629377265833889126584206834902794697518171431222912791170447567040871094490052067407306798661337490592199170717969818501521767458577818192499457245780503918087449739410569911194050665897532807959319750868264903299819242751930003066441776015464336357481344549028678389909625259705769654505066857444104947192647667108605714724299029223354866042954807541588937325411249097096068333555976598698947608331063572282201472029299051787515328011628625087966449702534156436266476618723897816432054896528012909122280046552133534</span>
-</span><span id="__span-1-10">
-</span><span id="__span-1-11"><span class="n">d</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">Exgcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-</span><span id="__span-1-12">
-</span><span id="__span-1-13"><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-</span><span id="__span-1-14">
-</span><span id="__span-1-15"><span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-</span></code></pre></div>
-<h3 id="_3">线性同余方程组<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-2-1"><span class="k">def</span> <span class="nf">Exgcd</span><span class="p">(</span><span class="n">a</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span> <span class="c1"># d = gcd(a, b) = a * s + b * t</span>
-</span><span id="__span-2-2">    <span class="k">if</span> <span class="n">b</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-</span><span id="__span-2-3">        <span class="k">return</span> <span class="n">a</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
-</span><span id="__span-2-4">    <span class="n">d</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">Exgcd</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">)</span>
-</span><span id="__span-2-5">    <span class="k">return</span> <span class="n">d</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">s</span> <span class="o">-</span> <span class="p">(</span><span class="n">a</span> <span class="o">//</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">t</span>
-</span><span id="__span-2-6">
-</span><span id="__span-2-7"><span class="k">def</span> <span class="nf">verify</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b_i</span> <span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">n_i</span> <span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
-</span><span id="__span-2-8">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">b_i</span><span class="p">)):</span>
-</span><span id="__span-2-9">        <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="n">n_i</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">b_i</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-</span><span id="__span-2-10">            <span class="k">return</span> <span class="kc">False</span>
-</span><span id="__span-2-11">    <span class="k">return</span> <span class="kc">True</span>
-</span><span id="__span-2-12">
-</span><span id="__span-2-13"><span class="k">def</span> <span class="nf">CRT</span><span class="p">(</span><span class="n">b_i</span> <span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">n_i</span> <span class="p">:</span> <span class="nb">list</span><span class="p">):</span>
-</span><span id="__span-2-14">    <span class="n">n</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
-</span><span id="__span-2-15">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">b_i</span><span class="p">)):</span> <span class="c1"># Calculate n</span>
-</span><span id="__span-2-16">        <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">n_i</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span><span id="__span-2-17">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">b_i</span><span class="p">)):</span> <span class="c1"># Calculate m_i</span>
-</span><span id="__span-2-18">        <span class="n">m</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="n">n_i</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-</span><span id="__span-2-19">        <span class="n">d</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">Exgcd</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">n_i</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="c1"># b * m mod n_i[i] = 1</span>
-</span><span id="__span-2-20">        <span class="n">ans</span> <span class="o">=</span> <span class="p">(</span><span class="n">ans</span> <span class="o">+</span> <span class="n">b_i</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">m</span> <span class="o">*</span> <span class="n">b</span> <span class="o">%</span> <span class="n">n</span><span class="p">)</span> <span class="o">%</span> <span class="n">n</span>
-</span><span id="__span-2-21">    <span class="nb">print</span><span class="p">(</span><span class="n">verify</span><span class="p">((</span><span class="n">ans</span> <span class="o">%</span> <span class="n">n</span> <span class="o">+</span> <span class="n">n</span><span class="p">)</span> <span class="o">%</span> <span class="n">n</span><span class="p">,</span> <span class="n">b_i</span><span class="p">,</span> <span class="n">n_i</span><span class="p">))</span>
-</span><span id="__span-2-22">    <span class="k">return</span> <span class="p">(</span><span class="n">ans</span> <span class="o">%</span> <span class="n">n</span> <span class="o">+</span> <span class="n">n</span><span class="p">)</span> <span class="o">%</span> <span class="n">n</span><span class="p">,</span> <span class="n">n</span>
-</span><span id="__span-2-23">
-</span><span id="__span-2-24"><span class="n">b_i</span><span class="p">,</span> <span class="n">n_i</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
-</span><span id="__span-2-25">
-</span><span id="__span-2-26"><span class="nb">print</span><span class="p">(</span><span class="n">CRT</span><span class="p">(</span><span class="n">b_i</span><span class="p">,</span> <span class="n">n_i</span><span class="p">))</span>
-</span></code></pre></div>
-<h3 id="_4">生成元<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
-<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-3-1"><span class="k">def</span> <span class="nf">gcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-</span><span id="__span-3-2">    <span class="k">while</span> <span class="n">b</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-</span><span id="__span-3-3">        <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span>
-</span><span id="__span-3-4">    <span class="k">return</span> <span class="n">a</span>
-</span><span id="__span-3-5">
-</span><span id="__span-3-6"><span class="k">def</span> <span class="nf">is_generator</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-</span><span id="__span-3-7">    <span class="n">seen</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-</span><span id="__span-3-8">    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-</span><span id="__span-3-9">        <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="nb">pow</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span>
-</span><span id="__span-3-10">    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">seen</span><span class="p">)</span> <span class="o">==</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span>
-</span><span id="__span-3-11">
-</span><span id="__span-3-12"><span class="k">def</span> <span class="nf">find_generators</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-</span><span id="__span-3-13">    <span class="n">generators</span> <span class="o">=</span> <span class="p">[]</span>
-</span><span id="__span-3-14">    <span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-</span><span id="__span-3-15">        <span class="k">if</span> <span class="n">gcd</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># g 与 n 互质</span>
-</span><span id="__span-3-16">            <span class="k">if</span> <span class="n">is_generator</span><span class="p">(</span><span class="n">g</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-</span><span id="__span-3-17">                <span class="n">generators</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
-</span><span id="__span-3-18">    <span class="k">return</span> <span class="n">generators</span>
-</span><span id="__span-3-19">
-</span><span id="__span-3-20"><span class="nb">print</span><span class="p">(</span><span class="n">find_generators</span><span class="p">(</span><span class="mi">107</span><span class="p">))</span>
-</span></code></pre></div>
+<h1 id="_1">多元函数微分学<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">基本概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>邻域 <span class="arithmatex">\(B(M_0,r) = \{M\mid \rho(M,M_0)&lt;r\}\)</span></p>
+</li>
+<li>
+<p>内点，核<span class="arithmatex">\(E^\circ\)</span>、外点 <span class="arithmatex">\((E^c)^\circ\)</span>、边界点，边界 <span class="arithmatex">\(\partial E\)</span></p>
+</li>
+<li>
+<p>内点 <span class="arithmatex">\(+\)</span> 非孤立边界点 <span class="arithmatex">\(=\)</span> 聚点，导集<span class="arithmatex">\(E'\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(E=E^\circ \Rightarrow\)</span> 开集 <span class="arithmatex">\(\leftrightarrow\)</span> 闭集</p>
+</li>
+</ul>
+<h2 id="_3">多变量函数的极限<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="_4">二重极限<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[\lim_{M\to M_0} f(M)=a\]</div>
+<h3 id="_5">累次极限<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[\lim_{x\to x_0}\lim_{y\to y_0}f(x,y) = a\]</div>
+<h2 id="_6">性质<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="_7">连续性<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[\lim_{(x,y)\to (x_0,y_0)}f(x,y) = f(x_0,y_0)\]</div>
+<h3 id="_8">可偏导<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[f_x'(x_0,y_0) = \lim_{\Delta x\to 0}\dfrac{f(x_0+\Delta x)-f(x_0,y_0)}{\Delta x}\]</div>
+<div class="arithmatex">\[f_y'(x_0,y_0) = \lim_{\Delta y\to 0}\dfrac{f(y_0+\Delta y)-f(x_0,y_0)}{\Delta y}\]</div>
+<h3 id="_9">可微<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[\Delta f-\left[f_x'(x_0,y_0)\Delta x + f_y'(x_0,y_0)\Delta y\right]=o(\sqrt{\Delta x^2+\Delta y^2})\]</div>
+<p>或</p>
+<div class="arithmatex">\[\lim_{\rho \to 0}\dfrac{\Delta f-f_x'(x_0,y_0)\Delta x-f_y'(x_0,y_0)\Delta y}{\rho} = 0\]</div>
+<p>其中 <span class="arithmatex">\(\Delta f = f(x_0+\Delta x,y_0+\Delta y)-f(x_0,y_0)\)</span></p>
+<h2 id="_10">隐函数<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h3 id="_11">多元隐函数<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(F(x_0,y_0,z_0) = 0, z = f(x,y)\)</span></p>
+<p><span class="arithmatex">\(\dfrac{\partial z}{\partial x} = -\dfrac{F_x'}{F_z'},\ \dfrac{\partial z}{\partial y} = -\dfrac{F_y'}{F_z'},\ F_z'\neq 0\)</span></p>
+<h3 id="_12">隐映射存在定理<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(F(x_0,y_0,u_0,v_0) = 0, G(x_0,y_0,u_0,v_0) = 0\)</span>，且在某一邻域存在连续的偏导数</p>
+<div class="arithmatex">\[
+J_0 = \dfrac{\partial (F,G)}{\partial (u,v)}\bigg|_{P_0}=\begin{vmatrix}\dfrac{\partial F}{\partial u} &amp; \dfrac{\partial F}{\partial v}\\\\
+\dfrac{\partial G}{\partial u} &amp; \dfrac{\partial G}{\partial v}\end{vmatrix}_{P_0}\neq 0
+\]</div>
+<p>则 <span class="arithmatex">\(\begin{cases}F(x,y,u,v)=0\\G(x,y,u,v)=0\end{cases}\)</span> 可唯一确定<strong>隐映射</strong> <span class="arithmatex">\(\begin{cases}u=u(x,y)\\v=v(x,y)\end{cases}\)</span></p>
+<div class="arithmatex">\[
+\frac{\partial u}{\partial x} = -\frac{1}{J} \frac{\partial (F, G)}{\partial (x, v)} = -\frac{1}{J} \begin{vmatrix} 
+F_x &amp; F_v \\ 
+G_x &amp; G_v 
+\end{vmatrix}
+\]</div>
+<div class="arithmatex">\[
+\frac{\partial u}{\partial y} = -\frac{1}{J} \frac{\partial (F, G)}{\partial (y, v)} = -\frac{1}{J} \begin{vmatrix} 
+F_y &amp; F_v \\ 
+G_y &amp; G_v 
+\end{vmatrix}
+\]</div>
+<div class="arithmatex">\[
+\frac{\partial v}{\partial x} = -\frac{1}{J} \frac{\partial (F, G)}{\partial (u, x)} = -\frac{1}{J} \begin{vmatrix} 
+F_u &amp; F_x \\ 
+G_u &amp; G_x 
+\end{vmatrix}
+\]</div>
+<div class="arithmatex">\[
+\frac{\partial v}{\partial y} = -\frac{1}{J} \frac{\partial (F, G)}{\partial (u, y)} = -\frac{1}{J} \begin{vmatrix} 
+F_u &amp; F_y \\ 
+G_u &amp; G_y 
+\end{vmatrix}
+\]</div>
+<h3 id="_13">逆映射存在定理<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+J_0 = \left.\dfrac{\partial (u, v)}{\partial (x, y)}\right|_{P_0} \neq 0,
+\]</div>
+<p>则</p>
+<div class="arithmatex">\[
+\begin{cases}
+u = u(x, y) \\
+v = v(x, y)
+\end{cases}
+\]</div>
+<p>在 <span class="arithmatex">\(B(u_0, v_0)\)</span> 存在逆映射 <span class="arithmatex">\(\begin{cases}x = x(u, v) \\y = y(u, v)\end{cases}\)</span> 满足 <span class="arithmatex">\(\begin{cases}x_0 = x(u_0, v_0) \\y_0 = y(u_0, v_0)\end{cases}\)</span></p>
+<p>且有连续偏导数</p>
+<div class="arithmatex">\[
+\begin{matrix}
+\dfrac{\partial x}{\partial u} = \dfrac{1}{J} \cdot \dfrac{\partial v}{\partial y} &amp; \dfrac{\partial x}{\partial v} = -\dfrac{1}{J} \cdot \dfrac{\partial u}{\partial y}\\\\
+\dfrac{\partial y}{\partial u} = -\dfrac{1}{J} \cdot \dfrac{\partial v}{\partial x} &amp; \dfrac{\partial y}{\partial v} = \dfrac{1}{J} \cdot \dfrac{\partial u}{\partial x}
+\end{matrix}
+\]</div>
+<h2 id="taylor">Taylor 公式和极值<a class="headerlink" href="#taylor" title="Permanent link">&para;</a></h2>
+<h3 id="taylor_1">Taylor 公式<a class="headerlink" href="#taylor_1" title="Permanent link">&para;</a></h3>
+<details class="tip" open="open">
+<summary>Taylor公式</summary>
+<p>设函数 <span class="arithmatex">\( f(x, y) \)</span> 在 <span class="arithmatex">\( B(P_0(x_0, y_0)) \)</span> 有 <span class="arithmatex">\( n+1 \)</span> 阶连续偏导数，则 <span class="arithmatex">\(\exists \theta \in (0, 1) \)</span>:</p>
+<div class="arithmatex">\[
+f(x_0 + h, y_0 + k) = \sum_{m=0}^{n} \frac{1}{m!} \left( h \frac{\partial}{\partial x} + k \frac{\partial}{\partial y} \right)^m f(x_0, y_0) + R_n
+\]</div>
+<p>其中 Lagrange 型余项</p>
+<div class="arithmatex">\[
+R_n = \frac{1}{(n+1)!} \left( h \frac{\partial}{\partial x} + k \frac{\partial}{\partial y} \right)^{n+1} f(x_0 + \theta h, y_0 + \theta k)
+\]</div>
+</details>
+<h2 id="_14">极值<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h3 id="_15">驻点<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\(f_x'(x_0,y_0)=0=f_y'(x_0,y_0)\)</span>，则 <span class="arithmatex">\(f(x_0,y_0)\)</span> 为驻点</p>
+<h3 id="_16">极值点<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>设 <span class="arithmatex">\(f(x, y)\)</span> 在 <span class="arithmatex">\(B(P_0(x_0, y_0))\)</span> 的二阶偏导数连续，且
+<span class="arithmatex">\(f'_x(x_0, y_0) = 0, \quad f'_y(x_0, y_0) = 0\)</span></p>
+<p>记 <strong>Hesse 矩阵</strong></p>
+<div class="arithmatex">\[ H = \begin{pmatrix}
+f''_{xx} &amp; f''_{xy} \\\\
+f''_{yx} &amp; f''_{yy}
+\end{pmatrix}_{P_0} \]</div>
+<ol>
+<li>
+<p>若 <span class="arithmatex">\(H\)</span> 为正定矩阵，则 <span class="arithmatex">\(f(x_0, y_0)\)</span> 为严格极小值</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(H\)</span> 为负定矩阵，则 <span class="arithmatex">\(f(x_0, y_0)\)</span> 为严格极大值。</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(H\)</span> 为不定矩阵，则 <span class="arithmatex">\(f(x_0, y_0)\)</span> 非极值。</p>
+</li>
+</ol>
+<h3 id="lagrange">条件极值（Lagrange乘数法）<a class="headerlink" href="#lagrange" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[L(x,y,\lambda) = f(x,y) + \lambda \varphi(x,y)\]</div>
+<div class="arithmatex">\[\begin{cases}
+L_x'=f_x'+\lambda \varphi_x'=0\\
+L_y'=f_y'+\lambda \varphi_y'=0\\
+L_{\lambda}'=\varphi(x,y)=0
+\end{cases}\]</div>
 
 
 
@@ -2216,7 +2577,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 9, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 29, 2024</span>
   </span>
 
     
@@ -2226,7 +2587,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 31, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 29, 2024</span>
   </span>
 
     
@@ -2310,7 +2671,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../links/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 一些有用的链接">
+          <a href="../ode/" class="md-footer__link md-footer__link--prev" aria-label="上一页: ODE">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2320,20 +2681,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                一些有用的链接
+                ODE
               </div>
             </div>
           </a>
         
         
           
-          <a href="../chsh/" class="md-footer__link md-footer__link--next" aria-label="下一页: Cheatsheet">
+          <a href="../iint/" class="md-footer__link md-footer__link--next" aria-label="下一页: 重积分">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Cheatsheet
+                重积分
               </div>
             </div>
             <div class="md-footer__button md-icon">
