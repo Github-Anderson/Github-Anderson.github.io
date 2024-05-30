@@ -142,7 +142,7 @@ S=\frac{1}{2}\oint_{\partial D^+}x\text{d}y-y\text{d}x$$
 		1. 在 $D$ 内的任一条分段光滑闭曲线 $L$ 上
 		$\begin{aligned}\oint_LP\text{d}x+Q\text{d}y=0\end{aligned}$
 
-		2. 在 $D$ 内曲线积分 $\begin{aligned}\oint_LP\text{d}x+Q\text{d}y\end{aligned}$ 与路径无关，即值仅与 $A,B$ 有关, 而与 $L$ 无关
+		2. 在 $D$ 内曲线积分 $\begin{aligned}\int_LP\text{d}x+Q\text{d}y\end{aligned}$ 与路径无关，即值仅与 $A,B$ 有关, 而与 $L$ 无关
 
 		3. 向量场是某函数的**梯度场**，即存在 $\varphi(x,y)$，使得
 		$\bm{v} = \nabla\varphi(x,y) \text{ or } \text{d}\varphi = P\text{d}x+Q\text{d}y$
@@ -275,7 +275,7 @@ $$
 
     $$V = \frac{1}{3}\oiint_{\partial V^+}x\text{d}y\text{d}z+y\text{d}z\text{d}x+z\text{d}x\text{d}y$$
 
-- **散度物理意义** $\begin{aligned}\text{div }\bm{v}(M) = \lim_{V\to M}\frac{1}{\text{Vol}(V)}\oiint_{\partial V^+}\bm{v}\cdot \text{d}\bm{S}\end{aligned}$
+- **散度物理意义** $\displaystyle \text{div }\bm{v}(M) = \lim_{V\to M}\frac{1}{\text{Vol}(V)}\oiint_{\partial V^+}\bm{v}\cdot \text{d}\bm{S}$
 
 !!! abstract "Stokes 公式"
 
@@ -303,13 +303,13 @@ $$
 	向量形式
 
 	$$\begin{aligned}
-	\oint_{\partial S}\bm{v}\cdot \text{d}\bm{r} &= \iint_S\text{rot }\bm{v}\cdot \text{d}\bm{S}\\
-	&=\iint_S\text{rot }\bm{v}\cdot \bm{n}^{\circ}\text{d}S
+	\oint_{\partial S}\bm{v}\cdot \text{d}\bm{r} &= \iint_S\textbf{rot }\bm{v}\cdot \text{d}\bm{S}\\
+	&=\iint_S\textbf{rot }\bm{v}\cdot \bm{n}^{\circ}\text{d}S
 	\end{aligned}$$
 
 
 
-- **旋度物理意义** $\begin{aligned}\text{rot }\bm{v}\cdot \bm{n}^{\circ} \mid_M = \lim_{S\to M}\frac{1}{\text{Area}(V)}\oint_{\partial S}\bm{v}\cdot \text{d}\bm{r}\end{aligned}$
+- **旋度物理意义** $\displaystyle \textbf{rot }\bm{v}\cdot \bm{n}^{\circ} \mid_M = \lim_{S\to M}\frac{1}{\text{Area}(V)}\oint_{\partial S}\bm{v}\cdot \text{d}\bm{r}$
 
 ## 保守场
 
@@ -327,9 +327,9 @@ $$
 
 	2. \(\text{d} \varphi = P \text{d}x + Q \text{d}y + R \text{d}z\)，则称 \(\varphi\) 是 \(\bm{v}\) 的 **势函数**，\(\bm{v}\) 是 \(\varphi\) 的 **梯度场**，即 \(\bm{v} = \nabla \varphi\);
 
-	3. 在 \(V\) 内恒有 \(\operatorname{rot} \bm{v} = 0\)，则称 \(\bm{v}\) 为 \(V\) 中的 **无旋场**.
+	3. 在 \(V\) 内恒有 \(\textbf{rot} \bm{v} = 0\)，则称 \(\bm{v}\) 为 \(V\) 中的 **无旋场**.
 
-- 设 \(\bm{v}\) 为光滑向量场，\(V \subset \mathbb{R}^3\)。若存在向量场 \(\bm{\alpha}\) 使得 \(\bm{v} = \operatorname{rot} \bm{\alpha} = \nabla \times \bm{\alpha}\)，则称 \(\bm{\alpha}\) 为 \(\bm{v}\) 的 **向量势**.
+- 设 \(\bm{v}\) 为光滑向量场，\(V \subset \mathbb{R}^3\)。若存在向量场 \(\bm{\alpha}\) 使得 \(\bm{v} = \textbf{rot} \bm{\alpha} = \nabla \times \bm{\alpha}\)，则称 \(\bm{\alpha}\) 为 \(\bm{v}\) 的 **向量势**.
 
 
 - 若 $\bm{v}$ 为光滑向量场, 则 $\bm{v}$ 存在向量势的充要条件是 $\bm{v}$ 为无源场.

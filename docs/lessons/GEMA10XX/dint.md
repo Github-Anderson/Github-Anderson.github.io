@@ -171,3 +171,27 @@ L_x'=f_x'+\lambda \varphi_x'=0\\
 L_y'=f_y'+\lambda \varphi_y'=0\\
 L_{\lambda}'=\varphi(x,y)=0
 \end{cases}$$
+
+## 向量场的微商
+
+### 梯度、散度与旋度
+
+设有向量场 $\bm{v}(x,y,z) = P\bm{i} + Q\bm{j} + R\bm{k}$
+
+- Hamilton 算子 $\nabla = \dfrac{\partial}{\partial x}\bm{i} + \dfrac{\partial}{\partial y}\bm{j} + \dfrac{\partial}{\partial z}\bm{k}$
+
+- $\bm{v}$ 的散度 $\text{div }\bm{v}\stackrel{\text{def}}{=}\nabla \cdot \bm{v} = \dfrac{\partial P}{\partial x} + \dfrac{\partial Q}{\partial y} + \dfrac{\partial R}{\partial z}$
+
+- $\bm{v}$ 的旋度 $\textbf{rot }\bm{v}\stackrel{\text{def}}{=}\nabla \times \bm{v} = 
+\begin{vmatrix}
+\bm{i} & \bm{j} & \bm{k}\\
+\dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z}\\
+P & Q & R
+\end{vmatrix}$
+
+- $\textbf{rot grad }\varphi = \nabla \times \nabla \varphi = \bm{0}$
+
+- $\text{div }\textbf{rot }\bm{v} = \nabla \cdot \nabla \times \bm{a} = 0$
+
+- Laplace 算子 $\Delta = \nabla \cdot \nabla = \dfrac{\partial^2}{\partial x^2} + \dfrac{\partial^2}{\partial y^2} + \dfrac{\partial^2}{\partial z^2}$
+

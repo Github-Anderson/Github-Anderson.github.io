@@ -228,8 +228,6 @@ $$
 
 	$$\lim_{n\to \infty} \|f-S_n\|^2 = 0$$
 
-	该定理证明留到 [收敛性定理](#fourier_proof) 这一节阐述
-
 !!! tip "Parseval 等式"
 
 	设 $f\in L^2[-\pi, \pi]$，则 $f$ 的F式系数满足
@@ -246,15 +244,15 @@ $$
 
 	中的每一个都正交，则 $f(x) \equiv 0$。
 
-	- 若 $f, g \in C[-\pi, \pi]$，且傅里叶系数相等，则 $f(x) \equiv g(x)$
+	- 若 $f, g \in C[-\pi, \pi]$，且F氏系数相等，则 $f(x) \equiv g(x)$
 
-2. 设 $f, g \in L^2[-\pi, \pi]$，其傅里叶系数分别为 $a_n, b_n$ 和 $\overline{a_n}, \overline{b_n}$，则
+2. 设 $f, g \in L^2[-\pi, \pi]$，其F氏系数分别为 $a_n, b_n$ 和 $\overline{a_n}, \overline{b_n}$，则
 
 	$$
 	\frac{1}{\pi} \int_{-\pi}^{\pi} f(x) g(x) \text{d}x = \frac{a_0 \overline{a_0}}{2} + \sum_{n=1}^{\infty} (a_n \overline{a_n} + b_n \overline{b_n})
 	$$
 
-3. 设 $f \in L^2[-\pi, \pi]$，其傅里叶级数为
+3. 设 $f \in L^2[-\pi, \pi]$，其 Fourier 级数为
 
 	$$
 	f(x) \sim \frac{a_0}{2} + \sum_{n=1}^{\infty} (a_n \cos nx + b_n \sin nx)
@@ -322,14 +320,32 @@ $$\displaystyle \langle \varphi_m(x),\varphi_n(x)\rangle = \int_a^b \varphi_m(x)
 
 	3. 若 $\displaystyle\int_a^b \varphi_0^2(x) \text{d}x = 1$，则 $\{\varphi_n(x)\}$ 增加 $\varphi_0(x)$ 所得函数系非正交系。
 
-<a id="fourier_proof"></a>
-## 收敛性定理
-
-
-
-### Dirichlet 收敛定理
-
-### 平方平均收敛定理
-
 ## Fourier 变换
 
+### Fourier 积分
+
+回顾 [F氏级数的复数形式](#f)
+
+设 $f$ 在 $\mathbb{R}$ 的任意有限区间分段可微，且在 $(-\infty,+\infty)$ 上绝对可积，则有对任意 $x\in \mathbf{R}$ 有
+
+$$\frac{1}{2\pi}\int_{-\infty}^{+\infty}\left[\int_{-\infty}^{+\infty}f(t)e^{-i\lambda t}\text{d}t\right]e^{i\lambda x}\text{d}\lambda = \frac{f(x+0)+f(x-0)}{2}$$
+
+特别地，若 $f$ 在 $x$ 处连续，则
+
+$$\frac{1}{2\pi}\int_{-\infty}^{+\infty}\left[\int_{-\infty}^{+\infty}f(t)e^{-i\lambda t}\text{d}t\right]e^{i\lambda x}\text{d}\lambda = f(x)$$
+
+### Fourier 变换
+
+设 $f$ 满足定理条件且连续，称函数
+
+$$F(\lambda) = \int_{-\infty}^{+\infty}f(t)e^{-i\lambda t}\text{d}t$$
+
+为 $f$ 的 Fourier变换；而函数
+
+$$f(x) = \frac{1}{2\pi}\int_{-\infty}^{+\infty}e^{i\lambda x}\text{d}\lambda$$
+
+称为 $F(\lambda)$ 的 Fourier 逆变换，上式称为反演公式
+
+### 性质
+
+### 卷积
