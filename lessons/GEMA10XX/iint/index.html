@@ -1093,14 +1093,6 @@
     多元函数微分学
   </span>
   
-    
-  
-  
-    <span class="md-status md-status--star" title="最近更新">
-    </span>
-  
-
-  
 
       </a>
     </li>
@@ -2682,7 +2674,7 @@
 <p>若 <span class="arithmatex">\(D\)</span> 关于 <span class="arithmatex">\(y\)</span> 轴对称，记 <span class="arithmatex">\(D_1\)</span> 为 <span class="arithmatex">\(D\)</span> 中 <span class="arithmatex">\(x\geq0\)</span> 部分，则</p>
 <div class="arithmatex">\[\iint_Df(x,y)\text{d}x\text{d}y = \begin{cases}
 0,&amp; f(-x,y) = -f(x,y)\\
-2\iint_{D_1}f(x,y)\text{d}x\text{d}y, &amp;f(-x,y) = f(x,y)
+\displaystyle 2\iint_{D_1}f(x,y)\text{d}x\text{d}y, &amp;f(-x,y) = f(x,y)
 \end{cases}\]</div>
 <h3 id="_10">换元<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
 <h4 id="_11">极坐标形式<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
@@ -2703,11 +2695,11 @@
 <h4 id="_15">长方体区域<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
 <p>设 <span class="arithmatex">\(f(x,y,z)\)</span> 在 <span class="arithmatex">\([a,b]\times [c,d]\times [e,h]\)</span> 可积.</p>
 <ol>
-<li>若 <span class="arithmatex">\(\forall (x,y)\in [a,b]\times [c,d]\)</span>，存在<strong>首次积分</strong> <span class="arithmatex">\(\mu (x,y) = \int_e^hf(x,y,z)\text{d}z\)</span>，则</li>
+<li>若 <span class="arithmatex">\(\forall (x,y)\in [a,b]\times [c,d]\)</span>，存在<strong>首次积分</strong> <span class="arithmatex">\(\displaystyle \mu (x,y) = \int_e^hf(x,y,z)\text{d}z\)</span>，则</li>
 </ol>
 <div class="arithmatex">\[\iiint_{[a,b]\times [c,d]\times [e,h]}f(x,y,z)\text{d}V = \iint_{[a,b]\times [c,d]}\text{d}x\text{d}y\int_e^hf(x,y,z)\text{d}z\]</div>
 <ol>
-<li>若 <span class="arithmatex">\(\forall z\in [e,h]\)</span>，存在<strong>二重积分</strong> <span class="arithmatex">\(\mu(z) = \iint_{[a,b]\times [c,d]}f(x,y,z)\text{d}x\text{d}y\)</span>，则</li>
+<li>若 <span class="arithmatex">\(\forall z\in [e,h]\)</span>，存在<strong>二重积分</strong> <span class="arithmatex">\(\displaystyle \mu(z) = \iint_{[a,b]\times [c,d]}f(x,y,z)\text{d}x\text{d}y\)</span>，则</li>
 </ol>
 <div class="arithmatex">\[\iiint_{[a,b]\times [c,d]\times [e,h]}f(x,y,z)\text{d}V = \int_e^h\text{d}z\iint_{[a,b]\times [c,d]}f(x,y,z)\text{d}x\text{d}y\]</div>
 <h4 id="_16">柱线法（坐标面投影法）<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
@@ -2826,7 +2818,7 @@ x_2 = \rho\sin\theta_1\sin\theta_2\cdots\sin\theta_{n-1}\newline
 \ \vdots\newline
 x_n = \rho\cos\theta_1
 \end{cases}
-\textbf{J} = \begin{aligned}\frac{\partial (x_1,x_2,\dots,x_n)}{\partial (\rho,\theta_1,\theta_2,\dots,\theta_{n-1})} = \rho^n\sin^{n-1}\theta_1\cdots\sin\theta_{n-1}\end{aligned}\)</span></p>
+\displaystyle \textbf{J} = \frac{\partial (x_1,x_2,\dots,x_n)}{\partial (\rho,\theta_1,\theta_2,\dots,\theta_{n-1})} = \rho^n\sin^{n-1}\theta_1\cdots\sin\theta_{n-1}\)</span></p>
 <p><span class="arithmatex">\(\begin{aligned}
 &amp;\int_{\Omega}\text{d}V = \int_{\Omega'}|\textbf{J}|\text{d}\rho\text{d}\theta_1\cdots\text{d}\theta_{n-1}\\
 =&amp; \int_0^{2\pi}\text{d}\theta_{n-1}\int_0^{\pi}\sin^{n-1}\theta_1\text{d}\theta_1\cdots\int_0^{\pi}\sin\theta_{n-2}\text{d}\theta_{n-2}\int_0^{R}\rho^{n-1}\text{d}\rho\newline
@@ -2860,7 +2852,7 @@ x_n = \rho\cos\theta_1
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 29, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 30, 2024</span>
   </span>
 
     
