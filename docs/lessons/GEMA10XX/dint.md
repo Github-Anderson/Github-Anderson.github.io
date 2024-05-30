@@ -1,6 +1,5 @@
 ---
 comments: true
-status: star
 ---
 
 # 多元函数微分学
@@ -19,7 +18,7 @@ status: star
 
 ### 二重极限
 
-$$\lim_{M\to M_0} f(M)=a$$
+$$\lim_{M\to M_0} f(M)=\lim_{(x,y)\to (x_0,y_0)}f(x,y)=a$$
 
 ### 累次极限
 

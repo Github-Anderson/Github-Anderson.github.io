@@ -127,7 +127,7 @@ $$\int_LP\text{d}x+Q\text{d}y=\int_a^b[P(x,y(x))+Q(x,y(x))y'(x)]\text{d}x$$
 
 	向量形式
 
-	$$\oint_{\partial D}=\bm{F}\cdot\bm{n}^{\circ}\text{d}s=\iint_D\nabla\cdot\bm{F}\text{d}\sigma$$
+	$$\oint_{\partial D}\bm{F}\cdot\bm{n}^{\circ}\text{d}s=\iint_D\nabla\cdot\bm{F}\text{d}\sigma$$
 
 设平面有界闭域 $D$ 的边界分段光滑, 则其面积
 $$

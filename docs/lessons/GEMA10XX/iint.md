@@ -58,7 +58,7 @@ $$\begin{aligned}\iint_Df(x,y)\text{d}x\text{d}y = \int_{c}^{d}\text{d}y\int_{x_
 
 $$\iint_Df(x,y)\text{d}x\text{d}y = \begin{cases}
 0,& f(-x,y) = -f(x,y)\\
-2\iint_{D_1}f(x,y)\text{d}x\text{d}y, &f(-x,y) = f(x,y)
+\displaystyle 2\iint_{D_1}f(x,y)\text{d}x\text{d}y, &f(-x,y) = f(x,y)
 \end{cases}$$
 
 ### 换元
@@ -93,11 +93,11 @@ $$\iint_Df(x,y)\text{d}x\text{d}y = \iint_{D'}f(x(u,v),y(u,v))|\mathbf{J}|\text{
 
 设 $f(x,y,z)$ 在 $[a,b]\times [c,d]\times [e,h]$ 可积.
 
-1. 若 $\forall (x,y)\in [a,b]\times [c,d]$，存在**首次积分** $\mu (x,y) = \int_e^hf(x,y,z)\text{d}z$，则
+1. 若 $\forall (x,y)\in [a,b]\times [c,d]$，存在**首次积分** $\displaystyle \mu (x,y) = \int_e^hf(x,y,z)\text{d}z$，则
 
 $$\iiint_{[a,b]\times [c,d]\times [e,h]}f(x,y,z)\text{d}V = \iint_{[a,b]\times [c,d]}\text{d}x\text{d}y\int_e^hf(x,y,z)\text{d}z$$
 
-2. 若 $\forall z\in [e,h]$，存在**二重积分** $\mu(z) = \iint_{[a,b]\times [c,d]}f(x,y,z)\text{d}x\text{d}y$，则
+2. 若 $\forall z\in [e,h]$，存在**二重积分** $\displaystyle \mu(z) = \iint_{[a,b]\times [c,d]}f(x,y,z)\text{d}x\text{d}y$，则
 
 $$\iiint_{[a,b]\times [c,d]\times [e,h]}f(x,y,z)\text{d}V = \int_e^h\text{d}z\iint_{[a,b]\times [c,d]}f(x,y,z)\text{d}x\text{d}y$$
 
@@ -239,7 +239,7 @@ $$V_n = \frac{h^n}{n!}$$
 	\ \vdots\newline
 	x_n = \rho\cos\theta_1
 	\end{cases}
-	\textbf{J} = \begin{aligned}\frac{\partial (x_1,x_2,\dots,x_n)}{\partial (\rho,\theta_1,\theta_2,\dots,\theta_{n-1})} = \rho^n\sin^{n-1}\theta_1\cdots\sin\theta_{n-1}\end{aligned}$
+	\displaystyle \textbf{J} = \frac{\partial (x_1,x_2,\dots,x_n)}{\partial (\rho,\theta_1,\theta_2,\dots,\theta_{n-1})} = \rho^n\sin^{n-1}\theta_1\cdots\sin\theta_{n-1}$
 
 	$\begin{aligned}
 	&\int_{\Omega}\text{d}V = \int_{\Omega'}|\textbf{J}|\text{d}\rho\text{d}\theta_1\cdots\text{d}\theta_{n-1}\\
