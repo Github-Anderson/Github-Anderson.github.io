@@ -2675,7 +2675,7 @@ S=\frac{1}{2}\oint_{\partial D^+}x\text{d}y-y\text{d}x$$</p>
 <span class="arithmatex">\(\begin{aligned}\oint_LP\text{d}x+Q\text{d}y=0\end{aligned}\)</span></p>
 </li>
 <li>
-<p>在 <span class="arithmatex">\(D\)</span> 内曲线积分 <span class="arithmatex">\(\begin{aligned}\oint_LP\text{d}x+Q\text{d}y\end{aligned}\)</span> 与路径无关，即值仅与 <span class="arithmatex">\(A,B\)</span> 有关, 而与 <span class="arithmatex">\(L\)</span> 无关</p>
+<p>在 <span class="arithmatex">\(D\)</span> 内曲线积分 <span class="arithmatex">\(\begin{aligned}\int_LP\text{d}x+Q\text{d}y\end{aligned}\)</span> 与路径无关，即值仅与 <span class="arithmatex">\(A,B\)</span> 有关, 而与 <span class="arithmatex">\(L\)</span> 无关</p>
 </li>
 <li>
 <p>向量场是某函数的<strong>梯度场</strong>，即存在 <span class="arithmatex">\(\varphi(x,y)\)</span>，使得
@@ -2789,7 +2789,7 @@ $$</p>
 <div class="arithmatex">\[V = \frac{1}{3}\oiint_{\partial V^+}x\text{d}y\text{d}z+y\text{d}z\text{d}x+z\text{d}x\text{d}y\]</div>
 </li>
 <li>
-<p><strong>散度物理意义</strong> <span class="arithmatex">\(\begin{aligned}\text{div }\bm{v}(M) = \lim_{V\to M}\frac{1}{\text{Vol}(V)}\oiint_{\partial V^+}\bm{v}\cdot \text{d}\bm{S}\end{aligned}\)</span></p>
+<p><strong>散度物理意义</strong> <span class="arithmatex">\(\displaystyle \text{div }\bm{v}(M) = \lim_{V\to M}\frac{1}{\text{Vol}(V)}\oiint_{\partial V^+}\bm{v}\cdot \text{d}\bm{S}\)</span></p>
 </li>
 </ul>
 <div class="admonition abstract">
@@ -2813,12 +2813,12 @@ P &amp; Q &amp; R
 <p>其中 <span class="arithmatex">\(\partial S\)</span> 定向与 <span class="arithmatex">\((\cos\alpha, \cos\beta, \cos\gamma)\)</span> 按右手法则联系</p>
 <p>向量形式</p>
 <div class="arithmatex">\[\begin{aligned}
-\oint_{\partial S}\bm{v}\cdot \text{d}\bm{r} &amp;= \iint_S\text{rot }\bm{v}\cdot \text{d}\bm{S}\\
-&amp;=\iint_S\text{rot }\bm{v}\cdot \bm{n}^{\circ}\text{d}S
+\oint_{\partial S}\bm{v}\cdot \text{d}\bm{r} &amp;= \iint_S\textbf{rot }\bm{v}\cdot \text{d}\bm{S}\\
+&amp;=\iint_S\textbf{rot }\bm{v}\cdot \bm{n}^{\circ}\text{d}S
 \end{aligned}\]</div>
 </div>
 <ul>
-<li><strong>旋度物理意义</strong> <span class="arithmatex">\(\begin{aligned}\text{rot }\bm{v}\cdot \bm{n}^{\circ} \mid_M = \lim_{S\to M}\frac{1}{\text{Area}(V)}\oint_{\partial S}\bm{v}\cdot \text{d}\bm{r}\end{aligned}\)</span></li>
+<li><strong>旋度物理意义</strong> <span class="arithmatex">\(\displaystyle \textbf{rot }\bm{v}\cdot \bm{n}^{\circ} \mid_M = \lim_{S\to M}\frac{1}{\text{Area}(V)}\oint_{\partial S}\bm{v}\cdot \text{d}\bm{r}\)</span></li>
 </ul>
 <h2 id="_23">保守场<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h2>
 <h3 id="_24">定义<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
@@ -2841,13 +2841,13 @@ P &amp; Q &amp; R
 <p><span class="arithmatex">\(\text{d} \varphi = P \text{d}x + Q \text{d}y + R \text{d}z\)</span>，则称 <span class="arithmatex">\(\varphi\)</span> 是 <span class="arithmatex">\(\bm{v}\)</span> 的 <strong>势函数</strong>，<span class="arithmatex">\(\bm{v}\)</span> 是 <span class="arithmatex">\(\varphi\)</span> 的 <strong>梯度场</strong>，即 <span class="arithmatex">\(\bm{v} = \nabla \varphi\)</span>;</p>
 </li>
 <li>
-<p>在 <span class="arithmatex">\(V\)</span> 内恒有 <span class="arithmatex">\(\operatorname{rot} \bm{v} = 0\)</span>，则称 <span class="arithmatex">\(\bm{v}\)</span> 为 <span class="arithmatex">\(V\)</span> 中的 <strong>无旋场</strong>.</p>
+<p>在 <span class="arithmatex">\(V\)</span> 内恒有 <span class="arithmatex">\(\textbf{rot} \bm{v} = 0\)</span>，则称 <span class="arithmatex">\(\bm{v}\)</span> 为 <span class="arithmatex">\(V\)</span> 中的 <strong>无旋场</strong>.</p>
 </li>
 </ol>
 </div>
 <ul>
 <li>
-<p>设 <span class="arithmatex">\(\bm{v}\)</span> 为光滑向量场，<span class="arithmatex">\(V \subset \mathbb{R}^3\)</span>。若存在向量场 <span class="arithmatex">\(\bm{\alpha}\)</span> 使得 <span class="arithmatex">\(\bm{v} = \operatorname{rot} \bm{\alpha} = \nabla \times \bm{\alpha}\)</span>，则称 <span class="arithmatex">\(\bm{\alpha}\)</span> 为 <span class="arithmatex">\(\bm{v}\)</span> 的 <strong>向量势</strong>.</p>
+<p>设 <span class="arithmatex">\(\bm{v}\)</span> 为光滑向量场，<span class="arithmatex">\(V \subset \mathbb{R}^3\)</span>。若存在向量场 <span class="arithmatex">\(\bm{\alpha}\)</span> 使得 <span class="arithmatex">\(\bm{v} = \textbf{rot} \bm{\alpha} = \nabla \times \bm{\alpha}\)</span>，则称 <span class="arithmatex">\(\bm{\alpha}\)</span> 为 <span class="arithmatex">\(\bm{v}\)</span> 的 <strong>向量势</strong>.</p>
 </li>
 <li>
 <p>若 <span class="arithmatex">\(\bm{v}\)</span> 为光滑向量场, 则 <span class="arithmatex">\(\bm{v}\)</span> 存在向量势的充要条件是 <span class="arithmatex">\(\bm{v}\)</span> 为无源场.</p>
@@ -2875,7 +2875,7 @@ P &amp; Q &amp; R
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 26, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 30, 2024</span>
   </span>
 
     
