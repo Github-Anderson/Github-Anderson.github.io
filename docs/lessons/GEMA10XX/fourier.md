@@ -326,7 +326,9 @@ $$\displaystyle \langle \varphi_m(x),\varphi_n(x)\rangle = \int_a^b \varphi_m(x)
 
 回顾 [F氏级数的复数形式](#f)
 
-设 $f$ 在 $\mathbb{R}$ 的任意有限区间分段可微，且在 $(-\infty,+\infty)$ 上绝对可积，则有对任意 $x\in \mathbf{R}$ 有
+设 $f$ 在 $\mathbb{R}$ 的任意有限区间分段可微，且在 $(-\infty,+\infty)$ 上绝对可积[^1]，则有对任意 $x\in \mathbf{R}$ 有
+
+[^1]: 即积分在 $(-\infty,\infty)$ 上收敛
 
 $$\frac{1}{2\pi}\int_{-\infty}^{+\infty}\left[\int_{-\infty}^{+\infty}f(t)e^{-i\lambda t}\text{d}t\right]e^{i\lambda x}\text{d}\lambda = \frac{f(x+0)+f(x-0)}{2}$$
 
@@ -342,10 +344,93 @@ $$F(\lambda) = \int_{-\infty}^{+\infty}f(t)e^{-i\lambda t}\text{d}t$$
 
 为 $f$ 的 Fourier变换；而函数
 
-$$f(x) = \frac{1}{2\pi}\int_{-\infty}^{+\infty}e^{i\lambda x}\text{d}\lambda$$
+$$f(x) = \frac{1}{2\pi}\int_{-\infty}^{+\infty}F(\lambda)e^{i\lambda x}\text{d}\lambda$$
 
 称为 $F(\lambda)$ 的 Fourier 逆变换，上式称为反演公式
 
+### 实形式 Fourier 积分
+
+当 $f$ 在 $\mathbb{R}$ 上连续时，有
+
+$$\begin{aligned}
+f(x) &= \frac{1}{\pi}\int_0^{+\infty}\text{d}\lambda\int_{-\infty}^{+\infty}f(t)\cos\lambda(x-t)\text{d}t\\
+&\stackrel{\text{def}}{=}\int_0^{+\infty}\left[a(\lambda)\cos\lambda x+b(\lambda)\sin\lambda x\right]\text{d}\lambda
+\end{aligned}$$
+
+其中 $\displaystyle a(\lambda) = \frac{1}{\pi}\int_{-\infty}^{+\infty}f(t)\cos\lambda t\text{d}t\quad b(\lambda) = \frac{1}{\pi}\int_{-\infty}^{+\infty}f(t)\sin\lambda t\text{d}t$
+
+### 正弦和余弦变换
+
+=== "正弦变换"
+
+	若 \( f \) 为奇函数，其 Fourier 变换
+
+	$$
+	f(x) \rightarrow F_o(\lambda) = \int_{-\infty}^{+\infty} f(t)e^{-i \lambda t} \text{d}t = -2i \int_{0}^{+\infty} f(t)\sin(\lambda t) \text{d}t
+	$$
+
+	称 $\displaystyle G_o(\lambda) = i F_o(\lambda) = 2 \int_{0}^{+\infty} f(t)\sin(\lambda t) \text{d}t$ 为 $f$ 的**正弦变换**，其逆变换为
+
+	$$
+	G_o(\lambda) \rightarrow f(x) = \frac{1}{\pi} \int_{0}^{+\infty} G_o(\lambda)\sin(\lambda x) \text{d}\lambda
+	$$
+
+=== "余弦变换"
+
+	若 \( f \) 为偶函数，其 Fourier 变换
+
+	$$
+	f(x) \rightarrow F_e(\lambda) = \int_{-\infty}^{+\infty} f(t)e^{-i \lambda t} \text{d}t = 2 \int_{0}^{+\infty} f(t)\cos(\lambda t) \text{d}t
+	$$
+
+	称为**余弦变换**，其逆变换为
+
+	$$
+	F_e(\lambda) \rightarrow f(x) = \frac{1}{2\pi} \int_{-\infty}^{+\infty} F_e(\lambda)e^{i \lambda x} \text{d}\lambda = \frac{1}{\pi} \int_{0}^{+\infty} F_e(\lambda)\cos(\lambda x) \text{d}\lambda
+	$$
+
 ### 性质
 
+记 $f$ 的 Fourier 变换为 $F[f]$，即
+
+$$F[f](\lambda) = F(\lambda) = \int_{-\infty}^{+\infty}f(t) e^{-i\lambda t}\text{d}t$$
+
+#### 线性性
+
+$$F[\alpha f+\beta g] = \alpha F[f]+\beta F[g]\quad \alpha,\beta\in\mathbb{R}$$
+
+#### 频移性
+
+$$F[f(x)e^{-i\lambda_0x}](\lambda) = F(\lambda + \lambda_0)$$
+
+#### 微分关系
+
+设 $f(\pm\infty)=0,f'$ 存在 Fourier 变换，则
+
+$$F[f'] = i\lambda\cdot F[f]$$
+
+#### 微分特性
+
+设 $f$ 和 $xf(x)$ 存在 Fourier 变换，则
+
+$$F'(\lambda) = F[-ixf(x)]$$
+
 ### 卷积
+
+设 $f,g$ 在 $\mathbb{R}$ 上绝对可积，则 $f$ 和 $g$ 的卷积
+
+$$(f\ast g)(x)\stackrel{\text{def}}{=}\int_{-\infty}^{+\infty}f(x-t)g(t)\text{d}t$$
+
+- $f\ast g=g\ast f$
+
+- $(f\ast g)\ast h=f\ast (g\ast h)$
+
+- $(f+g)\ast h=f\ast h+g\ast h$
+
+- $F[f\ast g] = F[f]\cdot F[g]$
+
+!!! tip " Parseval 等式"
+
+	若 $f$ 可积且平方可积，$F(\lambda)$ 是 $f$ 的F氏变换，则有
+
+	$$\int_{-\infty}^{+\infty}f^2(t)\text{d}t=\frac{1}{2\pi}\int_{-\infty}^{+\infty}|F(\lambda)|^2\text{d}\lambda$$

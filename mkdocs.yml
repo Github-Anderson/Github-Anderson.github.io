@@ -117,6 +117,7 @@ plugins:
   # - tags
 
   - git-revision-date-localized:
+      # fallback_to_build_date: false
       enable_creation_date: true
       exclude:
         - index.md
@@ -124,7 +125,7 @@ plugins:
         - blog/index.md
         - lessons/index.md
         - about/index.md
-      type: date
+      type: timeago
 
 markdown_extensions:
   - pymdownx.critic

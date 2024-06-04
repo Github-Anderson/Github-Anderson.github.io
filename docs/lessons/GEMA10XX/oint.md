@@ -323,11 +323,11 @@ $$
 
 	设 \(\bm{v} = (P, Q, R)\) 是连通区域 \(V\) 内光滑向量场，若
 
-	1. 在 \(V\) 内曲线积分 \(\int_L P \text{d}x + Q \text{d}y + R \text{d}z\) 与路径无关，则称 \(\bm{v}\) 为 \(V\) 中的 **保守场**;
+	1. 在 \(V\) 内曲线积分 \(\displaystyle \int_L P \text{d}x + Q \text{d}y + R \text{d}z\) 与路径无关，则称 \(\bm{v}\) 为 \(V\) 中的 **保守场**;
 
 	2. \(\text{d} \varphi = P \text{d}x + Q \text{d}y + R \text{d}z\)，则称 \(\varphi\) 是 \(\bm{v}\) 的 **势函数**，\(\bm{v}\) 是 \(\varphi\) 的 **梯度场**，即 \(\bm{v} = \nabla \varphi\);
 
-	3. 在 \(V\) 内恒有 \(\textbf{rot} \bm{v} = 0\)，则称 \(\bm{v}\) 为 \(V\) 中的 **无旋场**.
+	3. 在 \(V\) 内恒有 \(\textbf{rot } \bm{v} = 0\)，则称 \(\bm{v}\) 为 \(V\) 中的 **无旋场**.
 
 - 设 \(\bm{v}\) 为光滑向量场，\(V \subset \mathbb{R}^3\)。若存在向量场 \(\bm{\alpha}\) 使得 \(\bm{v} = \textbf{rot} \bm{\alpha} = \nabla \times \bm{\alpha}\)，则称 \(\bm{\alpha}\) 为 \(\bm{v}\) 的 **向量势**.
 
