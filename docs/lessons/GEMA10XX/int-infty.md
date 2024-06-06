@@ -9,7 +9,7 @@ status: star
 
 - 记 $\displaystyle F(A)=\int_a^Af(x)\text{d}x$，定义**无穷积分** $\displaystyle \int_a^{+\infty}f(x)\text{d}x = \lim_{A\to +\infty}F(A)$
 
-- 记 $F(A)=\int_a^Af(x)\text{d}x$，（$b$ 瑕点）定义**瑕积分**$\displaystyle \int_a^bf(x)\text{d}x = \lim_{A\to b^-}F(A)$
+- 记 $\displaystyle F(A)=\int_a^Af(x)\text{d}x$，（$b$ 瑕点）定义**瑕积分**$\displaystyle \int_a^bf(x)\text{d}x = \lim_{A\to b^-}F(A)$
 
 ### 无穷积分的收敛性
 
