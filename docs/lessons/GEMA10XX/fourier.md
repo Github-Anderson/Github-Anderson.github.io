@@ -1,6 +1,5 @@
 ---
 comments: true
-status: star
 ---
 
 # Fourier 分析
@@ -325,6 +324,8 @@ $$\displaystyle \langle \varphi_m(x),\varphi_n(x)\rangle = \int_a^b \varphi_m(x)
 ### Fourier 积分
 
 回顾 [F氏级数的复数形式](#f)
+
+记 $\lambda_n = \dfrac{n\pi}{l}, \Delta\lambda = \lambda_n-\lambda_{n-1}=\dfrac{\pi}{l}$
 
 设 $f$ 在 $\mathbb{R}$ 的任意有限区间分段可微，且在 $(-\infty,+\infty)$ 上绝对可积[^1]，则有对任意 $x\in \mathbf{R}$ 有
 

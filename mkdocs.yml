@@ -221,6 +221,7 @@ nav:
       - lessons/GEMA10XX/iint.md
       - lessons/GEMA10XX/oint.md
       - lessons/GEMA10XX/fourier.md
+      - lessons/GEMA10XX/int-infty.md
     - 线性代数 MATH1112:
       - lessons/MATH1112/links.md
       - lessons/MATH1112/ele.md
