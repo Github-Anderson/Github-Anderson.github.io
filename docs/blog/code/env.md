@@ -133,7 +133,7 @@ comments: true
 				"configurations": [
 					{
 						"name": "Mac",
-						"compilerPath": "usr/bin/gcc",
+						"compilerPath": "/usr/bin/gcc",
 						"cStandard": "c17",
 						"cppStandard": "c++17",
 						"intelliSenseMode": "macos-clang-x64",
