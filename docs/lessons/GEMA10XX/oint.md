@@ -329,7 +329,7 @@ $$
 
 	3. 在 \(V\) 内恒有 \(\textbf{rot } \bm{v} = 0\)，则称 \(\bm{v}\) 为 \(V\) 中的 **无旋场**.
 
-- 设 \(\bm{v}\) 为光滑向量场，\(V \subset \mathbb{R}^3\)。若存在向量场 \(\bm{\alpha}\) 使得 \(\bm{v} = \textbf{rot} \bm{\alpha} = \nabla \times \bm{\alpha}\)，则称 \(\bm{\alpha}\) 为 \(\bm{v}\) 的 **向量势**.
+- 设 \(\bm{v}\) 为光滑向量场，\(V \subset \mathbb{R}^3\)。若存在向量场 \(\bm{\alpha}\) 使得 \(\bm{v} = \textbf{rot } \bm{\alpha} = \nabla \times \bm{\alpha}\)，则称 \(\bm{\alpha}\) 为 \(\bm{v}\) 的 **向量势**.
 
 
 - 若 $\bm{v}$ 为光滑向量场, 则 $\bm{v}$ 存在向量势的充要条件是 $\bm{v}$ 为无源场.

@@ -250,4 +250,58 @@ $$
 
 ## 含参变量的反常积分
 
+设 $f(x, u)$ 在 $[a, +\infty) \times [\alpha, \beta]$ 定义，若对 $\forall u \in [\alpha, \beta]$：
+
+$$
+\int_a^{+\infty} f(x, u) \text{d}x
+$$
+
+收敛，则称之为 **含参变量无穷积分**，记为
+
+$$
+\varphi(u) = \int_a^{+\infty} f(x, u) \text{d}x, \quad u \in [\alpha, \beta]
+$$
+
+!!! abstract "定理"
+
+	$\displaystyle \int_a^{+\infty} f(x, u) \text{d}u$ 在 $[\alpha, \beta]$ 上一致收敛的充要条件是：
+
+	$$
+	\lim_{A \to +\infty} \beta(A) = 0
+	$$
+
+	其中 $\displaystyle \beta(A) = \sup_{u \in [\alpha, \beta]} \left| \int_A^{+\infty} f(x, u) \text{d}x \right|$
+
+!!! abstract "定理(Cauchy准则)"
+
+	$\displaystyle \int_a^{+\infty} f(x, u) \text{d}x$ 在 $[\alpha, \beta]$ 上一致收敛
+
+	$$
+	\iff \quad \forall \epsilon > 0, \exists X > a, \forall A', A'' > X, \forall u \in [\alpha, \beta]:
+	$$
+
+	$$
+	\left| \int_{A'}^{A''} f(x, u) \text{d}x \right| < \epsilon
+	$$
+
+!!! abstract "定理(Weierstrass-判别法)"
+
+	存在 $p(x) \geq 0$ 使得
+
+	1. $\forall x \in [a, +\infty), \forall u \in [\alpha, \beta]: |f(x, u)| \leq p(x)$
+
+	2. $\displaystyle \int_a^{+\infty} p(x) \text{d}x$ 收敛
+
+	则 $\displaystyle \int_a^{+\infty} f(x, u) \text{d}x$ 在 $[\alpha, \beta]$ 上一致收敛.
+
+!!! abstract "定理 (A-D 判别法)"
+
+	设 $f(x, u), g(x, u)$ 满足下列两组条件之一：
+
+	则 $\displaystyle \int_a^{+\infty} f(x, u) g(x, u) \text{d}x$ 在 $[\alpha, \beta]$ 上一致收敛。
+
+	(Abel) $\forall u \in [\alpha, \beta], g(x, u)$ 关于 $x$ 单调，且一致有界，$\displaystyle \int_a^{+\infty} f(x, u) \text{d}x$ 关于 $u$ 在 $[\alpha, \beta]$ 上一致收敛；
+
+	(Dirichlet) $\forall u \in [\alpha, \beta], g(x, u)$ 关于 $x$ 单调，且一致趋于 $0$ $(x \to +\infty)$，$\displaystyle \int_a^{A} f(x, u) \text{d}x$ 一致有界。
+
 ## Euler 积分

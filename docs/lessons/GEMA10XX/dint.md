@@ -173,11 +173,17 @@ L_{\lambda}'=\varphi(x,y)=0
 
 ## 向量场的微商
 
+- Hamilton 算子 $\nabla = \dfrac{\partial}{\partial x}\bm{i} + \dfrac{\partial}{\partial y}\bm{j} + \dfrac{\partial}{\partial z}\bm{k}$
+
+- Laplace 算子 $\Delta = \nabla \cdot \nabla = \dfrac{\partial^2}{\partial x^2} + \dfrac{\partial^2}{\partial y^2} + \dfrac{\partial^2}{\partial z^2}$
+
 ### 梯度、散度与旋度
 
-设有向量场 $\bm{v}(x,y,z) = P\bm{i} + Q\bm{j} + R\bm{k}$
+设有函数 $u=u(x,y,z)$
 
-- Hamilton 算子 $\nabla = \dfrac{\partial}{\partial x}\bm{i} + \dfrac{\partial}{\partial y}\bm{j} + \dfrac{\partial}{\partial z}\bm{k}$
+- $u$ 的梯度 $|\text{grad }u| = |\nabla u| = |u_x'\bm{i} + u_y'\bm{j} + u_z'\bm{k}|$
+
+设有向量场 $\bm{v}(x,y,z) = P\bm{i} + Q\bm{j} + R\bm{k}$
 
 - $\bm{v}$ 的散度 $\text{div }\bm{v}\stackrel{\text{def}}{=}\nabla \cdot \bm{v} = \dfrac{\partial P}{\partial x} + \dfrac{\partial Q}{\partial y} + \dfrac{\partial R}{\partial z}$
 
@@ -192,5 +198,4 @@ P & Q & R
 
 - $\text{div }\textbf{rot }\bm{v} = \nabla \cdot \nabla \times \bm{a} = 0$
 
-- Laplace 算子 $\Delta = \nabla \cdot \nabla = \dfrac{\partial^2}{\partial x^2} + \dfrac{\partial^2}{\partial y^2} + \dfrac{\partial^2}{\partial z^2}$
 

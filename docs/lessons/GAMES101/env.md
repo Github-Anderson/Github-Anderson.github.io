@@ -6,7 +6,7 @@ comments: true
 
 !!! warning "注意"
 
-	不推荐使用 Windows 环境
+	不推荐使用 Windows 环境，可用作业提供的 VirtualBox 虚拟机
 
 === ":material-linux: Linux"
 
