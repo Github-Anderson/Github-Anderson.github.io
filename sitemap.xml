@@ -36,11 +36,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://Github-Anderson.github.io/blog/games/cs2onmac/</loc>
-         <lastmod>2024-06-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://Github-Anderson.github.io/blog/md/markdown/</loc>
          <lastmod>2024-06-16</lastmod>
          <changefreq>daily</changefreq>
@@ -52,6 +47,16 @@
     </url>
     <url>
          <loc>https://Github-Anderson.github.io/blog/mkdocs/first/</loc>
+         <lastmod>2024-06-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Github-Anderson.github.io/blog/other/bili/</loc>
+         <lastmod>2024-06-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://Github-Anderson.github.io/blog/other/cs2onmac/</loc>
          <lastmod>2024-06-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
