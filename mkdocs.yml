@@ -205,8 +205,9 @@ nav:
     - Material for MkDocs:
       - blog/mkdocs/first.md
       - blog/mkdocs/extra.md
-    - 游戏:
-      - blog/games/cs2onmac.md
+    - 杂七杂八的内容:
+      - blog/other/cs2onmac.md
+      # - blog/other/bili.md
   - 课程:
     - lessons/index.md
     - 信息科技导论 SI100B:

@@ -298,10 +298,10 @@ $$
 
 	设 $f(x, u), g(x, u)$ 满足下列两组条件之一：
 
-	则 $\displaystyle \int_a^{+\infty} f(x, u) g(x, u) \text{d}x$ 在 $[\alpha, \beta]$ 上一致收敛。
+	则 $\displaystyle \int_a^{+\infty} f(x, u) g(x, u) \text{d}x$ 在 $[\alpha, \beta]$ 上**一致收敛**。
 
-	(Abel) $\forall u \in [\alpha, \beta], g(x, u)$ 关于 $x$ 单调，且一致有界，$\displaystyle \int_a^{+\infty} f(x, u) \text{d}x$ 关于 $u$ 在 $[\alpha, \beta]$ 上一致收敛；
+	(Abel) $\forall u \in [\alpha, \beta], g(x, u)$ 关于 $x$ 单调，且**一致有界**，$\displaystyle \int_a^{+\infty} f(x, u) \text{d}x$ 关于 $u$ 在 $[\alpha, \beta]$ 上**一致收敛**；
 
-	(Dirichlet) $\forall u \in [\alpha, \beta], g(x, u)$ 关于 $x$ 单调，且一致趋于 $0$ $(x \to +\infty)$，$\displaystyle \int_a^{A} f(x, u) \text{d}x$ 一致有界。
+	(Dirichlet) $\forall u \in [\alpha, \beta], g(x, u)$ 关于 $x$ 单调，且一致趋于 $0$ $(x \to +\infty)$，$\displaystyle \int_a^{A} f(x, u) \text{d}x$ **一致有界**。
 
 ## Euler 积分

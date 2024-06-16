@@ -121,7 +121,7 @@ $$
 
 ???+ quote "更一般的形式"
 
-	$$f(x)\sim \dfrac{a_0}{2} + \sum_{n=1}^{\infty}\left(a_n\cos (\frac{2\pi nx}{T}) + b_n\sin (\frac{2\pi nx}{T}))\right)$$
+	$$f(x)\sim \dfrac{a_0}{2} + \sum_{n=1}^{\infty}\left(a_n\cos (\frac{2\pi nx}{T}) + b_n\sin (\frac{2\pi nx}{T})\right)$$
 
 	其中，
 
