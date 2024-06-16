@@ -987,7 +987,7 @@
             
   
   <span class="md-ellipsis">
-    数学分析 GEMA1009 & 10
+    数学分析 I & II GEMA1009 & 10
   </span>
   
 
@@ -997,7 +997,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
-            数学分析 GEMA1009 & 10
+            数学分析 I & II GEMA1009 & 10
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1388,7 +1388,7 @@
             
   
   <span class="md-ellipsis">
-    线性代数 MATH1112
+    线性代数 I MATH1112
   </span>
   
 
@@ -1398,7 +1398,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_4">
             <span class="md-nav__icon md-icon"></span>
-            线性代数 MATH1112
+            线性代数 I MATH1112
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2601,6 +2601,52 @@
 \]</div>
 </div>
 <h2 id="_9">含参变量的反常积分<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<p>设 <span class="arithmatex">\(f(x, u)\)</span> 在 <span class="arithmatex">\([a, +\infty) \times [\alpha, \beta]\)</span> 定义，若对 <span class="arithmatex">\(\forall u \in [\alpha, \beta]\)</span>：</p>
+<div class="arithmatex">\[
+\int_a^{+\infty} f(x, u) \text{d}x
+\]</div>
+<p>收敛，则称之为 <strong>含参变量无穷积分</strong>，记为</p>
+<div class="arithmatex">\[
+\varphi(u) = \int_a^{+\infty} f(x, u) \text{d}x, \quad u \in [\alpha, \beta]
+\]</div>
+<div class="admonition abstract">
+<p class="admonition-title">定理</p>
+<p><span class="arithmatex">\(\displaystyle \int_a^{+\infty} f(x, u) \text{d}u\)</span> 在 <span class="arithmatex">\([\alpha, \beta]\)</span> 上一致收敛的充要条件是：</p>
+<div class="arithmatex">\[
+\lim_{A \to +\infty} \beta(A) = 0
+\]</div>
+<p>其中 <span class="arithmatex">\(\displaystyle \beta(A) = \sup_{u \in [\alpha, \beta]} \left| \int_A^{+\infty} f(x, u) \text{d}x \right|\)</span></p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">定理(Cauchy准则)</p>
+<p><span class="arithmatex">\(\displaystyle \int_a^{+\infty} f(x, u) \text{d}x\)</span> 在 <span class="arithmatex">\([\alpha, \beta]\)</span> 上一致收敛</p>
+<div class="arithmatex">\[
+\iff \quad \forall \epsilon &gt; 0, \exists X &gt; a, \forall A', A'' &gt; X, \forall u \in [\alpha, \beta]:
+\]</div>
+<div class="arithmatex">\[
+\left| \int_{A'}^{A''} f(x, u) \text{d}x \right| &lt; \epsilon
+\]</div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">定理(Weierstrass-判别法)</p>
+<p>存在 <span class="arithmatex">\(p(x) \geq 0\)</span> 使得</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\forall x \in [a, +\infty), \forall u \in [\alpha, \beta]: |f(x, u)| \leq p(x)\)</span></p>
+</li>
+<li>
+<p><span class="arithmatex">\(\displaystyle \int_a^{+\infty} p(x) \text{d}x\)</span> 收敛</p>
+</li>
+</ol>
+<p>则 <span class="arithmatex">\(\displaystyle \int_a^{+\infty} f(x, u) \text{d}x\)</span> 在 <span class="arithmatex">\([\alpha, \beta]\)</span> 上一致收敛.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">定理 (A-D 判别法)</p>
+<p>设 <span class="arithmatex">\(f(x, u), g(x, u)\)</span> 满足下列两组条件之一：</p>
+<p>则 <span class="arithmatex">\(\displaystyle \int_a^{+\infty} f(x, u) g(x, u) \text{d}x\)</span> 在 <span class="arithmatex">\([\alpha, \beta]\)</span> 上一致收敛。</p>
+<p>(Abel) <span class="arithmatex">\(\forall u \in [\alpha, \beta], g(x, u)\)</span> 关于 <span class="arithmatex">\(x\)</span> 单调，且一致有界，<span class="arithmatex">\(\displaystyle \int_a^{+\infty} f(x, u) \text{d}x\)</span> 关于 <span class="arithmatex">\(u\)</span> 在 <span class="arithmatex">\([\alpha, \beta]\)</span> 上一致收敛；</p>
+<p>(Dirichlet) <span class="arithmatex">\(\forall u \in [\alpha, \beta], g(x, u)\)</span> 关于 <span class="arithmatex">\(x\)</span> 单调，且一致趋于 <span class="arithmatex">\(0\)</span> <span class="arithmatex">\((x \to +\infty)\)</span>，<span class="arithmatex">\(\displaystyle \int_a^{A} f(x, u) \text{d}x\)</span> 一致有界。</p>
+</div>
 <h2 id="euler">Euler 积分<a class="headerlink" href="#euler" title="Permanent link">&para;</a></h2>
 
 
@@ -2624,7 +2670,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-06-08T02:35:43+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-06-08</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-06-16T02:10:48+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-06-16</span>
   </span>
 
     
