@@ -54,7 +54,7 @@ theme:
     logo: octicons/terminal-16
     # [添加 GitHub 仓库]
     repo: fontawesome/brands/github
-  favicon: assets/icon/terminal-16.png
+  favicon: assets/icon/favicon.ico
   
 # [点击按钮跳转至 GitHub 修改 Markdown 源文件]
 edit_uri: edit/main/docs/
@@ -91,6 +91,16 @@ extra:
       link: https://space.bilibili.com/24705427
     - icon: material/email
       link: mailto:aytoolman@outlook.com
+  html:
+    head:
+      - link:
+          rel: apple-touch-icon
+          sizes: "180x180"
+          href: assets/icon/apple-touch-icon.png
+      - link:
+          rel: apple-touch-icon-precomposed
+          sizes: "180x180"
+          href: icon/apple-touch-icon-precomposed.png
 
   # consent:
   #   actions:
