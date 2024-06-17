@@ -91,16 +91,6 @@ extra:
       link: https://space.bilibili.com/24705427
     - icon: material/email
       link: mailto:aytoolman@outlook.com
-  html:
-    head:
-      - link:
-          rel: apple-touch-icon
-          sizes: "180x180"
-          href: assets/icon/apple-touch-icon.png
-      - link:
-          rel: apple-touch-icon-precomposed
-          sizes: "180x180"
-          href: icon/apple-touch-icon-precomposed.png
 
   # consent:
   #   actions:
