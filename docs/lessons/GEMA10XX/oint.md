@@ -217,6 +217,10 @@ $\bm{v}=(P,Q,R)$ - 均匀流体的流速场
 
 $\bm{n}^{\circ}$ - 指向正侧单位法向量
 
+???+ tip "微分形式"
+
+	更准确的说，这里所说的 $\text{d}y\text{d}z, \text{d}z\text{d}x, \text{d}x\text{d}y$ 其实是 $\text{d}y\wedge\text{d}z, \text{d}z\wedge\text{d}x, \text{d}x\wedge\text{d}y$
+
 ### 计算
 
 若定侧光滑曲面 $S$ 为 $\begin{cases}
@@ -331,5 +335,6 @@ $$
 
 - 设 \(\bm{v}\) 为光滑向量场，\(V \subset \mathbb{R}^3\)。若存在向量场 \(\bm{\alpha}\) 使得 \(\bm{v} = \textbf{rot } \bm{\alpha} = \nabla \times \bm{\alpha}\)，则称 \(\bm{\alpha}\) 为 \(\bm{v}\) 的 **向量势**.
 
+- 设v 为向量场, 若其散度 $\text{div }\bm{v} = \nabla\cdot \bm{v} = 0$, 则称 $v$ 为无源场.
 
 - 若 $\bm{v}$ 为光滑向量场, 则 $\bm{v}$ 存在向量势的充要条件是 $\bm{v}$ 为无源场.

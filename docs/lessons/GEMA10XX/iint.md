@@ -73,7 +73,7 @@ $$\iint_Df(x,y)\text{d}x\text{d}y=\iint_{D'}f(r\cos\theta,r\sin\theta)r\text{d}r
 
 $$\iint_{D'}f(r\cos\theta,r\sin\theta)r\text{d}r\text{d}\theta = \int_{\alpha}^{\beta}\text{d}\theta\int_{r_1(\theta)}^{r_2(\theta)}f(r\cos\theta,r\sin\theta)r\text{d}r$$
 
-!!! info "注意"
+!!! warning "注意"
 
 	由于 $r\neq 0$，显然这里的 $D'$ 并不包括 $z$ 轴，即 $\mathbf{F}: (x,y) \mapsto (r,\theta)$ 并不是一对一的。
 
@@ -144,7 +144,7 @@ z=z
 
 $$\iiint_{\Omega}f(x,y,z)\text{d}V=\iiint_{\Omega'}f(r\cos\theta,r\sin\theta,z)r\text{d}r\text{d}\theta\text{d}z$$
 
-!!! info "注意"
+!!! warning "注意"
 
 	同二重积分，由于 $r\neq 0$，显然这里的 $\Omega'$ 并不包括 $z$ 轴，即 $\mathbf{T}: (x,y,z) \mapsto (r,\theta,z)$ 并不是一对一的。
 

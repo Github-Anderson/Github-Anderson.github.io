@@ -1,6 +1,5 @@
 ---
 commments: true
-status: star
 ---
 
 # 反常积分和含参变量积分

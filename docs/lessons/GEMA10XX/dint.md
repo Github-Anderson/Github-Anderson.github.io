@@ -32,9 +32,9 @@ $$\lim_{(x,y)\to (x_0,y_0)}f(x,y) = f(x_0,y_0)$$
 
 ### 可偏导
 
-$$f_x'(x_0,y_0) = \lim_{\Delta x\to 0}\dfrac{f(x_0+\Delta x)-f(x_0,y_0)}{\Delta x}$$
+$$f_x'(x_0,y_0) = \lim_{\Delta x\to 0}\dfrac{f(x_0+\Delta x, y_0)-f(x_0,y_0)}{\Delta x}$$
 
-$$f_y'(x_0,y_0) = \lim_{\Delta y\to 0}\dfrac{f(y_0+\Delta y)-f(x_0,y_0)}{\Delta y}$$
+$$f_y'(x_0,y_0) = \lim_{\Delta y\to 0}\dfrac{f(x_0, y_0+\Delta y)-f(x_0,y_0)}{\Delta y}$$
 
 ### 可微
 
@@ -181,7 +181,7 @@ L_{\lambda}'=\varphi(x,y)=0
 
 设有函数 $u=u(x,y,z)$
 
-- $u$ 的梯度 $|\text{grad }u| = |\nabla u| = |u_x'\bm{i} + u_y'\bm{j} + u_z'\bm{k}|$
+- $u$ 的梯度 $|\textbf{grad }u| = |\nabla u| = |u_x'\bm{i} + u_y'\bm{j} + u_z'\bm{k}|$
 
 设有向量场 $\bm{v}(x,y,z) = P\bm{i} + Q\bm{j} + R\bm{k}$
 
