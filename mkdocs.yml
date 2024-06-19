@@ -237,9 +237,7 @@ nav:
       - lessons/GEHA1050/notes.md
     - 现代计算机图形学入门 GAMES101:
       - lessons/GAMES101/env.md
-      
-    # - 文章:
-      
+      - lessons/GAMES101/projection.md
   - 随笔:
     - essay/index.md
     - 文章:
