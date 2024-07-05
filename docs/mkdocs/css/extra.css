@@ -23,3 +23,17 @@ body .katex-display {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(100px);
 }
+
+/* 标题栏的CSS代码 */
+.md-header {
+    box-shadow: none;
+    transition: none;
+    backdrop-filter: saturate(180%) blur(10px); /* Gaussian blur */
+    -webkit-backdrop-filter: saturate(180%) blur(10px); /* Safari */
+    background-color: rgba(255, 255, 255, 0.6); 
+}
+
+/* 设置根元素的背景颜色变量 */
+:root > * {
+    --md-header-bg-color: rgba(255, 255, 255, 0.6);
+}
