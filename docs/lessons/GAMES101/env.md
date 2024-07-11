@@ -4,6 +4,10 @@ comments: true
 
 # 作业环境配置
 
+!!! info "关于作业"
+
+	个人版本作业，经供参考 [:fontawesome-brands-github: Github](https://github.com/Github-Anderson/GAMES101-HW/)
+	
 !!! warning "注意"
 
 	不推荐使用 Windows 环境，可用作业提供的 VirtualBox 虚拟机
