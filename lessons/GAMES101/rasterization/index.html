@@ -12,13 +12,13 @@
         <meta name="author" content="Anderson_Yang">
       
       
-        <link rel="canonical" href="https://Github-Anderson.github.io/lessons/GAMES101/projection/">
+        <link rel="canonical" href="https://Github-Anderson.github.io/lessons/GAMES101/rasterization/">
       
       
-        <link rel="prev" href="../env/">
+        <link rel="prev" href="../review-la/">
       
       
-        <link rel="next" href="../../../essay/">
+        <link rel="next" href="../geometry/">
       
       
       <link rel="icon" href="../../../assets/icon/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Projection - Anderson_Yang 的个人网站</title>
+        <title>Rasterization - Anderson_Yang 的个人网站</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#projection" class="md-skip">
+        <a href="#rasterization" class="md-skip">
           跳转至
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Projection
+              Rasterization
             
           </span>
         </div>
@@ -1574,6 +1574,14 @@
       
         
       
+        
+      
+        
+      
+        
+      
+        
+      
     
     
       
@@ -1630,6 +1638,48 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview of CG
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../review-la/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Review of Linear Algebra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1646,7 +1696,7 @@
           
   
   <span class="md-ellipsis">
-    Projection
+    Rasterization
   </span>
   
 
@@ -1657,7 +1707,7 @@
         
   
   <span class="md-ellipsis">
-    Projection
+    Rasterization
   </span>
   
 
@@ -1679,6 +1729,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#projection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Projection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#orthographic-projection" class="md-nav__link">
     <span class="md-ellipsis">
       Orthographic Projection
@@ -1686,11 +1746,442 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#perspective-projection" class="md-nav__link">
     <span class="md-ellipsis">
       Perspective Projection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Viewing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perspective-projection_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perspective Projection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canonical-cube-to-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canonical Cube to Screen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antialiasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Antialiasing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Antialiasing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-antialiasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before Antialiasing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Before Antialiasing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sampling-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sampling Artifacts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idea-blurring-before-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Idea: Blurring Before Sampling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequency-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequency Domain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Frequency Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fourier-series-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fourier Series &amp; Transform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-convolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering = Convolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filtering = Convolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sampling-repeating-frequency-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sampling = Repeating Frequency Contents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sampling = Repeating Frequency Contents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-increase-samling-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 1: Increase samling rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-antialiasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2: Antialiasing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antialiasing_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Antialiasing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Antialiasing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#antialiasing-by-averaging-values-in-pixel-area" class="md-nav__link">
+    <span class="md-ellipsis">
+      Antialiasing By Averaging Values in Pixel Area
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Antialiasing By Averaging Values in Pixel Area">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antialiasing-by-computing-average-pixel-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Antialiasing by Computing Average Pixel Value
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antialiasing-by-supersampling-msaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Antialiasing By Supersampling (MSAA)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Antialiasing By Supersampling (MSAA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supersampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supersampling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supersampling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3 Result
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antialiasing-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      Antialiasing Today
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visibility-occlusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visibility / Occlusion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visibility / Occlusion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#painters-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Painter's Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Z-Buffer (深度缓存)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Z-Buffer (深度缓存)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Idea
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complexity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shading
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blinn-phong-reflectance-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blinn-Phong Reflectance Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blinn-Phong Reflectance Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diffuse-reflection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diffuse Reflection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specular-term" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specular Term
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambient-term" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ambient Term
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shading-frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shading Frequencies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Texture
     </span>
   </a>
   
@@ -1700,6 +2191,48 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geometry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Geometry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ray-tracing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ray Tracing
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2138,6 +2671,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#projection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Projection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#orthographic-projection" class="md-nav__link">
     <span class="md-ellipsis">
       Orthographic Projection
@@ -2145,11 +2688,442 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#perspective-projection" class="md-nav__link">
     <span class="md-ellipsis">
       Perspective Projection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Viewing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perspective-projection_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perspective Projection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#canonical-cube-to-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canonical Cube to Screen
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antialiasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Antialiasing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Antialiasing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#before-antialiasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Before Antialiasing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Before Antialiasing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sampling-artifacts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sampling Artifacts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idea-blurring-before-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Idea: Blurring Before Sampling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#frequency-domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Frequency Domain
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Frequency Domain">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fourier-series-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fourier Series &amp; Transform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-convolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering = Convolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filtering = Convolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sampling-repeating-frequency-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sampling = Repeating Frequency Contents
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sampling = Repeating Frequency Contents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-increase-samling-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 1: Increase samling rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-antialiasing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2: Antialiasing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antialiasing_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Antialiasing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Antialiasing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#antialiasing-by-averaging-values-in-pixel-area" class="md-nav__link">
+    <span class="md-ellipsis">
+      Antialiasing By Averaging Values in Pixel Area
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Antialiasing By Averaging Values in Pixel Area">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solution:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antialiasing-by-computing-average-pixel-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      Antialiasing by Computing Average Pixel Value
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antialiasing-by-supersampling-msaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Antialiasing By Supersampling (MSAA)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Antialiasing By Supersampling (MSAA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#supersampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supersampling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supersampling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3 Result
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#antialiasing-today" class="md-nav__link">
+    <span class="md-ellipsis">
+      Antialiasing Today
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visibility-occlusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visibility / Occlusion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visibility / Occlusion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#painters-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Painter's Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z-buffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Z-Buffer (深度缓存)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Z-Buffer (深度缓存)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Idea
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complexity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shading
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blinn-phong-reflectance-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blinn-Phong Reflectance Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Blinn-Phong Reflectance Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diffuse-reflection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diffuse Reflection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specular-term" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specular Term
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ambient-term" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ambient Term
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shading-frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shading Frequencies
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#texture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Texture
     </span>
   </a>
   
@@ -2170,7 +3144,7 @@
                   
 
   
-    <a href="https://github.com/Github-Anderson/Github-Anderson.github.io/edit/main/docs/lessons/GAMES101/projection.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Github-Anderson/Github-Anderson.github.io/edit/main/docs/lessons/GAMES101/rasterization.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -2178,8 +3152,9 @@
   
 
 
-<h1 id="projection">Projection<a class="headerlink" href="#projection" title="Permanent link">&para;</a></h1>
-<h2 id="orthographic-projection">Orthographic Projection<a class="headerlink" href="#orthographic-projection" title="Permanent link">&para;</a></h2>
+<h1 id="rasterization">Rasterization<a class="headerlink" href="#rasterization" title="Permanent link">&para;</a></h1>
+<h2 id="projection">Projection<a class="headerlink" href="#projection" title="Permanent link">&para;</a></h2>
+<h3 id="orthographic-projection">Orthographic Projection<a class="headerlink" href="#orthographic-projection" title="Permanent link">&para;</a></h3>
 <p><span class="arithmatex">\([l,r]\times[b,t]\times[f,n]\)</span> to <span class="arithmatex">\([-1,1]^3\)</span></p>
 <div class="arithmatex">\[
 \mathbf{M}_{\text{ortho}} = \begin{pmatrix}
@@ -2196,7 +3171,7 @@
 \end{pmatrix}
 \]</div>
 <p><img alt="" src="../img/ortho.png" /></p>
-<h2 id="perspective-projection">Perspective Projection<a class="headerlink" href="#perspective-projection" title="Permanent link">&para;</a></h2>
+<h3 id="perspective-projection">Perspective Projection<a class="headerlink" href="#perspective-projection" title="Permanent link">&para;</a></h3>
 <div class="arithmatex">\[
 \mathbf{M}_{\text{persp}\to\text{ortho}} = \begin{pmatrix}
 n &amp; 0 &amp; 0 &amp; 0 \\
@@ -2208,12 +3183,30 @@ n &amp; 0 &amp; 0 &amp; 0 \\
 <div class="arithmatex">\[
 \mathbf{M}_{\text{persp}} = \mathbf{M}_{\text{ortho}}\mathbf{M}_{\text{persp}\to\text{ortho}}
 \]</div>
-<p><img alt="" src="../img/persp2ortho.png" /></p>
+<h2 id="viewing">Viewing<a class="headerlink" href="#viewing" title="Permanent link">&para;</a></h2>
+<h3 id="perspective-projection_1">Perspective Projection<a class="headerlink" href="#perspective-projection_1" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+\tan{\dfrac{fovY}{2}=\dfrac{t}{|n|}}
+\]</div>
+<div class="arithmatex">\[
+aspect = \dfrac{r}{t}
+\]</div>
+<h3 id="canonical-cube-to-screen">Canonical Cube to Screen<a class="headerlink" href="#canonical-cube-to-screen" title="Permanent link">&para;</a></h3>
+<p><span class="arithmatex">\([-1,1]^2\to [0, \text{width}]\times [0, \text{height}]\)</span></p>
+<div class="arithmatex">\[
+\mathbf{M}_{\text{viewport}} = 
+\begin{pmatrix}
+\dfrac{\text{width}}{2} &amp; 0 &amp; 0 &amp; \dfrac{\text{width}}{2}\\
+0 &amp; \dfrac{\text{height}}{2} &amp; 0 &amp; \dfrac{\text{height}}{2}\\
+0 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1
+\end{pmatrix}
+\]</div>
 <details class="question" open="open">
 <summary>Quiz</summary>
 <p>If we transform frustum into cuboid. For those points between <span class="arithmatex">\(n\)</span> and <span class="arithmatex">\(f\)</span>, are they close to <span class="arithmatex">\(n\)</span> or <span class="arithmatex">\(f\)</span>?</p>
 </details>
-<details class="quote" open="open">
+<details class="- quote">
 <summary>Solution</summary>
 <blockquote>
 <p>This solution is from <a href="https://games-cn.org/forums/topic/guanyulecture-04-kehousikaoti-xiangduigedaan/">BBS</a> @striveant</p>
@@ -2257,6 +3250,183 @@ z-z' &amp;= z - (n+f-\frac{nf}{z})\\
 \]</div>
 <p>This means the point is closer to <span class="arithmatex">\(f\)</span>.</p>
 </details>
+<h2 id="antialiasing">Antialiasing<a class="headerlink" href="#antialiasing" title="Permanent link">&para;</a></h2>
+<h3 id="before-antialiasing">Before Antialiasing<a class="headerlink" href="#before-antialiasing" title="Permanent link">&para;</a></h3>
+<h4 id="sampling-artifacts">Sampling Artifacts<a class="headerlink" href="#sampling-artifacts" title="Permanent link">&para;</a></h4>
+<p>Jaggies, Moire, Wagon wheel effect...</p>
+<h4 id="idea-blurring-before-sampling">Idea: Blurring Before Sampling<a class="headerlink" href="#idea-blurring-before-sampling" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Sample then filter, WRONG!</p>
+</blockquote>
+<h3 id="frequency-domain">Frequency Domain<a class="headerlink" href="#frequency-domain" title="Permanent link">&para;</a></h3>
+<h4 id="fourier-series-transform">Fourier Series &amp; Transform<a class="headerlink" href="#fourier-series-transform" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Higher Frequencies Need Faster Sampling</p>
+</li>
+<li>
+<p>Undersampling Creates Frequency Aliases</p>
+</li>
+</ul>
+<p>Filtering = Getting rid of certain frequency contents</p>
+<h4 id="filtering-convolution">Filtering = Convolution<a class="headerlink" href="#filtering-convolution" title="Permanent link">&para;</a></h4>
+<p>Convolution in the spatial domain = Multiplication in the frequency domain</p>
+<h5 id="option-1">Option 1<a class="headerlink" href="#option-1" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Filter by convolution in the spatial domain</li>
+</ul>
+<h5 id="option-2">Option 2<a class="headerlink" href="#option-2" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Transform to frequency domain (Fourier transform)</li>
+<li>Multiply by Fourier transform of convolution kernel</li>
+<li>Transform back to spatial domain (inverse Fourier)</li>
+</ul>
+<h4 id="sampling-repeating-frequency-contents">Sampling = Repeating Frequency Contents<a class="headerlink" href="#sampling-repeating-frequency-contents" title="Permanent link">&para;</a></h4>
+<p>Sparse sampling will cause aliasing</p>
+<p>How can we reduce aliasing error?</p>
+<h5 id="option-1-increase-samling-rate">Option 1: Increase samling rate<a class="headerlink" href="#option-1-increase-samling-rate" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Essentially increasing the distance between replicas in the Fourier domain</li>
+<li>Higher resolution displays, sensors, framebuffers...</li>
+<li>BUT: costly &amp; may need very high resolution</li>
+</ul>
+<h5 id="option-2-antialiasing">Option 2: Antialiasing<a class="headerlink" href="#option-2-antialiasing" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Making Fourier contents "narrower" before repeating</li>
+<li>i.e. <strong>Filtering out high frequencies before sampling</strong></li>
+</ul>
+<h3 id="antialiasing_1">Antialiasing<a class="headerlink" href="#antialiasing_1" title="Permanent link">&para;</a></h3>
+<p>A 1 pixel-width box filter (low pass, blurring)</p>
+<h4 id="antialiasing-by-averaging-values-in-pixel-area">Antialiasing By Averaging Values in Pixel Area<a class="headerlink" href="#antialiasing-by-averaging-values-in-pixel-area" title="Permanent link">&para;</a></h4>
+<h5 id="solution">Solution:<a class="headerlink" href="#solution" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>Convolve</strong>: <span class="arithmatex">\(f(x,y)\)</span> by 1-pixel box-blur</li>
+<li><strong>Then sample</strong> at every pixel's center</li>
+</ul>
+<h4 id="antialiasing-by-computing-average-pixel-value">Antialiasing by Computing Average Pixel Value<a class="headerlink" href="#antialiasing-by-computing-average-pixel-value" title="Permanent link">&para;</a></h4>
+<p>In rasterizing one triangle, the average value inside a pixel area of <span class="arithmatex">\(f(x,y) = inside(triangle,x,y)\)</span> is equal to the area of the pixel covered by the triangle.</p>
+<p><img alt="average" src="../img/average.png" /></p>
+<h3 id="antialiasing-by-supersampling-msaa">Antialiasing By Supersampling (MSAA)<a class="headerlink" href="#antialiasing-by-supersampling-msaa" title="Permanent link">&para;</a></h3>
+<p>MSAA = Muti-Sample-Anti-Aliasing</p>
+<h4 id="supersampling">Supersampling<a class="headerlink" href="#supersampling" title="Permanent link">&para;</a></h4>
+<p>Sampling multiple locations within a pixel</p>
+<h5 id="step-1">Step 1<a class="headerlink" href="#step-1" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Take <span class="arithmatex">\(N\times N\)</span> samples in each pixel</li>
+</ul>
+<h5 id="step-2">Step 2<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Average the <span class="arithmatex">\(N\times N\)</span> samples "inside" each pixel</li>
+</ul>
+<h5 id="step-3-result">Step 3 Result<a class="headerlink" href="#step-3-result" title="Permanent link">&para;</a></h5>
+<h3 id="antialiasing-today">Antialiasing Today<a class="headerlink" href="#antialiasing-today" title="Permanent link">&para;</a></h3>
+<p>No free lunch!</p>
+<ul>
+<li>Cost of MSAA</li>
+</ul>
+<p>Milestones</p>
+<ul>
+<li>FXAA (Fast Approximate AA)</li>
+<li>TAA (Temporal AA)</li>
+</ul>
+<p>Super resolution / super sampling</p>
+<ul>
+<li>From low res to high res</li>
+<li>Essentially still "not enough samples" problem</li>
+<li>DLSS (Deep Learning Super Sampling)</li>
+</ul>
+<h2 id="visibility-occlusion">Visibility / Occlusion<a class="headerlink" href="#visibility-occlusion" title="Permanent link">&para;</a></h2>
+<h4 id="painters-algorithm">Painter's Algorithm<a class="headerlink" href="#painters-algorithm" title="Permanent link">&para;</a></h4>
+<p>Requires sorting in depth, can have unresolvable depth order</p>
+<h3 id="z-buffer">Z-Buffer (深度缓存)<a class="headerlink" href="#z-buffer" title="Permanent link">&para;</a></h3>
+<h4 id="idea">Idea<a class="headerlink" href="#idea" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Store current min. z-value <strong>for <u>each</u> sample (pixel)</strong></p>
+</li>
+<li>
+<p>Needs an additional buffer for depth values</p>
+</li>
+<li>frame buffer stores color values</li>
+<li>depth buffer (z-buffer) stores depth</li>
+</ul>
+<blockquote>
+<p>[!IMPORTANT]</p>
+<p>For simplicity we suppose <strong>z is always positive</strong></p>
+</blockquote>
+<h4 id="step">Step<a class="headerlink" href="#step" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Initialize depth buffer to <span class="arithmatex">\(\infty\)</span></li>
+<li>During rasterization:</li>
+</ul>
+<div class="language-c highlight"><span class="filename">C</span><pre><span></span><code><span id="__span-0-1"><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">each</span><span class="w"> </span><span class="n">triangles</span><span class="w"> </span><span class="n">T</span><span class="p">)</span>
+</span><span id="__span-0-2"><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">eachsample</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">z</span><span class="p">)</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">T</span><span class="p">)</span>
+</span><span id="__span-0-3"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">zbuffer</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">])</span><span class="w">           </span><span class="c1">// closest sample so far</span>
+</span><span id="__span-0-4"><span class="w">      </span><span class="n">framebuffer</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rgb</span><span class="p">;</span><span class="w">       </span><span class="c1">// update color</span>
+</span><span id="__span-0-5"><span class="w">      </span><span class="n">zbuffer</span><span class="p">[</span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">z</span><span class="p">;</span><span class="w">             </span><span class="c1">// update depth</span>
+</span><span id="__span-0-6"><span class="w">    </span><span class="k">else</span>
+</span><span id="__span-0-7"><span class="w">        </span><span class="p">;</span><span class="w">                   </span><span class="c1">// do nothing, this sample is occluded</span>
+</span></code></pre></div>
+<h4 id="complexity">Complexity<a class="headerlink" href="#complexity" title="Permanent link">&para;</a></h4>
+<ul>
+<li><span class="arithmatex">\(O(n)\)</span> for <span class="arithmatex">\(n\)</span> triangles (assuming constant coverage)</li>
+</ul>
+<blockquote>
+<p>Most important visibility algorithm, Implemented in hardware for all GPUs</p>
+</blockquote>
+<h2 id="shading">Shading<a class="headerlink" href="#shading" title="Permanent link">&para;</a></h2>
+<p>Definition in this course: The process of applying a material to an object.</p>
+<h3 id="blinn-phong-reflectance-model">Blinn-Phong Reflectance Model<a class="headerlink" href="#blinn-phong-reflectance-model" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../img/blinn.png" /></p>
+<div class="arithmatex">\[
+L = L_a + L_d + L_s
+\]</div>
+<p>Compute light reflected toward camera</p>
+<p><strong>No shadows</strong> will be generated! (shading <span class="arithmatex">\(\neq\)</span> shadow)</p>
+<h4 id="diffuse-reflection">Diffuse Reflection<a class="headerlink" href="#diffuse-reflection" title="Permanent link">&para;</a></h4>
+<p>Lambert's Cosine Law:</p>
+<p><img alt="" src="../img/lambert-pre.png" /></p>
+<p>Shading <strong>independent</strong> of view direction</p>
+<div class="arithmatex">\[
+L_d = k_d(I/r^2)\max(0, \mathbf{n}\cdot\mathbf{l})
+\]</div>
+<h4 id="specular-term">Specular Term<a class="headerlink" href="#specular-term" title="Permanent link">&para;</a></h4>
+<p>Intensity <strong>depends</strong> on view direction</p>
+<ul>
+<li>
+<p>Bright near mirror reflection direction</p>
+</li>
+<li>
+<p><span class="arithmatex">\(\mathbf{v}\)</span> close to mirror direction <span class="arithmatex">\(\Leftrightarrow\)</span> <strong>half vector</strong> near normal</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+\mathbf{h} = \text{bisector}(\mathbf{v},\mathbf{l}) = \frac{\mathbf{v} + \mathbf{l}}{\|\mathbf{v}+\mathbf{l}\|}
+\]</div>
+<div class="arithmatex">\[
+\begin{aligned}
+L_s &amp;= k_s(I/r^2)\max(0, \cos\alpha)^p\\
+&amp;= k_s(I/r^2)\max(0, \mathbf{n} \cdot \mathbf{h})^p
+\end{aligned}
+\]</div>
+<h4 id="ambient-term">Ambient Term<a class="headerlink" href="#ambient-term" title="Permanent link">&para;</a></h4>
+<p>Shading that does not depend on anything</p>
+<ul>
+<li>
+<p>Add constant color to account for disregarded illumination and fill in black shadows</p>
+</li>
+<li>
+<p>This is approximate / fake!</p>
+</li>
+</ul>
+<div class="arithmatex">\[
+L_a = k_aI_a
+\]</div>
+<h3 id="shading-frequencies">Shading Frequencies<a class="headerlink" href="#shading-frequencies" title="Permanent link">&para;</a></h3>
+<p>Shade each triangle (flat shading)</p>
+<p>Shade each vertex (Gourand shading)</p>
+<p>Shade each pixel (Phong shading)</p>
+<h2 id="texture">Texture<a class="headerlink" href="#texture" title="Permanent link">&para;</a></h2>
 
 
 
@@ -2279,7 +3449,7 @@ z-z' &amp;= z - (n+f-\frac{nf}{z})\\
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-06-19T18:45:36+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-06-19</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-11T13:34:57+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-11</span>
   </span>
 
     
@@ -2289,7 +3459,7 @@ z-z' &amp;= z - (n+f-\frac{nf}{z})\\
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3h-2Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-06-19T18:45:36+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-06-19</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-07-11T13:34:57+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-07-11</span>
   </span>
 
     
@@ -2373,7 +3543,7 @@ z-z' &amp;= z - (n+f-\frac{nf}{z})\\
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../env/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 作业环境配置">
+          <a href="../review-la/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Review of Linear Algebra">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2383,20 +3553,20 @@ z-z' &amp;= z - (n+f-\frac{nf}{z})\\
                 上一页
               </span>
               <div class="md-ellipsis">
-                作业环境配置
+                Review of Linear Algebra
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../essay/" class="md-footer__link md-footer__link--next" aria-label="下一页: 随笔">
+          <a href="../geometry/" class="md-footer__link md-footer__link--next" aria-label="下一页: Geometry">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                随笔
+                Geometry
               </div>
             </div>
             <div class="md-footer__button md-icon">
