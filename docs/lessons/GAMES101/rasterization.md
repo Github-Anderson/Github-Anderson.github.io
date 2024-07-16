@@ -47,11 +47,11 @@ $$
 ### Perspective Projection
 
 $$
-\tan{\dfrac{fovY}{2}=\dfrac{t}{|n|}}
+\tan{\dfrac{\text{fovY}}{2}=\dfrac{t}{|n|}}
 $$
 
 $$
-aspect = \dfrac{r}{t}
+\text{aspect} = \dfrac{r}{t}
 $$
 
 ### Canonical Cube to Screen
@@ -338,3 +338,143 @@ Shade each vertex (Gourand shading)
 Shade each pixel (Phong shading)
 
 ## Texture
+
+### Texture Mapping
+
+#### Surfaces are 2D
+
+Screen space $(x_s,y_s)$ $\to$ World space $(x,y,z)$ $\to$ Texture space $(u,v)$
+
+### Interpolation Across Triangles: Barycentric Coordinates
+
+#### Barycentric Coordinates
+
+A coordinate system for triangles $(\alpha,\beta,\gamma)$
+
+$$
+(x,y) = \alpha A+\beta B+\gamma C\\
+\alpha + \beta + \gamma = 1
+$$
+
+is **inside the triangle if all three coordinates are non-negative**
+
+#### Geometric Viewpoint: Proportional Areas
+
+$$
+\begin{aligned}
+\alpha = \frac{A_A}{A_A + A_B + A_C}\\
+\beta = \frac{A_B}{A_A + A_B + A_C}\\
+\gamma = \frac{A_C}{A_A + A_B + A_C}
+\end{aligned}
+$$
+
+#### Formulas
+
+$$
+\begin{aligned}
+\alpha &= \frac{-(x - x_B)(y_C - y_B) + (y - y_B)(x_C - x_B)}{-(x_A - x_B)(y_C - y_B) + (y_A - y_B)(x_C - x_B)}\\
+\beta &= \frac{-(x - x_C)(y_A - y_C) + (y - y_C)(x_A - x_C)}{-(x_B - x_C)(y_A - y_C) + (y_B - y_C)(x_A - x_C)}\\
+\gamma &= 1 - \alpha - \beta
+\end{aligned}
+$$
+
+### Applying Textures
+
+#### Simple Texture Mapping: Diffuse Color
+
+```
+for each rasterized screen sample (x,y):
+  (u,v) = evaluate texture coordinate at (x,y);
+  texcolor = texture.sample(u,v);
+  set sample's color to texcolor;
+```
+
+### Texture Magnification
+
+(What if the texture is too small?)
+
+#### Bilinear Interpolation
+
+![](img/bilinear.png)
+
+1. Take 4 nearest sample locations, with texture values as labeled
+
+2. And fractional offsets $(s,t)$ as shown
+
+3. Linear interpolation (1D)
+
+    $\text{lerp}(x,v_0,v_1) = v_0 + x(v_1 - v_0)$
+
+4. Two helper lerps
+
+    $u_0 = \text{lerp}(s, u_{00}, u_{10})$
+
+    $u_1 = \text{lerp}(s, u_{01}, u_{11})$
+
+5. Final vertical lerp, to get result:
+
+    $f(x,y) = \text{lerp}(t, u_0, u_1)$
+
+Bilinear interpolation usually gives pretty good results at reasonable costs
+
+(What if the texture is too large?)
+
+### Mipmap
+
+![](img/mipmap.png)
+
+Level = $D$
+
+#### Computing Mipmap Level $D$
+
+![](img/level.png)
+
+$$
+D = \log_2L
+$$
+
+$$
+L = \max\left(\sqrt{\left(\frac{\text{d}u}{\text{d}x}\right)^2 + \left(\frac{\text{d}v}{\text{d}x}\right)^2},\sqrt{\left(\frac{\text{d}u}{\text{d}y}\right)^2 + \left(\frac{\text{d}v}{\text{d}y}\right)^2}\right)
+$$
+
+#### Trilinear Interpolation
+
+Bilinear result in Mipmap Level $D$ + Bilinear result in Mipmap Level $D+1$
+
+### Applications of Texture
+
+#### Bump Mapping
+
+Adding surface normal per pixel (for shading computations only)
+
+- Original surface normal $n(p) = (0, 0, 1)$
+
+- Derivative at $p$ are
+
+	- $\text{d}p/\text{d}u = c_1 * [h(u+1)-h(u)]$
+
+	- $\text{d}p/\text{d}v = c_2 * [h(v+1)-h(v)]$
+
+- Perturbed normal is then $n(p) = (-\text{d}p/\text{d}u,\text{d}p/\text{d}v, 1).\text{normalized}()$
+
+#### Displacement Mapping
+
+A more advanced approach
+
+- Uses the same texture in bumping mapping
+
+- Actually **moves the vertices**
+
+## Graphics (Real-Time Rendering) Pipline
+
+### Graphics Pipline
+
+- **Vertex Processing**: Model, View, Projection transforms
+
+- **Triangle Processing**
+
+- **Rasterization**: Sampling triangle coverage
+
+- **Fragment Processing**: Z-Buffer Visibility Tests, Shading, Texture mapping
+
+- **Framebuffer Operations**

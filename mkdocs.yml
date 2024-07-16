@@ -37,7 +37,7 @@ theme:
     # 给每个 Tab 添加一个 index.md，且在点击 Tab 时打开
     - navigation.indexes
     # 打开 Tab 时左侧目录全部展开
-    - navigation.expand
+    # - navigation.expand
     # 搜索输入一些字母时推荐补全整个单词
     - search.suggest
     # 搜索的关键词文章加入高亮

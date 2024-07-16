@@ -4,6 +4,8 @@ comments: true
 
 # Ray Tracing
 
+## Whitted-Style Ray Tracing
+
 ### Why Ray Tracing?
 
 - Rasterization couldn't handle **global** effects well
@@ -100,7 +102,7 @@ For each grid cell, test intersection with all objects stored at that cell
 
 Heuristic:
 
-- #cells = C * #objs
+- \#cells = C * \#objs
 - $C\approx 27$ in 3D
 
 ### Spatial Partitions
@@ -143,6 +145,7 @@ Internal nodes store
 Leaf nodes store
 
 - Bounding box
+
 - List of objects
 
 Nodes represent subset of primitives in scene
@@ -294,4 +297,73 @@ $$
 $$
 L=E+KE+K^2E+K^3E+\cdots
 $$
+
+## Path Tracing
+
+#### Problem
+
+- Where should the ray be reflected for **glossy** materials?
+
+- No reflections between diffuse materials?
+
+#### A Simple Monte Carlo Solution
+
+Compute the radiance at $p$ towards the camera
+
+$$
+L_o(\text{p},\omega_o) = \int_{\Omega^+}L_i(\text{p},\omega_i) f_r(\text{p},\omega_i, \omega_o)(n\cdot \omega_i)\text{d}\omega_i
+$$
+
+Monte Carlo Integration: $\displaystyle \int f(x)\text{d}x = \frac{1}{N} \sum_{i=1}^N\frac{f(X_i)}{p(X_i)}\quad X_i\sim p(x)$
+
+"$f(x)$": $L_i(\text{p},\omega_i) f_r(\text{p},\omega_i, \omega_o)(n\cdot \omega_i)$
+
+PDF: $p(\omega_i)=1/2\pi$ (assume uniformly sampling the hemisphere)
+
+$$
+\begin{aligned}
+L_o(\text{p},\omega_o) &= \int_{\Omega^+}L_i(\text{p},\omega_i) f_r(\text{p},\omega_i, \omega_o)(n\cdot \omega_i)\text{d}\omega_i\\
+&\approx \frac{1}{N}\sum_{i=1}^N\frac{L_i(\text{p},\omega_i) f_r(\text{p},\omega_i, \omega_o)(n\cdot \omega_i)}{p(\omega_i)}
+\end{aligned}
+$$
+
+#### Introducing Global Illumination
+
+What if a ray hits an object? The direct illumination at the object!
+
+#### Sampling the Light
+
+$\displaystyle \text{d}\omega = \frac{\text{d}\cos \theta'}{\|x'-x\|^2}$
+
+$$
+\begin{aligned}
+L_o(x,\omega_o) &= \int_{\Omega^+}L_i(x,\omega_i) f_r(x,\omega_i, \omega_o)(n\cdot \omega_i)\text{d}\omega_i\\
+&= \int_AL_i(x,\omega_i) f_r(x,\omega_i, \omega_o)\frac{\cos \theta\cos \theta'}{\|x'-x\|^2}\text{d}A
+\end{aligned}
+$$
+
+Now we consider the radiance coming from two parts:
+
+1. **light source** (direct, no need to have RR)
+
+2. **other reflectors** (indirect, RR)
+
+```c
+shade(p, wo)
+  // Contribution from the light source.
+  Uniformly sample the light at x’ (pdf_light = 1 / A)
+  Shoot a ray from p to x'
+  if the ray is not blocked in the middle
+    L_dir = L_i * f_r * cos θ * cos θ' / |x' - p| ^2 / pdf_light
+
+  // Contribution from other reflectors.
+  L_indir = 0.0
+  Test Russian Roulette with probability P_RR
+  Uniformly sample the hemisphere toward wi (pdf_hemi = 1 / 2pi)
+  Trace a ray r(p, wi)
+  if ray r hit a non-emitting object at q
+    L_indir = shade(q, -wi) * f_r * cos θ / pdf_hemi / P_RR
+
+  return L_dir + L_indir
+```
 
