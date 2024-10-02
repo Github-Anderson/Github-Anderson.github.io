@@ -203,12 +203,35 @@ Each bucket stores a linked list, containing all colliding elements.
 
 If the bucket already contains an element, linearly traverse forward the conflict position to insert or search elements.
 
+e.g. If $n$ has already store a pair, we jump to $n+1$, if so, then $n+2$, $n+3$, etc.
+
 ##### Quadratic Proding
 
 Similar to linear proding, if the bucket already contains an element, traverse by skipping a square of the number of prodes forward the conflict position to insert or search elements.
+
+e.g. If $n$ has already store a pair, we jump to $n+1$, if so, then $n+2$, $n+4$, etc.
 
 ##### Double Hashing
 
 Uses multiple hash functions $f_1(x), f_2(x), \dots$ for proding.
 
 ### Hash Algorithm
+
+The methods given above can be used to solve hash collision. However, they cannot reduce the frequency of hash collisions. So we need to design some algorithms in order to avoid collisions.
+
+#### Common Hash Algorithm
+
+In practice, we usually use some standard hash algorithms, such as MD5, SHA-1, SHA-2, and SHA-3. They can map input data of any length to a fixed-length hash value.
+
+## Tree
+
+### Binary Tree
+
+```cpp
+struct TreeNode {
+  int val;
+  TreeNode *left;
+  TreeNode *right;
+  TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+}
+```

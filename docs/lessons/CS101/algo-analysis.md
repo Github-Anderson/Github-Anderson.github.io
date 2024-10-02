@@ -4,6 +4,8 @@ comments: true
 
 # Algorithm Analysis
 
+Algorithm analysis, or complexity analysis, can help asssess algorithm time of space efficiency.
+
 $$
 \begin{array}{ll}
 	f(n) = o(g(n)) & \lim\limits_{n \to \infty} \dfrac{f(n)}{g(n)} = 0 \\[15pt]
