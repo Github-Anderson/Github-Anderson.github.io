@@ -153,7 +153,9 @@ markdown_extensions:
       # linenums: true
       # 显示编程语言名称
       auto_title: true
+      anchor_linenums: true
       line_spans: __span
+      use_pygments: true
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
@@ -242,6 +244,9 @@ nav:
       - lessons/GAMES101/rasterization.md
       - lessons/GAMES101/geometry.md
       - lessons/GAMES101/ray-tracing.md
+    - 算法与数据结构 CS101:
+      - lessons/CS101/abt.md
+      - lessons/CS101/algo-analysis.md
   - 随笔:
     - essay/index.md
     - 文章:
