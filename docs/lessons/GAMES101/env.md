@@ -6,7 +6,7 @@ comments: true
 
 !!! info "关于作业"
 
-	个人版本作业，经供参考 [:fontawesome-brands-github: Github](https://github.com/Github-Anderson/GAMES101-HW/)
+	个人版本作业，仅供参考 [:fontawesome-brands-github: Github](https://github.com/Github-Anderson/GAMES101-HW/)
 	
 !!! warning "注意"
 
@@ -82,7 +82,7 @@ comments: true
 
 === ":material-apple: macOS"
 
-	> 以 macOS Sonoma 14.5 为例，且为 arm64
+	> 以 arm64 架构的 macOS Sonoma 14.5 为例
 
 	1. 安装 eigen 和 opencv
 

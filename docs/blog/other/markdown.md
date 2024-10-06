@@ -2,7 +2,7 @@
 comments: true
 ---
 
-# 语法速记
+# MarkDown 语法速记
 
 ## 基础语法
 

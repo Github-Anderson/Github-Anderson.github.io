@@ -199,15 +199,13 @@ nav:
   # - index.md
   - 博客:
     - blog/index.md
-    - Visual Studio Code:
-      - blog/code/env.md
-      - blog/code/tips.md
-    - MarkDown:
-      - blog/md/markdown.md
     - Material for MkDocs:
       - blog/mkdocs/first.md
       - blog/mkdocs/extra.md
     - 杂七杂八的内容:
+      - blog/other/env.md
+      # - blog/other/tips.md
+      - blog/other/markdown.md
       - blog/other/cs2onmac.md
       # - blog/other/bili.md
   - 课程:
