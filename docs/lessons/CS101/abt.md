@@ -96,11 +96,17 @@ private:
 
 public:
   int size() const;
-  bool isEmpty() const;
+  bool empty() const;
   
-  void push(int val);
-  int pop();
-  int peek();
+  void push(int val) {
+    stack.push_back(val);
+  }
+  int pop() {
+    int num = top();
+    stack.pop_back();
+    return num;
+  }
+  int top();
 };
 ```
 
@@ -111,11 +117,23 @@ private:
   int size;
 public:
   int size() const;
-  bool isEmpty() const;
+  bool empty() const;
 
-  void push(int val);
-  int pop();
-  int peek();
+  void push(int val) {
+    Node *node = new Node(val);
+    node->next = top;
+    top = node;
+    size++;
+  }
+  int pop() {
+    int num = top();
+    Node *tmp = top;
+    top = top->next;
+    delete tmp;
+    size--;
+    return num;
+  }
+  int top();
 };
 ```
 
@@ -138,7 +156,34 @@ private:
   int size;
   int capacity;
 public:
-  /* Functions */
+  ArrayQueue(int cap) {
+    val = new int[cap];
+    capacity = cap;
+    front = 0;
+    size = 0;
+  }
+  
+  ~ArrayQueue() {
+    delete[] val;
+  }
+
+  int capacity();
+  int size();
+  bool empty;
+
+  void push(int num) {
+    if (size == capacity) return;
+    int rear = (front + size) % capacity;
+    val[rear] = num;
+    size++;
+  }
+  int pop() {
+    int num = front();
+    front = (front + 1) % capacity;
+    size--;
+    return num;
+  }
+  int front();
 };
 ```
 
@@ -148,7 +193,37 @@ private:
   Node *front, *rear;
   int size;
 public:
-  /* Functions */
+  LinkedListQueue() {
+    front = nullptr;
+    rear = nullptr;
+    size = 0;
+  }
+
+  ~LinkedListQueue();
+
+  int size();
+  bool empty();
+
+  void push(int val) {
+    Node *node = new Node(val);
+    if (front == nullptr) {
+      front = node;
+      rear = node;
+    } else {
+      rear->next = node;
+      rear = node;
+    }
+    size++;
+  }
+  int pop() {
+    int num = front();
+    Node *tmp = front;
+    front = front->next;
+    delete tmp;
+    size--;
+    return num;
+  }
+  int front();
 };
 ```
 
