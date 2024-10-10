@@ -88,6 +88,7 @@ The stack can be implemented using either an **array** or a **linked list** (`st
 
 - Follows the principle of Last-In-First-OUT.
 - `push()` to add element to the top of stack & `pop()` to remove the top element.
+- ALL implemented in $O(1)$.
 
 ```cpp
 class ArrayStack {
@@ -186,6 +187,8 @@ public:
   int front();
 };
 ```
+
+Implemented by circular array.
 
 ```cpp
 class LinkedListQueue {

@@ -245,7 +245,7 @@ nav:
     - 算法与数据结构 CS101:
       - lessons/CS101/abt.md
       - lessons/CS101/algo-analysis.md
-      - lessons/CS101/algo.md
+      - lessons/CS101/sorting.md
   - 随笔:
     - essay/index.md
     - 文章:
