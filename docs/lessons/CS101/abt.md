@@ -248,6 +248,14 @@ public:
 Hash table is a higly efficient data structure.
 
 - Establishes a mapping between keys and values.
+- Load Factor: the average number of objects per bin.
+$$
+\lambda = \frac{n}{M}
+$$
+- Probability of at least one collision
+$$
+1 - \frac{M(M-1)\cdots(M-n+1)}{M^n}
+$$
 
 |Operation|Array|Linked List|Hash Table|
 |---|---|---|---|
@@ -281,17 +289,25 @@ Each bucket stores a linked list, containing all colliding elements.
 
 If the bucket already contains an element, linearly traverse forward the conflict position to insert or search elements.
 
-e.g. If $n$ has already store a pair, we jump to $n+1$, if so, then $n+2$, $n+3$, etc.
+e.g. If index $n$ has already store a pair, we jump to $n+1$, if so, then $n+2$, $n+3$, etc.
 
 ##### Quadratic Proding
 
 Similar to linear proding, if the bucket already contains an element, traverse by skipping a square of the number of prodes forward the conflict position to insert or search elements.
 
-e.g. If $n$ has already store a pair, we jump to $n+1$, if so, then $n+2$, $n+4$, etc.
+e.g. If index $n$ has already store a pair, we jump to $n+1$, if so, then $n+2$, $n+4$, etc.
 
 ##### Double Hashing
 
-Uses multiple hash functions $f_1(x), f_2(x), \dots$ for proding.
+Uses two hash functions $h_1(k), h_2(k)$ for proding.
+
+$$
+h(k) = h_1(k) + i \cdot h_2(k)
+$$
+
+Then *Linear Proding* can be shown as $h(k) = h_1(k) + i$, where $h_2(k) = 1$
+
+*Quadratic Proding* can also be shown as $h(k) = h_1(k) + c_1 + c_2 \cdot i$, where $h_2(k) = c_1 + c_2 \cdot i$
 
 ### Hash Algorithm
 

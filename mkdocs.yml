@@ -246,6 +246,7 @@ nav:
       - lessons/CS101/abt.md
       - lessons/CS101/algo-analysis.md
       - lessons/CS101/sorting.md
+      - lessons/CS101/divide-and-conquer.md
   - 随笔:
     - essay/index.md
     - 文章:
