@@ -21,7 +21,6 @@ comments: true
 
 - Initially, the first element of the array is sorted.
 - The $k$-th element of the array is taken as `base`, and after inserting it into the correct position, the first $k$ elements of the array are sorted.
-- 
 
 #### C++ Implementation
 ```cpp
@@ -83,7 +82,12 @@ void insertion_sort_optimized(Type *const array, int const n) {
 
 #### Algorithm Process
 
+Assuming the length of the array is $n$,
 
+- First, perform a "bubble" on $n$ elements, swapping the largest element to its correct position.
+- Next, perform a "bubble" on the remaining $n-1$ elements, swapping the second largest element to its correct position.
+- Similarly, after $n-1$ rounds of "bubbling," the top $n-1$ largest elements will be swapped to their correct positions.
+- The only remaining element is necessarily the smallest and does not require sorting, thus the array sorting is complete.
 
 #### C++ Implementation
 
@@ -161,8 +165,6 @@ template <typename Type>
 
 - $O(1)$
 
-## Selection Sort
-
 ## Merge Sort
 
 The merge sort algorithm is defined recursively:
@@ -217,3 +219,51 @@ void merge_sort(vector<int> &nums, int left, int right) {
 ##### Space Complexity
 
 - $O(n)$ (Not in-space)
+
+## Quick Sort
+
+- Quick sort also uses *divide-and-conquer* strategy.
+- The core operation of quick sort is "pivot partitioning". Choosing a suitable pivot can significantly reduce the time complexity.
+- The essence of pivot partitioning is to simplify a longer array's sorting problem into two shorter arrays' sorting problems.
+
+### Algorithm Process
+
+### C++ Complementation
+
+```cpp
+/* Partition */
+int partition(vector<int> &nums, int left, int right) {
+    // Use nums[left] as the pivot
+    int i = left, j = right;
+    while (i < j) {
+        while (i < j && nums[j] >= nums[left])
+            j--; // Search from right to left for the first element smaller than the pivot
+        while (i < j && nums[i] <= nums[left])
+            i++;          // Search from left to right for the first element greater than the pivot
+        swap(nums, i, j); // Swap these two elements
+    }
+    swap(nums, i, left); // Swap the pivot to the boundary between the two subarrays
+    return i;            // Return the index of the pivot
+}
+/* Quick sort */
+void quickSort(vector<int> &nums, int left, int right) {
+    // Terminate recursion when subarray length is 1
+    if (left >= right)
+        return;
+    // Partition
+    int pivot = partition(nums, left, right);
+    // Recursively process the left subarray and right subarray
+    quickSort(nums, left, pivot - 1);
+    quickSort(nums, pivot + 1, right);
+}
+```
+
+### Run-time Analysis
+
+### Pivot Optimization
+
+#### Median-of-Three
+
+Choose the median of the first, middle, and last entries in the list
+
+## Heap Sort

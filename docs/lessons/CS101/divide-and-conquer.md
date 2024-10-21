@@ -22,15 +22,26 @@ T(n) =
 \end{cases}
 $$
 
-We can get $T(n) = \Theta(n\lg n)$ by solving it.
+We can get $T(n) = \Theta(n\log n)$ by solving it.
 
-There are three methods could be use to solve a recurrence:
+When analyzing the time complexity of recursive algorithms, several methods can be used to solve recurrence relations effectively. Below are three widely used techniques:
 
 #### Iteration Method (Substitution)
 
+This method involves repeatedly substituting the recurrence relation into itself until it reduces to a base case with constant complexity. e.g. $T(0)$ or $T(1)$.
+
 #### Recursion Tree Method
 
-#### Master Theroem
+This method visualizes the recurrence as a tree, with each recursive call represented as a node. The goal is to determine the total contribution of all nodes across every level.
+
+##### Process
+
+1. Treat each T(n) as a node in the recursion tree, with children representing recursive calls.
+2. Calculate the total work done at each level of the tree.
+3. Determine the height (or depth) of the tree, which corresponds to the number of levels.
+4. Sum the contributions from all levels to get the overall time complexity.
+
+#### Master Theorem
 
 Applicable when the recurrence fits the form $T(n) = aT(n/b) + O(n^d)$.
 
