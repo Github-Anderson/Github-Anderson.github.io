@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../assets/icon/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -1793,12 +1793,27 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Recursion Tree Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#master-theroem" class="md-nav__link">
+  <a href="#master-theorem" class="md-nav__link">
     <span class="md-ellipsis">
-      Master Theroem
+      Master Theorem
     </span>
   </a>
   
@@ -2268,12 +2283,27 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Recursion Tree Method">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
-  <a href="#master-theroem" class="md-nav__link">
+  <a href="#master-theorem" class="md-nav__link">
     <span class="md-ellipsis">
-      Master Theroem
+      Master Theorem
     </span>
   </a>
   
@@ -2323,11 +2353,20 @@ T(n) =
     2T(n/2)+\Theta(n), &amp; n&gt;1
 \end{cases}
 \]</div>
-<p>We can get <span class="arithmatex">\(T(n) = \Theta(n\lg n)\)</span> by solving it.</p>
-<p>There are three methods could be use to solve a recurrence:</p>
+<p>We can get <span class="arithmatex">\(T(n) = \Theta(n\log n)\)</span> by solving it.</p>
+<p>When analyzing the time complexity of recursive algorithms, several methods can be used to solve recurrence relations effectively. Below are three widely used techniques:</p>
 <h4 id="iteration-method-substitution">Iteration Method (Substitution)<a class="headerlink" href="#iteration-method-substitution" title="Permanent link">&para;</a></h4>
+<p>This method involves repeatedly substituting the recurrence relation into itself until it reduces to a base case with constant complexity. e.g. <span class="arithmatex">\(T(0)\)</span> or <span class="arithmatex">\(T(1)\)</span>.</p>
 <h4 id="recursion-tree-method">Recursion Tree Method<a class="headerlink" href="#recursion-tree-method" title="Permanent link">&para;</a></h4>
-<h4 id="master-theroem">Master Theroem<a class="headerlink" href="#master-theroem" title="Permanent link">&para;</a></h4>
+<p>This method visualizes the recurrence as a tree, with each recursive call represented as a node. The goal is to determine the total contribution of all nodes across every level.</p>
+<h5 id="process">Process<a class="headerlink" href="#process" title="Permanent link">&para;</a></h5>
+<ol>
+<li>Treat each T(n) as a node in the recursion tree, with children representing recursive calls.</li>
+<li>Calculate the total work done at each level of the tree.</li>
+<li>Determine the height (or depth) of the tree, which corresponds to the number of levels.</li>
+<li>Sum the contributions from all levels to get the overall time complexity.</li>
+</ol>
+<h4 id="master-theorem">Master Theorem<a class="headerlink" href="#master-theorem" title="Permanent link">&para;</a></h4>
 <p>Applicable when the recurrence fits the form <span class="arithmatex">\(T(n) = aT(n/b) + O(n^d)\)</span>.</p>
 <ul>
 <li>
@@ -2371,7 +2410,7 @@ $$</p>
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-15T23:58:54+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-15</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-21T11:13:49+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-21</span>
   </span>
 
     
