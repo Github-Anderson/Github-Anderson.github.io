@@ -319,13 +319,164 @@ In practice, we usually use some standard hash algorithms, such as MD5, SHA-1, S
 
 ## Tree
 
+- All nodes will have zero or more child nodes or *children*
+- For all nodes other than the root node, there is one parent node
+- The *degree* of a node is defined as the number of its children.
+    - Nodes with degree zero are also called ***leaf nodes***
+  
+- For each node in a tree, there exists a unique path from the root node to that node
+
+- The *height* of a tree is defined as the maximum depth of any node within the tree
+
+- Ancestor of node $n$: any node $y$ on the (unique) path from root $r$ to node $n$ is an ancestor of node $n$
+- Descendent of node $n$: any node $y$ for which $n$ is an ancestor of $y$
+
+!!! abstract "A recursive definition of a tree"
+    - A degree-0 node is a tree
+    - A node with degree $n$ is a tree if it has $n$ children and all of its children are disjoint trees (i.e. with no intersecting nodes)
+
+    ??? quote "Code"
+        ```cpp
+        // TreeNode structure definition
+        struct TreeNode {
+          int value;
+          std::vector<TreeNode*> children;
+
+          TreeNode(int val) : value(val) {}
+        };
+
+        // Helper function to check if there are duplicate nodes (disjoint check)
+        bool areDisjoint(TreeNode* node, std::unordered_set<TreeNode*>& visited) {
+          if (visited.count(node)) return false;  // Node already visited
+
+          visited.insert(node);  // Mark this node as visited
+          for (TreeNode* child : node->children) {
+            if (!areDisjoint(child, visited)) {
+              return false;  // If any child violates the disjoint rule
+            }
+          }
+          return true;
+        }
+
+        // Main function to check if the tree is valid
+        bool IsTree(TreeNode* root) {
+          if (root == nullptr) return true;  // Empty tree is valid
+
+          std::unordered_set<TreeNode*> visited;  // To track visited nodes
+          if (!areDisjoint(root, visited)) return false;  // Check disjoint condition
+
+          // Verify the recursive tree structure
+          for (TreeNode* child : root->children) {
+            if (!IsTree(child)) return false;  // Recursively check all children
+          }
+          return true;
+        }
+        ```
+
+### Operations
+
+- Access the root
+- Given an object in the container:
+    - Access the parent of the current object
+    - Find the degree of the current object
+    - Get a reference to a child
+    - Attach a new sub-tree to the current object
+    - Detach this tree from its parent
+
+### C++ Implementation
+
+### Tree Traversal
+
+#### Breadth-First Traversal
+
+Visit all nodes at a given depth before descending a level
+
+- Place the root node into a queue
+- While the queue is not empty:
+    - Pop the node at the front of the queue
+    - Push all of its children into the queue
+  
+The order in which the nodes come out of the queue will be in breadth-first order
+
+#### Depth-First Traversal
+
+##### Pre-ordering
+
+##### Post-ordering
+
+### Monte Carlo Tree Search
+
+A randomized and principled tree search method
+
 ### Binary Tree
 
-```cpp
-struct TreeNode {
-  int val;
-  TreeNode *left;
-  TreeNode *right;
-  TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-}
-```
+A binary tree is a restriction where each node has exactly two children.
+
+A full binary tree is where each node is:
+
+- A full node, or
+- A leaf node
+
+#### Perfect Binary Tree
+
+A ***perfect binary tree*** of height $h$ is a binary tree where
+
+- All leaf nodes have the same depth $h$
+- All other nodes are full
+
+##### Theorems
+
+- A perfect binary tree of height $h$ has $2^{h+1} - 1$ nodes
+- The height is $\Theta(\ln n)$
+- There are $2^h$ leaf nodes
+- The average depth of a node is $\Theta(\ln n)$: 
+
+$$
+\begin{aligned}
+\frac{\sum_{k=0}^{h}k 2^k}{2^{h+1} - 1} &= \frac{h2^{h+1} - 2^{h + 1} + 2}{2^{h+1} - 1} = \frac{h(2^{h+1} - 1) - (2^{h+1} - 1) + 1 + h}{2^{h+1} - 1}\\
+&= h - 1 + \frac{h + 1}{2^{h+1} - 1} \approx h - 1 = \Theta(\ln n)
+\end{aligned}
+$$
+
+#### Complete Binary Tree
+
+Recursive definition: a binary tree with a single node is a ***complete binary tree*** of height $h = 0$ and a complete binary tree of height $h$ is a tree where either:
+
+- The left sub-tree is a complete tree of height $h – 1$ and the right sub-tree is a perfect tree of height $h – 2$, or
+- The left sub-tree is perfect tree with height $h – 1$ and the right sub-tree is complete tree with height $h – 1$
+
+More commonly, a complete is perfect except the last level, and the leaves in the last level are implemented from left side to the right side.
+
+##### Theorems
+
+- The height is $h = \left\lfloor \lg n\right\rfloor$
+
+#### Left-Child Right-Sibling Binary Tree
+
+Store a general tree as a binary tree
+
+![](img/lcrs.png)
+
+## Heap
+
+### Binary Heap
+
+A non-empty tree is a min-heap if
+
+- The key associated with the root is less than or equal to the keys associated with the sub-trees (if any)
+- The sub-trees (if any) are also min-heaps
+
+|Operation|Time|
+|---|---|
+|push()|$O(\log n)$|
+|pop()|$O(\log n)$|
+|peek()|$\blue{O(1)}$|
+
+#### Array Implementation
+
+Start at index 1 when filling the array.
+
+Given the entry at index k, it follows that:
+
+- The parent of node is a $k/2$
+- The children are at $2k$ and $2k + 1$

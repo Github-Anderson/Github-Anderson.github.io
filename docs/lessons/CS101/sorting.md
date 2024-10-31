@@ -267,3 +267,10 @@ void quickSort(vector<int> &nums, int left, int right) {
 Choose the median of the first, middle, and last entries in the list
 
 ## Heap Sort
+
+- Place the objects into a heap
+- Repeatedly popping the top object until the heap is empty
+
+### Run-time Analysis
+
+- Time complexity: $O(n \ln(n))$
