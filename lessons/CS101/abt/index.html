@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../assets/icon/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
     
     
       
@@ -2092,6 +2092,90 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#binary-search-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Search Tree
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Binary Search Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#print" class="md-nav__link">
+    <span class="md-ellipsis">
+      print()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert" class="md-nav__link">
+    <span class="md-ellipsis">
+      insert()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erase" class="md-nav__link">
+    <span class="md-ellipsis">
+      erase()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avl-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      AVL Tree
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AVL Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-3-only-happen-when-erasing-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 3 (Only happen when erasing nodes)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3020,6 +3104,90 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#binary-search-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Search Tree
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Binary Search Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#print" class="md-nav__link">
+    <span class="md-ellipsis">
+      print()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#insert" class="md-nav__link">
+    <span class="md-ellipsis">
+      insert()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#erase" class="md-nav__link">
+    <span class="md-ellipsis">
+      erase()
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avl-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      AVL Tree
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AVL Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-3-only-happen-when-erasing-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case 3 (Only happen when erasing nodes)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3265,15 +3433,15 @@
 </thead>
 <tbody>
 <tr>
-<td>push()</td>
+<td><code>push()</code></td>
 <td><span class="arithmatex">\(\blue{O(1)}\)</span></td>
 </tr>
 <tr>
-<td>pop()</td>
+<td><code>pop()</code></td>
 <td><span class="arithmatex">\(\blue{O(1)}\)</span></td>
 </tr>
 <tr>
-<td>peek()</td>
+<td><code>peek()</code></td>
 <td><span class="arithmatex">\(\blue{O(1)}\)</span></td>
 </tr>
 </tbody>
@@ -3600,6 +3768,32 @@ h(k) = h_1(k) + i \cdot h_2(k)
 <h4 id="left-child-right-sibling-binary-tree">Left-Child Right-Sibling Binary Tree<a class="headerlink" href="#left-child-right-sibling-binary-tree" title="Permanent link">&para;</a></h4>
 <p>Store a general tree as a binary tree</p>
 <p><img alt="" src="../img/lcrs.png" /></p>
+<h3 id="binary-search-tree">Binary Search Tree<a class="headerlink" href="#binary-search-tree" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>All objects in the left sub-tree to be less than the object stored in the root node</p>
+</li>
+<li>
+<p>All objects in the right sub-tree to be greater than the object in the root object</p>
+</li>
+<li>
+<p>The two sub-trees are themselves binary search trees</p>
+</li>
+</ul>
+<p><img alt="" src="../img/bst.png" /></p>
+<h5 id="print"><code>print()</code><a class="headerlink" href="#print" title="Permanent link">&para;</a></h5>
+<p>In-order traversal</p>
+<h5 id="insert"><code>insert()</code><a class="headerlink" href="#insert" title="Permanent link">&para;</a></h5>
+<h5 id="erase"><code>erase()</code><a class="headerlink" href="#erase" title="Permanent link">&para;</a></h5>
+<h3 id="avl-tree">AVL Tree<a class="headerlink" href="#avl-tree" title="Permanent link">&para;</a></h3>
+<p>A BST can easily degenerate into a linked list in some cases. In order to take advantage of BST properties, we need some operations to keep it balanced.</p>
+<h4 id="case-1">Case 1<a class="headerlink" href="#case-1" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../img/avl-case1.png" /></p>
+<h4 id="case-2">Case 2<a class="headerlink" href="#case-2" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../img/avl-case2.png" /></p>
+<h4 id="case-3-only-happen-when-erasing-nodes">Case 3 (Only happen when erasing nodes)<a class="headerlink" href="#case-3-only-happen-when-erasing-nodes" title="Permanent link">&para;</a></h4>
+<p>Do the same as in Case 1 when erasing a node.</p>
+<p><img alt="" src="../img/avl-case3.png" /></p>
 <h2 id="heap">Heap<a class="headerlink" href="#heap" title="Permanent link">&para;</a></h2>
 <h3 id="binary-heap">Binary Heap<a class="headerlink" href="#binary-heap" title="Permanent link">&para;</a></h3>
 <p>A non-empty tree is a min-heap if</p>
@@ -3616,15 +3810,15 @@ h(k) = h_1(k) + i \cdot h_2(k)
 </thead>
 <tbody>
 <tr>
-<td>push()</td>
+<td><code>push()</code></td>
 <td><span class="arithmatex">\(O(\log n)\)</span></td>
 </tr>
 <tr>
-<td>pop()</td>
+<td><code>pop()</code></td>
 <td><span class="arithmatex">\(O(\log n)\)</span></td>
 </tr>
 <tr>
-<td>peek()</td>
+<td><code>peek()</code></td>
 <td><span class="arithmatex">\(\blue{O(1)}\)</span></td>
 </tr>
 </tbody>
@@ -3658,7 +3852,7 @@ h(k) = h_1(k) + i \cdot h_2(k)
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-31T16:44:27+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-31</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-12T14:13:29+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-12</span>
   </span>
 
     
