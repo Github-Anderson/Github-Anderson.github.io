@@ -140,9 +140,9 @@ public:
 
 |Operation|Time|
 |---|---|
-|push()|$\blue{O(1)}$|
-|pop()|$\blue{O(1)}$|
-|peek()|$\blue{O(1)}$|
+|`push()`|$\blue{O(1)}$|
+|`pop()`|$\blue{O(1)}$|
+|`peek()`|$\blue{O(1)}$|
 
 ### Queue
 
@@ -457,6 +457,42 @@ Store a general tree as a binary tree
 
 ![](img/lcrs.png)
 
+### Binary Search Tree
+
+- All objects in the left sub-tree to be less than the object stored in the root node
+
+- All objects in the right sub-tree to be greater than the object in the root object
+
+- The two sub-trees are themselves binary search trees
+
+![](img/bst.png)
+
+##### `print()`
+
+In-order traversal
+
+##### `insert()`
+
+##### `erase()`
+
+### AVL Tree
+
+A BST can easily degenerate into a linked list in some cases. In order to take advantage of BST properties, we need some operations to keep it balanced.
+
+#### Case 1
+
+![](img/avl-case1.png)
+
+#### Case 2
+
+![](img/avl-case2.png)
+
+#### Case 3 (Only happen when erasing nodes)
+
+Do the same as in Case 1 when erasing a node.
+
+![](img/avl-case3.png)
+
 ## Heap
 
 ### Binary Heap
@@ -468,9 +504,9 @@ A non-empty tree is a min-heap if
 
 |Operation|Time|
 |---|---|
-|push()|$O(\log n)$|
-|pop()|$O(\log n)$|
-|peek()|$\blue{O(1)}$|
+|`push()`|$O(\log n)$|
+|`pop()`|$O(\log n)$|
+|`peek()`|$\blue{O(1)}$|
 
 #### Array Implementation
 
