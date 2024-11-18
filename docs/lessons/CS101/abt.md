@@ -341,14 +341,14 @@ In practice, we usually use some standard hash algorithms, such as MD5, SHA-1, S
         struct TreeNode {
           int value;
           std::vector<TreeNode*> children;
-
+    
           TreeNode(int val) : value(val) {}
         };
-
+    
         // Helper function to check if there are duplicate nodes (disjoint check)
         bool areDisjoint(TreeNode* node, std::unordered_set<TreeNode*>& visited) {
           if (visited.count(node)) return false;  // Node already visited
-
+    
           visited.insert(node);  // Mark this node as visited
           for (TreeNode* child : node->children) {
             if (!areDisjoint(child, visited)) {
@@ -357,14 +357,14 @@ In practice, we usually use some standard hash algorithms, such as MD5, SHA-1, S
           }
           return true;
         }
-
+    
         // Main function to check if the tree is valid
         bool IsTree(TreeNode* root) {
           if (root == nullptr) return true;  // Empty tree is valid
-
+    
           std::unordered_set<TreeNode*> visited;  // To track visited nodes
           if (!areDisjoint(root, visited)) return false;  // Check disjoint condition
-
+    
           // Verify the recursive tree structure
           for (TreeNode* child : root->children) {
             if (!IsTree(child)) return false;  // Recursively check all children
@@ -395,7 +395,7 @@ Visit all nodes at a given depth before descending a level
 - While the queue is not empty:
     - Pop the node at the front of the queue
     - Push all of its children into the queue
-  
+
 The order in which the nodes come out of the queue will be in breadth-first order
 
 #### Depth-First Traversal
@@ -412,23 +412,20 @@ A randomized and principled tree search method
 
 A binary tree is a restriction where each node has exactly two children.
 
-A full binary tree is where each node is:
-
-- A full node, or
-- A leaf node
+A full binary tree is where each node is a full node, or a leaf node.
 
 #### Perfect Binary Tree
 
 A ***perfect binary tree*** of height $h$ is a binary tree where
 
-- All leaf nodes have the same depth $h$
-- All other nodes are full
+- All leaf nodes have the same depth $h$.
+- All other nodes are full.
 
 ##### Theorems
 
-- A perfect binary tree of height $h$ has $2^{h+1} - 1$ nodes
-- The height is $\Theta(\ln n)$
-- There are $2^h$ leaf nodes
+- A perfect binary tree of height $h$ has $2^{h+1} - 1$ nodes.
+- The height is $\Theta(\ln n)$.
+- There are $2^h$ leaf nodes.
 - The average depth of a node is $\Theta(\ln n)$: 
 
 $$
@@ -453,41 +450,57 @@ More commonly, a complete is perfect except the last level, and the leaves in th
 
 #### Left-Child Right-Sibling Binary Tree
 
-Store a general tree as a binary tree
+Store a general tree as a binary tree.
 
 ![](img/lcrs.png)
 
+### *Huffman Code
+
+Reduce size of data.
+
+- Going left if a $0$
+- Going right is a $1$
+- Code word is only completed when a leaf node is reached.
+
+<img src="/lessons/CS101/img/huffman.png" style="zoom:50%;" />
+
 ### Binary Search Tree
 
-- All objects in the left sub-tree to be less than the object stored in the root node
+- All objects in the left sub-tree to be less than the object stored in the root node.
 
-- All objects in the right sub-tree to be greater than the object in the root object
+- All objects in the right sub-tree to be greater than the object in the root object.
 
-- The two sub-trees are themselves binary search trees
+- The two sub-trees are themselves binary search trees.
 
 ![](img/bst.png)
 
-##### `print()`
+#### Implementation
 
-In-order traversal
+- `print()`
 
-##### `insert()`
+    In-order traversal
 
-##### `erase()`
+- `insert()`
+
+- `erase()`
 
 ### AVL Tree
 
 A BST can easily degenerate into a linked list in some cases. In order to take advantage of BST properties, we need some operations to keep it balanced.
 
-#### Case 1
+All operations are in $O(\log n)$
+
+#### Cases
+
+##### Case 1
 
 ![](img/avl-case1.png)
 
-#### Case 2
+##### Case 2
 
 ![](img/avl-case2.png)
 
-#### Case 3 (Only happen when erasing nodes)
+##### Case 3 (Only happen when erasing nodes)
 
 Do the same as in Case 1 when erasing a node.
 
@@ -516,3 +529,63 @@ Given the entry at index k, it follows that:
 
 - The parent of node is a $k/2$
 - The children are at $2k$ and $2k + 1$
+
+## Disjoint Set
+
+- Worst case: $O(\log n)$
+- Average case: $O(\alpha (n))$
+- Best case: $\Theta(1)$
+
+!!! quote "About $\alpha (n)$"
+
+    $\alpha(n)$ is the inverse of the function $A(i,j)$, that is
+    
+    $$
+    \alpha (n) = \min \{i \mid A(i, i)\geq n\}
+    $$
+    
+    where $A(i,j)$ is the Ackermann function
+    
+    $$
+    A(i,j) =
+    \begin{cases}
+    j+1, &i=0\\
+    A(i-1,1), &i>0, j=0\\
+    A(i-1, A(i, j-1)), &i>0, j>0
+    \end{cases}
+    $$
+
+#### Implementation
+
+- `find(i)`
+
+    - Find the root element of the tree that contains `i`.
+
+- `set_union(i, j)`
+
+    - Find the root elements of `i` and `j`.
+    - Update the parent of one root element to be the other root element.
+
+#### Optimization 1: Union-by-rank
+
+When two trees have the same height, the set specified first in the union will be the root of the merged set.
+
+- Point the root of the shorter tree to the root of the taller tree.
+- The height of the taller will increase if and only if the trees are equal in height.
+
+#### Optimization 2: Path compression
+
+The set specified first in the union will always be the root of the merged set.
+
+```cpp
+size_t Disjoint_set::find(size_t n) {
+  if (parent[n] == n) {
+    return n;
+  } else {
+    parent[n] = find(parent[n]);
+    return parent[n];
+  }
+}
+```
+
+<img src="/lessons/CS101/img/path-compression.png" style="zoom:40%;" />
