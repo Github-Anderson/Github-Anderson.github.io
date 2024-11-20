@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../assets/icon/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.45">
     
     
       
@@ -2049,6 +2049,93 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Bipartite Graphs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-spanning-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minimum Spanning Tree
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Minimum Spanning Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prims-algorithm-adding-vertices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prim's algorithm (Adding vertices)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prim's algorithm (Adding vertices)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kruskals-algorithm-adding-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kruskal's algorithm (Adding edges)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kruskal's algorithm (Adding edges)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2743,6 +2830,93 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Bipartite Graphs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimum-spanning-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minimum Spanning Tree
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Minimum Spanning Tree">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prims-algorithm-adding-vertices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prim's algorithm (Adding vertices)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prim's algorithm (Adding vertices)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kruskals-algorithm-adding-edges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kruskal's algorithm (Adding edges)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kruskal's algorithm (Adding edges)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analysis_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2797,6 +2971,14 @@ E = \{\{v_i, v_j\}\mid v_i, v_j\text{ are connected}\}
 <p>A simple cycle is a simple path of <strong>at least two vertices</strong> with the first and last vectices equal.</p>
 <h5 id="connectedness">Connectedness<a class="headerlink" href="#connectedness" title="Permanent link">&para;</a></h5>
 <p><span class="arithmatex">\(v_i, v_j\)</span> are connected if there exists a path from <span class="arithmatex">\(v_i\)</span> to <span class="arithmatex">\(v_j\)</span>.</p>
+<ul>
+<li>
+<p>Two nodes are strongly connected if there exists multiple path from one to the other.</p>
+</li>
+<li>
+<p>Two nodes are weakly connected if there is only one path.</p>
+</li>
+</ul>
 <h5 id="weighted-graphs">Weighted graphs<a class="headerlink" href="#weighted-graphs" title="Permanent link">&para;</a></h5>
 <h5 id="trees">Trees<a class="headerlink" href="#trees" title="Permanent link">&para;</a></h5>
 <p>A graph is a tree if it is connected and there is a unique path between any two vertices.</p>
@@ -2904,9 +3086,61 @@ E = \{\{v_i, v_j\}\mid v_i, v_j\text{ are connected}\}
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="bipartite-graphs">Bipartite Graphs<a class="headerlink" href="#bipartite-graphs" title="Permanent link">&para;</a></h2>
+<h4 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h4>
 <p>A bipartite graph is a graph where the vertices <span class="arithmatex">\(V\)</span> can be divided into two disjoint sets <span class="arithmatex">\(V_1\)</span> and <span class="arithmatex">\(V_2\)</span> such that <strong>every</strong> edge has one vertex in <span class="arithmatex">\(V_1\)</span> and the other in <span class="arithmatex">\(V_2\)</span>.</p>
 <p><img alt="" src="../img/bipartite.png" /></p>
 <p>Use a breadth-firsgt traversal to determine if it's a bipartite graph.</p>
+<h2 id="minimum-spanning-tree">Minimum Spanning Tree<a class="headerlink" href="#minimum-spanning-tree" title="Permanent link">&para;</a></h2>
+<p>Given a connected graph with <span class="arithmatex">\(n\)</span> vertices, a spanning tree is defined as a subgraph that is a tree and includes all the <span class="arithmatex">\(n\)</span> vertices.</p>
+<p><img alt="" src="../img/mst.png" /></p>
+<h4 id="definition_1">Definition<a class="headerlink" href="#definition_1" title="Permanent link">&para;</a></h4>
+<p>The spanning tree with the minimum weight.</p>
+<h3 id="prims-algorithm-adding-vertices">Prim's algorithm (Adding vertices)<a class="headerlink" href="#prims-algorithm-adding-vertices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Start with an arbitrary vertex to form a MST on one vertex as the root.</li>
+<li>At each step, add the edge with least weight that connects the current MST to a new vertex.</li>
+<li>Continue until we have <span class="arithmatex">\(n-1\)</span> edges and <span class="arithmatex">\(n\)</span> vertices.</li>
+</ul>
+<h4 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Time complexity: <span class="arithmatex">\(\Theta(|V|^2 + |E|)\)</span></li>
+</ul>
+<p>We can use a binary heap or fib to find the shortest edge in each iteration.</p>
+<ul>
+<li>Using binary heap: <span class="arithmatex">\(O((|V|+|E|)\ln(|V|)) = O(|E|\ln(|V|))\)</span></li>
+<li>Using Fibonacci heap: <span class="arithmatex">\(O(|E|+|V|\ln(|V|)\)</span></li>
+</ul>
+<h3 id="kruskals-algorithm-adding-edges">Kruskal's algorithm (Adding edges)<a class="headerlink" href="#kruskals-algorithm-adding-edges" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sort the edges by weight.</li>
+<li>Create a disjoint set of the vertices.</li>
+<li>
+<p>Go through the edges from least weight to greatest weight.</p>
+<ul>
+<li>Add the edges to the spanning tree so long as the addition does not create a cycle.</li>
+</ul>
+</li>
+<li>
+<p>Repeatedly add more edges until:</p>
+<ul>
+<li><span class="arithmatex">\(|V| - 1\)</span> edges have been added, then we have a minimum spanning tree.</li>
+<li>Otherwise, if we have gone through all the edges, then we have a forest of minimum spanning trees on all connected sub-graphs.</li>
+</ul>
+</li>
+</ul>
+<h4 id="analysis_1">Analysis<a class="headerlink" href="#analysis_1" title="Permanent link">&para;</a></h4>
+<div class="admonition question">
+<p class="admonition-title">How do we determine if a cycle would be created?</p>
+<p>We could use disjoint sets.</p>
+<ul>
+<li>Consider edges in the same connected sub-graph as forming a set.</li>
+<li>If the vertices of the next edge are in different sets, take the union of the two sets.</li>
+<li>Do not add edge if both vertices are in the same set.</li>
+</ul>
+</div>
+<ul>
+<li>Time complexity: <span class="arithmatex">\(O(|E|\ln(|E|))\)</span></li>
+</ul>
 
 
 
@@ -2929,7 +3163,7 @@ E = \{\{v_i, v_j\}\mid v_i, v_j\text{ are connected}\}
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-18T11:30:36+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-18</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-20T09:47:42+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-20</span>
   </span>
 
     
