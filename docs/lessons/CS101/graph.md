@@ -50,6 +50,10 @@ A simple cycle is a simple path of **at least two vertices** with the first and 
 
 $v_i, v_j$ are connected if there exists a path from $v_i$ to $v_j$.
 
+- Two nodes are strongly connected if there exists multiple path from one to the other.
+
+- Two nodes are weakly connected if there is only one path.
+
 ##### Weighted graphs
 
 ##### Trees
@@ -158,8 +162,58 @@ void Vertex::depth_first_traversal() const {
 
 ## Bipartite Graphs
 
+#### Definition
+
 A bipartite graph is a graph where the vertices $V$ can be divided into two disjoint sets $V_1$ and $V_2$ such that **every** edge has one vertex in $V_1$ and the other in $V_2$.
 
 ![](img/bipartite.png)
 
 Use a breadth-firsgt traversal to determine if it's a bipartite graph.
+
+## Minimum Spanning Tree
+
+Given a connected graph with $n$ vertices, a spanning tree is defined as a subgraph that is a tree and includes all the $n$ vertices.
+
+![](img/mst.png)
+
+#### Definition
+
+The spanning tree with the minimum weight.
+
+### Prim's algorithm (Adding vertices)
+
+- Start with an arbitrary vertex to form a MST on one vertex as the root.
+- At each step, add the edge with least weight that connects the current MST to a new vertex.
+- Continue until we have $n-1$ edges and $n$ vertices.
+
+#### Analysis
+
+- Time complexity: $\Theta(|V|^2 + |E|)$
+
+We can use a binary heap or fib to find the shortest edge in each iteration.
+
+- Using binary heap: $O((|V|+|E|)\ln(|V|)) = O(|E|\ln(|V|))$
+- Using Fibonacci heap: $O(|E|+|V|\ln(|V|)$
+
+### Kruskal's algorithm (Adding edges)
+
+- Sort the edges by weight.
+- Create a disjoint set of the vertices.
+- Go through the edges from least weight to greatest weight.
+	- Add the edges to the spanning tree so long as the addition does not create a cycle.
+
+- Repeatedly add more edges until:
+	- $|V| - 1$ edges have been added, then we have a minimum spanning tree.
+	- Otherwise, if we have gone through all the edges, then we have a forest of minimum spanning trees on all connected sub-graphs.
+
+#### Analysis
+
+!!! question "How do we determine if a cycle would be created?"
+
+	We could use disjoint sets.
+
+	- Consider edges in the same connected sub-graph as forming a set.
+	- If the vertices of the next edge are in different sets, take the union of the two sets.
+	- Do not add edge if both vertices are in the same set.
+
+- Time complexity: $O(|E|\ln(|E|))$

@@ -532,7 +532,7 @@ Given the entry at index k, it follows that:
 
 ## Disjoint Set
 
-- Worst case: $O(\log n)$
+- Worst case: $O(\log n)$ (or $O(n)$ without optimization)
 - Average case: $O(\alpha (n))$
 - Best case: $\Theta(1)$
 
