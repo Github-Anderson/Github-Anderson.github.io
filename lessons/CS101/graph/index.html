@@ -18,7 +18,7 @@
         <link rel="prev" href="../divide-and-conquer/">
       
       
-        <link rel="next" href="../../../essay/">
+        <link rel="next" href="../greedy/">
       
       
       <link rel="icon" href="../../../assets/icon/favicon.ico">
@@ -1623,6 +1623,8 @@
       
         
       
+        
+      
     
     
       
@@ -2133,6 +2135,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#additional-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Theorem
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2142,6 +2153,27 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../greedy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Greedy
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2914,6 +2946,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#additional-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Theorem
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -3141,6 +3182,42 @@ E = \{\{v_i, v_j\}\mid v_i, v_j\text{ are connected}\}
 <ul>
 <li>Time complexity: <span class="arithmatex">\(O(|E|\ln(|E|))\)</span></li>
 </ul>
+<h3 id="additional-theorem">Additional Theorem<a class="headerlink" href="#additional-theorem" title="Permanent link">&para;</a></h3>
+<div class="admonition quote">
+<p class="admonition-title">How do we know the range of an edge in <span class="arithmatex">\(G\)</span>?</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Cut Property</p>
+<ul>
+<li>An edge in the Minimum Spanning Tree (MST) must be the smallest-weight edge (or one of them) in some cut of the graph.</li>
+<li>If the weight of an edge in the MST is modified, it must still remain the smallest-weight edge in that cut.</li>
+</ul>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Cycle Property</p>
+<ul>
+<li>If an edge outside the MST is added to the MST, it will form a cycle.</li>
+<li>If the weight of this edge is smaller than that of any edge in the cycle, it will replace the heaviest edge in the cycle, thereby altering the structure of the MST.</li>
+</ul>
+</div>
+<p>Therefore, for any edge <span class="arithmatex">\(e\)</span> in <span class="arithmatex">\(G\)</span>, we can consider two situations:</p>
+<ol>
+<li>
+<p>If <span class="arithmatex">\(e\)</span> is in the MST,</p>
+<ul>
+<li>We generally delete <span class="arithmatex">\(e\)</span> in the MST, dividing the MST into two parts.</li>
+<li>Then find all the edges that can connect these two parts.</li>
+<li>The maximum weight of <span class="arithmatex">\(e\)</span> is not greater than the minimum weight in these edges.</li>
+</ul>
+</li>
+<li>
+<p>If <span class="arithmatex">\(e\)</span> is not in the MST,</p>
+<ul>
+<li>We generally add <span class="arithmatex">\(e\)</span> to the MST, creating a cycle in the MST.</li>
+<li>The minimum weight of <span class="arithmatex">\(e\)</span> is not lesser than the maximum weight in this cycle. (except <span class="arithmatex">\(e\)</span> itself)</li>
+</ul>
+</li>
+</ol>
 
 
 
@@ -3163,7 +3240,7 @@ E = \{\{v_i, v_j\}\mid v_i, v_j\text{ are connected}\}
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-20T09:47:42+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-20</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-25T08:55:57+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-25</span>
   </span>
 
     
@@ -3274,13 +3351,13 @@ E = \{\{v_i, v_j\}\mid v_i, v_j\text{ are connected}\}
         
         
           
-          <a href="../../../essay/" class="md-footer__link md-footer__link--next" aria-label="下一页: 随笔">
+          <a href="../greedy/" class="md-footer__link md-footer__link--next" aria-label="下一页: Greedy">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                随笔
+                Greedy
               </div>
             </div>
             <div class="md-footer__button md-icon">
