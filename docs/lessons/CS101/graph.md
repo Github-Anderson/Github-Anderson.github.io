@@ -217,3 +217,28 @@ We can use a binary heap or fib to find the shortest edge in each iteration.
 	- Do not add edge if both vertices are in the same set.
 
 - Time complexity: $O(|E|\ln(|E|))$
+
+### Additional Theorem
+
+!!! quote "How do we know the range of an edge in $G$?"
+
+!!! abstract "Cut Property"
+	- An edge in the Minimum Spanning Tree (MST) must be the smallest-weight edge (or one of them) in some cut of the graph.
+	- If the weight of an edge in the MST is modified, it must still remain the smallest-weight edge in that cut.
+
+!!! abstract "Cycle Property"
+	- If an edge outside the MST is added to the MST, it will form a cycle.
+	- If the weight of this edge is smaller than that of any edge in the cycle, it will replace the heaviest edge in the cycle, thereby altering the structure of the MST.
+
+Therefore, for any edge $e$ in $G$, we can consider two situations:
+
+1. If $e$ is in the MST,
+
+	- We generally delete $e$ in the MST, dividing the MST into two parts.
+	- Then find all the edges that can connect these two parts.
+	- The maximum weight of $e$ is not greater than the minimum weight in these edges.
+	
+2. If $e$ is not in the MST,
+
+	- We generally add $e$ to the MST, creating a cycle in the MST.
+	- The minimum weight of $e$ is not lesser than the maximum weight in this cycle. (except $e$ itself)

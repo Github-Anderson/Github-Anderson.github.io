@@ -248,6 +248,7 @@ nav:
       - lessons/CS101/sorting.md
       - lessons/CS101/divide-and-conquer.md
       - lessons/CS101/graph.md
+      - lessons/CS101/greedy.md
   - 随笔:
     - essay/index.md
     - 文章:
