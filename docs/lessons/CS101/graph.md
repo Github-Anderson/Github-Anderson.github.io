@@ -193,7 +193,7 @@ The spanning tree with the minimum weight.
 We can use a binary heap or fib to find the shortest edge in each iteration.
 
 - Using binary heap: $O((|V|+|E|)\ln(|V|)) = O(|E|\ln(|V|))$
-- Using Fibonacci heap: $O(|E|+|V|\ln(|V|)$
+- Using Fibonacci heap: $O(|E|+|V|\ln(|V|))$
 
 ### Kruskal's algorithm (Adding edges)
 
@@ -220,6 +220,18 @@ We can use a binary heap or fib to find the shortest edge in each iteration.
 
 ### Additional Theorem
 
+!!! quote "How to find the number of spanning trees of a specific graph?"
+
+1. Form the Laplacian matrix $L$.
+	- $L[i][i] = $ Degree of vertex $i$.
+	- $L[i][j] = -1$ if there is an edge between vertices $i$ and $j$, and $0$ otherwise.
+
+2. Create the reduced Laplacian matrix $L'$.
+	- Remove any one row and the corresponding column from $L$.
+
+3. Calculate the determinant of $L'$.
+	- The determinant of $L'$ gives the number of spanning trees of the graph.
+
 !!! quote "How do we know the range of an edge in $G$?"
 
 !!! abstract "Cut Property"
@@ -242,3 +254,71 @@ Therefore, for any edge $e$ in $G$, we can consider two situations:
 
 	- We generally add $e$ to the MST, creating a cycle in the MST.
 	- The minimum weight of $e$ is not lesser than the maximum weight in this cycle. (except $e$ itself)
+
+## Topological Sort
+
+#### Definition
+
+- A graph is a DAG if and only if it has a topological sorting.
+
+Lemmas:
+
+- A DAG always has at least one vertex with in-degree zero.
+- Any sub-graph of a DAG is a DAG
+
+#### Algorithm
+
+Given a DAG $V$, iterate:
+
+- Find a vertex $v$ in $V$ with in-degree zero.
+- Let $v$ be the next vertex in the topological sort.
+- Continue iterating with the vertex-induced sub-graph $V\backslash \{v\}$
+
+> Note that topological sorts need **not be unique**.
+
+#### Analysis
+
+- Use a queue (or other container) to temporarily store those vertices with in-degree zero.
+- Each time the in-degree of a vertex is decremented to zero, push it onto the queue.
+
+#### Implementation
+
+To implement a topological sort:
+
+- Allocate memory for and initialize an array of in-degrees.
+- Create a queue and initialize it with all vertices that have in-degree zero.
+
+While the queue is not empty:
+
+- Pop a vertex from the queue.
+- Decrement the in-degree of each neighbor.
+- Those neighbors whose in-degree was decremented to zero are pushed onto the queue.
+
+![](img/topo-sort-queue.gif)
+
+### Example: Critical Path
+
+The **critical time** of each task is the earliest time that it could be completed after the start of execution.
+
+The **critical path** is the sequence of tasks determining the minimum time needed to complete the project.
+
+- If a task on the critical path is delayed, the entire project will be delayed.
+
+#### Find the critical path
+
+To find the critical time/path, we run topological sorting.
+
+Each time we pop a vertex $v$, in addition to what we already do:
+
+- For $v$, add the task time onto the critical time for that vertex:
+
+	- That is the critical time for $v$.
+
+- For each <u>adjacent</u> vertex $w$:
+
+	- If the critical time for $v$ is greater than the currently stored critical time for $w$.
+
+		- Update the critical time with the critical time for $v$.
+		- Set the previous pointer to the vertex $v$.
+
+![](img/critical-path.gif)
