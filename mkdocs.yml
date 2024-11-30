@@ -104,6 +104,10 @@ extra:
   status:
     star: 最近更新
 
+  template:
+    home: overrides/home.html
+
+
 
 plugins:
   # [搜索功能]
@@ -115,6 +119,8 @@ plugins:
   
   # [给单篇文章添加标签]
   # - tags
+
+  # - social
 
   - git-revision-date-localized:
       # fallback_to_build_date: false
@@ -196,7 +202,7 @@ extra_css:
 
 # [Navigtion]
 nav:
-  # - index.md
+  # - 你好: index.md
   - 博客:
     - blog/index.md
     - Material for MkDocs:
@@ -247,8 +253,8 @@ nav:
       - lessons/CS101/algo-analysis.md
       - lessons/CS101/sorting.md
       - lessons/CS101/divide-and-conquer.md
-      - lessons/CS101/graph.md
       - lessons/CS101/greedy.md
+      - lessons/CS101/graph.md
   - 随笔:
     - essay/index.md
     - 文章:

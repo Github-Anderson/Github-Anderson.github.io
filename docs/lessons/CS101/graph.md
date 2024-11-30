@@ -1,5 +1,6 @@
 ---
 comments: true
+status: star
 ---
 
 # Graph
@@ -322,3 +323,43 @@ Each time we pop a vertex $v$, in addition to what we already do:
 		- Set the previous pointer to the vertex $v$.
 
 ![](img/critical-path.gif)
+
+## Shortest Path
+
+Given a weighted directed graph, one common problem is finding the shortest path between two given vertices.
+
+### Dijkstra's Algorithm
+
+#### Process
+
+> Dijkstra's algorithm solves the single-source shortest path problem.
+>
+> - It is very similar to Prim's algorithm.
+> - Assumption: ==all the weights are positive==.
+
+We will iterate $|V|$ times:
+
+- Find the unvisited vertex $v$ that has a minimum distance to it.
+- Mark it as visited.
+- Consider its every adjacent vertex $w$ that is unvisited:
+
+	- If the distance to $v$ plus the weight of the edge $(v,w)$ less than our currently known shortest distance to $w$, update the shortest distance to $w$.
+
+Continue iterating until all vertices are visited or ==all remaining vertices have a distance of infinity==.
+
+#### Analysis
+
+- Use a binary heap: $O(|E|\ln (|V|))$
+- Use a Fibonacci heap: $O(|E| + |V|\ln (|V|))$
+
+## Bellman-Ford Algorithm
+
+> How to solve if there exists negative weight?
+>
+> Assumption: For graphs with negative weights (but no cycles with negative weight)
+
+## Process
+
+$$
+\text{dist}[v] = \min \{\text{dist}[v], \text{dist}[u] + w(u,v)\}
+$$
