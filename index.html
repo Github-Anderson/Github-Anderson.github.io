@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              你好
+              你好。
             
           </span>
         </div>
@@ -225,6 +225,7 @@
     <div class="md-container" data-md-component="container">
       
       
+
         
           
             
@@ -318,12 +319,194 @@
           
         
       
+
+<style>
+  /* 隐藏默认的界面元素 */
+  .md-sidebar--primary,
+  .md-sidebar--secondary,
+  .md-main {
+    display: none;
+  }
+
+  /* 显示标题 */
+  .md-header__title {
+    display: block;
+  }
+
+  /* 设置大图全屏显示 */
+  .mdx-hero {
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .mdx-hero-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 标题文字样式 */
+  .mdx-hero-title {
+    position: relative;
+    bottom: 30%;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+  }
+
+  /* 副标题文字样式 */
+  .mdx-hero-subtitle {
+    position: relative;
+    color: white;
+    padding: 0px 30px;
+    font-size: 0.8rem;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    z-index: 4;
+  }
+
+  .mdx-hero-button,
+  .mdx-hero-repo-button {
+    position: relative;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: 38%;
+    padding: 9px 18px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* 图标与文字的间距 */
+    z-index: 4;
+  }
+
+  /* 按钮样式 */
+  .mdx-hero-button {
+    background-color: #007BFF;
+  }
+
+  .mdx-hero-button:hover {
+    background-color: #0168d6;
+    color: #d7d7d7;
+  }
+
+  /* 仓库按钮样式 */
+  .mdx-hero-repo-button {
+    background-color: #52575c; /* 灰色背景 */
+  }
+
+  .mdx-hero-repo-button:hover {
+    background-color: #3f4347;
+    color: #d7d7d7;
+  }
+
+  /* 设置图标默认颜色为白色 */
+  .mdx-hero-button svg,
+  .mdx-hero-repo-button svg {
+    fill: white; /* 图标填充颜色 */
+    width: 16px;
+    height: 16px;
+  }
+
+  /* 鼠标悬停时，图标变暗 */
+  .mdx-hero-button:hover svg,
+  .mdx-hero-repo-button:hover svg {
+    fill: #d7d7d7; /* 图标颜色变暗 */
+  }
+
+  /* 背景矩形样式 */
+  .mdx-hero-container {
+    position: relative; /* 创建一个父容器用于相对定位 */
+    display: inline-block; /* 包裹内部内容 */
+    padding: 40px 50px;
+  }
+
+  /* 背景矩形样式 */
+  .mdx-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* 覆盖整个父容器 */
+    height: 100%; /* 覆盖整个父容器 */
+    backdrop-filter: blur(15px); /* 高斯模糊 */
+    border-radius: 20px; /* 圆角 */
+    z-index: 1; /* 确保在文字和按钮下方 */
+    
+  }
+
+  .mdx-hero-buttons {
+    width: auto;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    padding-top: 40px;
+  }
+
+</style>
+<section class="mdx-hero">
+
+  <img id="hero-image" class="mdx-hero-image" alt="Hero Image">
+
+  <div class="mdx-hero-container">
+    <div class="mdx-hero-bg"></div>
+    <div class="mdx-hero-title">Anderson_Yang 的个人网站</div>
+    <div class="mdx-hero-subtitle">一个展示我个人项目、课程和随笔的地方</div>
+    
+    <div class="mdx-hero-buttons">
+      <a href="lessons/" class="mdx-hero-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>book-open-variant-outline</title><path d="M12 21.5C10.65 20.65 8.2 20 6.5 20C4.85 20 3.15 20.3 1.75 21.05C1.65 21.1 1.6 21.1 1.5 21.1C1.25 21.1 1 20.85 1 20.6V6C1.6 5.55 2.25 5.25 3 5C4.11 4.65 5.33 4.5 6.5 4.5C8.45 4.5 10.55 4.9 12 6C13.45 4.9 15.55 4.5 17.5 4.5C18.67 4.5 19.89 4.65 21 5C21.75 5.25 22.4 5.55 23 6V20.6C23 20.85 22.75 21.1 22.5 21.1C22.4 21.1 22.35 21.1 22.25 21.05C20.85 20.3 19.15 20 17.5 20C15.8 20 13.35 20.65 12 21.5M11 7.5C9.64 6.9 7.84 6.5 6.5 6.5C5.3 6.5 4.1 6.65 3 7V18.5C4.1 18.15 5.3 18 6.5 18C7.84 18 9.64 18.4 11 19V7.5M13 19C14.36 18.4 16.16 18 17.5 18C18.7 18 19.9 18.15 21 18.5V7C19.9 6.65 18.7 6.5 17.5 6.5C16.16 6.5 14.36 6.9 13 7.5V19M14 16.35C14.96 16 16.12 15.83 17.5 15.83C18.54 15.83 19.38 15.91 20 16.07V14.57C19.13 14.41 18.29 14.33 17.5 14.33C16.16 14.33 15 14.5 14 14.76V16.35M14 13.69C14.96 13.34 16.12 13.16 17.5 13.16C18.54 13.16 19.38 13.24 20 13.4V11.9C19.13 11.74 18.29 11.67 17.5 11.67C16.22 11.67 15.05 11.82 14 12.12V13.69M14 11C14.96 10.67 16.12 10.5 17.5 10.5C18.41 10.5 19.26 10.59 20 10.78V9.23C19.13 9.08 18.29 9 17.5 9C16.18 9 15 9.15 14 9.46V11Z" /></svg>
+        阅读文档
+      </a>
+
+      <a href="https://github.com/Github-Anderson/Github-Anderson.github.io" class="mdx-hero-repo-button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+          <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/>
+        </svg>
+        查看仓库
+      </a>
+    </div>
+      
+  </div>
+</section>
+
+<script>
+  // 随机图片路径数组
+  const images = [
+    'assets/image1.jpg',
+    'assets/image2.jpg',
+    'assets/image3.jpg',
+  ];
+
+  // 随机选择图片
+  const randomImage = images[Math.floor(Math.random() * images.length)];
+
+  // 设置图片 src
+  document.getElementById('hero-image').src = randomImage;
+</script>
+
+
+
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
             
-              
-                
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
@@ -1736,11 +1919,11 @@
   
   
     <li class="md-nav__item">
-      <a href="lessons/CS101/graph/" class="md-nav__link">
+      <a href="lessons/CS101/greedy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Graph
+    Greedy
   </span>
   
 
@@ -1757,12 +1940,20 @@
   
   
     <li class="md-nav__item">
-      <a href="lessons/CS101/greedy/" class="md-nav__link">
+      <a href="lessons/CS101/graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Greedy
+    Graph
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--star" title="最近更新">
+    </span>
+  
+
   
 
       </a>
@@ -2177,8 +2368,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -2212,8 +2401,7 @@
   
 
 
-<h1 id="_1">你好<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>欢迎来到 Anderson_Yang 的个人网站。</p>
+<h1 id="_1">你好。<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 
 
 
@@ -2228,8 +2416,6 @@
 
   
 
-
-  
 
 
 

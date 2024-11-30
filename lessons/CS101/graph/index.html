@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://Github-Anderson.github.io/lessons/CS101/graph/">
       
       
-        <link rel="prev" href="../divide-and-conquer/">
+        <link rel="prev" href="../greedy/">
       
       
-        <link rel="next" href="../greedy/">
+        <link rel="next" href="../../../essay/">
       
       
       <link rel="icon" href="../../../assets/icon/favicon.ico">
@@ -1744,6 +1744,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../greedy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Greedy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1763,6 +1784,14 @@
     Graph
   </span>
   
+    
+  
+  
+    <span class="md-status md-status--star" title="最近更新">
+    </span>
+  
+
+  
 
           <span class="md-nav__icon md-icon"></span>
         </label>
@@ -1773,6 +1802,14 @@
   <span class="md-ellipsis">
     Graph
   </span>
+  
+    
+  
+  
+    <span class="md-status md-status--star" title="最近更新">
+    </span>
+  
+
   
 
       </a>
@@ -2224,31 +2261,76 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#shortest-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shortest Path
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shortest Path">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dijkstras-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dijkstra's Algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dijkstra's Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bellman-ford-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bellman-Ford Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../greedy/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Greedy
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -3110,6 +3192,72 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#shortest-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shortest Path
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shortest Path">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dijkstras-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dijkstra's Algorithm
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dijkstra's Algorithm">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analysis_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bellman-ford-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bellman-Ford Algorithm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3460,6 +3608,43 @@ E = \{\{v_i, v_j\}\mid v_i, v_j\text{ are connected}\}
 </li>
 </ul>
 <p><img alt="" src="../img/critical-path.gif" /></p>
+<h2 id="shortest-path">Shortest Path<a class="headerlink" href="#shortest-path" title="Permanent link">&para;</a></h2>
+<p>Given a weighted directed graph, one common problem is finding the shortest path between two given vertices.</p>
+<h3 id="dijkstras-algorithm">Dijkstra's Algorithm<a class="headerlink" href="#dijkstras-algorithm" title="Permanent link">&para;</a></h3>
+<h4 id="process">Process<a class="headerlink" href="#process" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Dijkstra's algorithm solves the single-source shortest path problem.</p>
+<ul>
+<li>It is very similar to Prim's algorithm.</li>
+<li>Assumption: <mark>all the weights are positive</mark>.</li>
+</ul>
+</blockquote>
+<p>We will iterate <span class="arithmatex">\(|V|\)</span> times:</p>
+<ul>
+<li>Find the unvisited vertex <span class="arithmatex">\(v\)</span> that has a minimum distance to it.</li>
+<li>Mark it as visited.</li>
+<li>
+<p>Consider its every adjacent vertex <span class="arithmatex">\(w\)</span> that is unvisited:</p>
+<ul>
+<li>If the distance to <span class="arithmatex">\(v\)</span> plus the weight of the edge <span class="arithmatex">\((v,w)\)</span> less than our currently known shortest distance to <span class="arithmatex">\(w\)</span>, update the shortest distance to <span class="arithmatex">\(w\)</span>.</li>
+</ul>
+</li>
+</ul>
+<p>Continue iterating until all vertices are visited or <mark>all remaining vertices have a distance of infinity</mark>.</p>
+<h4 id="analysis_3">Analysis<a class="headerlink" href="#analysis_3" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Use a binary heap: <span class="arithmatex">\(O(|E|\ln (|V|))\)</span></li>
+<li>Use a Fibonacci heap: <span class="arithmatex">\(O(|E| + |V|\ln (|V|))\)</span></li>
+</ul>
+<h2 id="bellman-ford-algorithm">Bellman-Ford Algorithm<a class="headerlink" href="#bellman-ford-algorithm" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>How to solve if there exists negative weight?</p>
+<p>Assumption: For graphs with negative weights (but no cycles with negative weight)</p>
+</blockquote>
+<h2 id="process_1">Process<a class="headerlink" href="#process_1" title="Permanent link">&para;</a></h2>
+<div class="arithmatex">\[
+\text{dist}[v] = \min \{\text{dist}[v], \text{dist}[u] + w(u,v)\}
+\]</div>
 
 
 
@@ -3482,7 +3667,7 @@ E = \{\{v_i, v_j\}\mid v_i, v_j\text{ are connected}\}
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-27T04:32:49+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-27</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-11-30T13:53:49+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-11-30</span>
   </span>
 
     
@@ -3576,7 +3761,7 @@ E = \{\{v_i, v_j\}\mid v_i, v_j\text{ are connected}\}
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../divide-and-conquer/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Divide and Conquer">
+          <a href="../greedy/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Greedy">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3586,20 +3771,20 @@ E = \{\{v_i, v_j\}\mid v_i, v_j\text{ are connected}\}
                 上一页
               </span>
               <div class="md-ellipsis">
-                Divide and Conquer
+                Greedy
               </div>
             </div>
           </a>
         
         
           
-          <a href="../greedy/" class="md-footer__link md-footer__link--next" aria-label="下一页: Greedy">
+          <a href="../../../essay/" class="md-footer__link md-footer__link--next" aria-label="下一页: 随笔">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Greedy
+                随笔
               </div>
             </div>
             <div class="md-footer__button md-icon">
