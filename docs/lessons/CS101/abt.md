@@ -530,6 +530,11 @@ Given the entry at index k, it follows that:
 - The parent of node is a $k/2$
 - The children are at $2k$ and $2k + 1$
 
+### Fibonacci Heap
+
+- Consist of a group of trees satisfying the minimum-heap property.
+- The minimum key is always at the top of the trees.
+
 ## Disjoint Set
 
 - Worst case: $O(\log n)$ (or $O(n)$ without optimization)

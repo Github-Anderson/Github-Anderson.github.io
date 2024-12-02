@@ -22,6 +22,14 @@ A greedy algorithm is an algorithm which has:
 - A set of partial solutions from which a solution is built.
 - An *objective function* which assigns a value to any partial solution.
 
+Then given a partial solution, we
+
+- Consider possible extensions of the partial solution.
+- Discard any extensions which are not feasible.
+- Choose that extension which minimizes the object function.
+
+This continues until some criteria has been reached.
+
 ## Interval Scheduling
 
 ### Description
@@ -63,7 +71,7 @@ $$
 
 !!! abstract "Theorem"
 
-	Earliest-start-time-first algorithm is optimal.
+	The earliest-start-time-first algorithm is optimal.
 
 	- Let $d$ = number of classrooms that the algorithm allocates.
 	- Classroom $d$ is opened because we needed to schedule a lecture, say j, that is incompatible with a lecture in each of $d-1$ other classrooms.
@@ -73,5 +81,124 @@ $$
 	
 ## Scheduling to minimize lateness
 
+### Description
+
+- Single resource processes one job at a time.
+- Job $j$ requires $t_j$ units of processing time and is due at time $d_j$.
+- Lateness: $\ell_j = \max \{0, f_j - d_j\}$.
+- Goal: Schedule all jobs to minimize **maximum** lateness $L = \max_j \ell_j$.
+
+### Solve
+
+- Solve the processes by due time $d_j$ in ascending order.
+- Choose and process jobs.
+- Count the total lateness.
+
+!!! abstract "Theorem" 
+
+	The earliest-deadline-first schedule $S$ is optimal.
+
+	- No idle time.
+	- No inversions.
+	- Proved by induction.
+
 ## Optimal caching
 
+### Description
+
+- Cache with capacity to store $k$ items.
+- Sequence of $m$ item requests $d_1, d_2, \dots, d_m$.
+- Goal: Eviction schedule that minimizes the number of evictions.
+
+### Solve
+
+Farthest-in-future. Evict item in the cache that is not requested until farthest in the future.
+
+!!! abstract "Theorem"
+
+	The earliest-deadline-first schedule $S$ is optimal.
+
+---
+
+# Notes for Evaluating Greedy Algorithms
+
+## Judgment Process
+
+### Step 1: Determine Optimality
+
+For each greedy algorithm:
+
+!!! quote "Does it always find an optimal solution?"
+
+    - If yes, proceed to proof by "Greedy Stays Ahead" arguments.
+    - If no, provide a counterexample with details.
+
+## Counterexample (if algorithm is not always optimal)
+
+### Details to include:
+
+1. **Input**: Specify the input to the algorithm.
+2. **Greedy Solution**: Show the solution produced by the greedy algorithm.
+3. **Optimal Solution**: Compare with the correct optimal solution.
+
+## Proof of Optimality (if algorithm always finds optimal solution)
+
+### Use "Greedy Stays Ahead" Arguments:
+
+#### 1. Definition of Sub-Problem Solutions
+
+- Define a sequence of sub-problems \( X_1, X_2, X_3, \ldots \) solved iteratively by the greedy algorithm.
+
+- Example: In the coin change problem, \( X_i \) is the multiset of coins summing to \( i \).
+
+#### 2. Definition of Optimality
+
+- Specify a measurement \( m_i(X_i) \) for evaluating sub-problem solutions.
+
+- Define the optimal solution for sub-problem \( i \) as:
+
+\[
+X_i^* \in \arg\max\{m_i(X_i)\} \quad \text{or} \quad X_i^* \in \arg\min\{m_i(X_i)\}
+\]
+
+- Example: In the coin change problem, \( m_i(X_i) = |X_i| \), the number of coins, and the goal is to minimize \( m_i(X_i) \).
+
+#### 3. Proof of "Greedy Stays Ahead"
+
+- Prove by induction:
+
+\[
+m_{i-1}(X_{i-1}) = m_{i-1}(X_{i-1}^*) \implies m_i(X_i) = m_i(X_i^*)
+\]
+
+- Usually, prove by contradiction:
+
+\[
+m_{i-1}(X_{i-1}) \neq m_{i-1}(X_{i-1}^*) \impliedby m_i(X_i) \neq m_i(X_i^*)
+\]
+
+#### 4. Structure of Proof
+
+- Base case: Show the greedy algorithm produces an optimal solution for the first sub-problem.
+- Inductive step: Assume optimality up to \( i-1 \); prove optimality for \( i \).
+
+### Example Framework for Proof:
+
+#### 1. Sub-problem solutions \( X_i \)
+
+- Define \( X_i \) based on what the algorithm produces after \( i \)-th iteration.
+
+#### 2. Optimality measurement \( m_i(X_i) \)
+
+- Define \( m_i \) to evaluate solutions.
+
+#### 3. Induction
+
+- Base case: Show \( m_1(X_1) = m_1(X_1^*) \).
+- Inductive step:
+
+\[
+    m_{i-1}(X_{i-1}) = m_{i-1}(X_{i-1}^*) \implies m_i(X_i) = m_i(X_i^*)
+\]
+
+This structure ensures clarity and rigor in evaluating greedy algorithms.

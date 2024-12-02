@@ -332,10 +332,12 @@ Given a weighted directed graph, one common problem is finding the shortest path
 
 #### Process
 
-> Dijkstra's algorithm solves the single-source shortest path problem.
->
-> - It is very similar to Prim's algorithm.
-> - Assumption: ==all the weights are positive==.
+!!! quote "Description"
+
+	Dijkstra's algorithm solves the single-source shortest path problem.
+
+	- It is very similar to Prim's algorithm.
+	- Assumption: ==all the weights are positive==.
 
 We will iterate $|V|$ times:
 
@@ -354,12 +356,26 @@ Continue iterating until all vertices are visited or ==all remaining vertices ha
 
 ## Bellman-Ford Algorithm
 
-> How to solve if there exists negative weight?
->
-> Assumption: For graphs with negative weights (but no cycles with negative weight)
+!!! quote "Description"
 
-## Process
+	How to solve if there exists negative weight?
+
+	Assumption: For graphs with negative weights (but no cycles with negative weight)
+
+#### Process
+
+Basic idea:
 
 $$
 \text{dist}[v] = \min \{\text{dist}[v], \text{dist}[u] + w(u,v)\}
 $$
+
+That is, for each edge $(u,v)\in E$, if $\text{dist}[v] > \text{dist}[u] + w(u,v)$,
+
+$$
+\text{dist}[v] = \text{dist}[u] + w(u,v)
+$$
+
+#### Analysis
+
+- Time Complexity: $O(|V||E|)$
