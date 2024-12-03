@@ -82,27 +82,25 @@
     background-color: #007BFF;
   }
 
+  /* 仓库按钮样式 */
+  .mdx-hero-repo-button {
+    background-color: #52575c;
+  }
+
   .mdx-hero-button:hover {
     background-color: #0168d6;
     color: #d7d7d7;
-    cursor: pointer;
-  }
-
-  /* 仓库按钮样式 */
-  .mdx-hero-repo-button {
-    background-color: #52575c; /* 灰色背景 */
   }
 
   .mdx-hero-repo-button:hover {
     background-color: #3f4347;
     color: #d7d7d7;
-    cursor: pointer;
   }
 
   /* 设置图标默认颜色为白色 */
   .mdx-hero-button svg,
   .mdx-hero-repo-button svg {
-    fill: white; /* 图标填充颜色 */
+    fill: white;
     width: 16px;
     height: 16px;
   }
@@ -110,13 +108,14 @@
   /* 鼠标悬停时，图标变暗 */
   .mdx-hero-button:hover svg,
   .mdx-hero-repo-button:hover svg {
-    fill: #d7d7d7; /* 图标颜色变暗 */
+    fill: #d7d7d7;
+    cursor: pointer;
   }
 
   /* 背景矩形样式 */
   .mdx-hero-container {
-    position: relative; /* 创建一个父容器用于相对定位 */
-    display: inline-block; /* 包裹内部内容 */
+    position: relative;
+    display: inline-block;
     padding: 40px 50px;
   }
 
@@ -125,11 +124,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* 覆盖整个父容器 */
-    height: 100%; /* 覆盖整个父容器 */
-    backdrop-filter: blur(15px); /* 高斯模糊 */
-    border-radius: 20px; /* 圆角 */
-    z-index: 1; /* 确保在文字和按钮下方 */
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    z-index: 1;
     
   }
 
