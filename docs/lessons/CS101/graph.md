@@ -354,7 +354,7 @@ Continue iterating until all vertices are visited or ==all remaining vertices ha
 - Use a binary heap: $O(|E|\ln (|V|))$
 - Use a Fibonacci heap: $O(|E| + |V|\ln (|V|))$
 
-## Bellman-Ford Algorithm
+### Bellman-Ford Algorithm
 
 !!! quote "Description"
 
@@ -379,3 +379,166 @@ $$
 #### Analysis
 
 - Time Complexity: $O(|V||E|)$
+
+### A*
+
+#### Idea
+
+The A* search algorithm initially:
+
+- Marks each vertex as unvisited.
+- Starts with a priority queue containing only the initial vertex $a$.
+
+	- The priority of any vertex $v$ in the queue is the weight $w(v)$ which assumes we have found the shortest path to $v$ (initialize it to be infinity except for the initial vertex $a$).
+	- Shortest weights have highest priority.
+
+- For each vertex $v$, $d(a, v)$ is the shortest known distance from $a$ to $v$, $d(a, a) = 0$ and $d(a, v)= \infty$ for all $v \neq a$.
+- For each vertex $v$, $h(v, z)$ is the heuristic distance from $v$ to $z$.
+
+#### Process (==Graph Search==)
+
+The algorithm then iterates:
+
+- Pop the vertex $u$ with highest priority.
+
+	- Mark $u$ as visited. (not require in tree traversal)
+
+- For each unvisited adjacent vertex (neighbor) v of u:
+
+	- If $w(v) = d(a, u) + d(u, v) + h(v, z)$ is less than the current weight/priority of $v$, update the path leading to $v$ and its priority
+	- If $v$ is not in the queue, push $v$ into the queue 
+
+Continue iterating until the item popped from the priority queue is the destination vertex $z$
+
+#### Comparison with Dijkstra's Algorithm
+
+- Dijkstra's algorithm radiates out from the initial vertex.
+- The A* search algorithm directs its search towards the destination
+
+Dijkstra’s algorithm is the A* search algorithm when 
+
+$$
+	h(u,v) = 
+	\begin{cases}
+	0, &u = v\\
+	1, &u\neq v
+	\end{cases}
+$$
+
+![](img/astar.png)
+
+The A* search algorithm will not always find the optimal path with a poor heuristic distance.
+
+#### Analysis
+
+- Exponential: $O(b^d)$ where $b$ is the branching factor (the average number of successors per state) and $b$ is the depth of the solution.
+
+- Can be shown to run in polynomial time if 
+
+	$$
+	|h(u, v) - d(u, v)| = O(\ln (d(u, v)))
+	$$
+
+	where $d(u, v)$ is the length of the actual shortest path.
+
+### Floyd-Warshall
+
+#### Idea
+
+!!! quote "Find the shortest path for all pairs of vertices"
+
+	If we want to find the shortest path between all pairs of vertices, we could apply Dijkstra's algorithm to each vertex.
+
+	- Runtime: $O(|V||E|\ln(|V|))$
+
+	If $|E| = \Theta(|V|^2)$, runnning Dijkstra for each vertex is $O(|V|^3 \ln(|V|))$.
+
+!!! question "Question"
+
+	For the worst case, can we find a $o(|V|^3 \ln(|V|))$ algorithm?
+
+We will look at the Floyd-Warshall algorithm.
+
+- It works with positive or negative weights with no negative cycle.
+
+#### Process
+
+First, initialize the adjacent matrix:
+
+$$
+d_{i,j}^{(0)} = 
+\begin{cases}
+0, &\text{If }i = j\\
+w_{i,j}, &\text{If there is an edge from }i\text{ to }\\
+\infty, &\text{Otherwise}
+\end{cases}
+$$
+
+```cpp
+// Initialize the matrix d
+// ...
+
+for ( int k = 0; k < num_vertices; ++k ) {
+  for ( int i = 0; i < num_vertices; ++i ) {
+    for ( int j = 0; j < num_vertices; ++j ) {
+      d[i][j] = std::min( d[i][j], d[i][k] + d[k][j] );
+    }
+  }
+}
+```
+
+#### Analysis
+
+- Run time: $\Theta(|V|^3)$
+
+!!! question "What is the Shortest Path?"
+
+	This algorithm finds the shortest distances, but what are the paths corresponding to those shortest distances?
+
+Let's store the next vertex in the shortest path, Initially:
+
+$$
+p_{i,j} =
+\begin{cases}
+\empty, &\text{If }i = j\\
+j, &\text{If there is an edge from }i\text{ to j}\\
+\empty, &\text{Otherwise}
+\end{cases}
+$$
+
+```cpp hl_lines="8"
+// Initialize the matrix p,d
+// ...
+
+for ( int k = 0; k < num_vertices; ++k ) {
+  for ( int i = 0; i < num_vertices; ++i ) {
+    for ( int j = 0; j < num_vertices; ++j ) {
+      if ( d[i][j] > d[i][k] + d[k][j] ) {
+        p[i][j] = p[i][k];
+        d[i][j] = d[i][k] + d[k][j];
+      }
+    }
+  }
+}
+```
+
+!!! question "Which Vertices are Connected?"
+
+	What if we only care if a connection exists?
+
+```cpp hl_lines="10"
+bool tc[num_vertices][num_vertices];
+
+// Initialize the matrix tc: Theta(|V|^2)
+// ...
+
+for ( int k = 0; k < num_vertices; ++k ) {
+  for ( int i = 0; i < num_vertices; ++i ) {
+    for ( int j = 0; j < num_vertices; ++j ) {
+      if ( d[i][j] > d[i][k] + d[k][j] ) {
+		tc[i][j] = tc[i][j] || (tc[i][k] && tc[k][j]);
+      }
+    }
+  }
+}
+```
