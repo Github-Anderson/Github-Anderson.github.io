@@ -1,6 +1,5 @@
 ---
 comments: true
-status: star
 ---
 
 # Graph
@@ -328,7 +327,7 @@ Each time we pop a vertex $v$, in addition to what we already do:
 
 Given a weighted directed graph, one common problem is finding the shortest path between two given vertices.
 
-### Dijkstra's Algorithm
+### Dijkstra
 
 #### Process
 
@@ -354,7 +353,7 @@ Continue iterating until all vertices are visited or ==all remaining vertices ha
 - Use a binary heap: $O(|E|\ln (|V|))$
 - Use a Fibonacci heap: $O(|E| + |V|\ln (|V|))$
 
-### Bellman-Ford Algorithm
+### Bellman-Ford
 
 !!! quote "Description"
 
@@ -362,9 +361,7 @@ Continue iterating until all vertices are visited or ==all remaining vertices ha
 
 	Assumption: For graphs with negative weights (but no cycles with negative weight)
 
-#### Process
-
-Basic idea:
+#### Idea
 
 $$
 \text{dist}[v] = \min \{\text{dist}[v], \text{dist}[u] + w(u,v)\}
@@ -375,6 +372,10 @@ That is, for each edge $(u,v)\in E$, if $\text{dist}[v] > \text{dist}[u] + w(u,v
 $$
 \text{dist}[v] = \text{dist}[u] + w(u,v)
 $$
+
+#### Process
+
+![](img/bellman.png)
 
 #### Analysis
 
@@ -441,6 +442,24 @@ The A* search algorithm will not always find the optimal path with a poor heuris
 
 	where $d(u, v)$ is the length of the actual shortest path.
 
+#### Heuristic
+
+##### Admissibility
+
+A heuristic is admissible if it never overestimates the true cost of reaching the goal from any node $n$.
+
+$$h(n) \leq h^*(n)$$
+
+where $h^*(n)$ is the actual minimum cost from $n$ to the goal.
+
+##### Consistency
+
+A heuristic is consistent if, for any edge between nodes $n$ and $n'$, the estimated cost satisfies
+
+$$h(n) \leq c(n, n') + h(n')$$
+
+where $c(n, n')$ is the actual cost of moving from $n$ to $n'$.
+
 ### Floyd-Warshall
 
 #### Idea
@@ -501,7 +520,7 @@ $$
 p_{i,j} =
 \begin{cases}
 \empty, &\text{If }i = j\\
-j, &\text{If there is an edge from }i\text{ to j}\\
+j, &\text{If there is an edge from }i\text{ to } j\\
 \empty, &\text{Otherwise}
 \end{cases}
 $$

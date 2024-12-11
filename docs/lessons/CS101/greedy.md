@@ -30,15 +30,17 @@ Then given a partial solution, we
 
 This continues until some criteria has been reached.
 
-## Interval Scheduling
+## Examples
 
-### Description
+### Interval Scheduling
+
+#### Description
 
 - Job $j$ starts at $s_j$ and finishes at $f_j$.
 - Two jobs are compatible if they don't overlap.
 - Goal: find maximum subset of mutually compatible jobs.
 
-### Solve
+#### Solve
 
 - Sort the processes on their end times.
 - Keep choosing the first avalible process until finished.
@@ -53,14 +55,14 @@ This continues until some criteria has been reached.
 		- Job $i_{r+1}$ exists and finishes no later than $j_{r+1}$.
 		- Job $i_{k}$ finishes no later than $j_k$, but $m>k$, the greedy algorithm should not stop, as job $j_k+1$ can be chosen.
 
-## Interval Partitioning
+### Interval Partitioning
 
-### Description
+#### Description
 
 - Lecture $j$ starts at $s_j$ and finishes at $f_j$.
 - Goal: find minimum number of classrooms to schedule all lectures so that no two lectures occur at the same time in the same room.
 
-### Solve
+#### Solve
 
 - Sort the lectures by start times and renumber so that $s_1 \leq s_2 \leq s_2 \leq \cdots \leq s_n$.
 
@@ -79,16 +81,16 @@ $$
 	- Since we sorted by start time, each of these incompatible lectures start no late than $s_j$.
 	- Thus, we have $d$ lectures overlapping at time $s_j + \epsilon$.
 	
-## Scheduling to minimize lateness
+### Scheduling to minimize lateness
 
-### Description
+#### Description
 
 - Single resource processes one job at a time.
 - Job $j$ requires $t_j$ units of processing time and is due at time $d_j$.
 - Lateness: $\ell_j = \max \{0, f_j - d_j\}$.
 - Goal: Schedule all jobs to minimize **maximum** lateness $L = \max_j \ell_j$.
 
-### Solve
+#### Solve
 
 - Solve the processes by due time $d_j$ in ascending order.
 - Choose and process jobs.
@@ -102,15 +104,15 @@ $$
 	- No inversions.
 	- Proved by induction.
 
-## Optimal caching
+### Optimal caching
 
-### Description
+#### Description
 
 - Cache with capacity to store $k$ items.
 - Sequence of $m$ item requests $d_1, d_2, \dots, d_m$.
 - Goal: Eviction schedule that minimizes the number of evictions.
 
-### Solve
+#### Solve
 
 Farthest-in-future. Evict item in the cache that is not requested until farthest in the future.
 

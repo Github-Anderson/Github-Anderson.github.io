@@ -255,6 +255,7 @@ nav:
       - lessons/CS101/divide-and-conquer.md
       - lessons/CS101/greedy.md
       - lessons/CS101/graph.md
+      - lessons/CS101/dp.md
   - 随笔:
     - essay/index.md
     - 文章:
