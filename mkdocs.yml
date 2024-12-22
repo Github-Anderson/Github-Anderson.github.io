@@ -249,6 +249,7 @@ nav:
       - lessons/GAMES101/geometry.md
       - lessons/GAMES101/ray-tracing.md
     - 算法与数据结构 CS101:
+      - lessons/CS101/index.md
       - lessons/CS101/abt.md
       - lessons/CS101/algo-analysis.md
       - lessons/CS101/sorting.md
@@ -256,6 +257,7 @@ nav:
       - lessons/CS101/greedy.md
       - lessons/CS101/graph.md
       - lessons/CS101/dp.md
+      - lessons/CS101/pnp.md
   - 随笔:
     - essay/index.md
     - 文章:

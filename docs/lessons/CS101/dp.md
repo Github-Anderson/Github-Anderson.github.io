@@ -1,6 +1,5 @@
 ---
 comments: true
-status: star
 ---
 
 # Dynamic Programming
@@ -24,7 +23,7 @@ status: star
 	\end{cases}
 	$$
 
-	So $T(n) = O(2^n)$
+	So $T(n) = O(2^n)$.
 
 	The problem is we need to call the function with some small inputs for millions of times.
 
@@ -41,12 +40,55 @@ status: star
 In solving optimization problems, the top-down approach may require repeatedly obtaining optimal solutions for the same sub-problem.
 
 Dynamic programming is distinct from divide-and-conquer, as the divide-and-conquer approach works well if the sub-problems are essentially unique.
-- Storing intermediate results would only waste memory
+- Storing intermediate results would only waste memory.
 
 If sub-problems re-occur, the problem is said to have overlapping sub-problems.
 
 - Break up a problem into a series of overlapping subproblems.
 - Combine solutions to smaller subproblems to form solution to large subproblem.
+
+## Solve
+
+#### 1. Problem Analysis
+
+- Understand the problem requirements: identify the goal and find the optimal solution.
+
+- Analyze the problem scale and break it into subproblems.
+
+- Ensure the problem satisfies these two properties:
+
+	1. Optimal Substructure: The solution of a problem can be composed of the solutions of its subproblems.
+
+	2. Overlapping Subproblems: Subproblems are solved multiple times.
+
+#### 2. Define State and Variables
+
+- Clearly define the `dp[i]` state.
+
+	- Example: `dp[i]` represents the number of ways to reach the ith step.
+
+- Determine the valid range of states (boundary conditions).
+
+#### Establish State Transition Relationship
+
+- Derive the recursive relationship to transition from smaller problems to larger ones.
+
+	- Example: `dp[i]` = `dp[i-1]` + `dp[i-2]` (Frog jump problem).
+
+#### Initialize States
+
+- Initialize the dp table or variables based on the base cases.
+
+	- Example: `dp[0] = 1`, `dp[1] = 1`.
+
+#### Bottom-Up Iteration
+
+- Solve the problem iteratively starting from the smallest subproblem.
+Avoid redundant calculations by storing the results of subproblems in a table or array.
+
+#### Return the Result
+
+- Output the result based on the final `dp` value(s).
 
 ## Examples
 
