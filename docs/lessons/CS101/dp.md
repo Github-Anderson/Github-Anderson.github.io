@@ -143,4 +143,70 @@ $$
 
 ### Segmented Least Squares
 
+#### Definition
+
+!!! quote "Least Squares"
+
+	- Given $n$ points in the plane: $(x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)$.
+	- Find a line $y = ax + b$ that minimizes the sum of the squared error:
+
+	$$
+	\text{SSE} = \sum_{i=1}^n (y_i - ax_i - b)^2
+	$$
+
+- Points lie roughly on a sequence of several line segments.
+- Given $n$ points in the plane: $(x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)$ with $x_1 < x_2 < \cdots < x_n$ find a sequence of lines that minimizes $f(x)$.
+
+!!! question "What is a reasonable choice for $f(x)$ to balance accuracy and parsimony?"
+
+- Goal: Minimize $f(x) = E + cL$ for some constant $c > 0$, where
+	
+	- $E = $ sum of the sums of the squared errors in each segment.
+	- $L = $ number of lines.
+
+#### Solve
+
+Define $\text{OPT}(j) =$ minimum cost for points $p_1, p_2, \dots, p_j$, $e_{ij} =$ SSE for points $p_i, p_{i+1}, \dots, p_j$.
+
+$$
+\text{OPT}(j) = 
+\begin{cases}
+	0, &\text{if }j = 0 \\
+	\displaystyle \min_{1 \leq i \leq j} 
+	\{e_{ij} + c + \text{OPT}(i - 1)\}, & \text{if }j>0
+\end{cases}
+$$
+
 ### Knapsack Problem
+
+#### Definition
+
+- Goal: Pack knapsack so as to maximize total value.
+
+	- There are $n$ items: item $i$ provides value $v_i > 0$ and weighs 
+	- Knapsack has weight capacity of $W$.
+
+#### Solve
+
+Define $\text{OPT}(i, w) =  $max-profit subset of items $1, \dots, i$ with weight limit $w$.
+
+- Case 1: $\text{OPT}(i, w)$ does not select item $i$.
+
+	- $\text{OPT}$ selects best of $\{1, 2, \dots, i-1\}$ using weight limit $w$.
+
+- Case 2: $\text{OPT}(i, w)$ selects item $i$.
+
+	- Collect value $v_i$.
+	- New weight limit $= w - w_i$.
+	- $\text{OPT}(i, w)$ selects best of $\{1, 2, \dots, i-1\}$ using this new weight limit.
+
+$$
+\text{OPT}(i, w) = 
+\begin{cases}
+	0, &\text{if } i=0 \\
+	\text{OPT}(i-1, w), &\text{if }w_i > w \\
+	\max \{\text{OPT}(i-1, w), v_i + \text{OPT}(i-1, w-w_i)\}, &\text{otherwise}
+\end{cases}
+$$
+
+### Drop an Egg
