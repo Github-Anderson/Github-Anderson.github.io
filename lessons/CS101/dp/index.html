@@ -1998,12 +1998,69 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Segmented Least Squares">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solve_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solve
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
   <a href="#knapsack-problem" class="md-nav__link">
     <span class="md-ellipsis">
       Knapsack Problem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Knapsack Problem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solve_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solve
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drop-an-egg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drop an Egg
     </span>
   </a>
   
@@ -2622,12 +2679,69 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Segmented Least Squares">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solve_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solve
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
   <a href="#knapsack-problem" class="md-nav__link">
     <span class="md-ellipsis">
       Knapsack Problem
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Knapsack Problem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solve_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solve
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drop-an-egg" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drop an Egg
     </span>
   </a>
   
@@ -2805,7 +2919,81 @@ Avoid redundant calculations by storing the results of subproblems in a table or
 <li>Time Complexity: <span class="arithmatex">\(O(n \log n)\)</span></li>
 </ul>
 <h3 id="segmented-least-squares">Segmented Least Squares<a class="headerlink" href="#segmented-least-squares" title="Permanent link">&para;</a></h3>
+<h4 id="definition_1">Definition<a class="headerlink" href="#definition_1" title="Permanent link">&para;</a></h4>
+<div class="admonition quote">
+<p class="admonition-title">Least Squares</p>
+<ul>
+<li>Given <span class="arithmatex">\(n\)</span> points in the plane: <span class="arithmatex">\((x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)\)</span>.</li>
+<li>Find a line <span class="arithmatex">\(y = ax + b\)</span> that minimizes the sum of the squared error:</li>
+</ul>
+<div class="arithmatex">\[
+\text{SSE} = \sum_{i=1}^n (y_i - ax_i - b)^2
+\]</div>
+</div>
+<ul>
+<li>Points lie roughly on a sequence of several line segments.</li>
+<li>Given <span class="arithmatex">\(n\)</span> points in the plane: <span class="arithmatex">\((x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)\)</span> with <span class="arithmatex">\(x_1 &lt; x_2 &lt; \cdots &lt; x_n\)</span> find a sequence of lines that minimizes <span class="arithmatex">\(f(x)\)</span>.</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">What is a reasonable choice for <span class="arithmatex">\(f(x)\)</span> to balance accuracy and parsimony?</p>
+</div>
+<ul>
+<li>
+<p>Goal: Minimize <span class="arithmatex">\(f(x) = E + cL\)</span> for some constant <span class="arithmatex">\(c &gt; 0\)</span>, where</p>
+<ul>
+<li>$E = $ sum of the sums of the squared errors in each segment.</li>
+<li>$L = $ number of lines.</li>
+</ul>
+</li>
+</ul>
+<h4 id="solve_1">Solve<a class="headerlink" href="#solve_1" title="Permanent link">&para;</a></h4>
+<p>Define <span class="arithmatex">\(\text{OPT}(j) =\)</span> minimum cost for points <span class="arithmatex">\(p_1, p_2, \dots, p_j\)</span>, <span class="arithmatex">\(e_{ij} =\)</span> SSE for points <span class="arithmatex">\(p_i, p_{i+1}, \dots, p_j\)</span>.</p>
+<div class="arithmatex">\[
+\text{OPT}(j) = 
+\begin{cases}
+    0, &amp;\text{if }j = 0 \\
+    \displaystyle \min_{1 \leq i \leq j} 
+    \{e_{ij} + c + \text{OPT}(i - 1)\}, &amp; \text{if }j&gt;0
+\end{cases}
+\]</div>
 <h3 id="knapsack-problem">Knapsack Problem<a class="headerlink" href="#knapsack-problem" title="Permanent link">&para;</a></h3>
+<h4 id="definition_2">Definition<a class="headerlink" href="#definition_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Goal: Pack knapsack so as to maximize total value.</p>
+<ul>
+<li>There are <span class="arithmatex">\(n\)</span> items: item <span class="arithmatex">\(i\)</span> provides value <span class="arithmatex">\(v_i &gt; 0\)</span> and weighs </li>
+<li>Knapsack has weight capacity of <span class="arithmatex">\(W\)</span>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="solve_2">Solve<a class="headerlink" href="#solve_2" title="Permanent link">&para;</a></h4>
+<p>Define $\text{OPT}(i, w) =  $max-profit subset of items <span class="arithmatex">\(1, \dots, i\)</span> with weight limit <span class="arithmatex">\(w\)</span>.</p>
+<ul>
+<li>
+<p>Case 1: <span class="arithmatex">\(\text{OPT}(i, w)\)</span> does not select item <span class="arithmatex">\(i\)</span>.</p>
+<ul>
+<li><span class="arithmatex">\(\text{OPT}\)</span> selects best of <span class="arithmatex">\(\{1, 2, \dots, i-1\}\)</span> using weight limit <span class="arithmatex">\(w\)</span>.</li>
+</ul>
+</li>
+<li>
+<p>Case 2: <span class="arithmatex">\(\text{OPT}(i, w)\)</span> selects item <span class="arithmatex">\(i\)</span>.</p>
+<ul>
+<li>Collect value <span class="arithmatex">\(v_i\)</span>.</li>
+<li>New weight limit <span class="arithmatex">\(= w - w_i\)</span>.</li>
+<li><span class="arithmatex">\(\text{OPT}(i, w)\)</span> selects best of <span class="arithmatex">\(\{1, 2, \dots, i-1\}\)</span> using this new weight limit.</li>
+</ul>
+</li>
+</ul>
+<div class="arithmatex">\[
+\text{OPT}(i, w) = 
+\begin{cases}
+    0, &amp;\text{if } i=0 \\
+    \text{OPT}(i-1, w), &amp;\text{if }w_i &gt; w \\
+    \max \{\text{OPT}(i-1, w), v_i + \text{OPT}(i-1, w-w_i)\}, &amp;\text{otherwise}
+\end{cases}
+\]</div>
+<h3 id="drop-an-egg">Drop an Egg<a class="headerlink" href="#drop-an-egg" title="Permanent link">&para;</a></h3>
 
 
 
@@ -2828,7 +3016,7 @@ Avoid redundant calculations by storing the results of subproblems in a table or
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-12-22T07:34:02+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-12-22</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-12-27T03:50:28+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-12-27</span>
   </span>
 
     
