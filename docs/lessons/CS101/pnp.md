@@ -15,7 +15,7 @@ status: star
 
 A poly-time from problem $X$ reduces to problem $Y$ (denoted $X \leq _{\text{ P}} Y$) means that 
 
-!!! quote ""
+!!! example "Definition"
 
 	Any instance of $X$ can be solved using
 
@@ -54,14 +54,14 @@ $$
 
 !!! quote "$\text{S}{\footnotesize\text{AT}}$"
 
-	Given a CNF formula $\varPhi$, does it have a satisfying truth assignment?
+	Given a CNF formula $\Phi$, does it have a satisfying truth assignment?
 
 !!! quote "$\text{3-S}{\footnotesize\text{AT}}$"
 
 	SAT where each clause contains exactly 3 literals (and each literal corresponds to a different variable).
 
 	$$
-	\varPhi = (\overline{x_1} \vee x_2 \vee x_3) \wedge (x_1 \vee \overline{x_2} \vee x_3) \wedge (\overline{x_1} \vee x_2 \vee x_4)
+	\Phi = (\overline{x_1} \vee x_2 \vee x_3) \wedge (x_1 \vee \overline{x_2} \vee x_3) \wedge (\overline{x_1} \vee x_2 \vee x_4)
 	$$
 
 $$
@@ -85,8 +85,6 @@ $$
 - $\textsf{NP}$. Set of decision problems for which there exists a poly-time certifier. ($\textsf{N}$ondeterministic $\textsf{P}$olynomial time)
 
 ??? question "DOES $\textsf{P}$ = $\textsf{NP}$?"
-
-	
 
 ## NP-Complete
 
