@@ -236,7 +236,7 @@ nav:
       - lessons/ARTS1701/main.md
       # - blog/ARTS1701/notes.md
     - 离散数学 SI120:
-      - lessons/SI120/links.md
+      - lessons/SI120/index.md
       - lessons/SI120/code.md
       - lessons/SI120/chsh.md
     - 中华文明通论 GEHA1050:
@@ -258,6 +258,10 @@ nav:
       - lessons/CS101/graph.md
       - lessons/CS101/dp.md
       - lessons/CS101/pnp.md
+    # - 计算机体系结构 I CS110:
+    #   - lessons/CS110/index.md
+    # - 机器学习引论 CS182:
+    #   - lessons/CS182/index.md
   - 随笔:
     - essay/index.md
     - 文章:
