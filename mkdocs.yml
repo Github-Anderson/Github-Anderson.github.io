@@ -258,20 +258,20 @@ nav:
       - lessons/CS101/graph.md
       - lessons/CS101/dp.md
       - lessons/CS101/pnp.md
-    # - 计算机体系结构 I CS110:
-    #   - lessons/CS110/index.md
-    # - 机器学习引论 CS182:
-    #   - lessons/CS182/index.md
+    - 计算机体系结构 I CS110:
+      - lessons/CS110/index.md
+    - 机器学习引论 CS182:
+      - lessons/CS182/index.md
   - 随笔:
     - essay/index.md
     - 文章:
       - essay/thoughts/230828-from-mac-to-mac.md
       - essay/thoughts/231002-refl-online.md
-    - 记录:
-      - essay/logs/240127.md
-      - essay/logs/240206.md
-      - essay/logs/240303.md
-      - essay/logs/240420.md
+    # - 记录:
+    #   - essay/logs/240127.md
+    #   - essay/logs/240206.md
+    #   - essay/logs/240303.md
+    #   - essay/logs/240420.md
   - 关于:
     - about/index.md
     # - about/me.md
