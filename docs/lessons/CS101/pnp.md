@@ -1,6 +1,5 @@
 ---
 comments: true
-status: star
 ---
 
 # Reductions, P and NP

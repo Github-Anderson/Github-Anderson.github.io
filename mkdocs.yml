@@ -260,8 +260,12 @@ nav:
       - lessons/CS101/pnp.md
     - 计算机体系结构 I CS110:
       - lessons/CS110/index.md
+    - 人工智能 I CS181:
+      - lessons/CS181/index.md
+      - lessons/CS181/search.md
     - 机器学习引论 CS182:
       - lessons/CS182/index.md
+      - lessons/CS182/superivsed-classification.md
   - 随笔:
     - essay/index.md
     - 文章:
