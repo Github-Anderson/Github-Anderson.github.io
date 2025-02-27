@@ -117,6 +117,16 @@ comments: true
 
 	where $h^*(n)$ is the true cost to a nearest goal.
 
+!!! tip "Consistency"
+
+	A heuristic \( h \) is *consistent* (or *monotonic*) if, for every node \( n \) and every successor \( n' \) of \( n \), the following condition holds:
+
+	\[
+	h(n) \leq c(n, n') + h(n')
+	\]
+
+	where \( c(n, n') \) is the cost of reaching \( n' \) from \( n \), and \( h(n) \) is the heuristic estimate of the cost from \( n \) to the goal.
+
 ### Search Heuristics
 
 !!! quote "Heuristics"

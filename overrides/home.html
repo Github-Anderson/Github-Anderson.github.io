@@ -170,15 +170,12 @@
 </section>
 
 <script>
-  // 随机图片路径数组
-  const images = [
-    'assets/image1.jpg',
-    'assets/image2.jpg',
-    'assets/image3.jpg',
-  ];
+  const imageCount = 5;
 
   // 随机选择图片
-  const randomImage = images[Math.floor(Math.random() * images.length)];
+  const randomIndex = Math.floor(Math.random() * imageCount);
+  const imageNumber = (randomIndex + 1).toString().padStart(2, '0');
+  const randomImage = `assets/wallpapers/${imageNumber}.jpg`;
 
   // 设置图片 src
   document.getElementById('hero-image').src = randomImage;
