@@ -5,7 +5,7 @@ status: star
 
 # Supervised Binary Classification
 
-## Function Approximation
+### Function Approximation
 
 #### Notation
 
@@ -46,7 +46,7 @@ $$
 #### Splitting Criterion
 
 - A **splitting criterion** is a function that measures how good or useful splitting on a particular feature is *for a specified dataset*.
-- Idea: when deciding which feature to split on, use the one that optimizesthe splitting criterion.
+- Idea: when deciding which feature to split on, use the one that optimizes the splitting criterion.
 - Potential splitting criteria:
 	- Training error rate (minimize)
  	- Gini impurity (minimize) → CART algorithm
@@ -182,9 +182,28 @@ def h(x'):
 	- Def: the **learning algorithm** defines the data-driven search over the hypothesis space. (i.e. search for good parameters)
 	- Def: **hyperparameters** are the tunable aspects of the model, that the learning algorithm does not select.
 
+!!! question "If "learning is all about picking the best **parameters**, how do we pick the best **hyperparameters**?"
+
 ### Cross-Validation
 
-### The Perceptron Algorithm
+- Cross validation is a method of estimating loss on held out data.
+	- Input: training data, learning algorithm, loss function. (e.g. 0/1 error)
+	- Output: an estimate of loss function on held-out data.
+
+- Key idea: rather than just a single "validation" set, use many!
+
+### Hyperparameter Optimization 
+
+- Lots of methods for hyperparameter optimization:
+	- Grid search
+	- Random search
+	- Bayesian optimization
+	- Graduate-student descent
+
+### Online Learning
+
+- Batch Learning: We have access to the entire training dataset at once.
+- Online Learning: A common alternative is the *online* setting, where examples arrive gradually and we learn continuously.
 
 - Key idea: Try to learn this hyperplane directly.
 - Directly modeling the hyperplane would use a decision function:
@@ -193,10 +212,17 @@ $$
 h(t) = \text{sign}(\boldsymbol{\theta}^{\top} t)
 $$
 
-#### Online Learning
+### Experimental Design
 
-- Batch Learning: We have access to the entire training dataset at once.
-- Online Learning: A common alternative is the *online* setting, where examples arrive gradually and we learn continuously.
+|                                 | **Input**                                                  | **Output**             | **Notes**                                                                                                                      |
+|---------------------------------|------------------------------------------------------------|------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| **Training**                    | training dataset <br> hyperparameters                      | best model parameters  | We pick the best model parameters by learning on the training dataset for a fixed set of hyperparameters.                      |
+| **Hyperparameter Optimization** | training dataset <br> validation dataset                   | best hyperparameters   | We pick the best hyperparameters by learning on the training data and evaluating error on the validation error.                |
+| **Cross-Validation**            | training dataset <br> validation dataset                   | cross-validation error | We estimate the error on held out data by repeatedly training on N-1 folds and predicting on the held-out fold.                |
+| **Testing**                     | test dataset <br> hypothesis (i.e. fixed model parameters) | test error             | We evaluate a hypothesis corresponding to a decision rule with fixed model parameters on a test dataset to obtain test error.  |
+
+
+### The Perceptron Algorithm
 
 !!! abstract "(Online) Perceptron Algorithm"
 
@@ -220,7 +246,50 @@ $$
 1. Decision boundary should be linear
 2. Recent mistakes are more important than older ones (and should be corrected immediately)
 
-#### Perceptron Mistake Bound
+### Perceptron Mistake Bound
 
 - Def: For a **binary classification** problem, a set of examples $S$ is **linearly separable** if there exists a linear decision boundary that can separate the points.
-- Def: The **margin** $\gamma$ for a dataset D is the greatest possible distance between a linear separator and the closest data point in $D$ to that linear separator
+- Def: The **margin** $\gamma$ for a dataset D is the greatest possible distance between a linear separator and the closest data point in $D$ to that linear separator.
+- Guarantee: If some data has margin $\gamma$ and all points lie inside a ball of radius $R$ rooted at the origin, then the online preceptron algorithm makes $\leq (R/\gamma)^2$ mistakes.
+
+!!! question "What if Not Linearly Separable?"
+
+	- Learn a more complex class of functions.
+	- Use a kernel. (a neat solution that attracted a lot of attention)
+	- Use a deep network.
+	- Combine kernels and deep networks.
+
+### Kernel Methods
+
+- Definition: $K(\cdot, \cdot)$ is a kernel if it can be viewed as a legal definition of inner product:
+	- $\exists \phi(x): X \to R^N$ s.t. $K(x,z) = \phi(x) \cdot \phi(z)$
+		- Range of $\phi$ is the $\boldsymbol{\phi}-$**space**.
+		- $N$ can be very large.
+	- But think of $\phi$ as **implicit**, not explicit.
+
+#### Kernelizing the Perceptron Algorithm
+
+<!-- TODO: Add kernelized perceptron algorithm -->
+
+- Example:
+	- Linear:
+	- Polynomial:
+	- Gaussian:
+	- Laplace Kernel:
+
+#### Properties of Kernels
+
+!!! abstract "Mercer's Theorem"
+
+	$K$ is a kernel if and only if:
+
+	- $K$ is symmetric: $K(x,z) = K(z,x)$
+	- For any set of training points $x_1, x_2, \dots, x_m$ and for any $a_1, a_2, \dots, a_m\in R$, we have:
+
+	$$\sum_{i,j} a_i a_j K(x_i, x_j) \geq 0$$
+	
+	$$a^{\top} K a \geq 0$$
+
+	i.e. $K = (K(x_i, x_j))_{i, j = 1, \dots, m}$ is positive semi-definite.
+
+## Support Vector Machines

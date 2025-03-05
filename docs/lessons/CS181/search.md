@@ -4,6 +4,8 @@ comments: true
 
 # Search
 
+## Search Problem
+
 ### Reflex Agents vs. Planning Agents
 
 - Reflex agents:
@@ -140,3 +142,31 @@ comments: true
 	- Designed for a particular search problem.
 
 	- Example: Manhattan distance, Euclidean distance for pathing.
+
+---
+
+## Adversarial Search
+
+#### Zero-Sum Games
+
+- Agents have opposite utilities (values on outcomes).
+- Let us think of a single value that one maximizes and the other minimizes.
+- Adversarial, pure competition.
+
+### Minimax
+
+#### Minimax Values
+
+> Policy: the agent should choose an action leading to the state with the largest value.
+
+- State under agent's control: $V(s) = \max_{s' \in \text{successors}(s)} V(s')$.
+- State under opponent's control: $V(s') = \min_{s' \in \text{successors}(s)} V(s)$.
+- Terminal state: $V(s) = \text{known}$.
+
+#### Adversarial Search
+
+- A state-space search tree.
+- Compute each node's minimax value: the best achievable utility against a rational (optimal) adversary.
+
+![](img/minimax.png)
+

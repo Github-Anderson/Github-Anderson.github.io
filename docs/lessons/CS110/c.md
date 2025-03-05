@@ -52,7 +52,11 @@ comments: true
 
 ### Pointer
 
+<!-- TODO: Implement -->
+
 ### Array
+
+<!-- TODO: Implement -->
 
 ### Pointer Arithmetic
 
@@ -67,3 +71,30 @@ comments: true
 - `sizeof(type)` *returns*[^1] number of bytes in object.
 
 [^1]: `sizeof()` is a operator, not a function.
+
+### Memory Management
+
+- A program's address space contains 4 regions:
+
+	- **stack**: local variables inside functions, grows downward.
+	- **heap**: space requested for dynamic data via malloc(); resizes dynamically, grows upward.
+	- **static data**: variables declared outside functions, does not grow or shrink. Loaded when program starts, can be modified.
+	- **code** (a.k.a. text): loaded when program starts, does not change.
+	- 0x0 unwritable/unreadable (NULL pointer).
+
+#### The Stack
+
+- Every time a function is called, a new "stack frame" (**contiguous** blocks of memory; stack pointer indicates start of stack frame) is allocated on the stack, includes:
+	- Return address
+	- Arguments
+	- Space for local variables
+
+#### Managing the Heap
+
+- The heap is dynamic memory – memory that can be allocated, resized, and freed during program runtime.
+
+- C supports four functions for heap management:
+	- `malloc()`: allocate a block of uninitialized memory
+	- `calloc()`: allocate a block of zeroed memory
+	- `free()`: free previously allocated block of memory
+	- `realloc()`: change size of previously allocated block (might move)
