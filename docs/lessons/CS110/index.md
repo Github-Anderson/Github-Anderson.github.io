@@ -7,6 +7,7 @@ commments: true
 !!! quote "References."
 	
 	- [UC Berkeley *CS61C*](https://www2.eecs.berkeley.edu/Courses/CS61C/) [course page](https://cs61c.org)
+	- [Github-Anderson/CS110P](https://www.github.com/Github-Anderson/CS110P/), will be available when the course is finished.
 
 ### Great Ideas in Computer Architecture
 

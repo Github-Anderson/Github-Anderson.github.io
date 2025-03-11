@@ -52,11 +52,7 @@ comments: true
 
 ### Pointer
 
-<!-- TODO: Implement -->
-
 ### Array
-
-<!-- TODO: Implement -->
 
 ### Pointer Arithmetic
 

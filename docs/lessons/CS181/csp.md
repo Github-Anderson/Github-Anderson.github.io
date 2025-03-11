@@ -1,6 +1,5 @@
 ---
 comments: true
-status: star
 ---
 
 # Constraint Satisfaction Problem

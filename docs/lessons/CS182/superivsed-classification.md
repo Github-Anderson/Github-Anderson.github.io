@@ -1,6 +1,5 @@
 ---
 comments: true
-status: star
 ---
 
 # Supervised Binary Classification
@@ -269,7 +268,20 @@ $$
 
 #### Kernelizing the Perceptron Algorithm
 
-<!-- TODO: Add kernelized perceptron algorithm -->
+- Set $t=1$, start with the all zero vector $w_1$.
+- Given example $x$, predict + iff $w_t \cdot x \geq 0$.
+- On a mistake, update as follows:
+	- Mistake on positive, $w_{t+1} \leftarrow w_t + x$.
+	- Mistake on negative, $w_{t+1} \leftarrow w_t - x$.
+- Given $x$, predict + iff
+
+$$
+a_{i_1} K(x_{i_1}, x) + \cdots + a_{i_{t-1}} K(x_{i_{t-1}}, x) \geq 0
+$$
+
+- On the $t$-th mistake, update as follows:
+	- Mistake on positive, $a_{i_t} \leftarrow 1$, store $x_{i_t}$.
+	- Mistake on negative, $a_{i_t} \leftarrow -1$, store $x_{i_t}$.
 
 - Example:
 	- Linear:
@@ -287,9 +299,116 @@ $$
 	- For any set of training points $x_1, x_2, \dots, x_m$ and for any $a_1, a_2, \dots, a_m\in R$, we have:
 
 	$$\sum_{i,j} a_i a_j K(x_i, x_j) \geq 0$$
-	
+
 	$$a^{\top} K a \geq 0$$
 
 	i.e. $K = (K(x_i, x_j))_{i, j = 1, \dots, m}$ is positive semi-definite.
 
 ## Support Vector Machines
+
+Find a margin $\gamma$ of a set of examples $S$ is the **maximum** $\gamma_w$ over all linear separators $w$.
+
+Directly optimize for the **maximum margin separator**: SVMs.
+
+!!! question "What if data is not perfectly linearly separable?"
+
+	Use a kernel.
+	
+### The Importance of SVM
+
+#### Why are margins important?
+
+- A **large margin** leads to better generalization, meaning the classifier performs well on unseen data.
+- In Perceptron learning, the number of mistakes depends on the **margin size** but is **independent of data dimensionality**.
+- SVM maximizes the **geometric margin**, ensuring a more robust decision boundary.
+
+#### The Primal Form of the SVM Optimization Problem
+
+##### Objective (Primal Form):
+SVM aims to **find a hyperplane that maximizes the margin** while correctly classifying training data.
+
+##### Hard-margin SVM (for linearly separable data)
+
+\[
+\min_{w, b} \quad \frac{1}{2} ||w||^2
+\]
+
+\[
+\text{s.t.} \quad y_i (w \cdot x_i + b) \geq 1, \quad \forall i
+\]
+
+- The constraint ensures that all points are correctly classified with a margin of at least **1**.
+
+##### Soft-margin SVM (for non-separable data)
+
+\[
+\min_{w, b, \xi} \quad \frac{1}{2} ||w||^2 + C \sum \xi_i
+\]
+
+\[
+\text{s.t.} \quad y_i (w \cdot x_i + b) \geq 1 - \xi_i, \quad \xi_i \geq 0, \quad \forall i
+\]
+
+- **Slack variables** \( \xi_i \) allow some misclassification while trying to keep the margin large.
+- **Hyperparameter** \( C \) balances margin maximization and classification errors.
+
+#### The Dual Form of the SVM Optimization Problem
+
+To solve SVM efficiently, we use **Lagrange Duality** to convert the primal problem into a dual formulation.
+
+##### Dual Optimization Problem
+
+\[
+\max_{\alpha} \sum_{i=1}^{m} \alpha_i - \frac{1}{2} \sum_{i=1}^{m} \sum_{j=1}^{m} \alpha_i \alpha_j y_i y_j (x_i \cdot x_j)
+\]
+
+\[
+\text{s.t.} \quad 0 \leq \alpha_i \leq C, \quad \sum_{i=1}^{m} \alpha_i y_i = 0
+\]
+
+- **\( \alpha_i \)** are **Lagrange multipliers** that determine the importance of each training sample.
+- **The decision boundary is defined using only the support vectors** (points with nonzero \( \alpha_i \)).
+- The **kernel trick** can be applied in the dual form (see next section).
+
+#### Kernelizing SVM
+
+##### Why use kernels?
+
+- **Problem**: Some data is not **linearly separable** in its original space.
+- **Solution**: Map data into a higher-dimensional space where it **becomes linearly separable**.
+
+##### Kernel Trick
+
+Instead of computing the transformation explicitly, we use a **kernel function** \( K(x_i, x_j) \) to compute inner products in the higher-dimensional space:
+
+\[
+K(x_i, x_j) = \phi(x_i) \cdot \phi(x_j)
+\]
+
+##### Common Kernel Functions
+
+1. **Linear Kernel**: \( K(x_i, x_j) = x_i \cdot x_j \)  
+   - Used when data is **linearly separable**.
+2. **Polynomial Kernel**: \( K(x_i, x_j) = (x_i \cdot x_j + c)^d \)  
+   - Captures polynomial relationships between features.
+3. **Radial Basis Function (RBF) Kernel**: \( K(x_i, x_j) = \exp\left(-\frac{||x_i - x_j||^2}{2\sigma^2}\right) \)  
+   - Maps data into **infinite-dimensional** space.
+4. **Sigmoid Kernel**: \( K(x_i, x_j) = \tanh(\beta x_i \cdot x_j + c) \)  
+   - Similar to neural network activation functions.
+
+##### Why is the kernel trick powerful?
+
+- **No need to compute high-dimensional transformations explicitly**.
+- **Computationally efficient**, making SVM applicable to complex datasets.
+
+---
+
+### **Summary**
+
+1. **Margins are crucial** for improving generalization and reducing misclassification.
+2. **The primal SVM formulation** directly optimizes the margin, allowing for soft constraints.
+3. **The dual SVM formulation** enables efficient computation and supports kernel methods.
+4. **Kernelized SVM** extends SVM to non-linear decision boundaries without explicit feature transformations.
+
+SVM remains one of the most powerful and interpretable machine learning algorithms, especially for classification problems with **structured data**.
+
