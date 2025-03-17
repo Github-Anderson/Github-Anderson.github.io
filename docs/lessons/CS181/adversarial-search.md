@@ -47,6 +47,7 @@ $$
 #### Alpha-Beta Pruning
 
 General configuration (MIN version)
+
 - We're computing the MIN-VALUE at some node $n$
 - We're looping over $n$'s children, so $n$'s estimate is decreasing
 - Let a be the best value that MAX can get at any choice point along the current path from the root
@@ -59,3 +60,10 @@ MAX version is symmetric
 
 ### Expectimax Search
 
+- Compute the average score under optimal play.
+
+	- Max nodes as in minimax search.
+	- Chance nodes are like min nodes but the outcome is uncertain.
+	- Calculate their expected utilities, i.e. taking weighted average (expectation) of children.
+
+![](img/expectimax.png)

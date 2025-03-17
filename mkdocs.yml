@@ -268,6 +268,7 @@ nav:
       - lessons/CS181/search.md
       - lessons/CS181/csp.md
       - lessons/CS181/adversarial-search.md
+      - lessons/CS181/logic.md
     - 机器学习引论 CS182:
       - lessons/CS182/index.md
       - lessons/CS182/superivsed-classification.md
