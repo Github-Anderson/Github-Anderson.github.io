@@ -245,6 +245,14 @@ $$
 1. Decision boundary should be linear
 2. Recent mistakes are more important than older ones (and should be corrected immediately)
 
+#### Summary: Perceptron
+
+- Perceptron is a **linear classifier**.
+- **Simple learning algorithm**: when a mistake is made, add / substract the feature.
+- Perceptron will converge if the data are **linear separable**, it will **not** converge if the data are **linear inseparable**.
+- For linearly separable and inseparable data, we can **bound the number of mistakes** (geometric argument).
+- **Extensions** support non-linear separators and structured prediciton.
+
 ### Perceptron Mistake Bound
 
 - Def: For a **binary classification** problem, a set of examples $S$ is **linearly separable** if there exists a linear decision boundary that can separate the points.
@@ -284,10 +292,10 @@ $$
 	- Mistake on negative, $a_{i_t} \leftarrow -1$, store $x_{i_t}$.
 
 - Example:
-	- Linear:
-	- Polynomial:
-	- Gaussian:
-	- Laplace Kernel:
+	- Linear
+	- Polynomial
+	- Gaussian
+	- Laplace Kernel
 
 #### Properties of Kernels
 
@@ -401,9 +409,7 @@ K(x_i, x_j) = \phi(x_i) \cdot \phi(x_j)
 - **No need to compute high-dimensional transformations explicitly**.
 - **Computationally efficient**, making SVM applicable to complex datasets.
 
----
-
-### **Summary**
+#### Summary
 
 1. **Margins are crucial** for improving generalization and reducing misclassification.
 2. **The primal SVM formulation** directly optimizes the margin, allowing for soft constraints.

@@ -96,22 +96,38 @@ $$
 	h_{\boldsymbol{\theta}}(\mathbf{x'}) = \boldsymbol{\theta}^{\top} \mathbf{x'}
 	$$
 
-1. Pick a random $\boldsymbol{\theta}$
-2. Evaluate $J(\boldsymbol{\theta})$
-3. Repeat step 1 and 2 many times
-4. Return the $\boldsymbol{\theta}$ that gives the smallest $J(\boldsymbol{\theta})$
+!!! abstract "Random Guess"
+
+	1. Pick a random $\boldsymbol{\theta}$
+	2. Evaluate $J(\boldsymbol{\theta})$
+	3. Repeat step 1 and 2 many times
+	4. Return the $\boldsymbol{\theta}$ that gives the smallest $J(\boldsymbol{\theta})$
 
 #### Optimization Method #1: Gradient Descent
 
 ![](img/gradient.png)
 
-1. Choose an initial point $\vec{\boldsymbol{\theta}}$
-2. Repeat $t = 1, 2, \dots$
+!!! abstract "Gradient Descent"
 
-	a. Compute gradient $\vec{g} = \nabla \mathbf{J}(\vec{\boldsymbol{\theta}})$
+	1. Choose an initial point $\vec{\boldsymbol{\theta}}$
+	2. Repeat $t = 1, 2, \dots$
 
-	b. Select step size $\delta_t \in R$
+		a. Compute gradient $\vec{g} = \nabla \mathbf{J}(\vec{\boldsymbol{\theta}})$
 
-	c. Update parameters $\vec{\boldsymbol{\theta}} \leftarrow \vec{\boldsymbol{\theta}} - \delta_t \vec{g}$
+		b. Select step size $\delta_t \in R$
 
-3. Return the best $\vec{\boldsymbol{\theta}}$ when some stopping criterion is reached.
+		c. Update parameters $\vec{\boldsymbol{\theta}} \leftarrow \vec{\boldsymbol{\theta}} - \delta_t \vec{g}$
+
+	3. Return the best $\vec{\boldsymbol{\theta}}$ when some stopping criterion is reached.
+
+### Support Vector Regression
+
+$$
+\text{minimize } \frac{1}{2} \|\mathbf{w}\|^2 + C \sum_t \left(|r^t - f(\mathbf{x}^t)| - \epsilon \right)_+
+$$
+
+where $C$ trades off the model complexity (i.e., the flatness of the model) and data misfit.
+
+### Stochastic Gradient Descent
+
+SGD reduces MSE much more rapidly than GD.

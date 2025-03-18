@@ -263,6 +263,8 @@ nav:
       - lessons/CS110/number.md
       - lessons/CS110/c.md
       - lessons/CS110/risc-v.md
+      - lessons/CS110/call.md
+      - lessons/CS110/circuit.md
     - 人工智能 I CS181:
       - lessons/CS181/index.md
       - lessons/CS181/search.md
