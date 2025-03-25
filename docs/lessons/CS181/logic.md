@@ -211,3 +211,14 @@ $\exists \text{<variable> <sentence>}$
 
 #### Horn Logic (the FOL case)
 
+- $p_1 \land p_2 \land \cdots \land p_n \Rightarrow q$
+
+where $p_i$ and $q$ are atomic sentences.
+
+- All variables assumed to be universally quantified.
+
+### Resolution
+
+Given a KB and a query, convert to CNF and apply resolution:
+
+- $\text{KB} \land \lnot \alpha$
