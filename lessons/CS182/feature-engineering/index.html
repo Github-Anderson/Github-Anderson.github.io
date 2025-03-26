@@ -12,13 +12,13 @@
         <meta name="author" content="Anderson_Yang">
       
       
-        <link rel="canonical" href="https://Github-Anderson.github.io/blog/other/cs2onmac/">
+        <link rel="canonical" href="https://Github-Anderson.github.io/lessons/CS182/feature-engineering/">
       
       
-        <link rel="prev" href="../markdown/">
+        <link rel="prev" href="../regression/">
       
       
-        <link rel="next" href="../../../lessons/">
+        <link rel="next" href="../../../essay/">
       
       
       <link rel="icon" href="../../../assets/icon/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>在 macOS 上畅玩 CS2 - Anderson_Yang 的个人网站</title>
+        <title>Feature Engineering & Regularization - Anderson_Yang 的个人网站</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macos-cs2" class="md-skip">
+        <a href="#feature-engineering-regularization" class="md-skip">
           跳转至
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              在 macOS 上畅玩 CS2
+              Feature Engineering &amp; Regularization
             
           </span>
         </div>
@@ -239,13 +239,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
     
@@ -261,11 +259,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../lessons/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -367,8 +367,6 @@
       
   
   
-    
-  
   
   
     
@@ -385,22 +383,19 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../blog/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -412,13 +407,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             博客
@@ -479,7 +474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mkdocs/first/" class="md-nav__link">
+      <a href="../../../blog/mkdocs/first/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,7 +496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mkdocs/extra/" class="md-nav__link">
+      <a href="../../../blog/mkdocs/extra/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -528,10 +523,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -547,11 +540,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
         
           
           <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
@@ -566,7 +559,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_3">
             <span class="md-nav__icon md-icon"></span>
             杂七杂八的内容
@@ -580,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../env/" class="md-nav__link">
+      <a href="../../../blog/other/env/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -602,7 +595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../markdown/" class="md-nav__link">
+      <a href="../../../blog/other/markdown/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -621,31 +614,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    在 macOS 上畅玩 CS2
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../blog/other/cs2onmac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -655,80 +627,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      序言
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#0" class="md-nav__link">
-    <span class="md-ellipsis">
-      0. 确认环境
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1-crossover-windows" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 使用 CrossOver 运行 Windows 应用程序
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-steam" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 安装 Steam &amp; 游戏本体
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-cxpatcher-crossover" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 运行 CXPatcher 对 CrossOver 进行优化
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      后记
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -752,6 +650,8 @@
       
       
   
+  
+    
   
   
   
@@ -787,19 +687,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../lessons/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -811,13 +714,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             课程
@@ -878,7 +781,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/SI100B/SI100B-report/" class="md-nav__link">
+      <a href="../../SI100B/SI100B-report/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -900,7 +803,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/SI100B/fb/" class="md-nav__link">
+      <a href="../../SI100B/fb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -989,7 +892,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/GEMA10XX/links/" class="md-nav__link">
+      <a href="../../GEMA10XX/links/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1011,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/GEMA10XX/int/" class="md-nav__link">
+      <a href="../../GEMA10XX/int/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1033,7 +936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/GEMA10XX/int-application/" class="md-nav__link">
+      <a href="../../GEMA10XX/int-application/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1055,7 +958,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/GEMA10XX/ode/" class="md-nav__link">
+      <a href="../../GEMA10XX/ode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1077,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/GEMA10XX/dint/" class="md-nav__link">
+      <a href="../../GEMA10XX/dint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1099,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/GEMA10XX/iint/" class="md-nav__link">
+      <a href="../../GEMA10XX/iint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1121,7 +1024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/GEMA10XX/oint/" class="md-nav__link">
+      <a href="../../GEMA10XX/oint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1143,7 +1046,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/GEMA10XX/fourier/" class="md-nav__link">
+      <a href="../../GEMA10XX/fourier/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1165,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/GEMA10XX/int-infty/" class="md-nav__link">
+      <a href="../../GEMA10XX/int-infty/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1240,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/MATH1112/links/" class="md-nav__link">
+      <a href="../../MATH1112/links/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1262,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/MATH1112/ele/" class="md-nav__link">
+      <a href="../../MATH1112/ele/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1335,7 +1238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/ARTS1701/main/" class="md-nav__link">
+      <a href="../../ARTS1701/main/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1390,7 +1293,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../lessons/SI120/" class="md-nav__link ">
+            <a href="../../SI120/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1424,7 +1327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/SI120/code/" class="md-nav__link">
+      <a href="../../SI120/code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1446,7 +1349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/SI120/chsh/" class="md-nav__link">
+      <a href="../../SI120/chsh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1519,7 +1422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/GEHA1050/notes/" class="md-nav__link">
+      <a href="../../GEHA1050/notes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1602,7 +1505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/GAMES101/env/" class="md-nav__link">
+      <a href="../../GAMES101/env/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1624,7 +1527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/GAMES101/overview/" class="md-nav__link">
+      <a href="../../GAMES101/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1646,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/GAMES101/review-la/" class="md-nav__link">
+      <a href="../../GAMES101/review-la/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1668,7 +1571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/GAMES101/rasterization/" class="md-nav__link">
+      <a href="../../GAMES101/rasterization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1690,7 +1593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/GAMES101/geometry/" class="md-nav__link">
+      <a href="../../GAMES101/geometry/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1712,7 +1615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/GAMES101/ray-tracing/" class="md-nav__link">
+      <a href="../../GAMES101/ray-tracing/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1779,7 +1682,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../lessons/CS101/" class="md-nav__link ">
+            <a href="../../CS101/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1813,7 +1716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS101/abt/" class="md-nav__link">
+      <a href="../../CS101/abt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1835,7 +1738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS101/algo-analysis/" class="md-nav__link">
+      <a href="../../CS101/algo-analysis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1857,7 +1760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS101/sorting/" class="md-nav__link">
+      <a href="../../CS101/sorting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1879,7 +1782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS101/divide-and-conquer/" class="md-nav__link">
+      <a href="../../CS101/divide-and-conquer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1901,7 +1804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS101/greedy/" class="md-nav__link">
+      <a href="../../CS101/greedy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1923,7 +1826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS101/graph/" class="md-nav__link">
+      <a href="../../CS101/graph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1945,7 +1848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS101/dp/" class="md-nav__link">
+      <a href="../../CS101/dp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1967,7 +1870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS101/pnp/" class="md-nav__link">
+      <a href="../../CS101/pnp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2028,7 +1931,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../lessons/CS110/" class="md-nav__link ">
+            <a href="../../CS110/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2062,7 +1965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS110/number/" class="md-nav__link">
+      <a href="../../CS110/number/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2084,7 +1987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS110/c/" class="md-nav__link">
+      <a href="../../CS110/c/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2106,7 +2009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS110/risc-v/" class="md-nav__link">
+      <a href="../../CS110/risc-v/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2128,7 +2031,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS110/call/" class="md-nav__link">
+      <a href="../../CS110/call/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2150,7 +2053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS110/circuit/" class="md-nav__link">
+      <a href="../../CS110/circuit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2219,7 +2122,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../lessons/CS181/" class="md-nav__link ">
+            <a href="../../CS181/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2253,7 +2156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS181/search/" class="md-nav__link">
+      <a href="../../CS181/search/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2275,7 +2178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS181/csp/" class="md-nav__link">
+      <a href="../../CS181/csp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2297,7 +2200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS181/adversarial-search/" class="md-nav__link">
+      <a href="../../CS181/adversarial-search/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2319,7 +2222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS181/logic/" class="md-nav__link">
+      <a href="../../CS181/logic/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2341,7 +2244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS181/bayesian-nets/" class="md-nav__link">
+      <a href="../../CS181/bayesian-nets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2368,6 +2271,8 @@
                 
   
   
+    
+  
   
   
     
@@ -2389,16 +2294,16 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_12" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../lessons/CS182/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -2416,7 +2321,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_12_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_12">
             <span class="md-nav__icon md-icon"></span>
             机器学习引论 CS182
@@ -2432,7 +2337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS182/superivsed-classification/" class="md-nav__link">
+      <a href="../superivsed-classification/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2454,7 +2359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../lessons/CS182/regression/" class="md-nav__link">
+      <a href="../regression/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2473,10 +2378,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../lessons/CS182/feature-engineering/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Feature Engineering &amp; Regularization
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2486,6 +2412,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#feature-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature Engineering
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regularization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regularization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regularization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overfitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overfitting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regularization_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regularization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2780,56 +2768,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#feature-engineering" class="md-nav__link">
     <span class="md-ellipsis">
-      序言
+      Feature Engineering
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#0" class="md-nav__link">
+  <a href="#regularization" class="md-nav__link">
     <span class="md-ellipsis">
-      0. 确认环境
+      Regularization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regularization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overfitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overfitting
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#1-crossover-windows" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#regularization_1" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 使用 CrossOver 运行 Windows 应用程序
+      Regularization
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2-steam" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 安装 Steam &amp; 游戏本体
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-cxpatcher-crossover" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 运行 CXPatcher 对 CrossOver 进行优化
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      后记
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2849,7 +2825,7 @@
 
 
   
-    <a href="https://github.com/Github-Anderson/Github-Anderson.github.io/edit/main/docs/blog/other/cs2onmac.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Github-Anderson/Github-Anderson.github.io/edit/main/docs/lessons/CS182/feature-engineering.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2857,117 +2833,26 @@
   
 
 
-<h1 id="macos-cs2">在 macOS 上畅玩 CS2<a class="headerlink" href="#macos-cs2" title="Permanent link">&para;</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">请勿过度玩梗！</p>
-<p>此文章所介绍的梗或由此衍生出的梗，可能有被滥用的风险。 不分场合随意使用此梗可能会引来诸多人的厌恶。</p>
-</div>
-<h3 id="_1">序言<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<p>提起用 Mac 打游戏，大家肯定会想起这样一张meme图：</p>
-<p><img alt="" src="../img/mac-gaming.jpg" width="300" /></p>
-<p>不过梗终究还是梗，我们不妨实操一下看看 Mac 是不是真的不能打游戏。</p>
-<p>以我投入时间较多的 <em>Counter-Strike 2</em><sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>为例，这款游戏由于基于 DX12 开发，显然未像 <a href="" title="Counter-Strike: Global Offensive"><em>CS:GO</em></a> 一样对 Mac 和 Linux进行适配，从开发乃至内测阶段就与 Mac 无缘了。</p>
-<p>那么为何我还是能在 Mac 上和室友一起下厨呢？答案在下文：</p>
-<h3 id="0">0. 确认环境<a class="headerlink" href="#0" title="Permanent link">&para;</a></h3>
+<h1 id="feature-engineering-regularization">Feature Engineering &amp; Regularization<a class="headerlink" href="#feature-engineering-regularization" title="Permanent link">&para;</a></h1>
+<h2 id="feature-engineering">Feature Engineering<a class="headerlink" href="#feature-engineering" title="Permanent link">&para;</a></h2>
+<h2 id="regularization">Regularization<a class="headerlink" href="#regularization" title="Permanent link">&para;</a></h2>
+<h3 id="overfitting">Overfitting<a class="headerlink" href="#overfitting" title="Permanent link">&para;</a></h3>
 <ul>
-<li>
-<p>确保使用的是 arm Mac，也就是搭载M系列SoC的 Mac，比如我这台 MacBook Pro 14"。</p>
-</li>
-<li>
-<p>确保已更新到 macOS Sonoma 14.0 或更新。<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<li>Definition: The problem of <strong>overfitting</strong> is when the model captures the noise in the training data instead of the underlying structure.</li>
+</ul>
+<h3 id="regularization_1">Regularization<a class="headerlink" href="#regularization_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Given objective function <span class="arithmatex">\(J(\theta)\)</span>.</li>
+<li>Goal is to find: <span class="arithmatex">\(\hat{\theta} = \argmin_{\theta} J(\theta) + \lambda r(\theta)\)</span>.</li>
+<li>Key idea: Define regularizer <span class="arithmatex">\(r(\theta)\)</span> s.t. we tradeoff between fitting the data and keeping the model simple.</li>
+<li>Choose form of <span class="arithmatex">\(r(\theta)\)</span> based on the model complexity.<ul>
+<li>Example: <span class="arithmatex">\(q\)</span>-norm</li>
+</ul>
 </li>
 </ul>
-<h3 id="1-crossover-windows">1. 使用 CrossOver 运行 Windows 应用程序<a class="headerlink" href="#1-crossover-windows" title="Permanent link">&para;</a></h3>
-<p>官网下载 <a href="https://www.codeweavers.com/crossover">CrossOver</a>，推荐使用正版。这里我所使用的版本为23.7。</p>
-<h3 id="2-steam">2. 安装 Steam &amp; 游戏本体<a class="headerlink" href="#2-steam" title="Permanent link">&para;</a></h3>
-<ul>
-<li>点击 "安装" <span class="arithmatex">\(\to\)</span> "Steam" <span class="arithmatex">\(\to\)</span> "安装"</li>
-</ul>
-<p><img alt="" src="../img/co01.png" /></p>
-<ul>
-<li>
-<p>容器选择 "Windows 10" 及更高，这里以 "Windows 10" 为例。</p>
-</li>
-<li>
-<p>等待安装完字体、创建完容器后，以正常方式运行登录 Steam 并下载游戏。</p>
-</li>
-<li>
-<p>下完后关闭 Steam，来到容器界面，可以看到有五个选项：</p>
-</li>
-</ul>
-<p><img alt="" src="../img/co03.png" /></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: center;">选项</th>
-<th style="text-align: center;">介绍</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: center;"><strong>D3DMetal</strong></td>
-<td style="text-align: center;">Game Porting Toolkit 中的图形API翻译层，支持 DirectX 11/12 游戏。<br />启用后，使用D3DMetal代替DXVK或wined3d默认值 <span class="twemoji" title="与 DXVK 不可同时开启"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>DXVK</strong></td>
-<td style="text-align: center;">基于Vulkan的翻译层，支持 DirectX 10/11 游戏。启用后，使用DXVK代替wined3d默认值 <span class="twemoji" title="与 D3DMetal 不可同时开启"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>ESync</strong></td>
-<td style="text-align: center;">基于 Eventfd 的同步，可提高帧率 <span class="twemoji" title="与 MSync 不可同时开启"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>MSync</strong></td>
-<td style="text-align: center;">基于 Memory 的同步，可提高帧率 <span class="twemoji" title="与 ESync 不可同时开启"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"/></svg></span></td>
-</tr>
-<tr>
-<td style="text-align: center;"><strong>高分辨率模式</strong></td>
-<td style="text-align: center;">启用 HiDPI 来运行游戏，无需开启</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>现在可以成功运行 CS2 了！</li>
-</ul>
-<div class="admonition quote">
-<p class="admonition-title">提示</p>
-<p>在游戏启动选项中添加"<strong>-nojoy</strong>"以提高帧率。</p>
-</div>
-<p>但运行一段时间后会发现：帧率还是太低了，强如 M1 Max 也只能跑60~70帧左右。那么有没有办法进一步提高帧率呢？</p>
-<h3 id="3-cxpatcher-crossover">3. 运行 CXPatcher 对 CrossOver 进行优化<a class="headerlink" href="#3-cxpatcher-crossover" title="Permanent link">&para;</a></h3>
-<div class="admonition example">
-<p class="admonition-title">警告</p>
-<p>接下来的内容涉及修改软件本体，不属于官方支持和服务范围内！</p>
-</div>
-<ul>
-<li>
-<p>需要到 <a href="https://github.com/italomandara/CXPatcher">https://github.com/italomandara/CXPatcher</a> 下载 CXPatcher，这里我使用的是V0.4.10，对应CrossOver 23.7 &amp; 23.7.1。</p>
-</li>
-<li>
-<p>在输入"我不会向 CodeWeavers 请求支持或退款" 后，安装GStreamer。</p>
-</li>
-<li>
-<p>在高级选项中禁用"使用独立的容器路径"，并将 CrossOver.app 拖入框中完成打补丁。</p>
-</li>
-<li>
-<p>完成！至此，可以在 Mac 上高帧率畅玩 CS2 了。</p>
-</li>
-</ul>
-<h3 id="_2">后记<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<ul>
-<li>CXPatcher 似乎只适用于 <em>CS2</em>，其他游戏如 <em>Cyberpunk 2077</em> 和 <em>幻兽帕鲁</em> 等游戏还未验证，需使用 D3DMetal 转译。</li>
-</ul>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p><em>Counter-Strike 2</em> 是一款由 Valve 开发的多人在线第一人称射击游戏。这款游戏延续了 <a href="" title="Counter-Strike: Global Offensive"><em>CS:GO</em></a> 的核心玩法，并结合了新的技术和功能。<a href="https://www.counter-strike.net/cs2">https://www.counter-strike.net/cs2</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
-</li>
-<li id="fn:2">
-<p>需更新至 macOS Sonoma 以使用 Game Porting Toolkit，从而转译 DX12 的游戏。<a href="https://developer.apple.com/download/all/">https://developer.apple.com/download/all/</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div>
+<div class="arithmatex">\[
+\|\boldsymbol{\theta}\|_q = \left( \sum_{m=1}^M |\theta_m|^q\right)^{\frac{1}{q}}
+\]</div>
 
 
 
@@ -2990,7 +2875,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2024年6月16日 09:09:04"><span class="timeago" datetime="2024-06-16T09:09:04+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2024年6月16日 09:09:04">2024-06-16</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年3月26日 01:51:35"><span class="timeago" datetime="2025-03-26T01:51:35+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年3月26日 01:51:35">2025-03-26</span>
   </span>
 
     
@@ -3000,7 +2885,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2024年3月5日 10:26:12"><span class="timeago" datetime="2024-03-05T10:26:12+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2024年3月5日 10:26:12">2024-03-05</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年3月26日 01:51:35"><span class="timeago" datetime="2025-03-26T01:51:35+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年3月26日 01:51:35">2025-03-26</span>
   </span>
 
     
@@ -3084,7 +2969,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../markdown/" class="md-footer__link md-footer__link--prev" aria-label="上一页: MarkDown 语法速记">
+          <a href="../regression/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Regression">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3094,20 +2979,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                MarkDown 语法速记
+                Regression
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../lessons/" class="md-footer__link md-footer__link--next" aria-label="下一页: 课程">
+          <a href="../../../essay/" class="md-footer__link md-footer__link--next" aria-label="下一页: 随笔">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                课程
+                随笔
               </div>
             </div>
             <div class="md-footer__button md-icon">
