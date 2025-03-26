@@ -271,10 +271,12 @@ nav:
       - lessons/CS181/csp.md
       - lessons/CS181/adversarial-search.md
       - lessons/CS181/logic.md
+      - lessons/CS181/bayesian-nets.md
     - 机器学习引论 CS182:
       - lessons/CS182/index.md
       - lessons/CS182/superivsed-classification.md
-      - lessons/CS182/linear-regression.md
+      - lessons/CS182/regression.md
+      - lessons/CS182/feature-engineering.md
   - 随笔:
     - essay/index.md
     - 文章:

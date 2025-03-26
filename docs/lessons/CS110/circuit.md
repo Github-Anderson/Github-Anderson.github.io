@@ -82,12 +82,16 @@ Combinational circuits: the ones that the output of the digital circuits depends
 
 - Setup Time: The period that the input should be ready before the edge.
 - Hold Time: The period that the input should hold its value after the edge.
+- CLK-to-Q delay: How long it takes the output to change, as measured from the rising edge of the CLK.
+- Critical path: path between input/output that incurs max delay
 
 #### Estimating the Max Frequency
 
 $$
 \text{Max Frequency} = \frac{1}{\text{Min Clock Period}}
 $$
+
 $$
 t_{\text{clk-to-Q}} + t_{\text{comb}} \leq \text{min clock period} + t_{\text{setup}}
 $$
+
