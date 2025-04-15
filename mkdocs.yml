@@ -272,6 +272,7 @@ nav:
       - lessons/CS181/adversarial-search.md
       - lessons/CS181/logic.md
       - lessons/CS181/bayesian-nets.md
+      - lessons/CS181/probabilistic-temporal-models.md
     - 机器学习引论 CS182:
       - lessons/CS182/index.md
       - lessons/CS182/superivsed-classification.md
