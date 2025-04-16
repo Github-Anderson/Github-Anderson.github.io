@@ -265,6 +265,7 @@ nav:
       - lessons/CS110/risc-v.md
       - lessons/CS110/call.md
       - lessons/CS110/circuit.md
+      - lessons/CS110/pipeline.md
     - 人工智能 I CS181:
       - lessons/CS181/index.md
       - lessons/CS181/search.md
@@ -273,6 +274,7 @@ nav:
       - lessons/CS181/logic.md
       - lessons/CS181/bayesian-nets.md
       - lessons/CS181/probabilistic-temporal-models.md
+      - lessons/CS181/markov-decision.md
     - 机器学习引论 CS182:
       - lessons/CS182/index.md
       - lessons/CS182/superivsed-classification.md

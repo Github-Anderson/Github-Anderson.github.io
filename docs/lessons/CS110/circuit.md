@@ -1,6 +1,5 @@
 ---
 comments: true
-status: star
 ---
 
 # Digital Circuits and Systems
