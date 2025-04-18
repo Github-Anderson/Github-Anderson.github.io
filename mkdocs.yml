@@ -266,6 +266,7 @@ nav:
       - lessons/CS110/call.md
       - lessons/CS110/circuit.md
       - lessons/CS110/pipeline.md
+      - lessons/CS110/cache.md
     - 人工智能 I CS181:
       - lessons/CS181/index.md
       - lessons/CS181/search.md
