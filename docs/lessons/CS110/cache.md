@@ -83,17 +83,24 @@ comments: true
 - We need a wag to tell if the cache have copy of location in memory so that can decide on hit or miss;
 - On cache miss put memory address of block in "tag address" of cache block.
 
-### Fully Associative Cache
+!!! warning "Understanding Cache Misses: 3Cs"
 
-- Cache size: total size of the cache ($C$)
-- Cache block size: $C_B \to$ decides the number of offset bits ($b$)
-- Number of cache blocks ($N$): $N = C / C_B$
-- Bit width of memory address ($w$): 16-bit in our examples
-- Bit width of tag ($t$): $t = w - b$
+	- Compulsory (cold start or process migration, 1st reference):
+		- First access to block impossible to avoid; small effect for long running programs
+		- Solution: increase block size (increases miss penalty; very large blocks could increase miss rate)
+
+	- Capacity:
+		- Cache cannot contain all blocks accessed by the program
+		- Solution: increase cache size (may increase access time)
+
+	- Conflict (Collision):
+		- Multiple memory locations mapped to the same cache location, conflict even when the cache has not reached full capacity.
+		- Solution 1: increase cache size
+		- Solution 2: increase associativity (may increase access time)
 
 ## Block Replacement Policy
 
-### Least Recently Used (LRU)
+#### Least Recently Used (LRU)
 
 - Replace the entry that has not been used for the longest time, i.e. has the oldest previous access.
 
@@ -104,22 +111,72 @@ comments: true
 
 - Add extra information to record cache usage.
 
-Other Replacement Policies
+#### Most Recently Used (MRU)
 
-- Most Recently Used (MRU)
-	- Replace the entry that has the newest previous access
+- Replace the entry that has the newest previous access
 
-- First In First Out (FIFO)
-	- Replace the oldest line in the set (queue)
+#### First In First Out (FIFO)
 
-- Last In First Out (LIFO)
-	- Replace the most recent line in the set (stack)
+- Replace the oldest line in the set (queue)
 
-- Random
+#### Last In First Out (LIFO)
+
+- Replace the most recent line in the set (stack)
+
+#### Random
+
+## Cache Mapping
+
+### Fully Associative Cache
+
+Arbitrary memory address can go to arbitrary cache blocks.
+
+![](img/fa.png)
+
+- Cache size: total size of the cache ($C$)
+- Cache block size: $C_B \to$ decides the number of offset bits ($b$)
+- Number of cache blocks ($N$): $N = C / C_B$
+- Bit width of memory address ($w$): 16-bit in our examples
+- Bit width of tag ($t$): $t = w - b$
+
+### Direct Mapped Cache
+
+The data at a memory address can be stored at exactly one possible block in the cache.
+
+![](img/dm.png)
+
+- Cache capacity/size: total size of the cache ($C$)
+- Cache block size: $C_B \to$ decides the number of offset bits ($o$): $2^o = C_B$
+- Number of cache blocks ($N$): $N = C / C_B$
+- Bit width of memory address ($w$)
+- Bit width of Index ($i$): $i = \log_2(N)$
+- Bit width of tag ($t$): $t = w - o - i$
+
+### Set Associative Cache
+
+The data can only be stored at one index, but there are multiple slots/blocks.
+
+![](img/sa.png)
+
+- Cache capacity/size: total size of the cache ($C$)
+- Cache block size: $C_B \to$ decides the number of offset bits ($o$): $2^o = C_B$
+- Number of cache blocks ($M$): $M = C / C_B$
+- Bit width of memory address ($w$)
+- $N$-way SA cache: $N$ cache blocks in a set
+- Number of sets ($S$): $S = M / N$
+- Bit width of Index ($i$): $i = \log_2(S) = \log_2(M / N)$
+- Bit width of tag ($t$): $t = w - o - i$
+- Given $N$-way, $t$, $i$, and $o$, total capacity = $2^o * 2^i * N$
+
+|Feature|Direct Mapped|Set Associative|Fully Associative|
+|---|---|---|---|
+|Hit time|Fast|Mid|Slow|
+|Miss rate|High|Mid|Low|
+|Miss penalty|$\sim$|$\sim$|$\sim$|
 
 ## Write Policy
 
-!!! tip "Write-Back vs. Write-Through"
+!!! tip "Write Policy"
 
 	- Store instructions write to memory, which changes values.
 	- Hardware needs to ensure that cache and memory have consistent information.
@@ -132,3 +189,36 @@ Other Replacement Policies
 		- (not the "Write back" phase in pipeline)
 		- Write data in cache and set a dirty bit to 1.
 		- When this block gets replaced from the cache (and "back" to memory), write to memory.
+
+	=== "Write-Allocate"
+		- Allocate in cache a space to deal with this write (cache block replacement)
+		- Update LRU
+		- Set dirty bit and implement write-back policy; or write-through
+
+	=== "No-Write-Allocate"
+		- The data is directly written to the main memory without loading it into the cache.
+
+## Cache Performance \& Metrics
+
+- Hit rate: fraction of accesses that hit in the cache
+- Miss rate: 1 – Hit rate
+- Miss penalty: time to replace a line/block from lower level in memory hierarchy to cache
+- Hit time: time to access cache memory (including tag comparison)
+
+!!! abstract "AMAT: Single-Level Cache"
+
+	**Average Memory Access Time (AMAT)** is the average time to access memory considering both hits and misses in the cache.
+
+	$$
+	\text{AMAT} = \text{Hit Time} + \text{Miss rate} \times \text{Miss penalty}
+	$$
+
+!!!	abstract "AMAT: Multi-Level Cache"
+
+	$$
+	\text{L}{\footnotesize\text{1}}\text{ AMAT} = \text{L}{\footnotesize\text{1}} \text{ Hit Time} + \text{L}{\footnotesize\text{1}} \text{ Miss rate} \times  \text{L}{\footnotesize\text{2}} \text{ AMAT}
+	$$
+
+	$$
+	\text{L}{\footnotesize\text{2}} \text{ AMAT} = \text{L}{\footnotesize\text{2}} \text{ Hit Time} + \text{L}{\footnotesize\text{2}} \text{ Miss rate} \times \text{Miss penalty}
+	$$

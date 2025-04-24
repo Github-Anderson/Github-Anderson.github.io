@@ -49,13 +49,13 @@ comments: true
 #### Optimal Quantities
 
 - The value (utility) of a state $s$:
-	- $V^*(s) = \text{expected utility starting in }s \text{ and acting optimally}$
+	- $V^*(s) = $ expected utility starting in $s$ and acting optimally
 
 - The value (utility) of a $q$-state $(s,a)$:
-	- $Q^*(s,a) = \text{expected utility starting out having taken action a from state }s \text{sand (thereafter) acting optimally}$
+	- $Q^*(s,a) = $ expected utility starting out having taken action a from state $s$ and (thereafter) acting optimally
 
 - The optimal policy:
-	- $\pi^*(s) = \text{optimal aciton from state }s$
+	- $\pi^*(s) = $ optimal aciton from state
 
 #### Values of States
 
