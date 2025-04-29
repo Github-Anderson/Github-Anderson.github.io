@@ -205,6 +205,8 @@ The data can only be stored at one index, but there are multiple slots/blocks.
 - Miss penalty: time to replace a line/block from lower level in memory hierarchy to cache
 - Hit time: time to access cache memory (including tag comparison)
 
+### AMAT
+
 !!! abstract "AMAT: Single-Level Cache"
 
 	**Average Memory Access Time (AMAT)** is the average time to access memory considering both hits and misses in the cache.
@@ -222,3 +224,21 @@ The data can only be stored at one index, but there are multiple slots/blocks.
 	$$
 	\text{L}{\footnotesize\text{2}} \text{ AMAT} = \text{L}{\footnotesize\text{2}} \text{ Hit Time} + \text{L}{\footnotesize\text{2}} \text{ Miss rate} \times \text{Miss penalty}
 	$$
+
+- Local miss rate: the fraction of references to one level of a cache that miss
+- Global miss rate: the fraction of references that miss in all levels of a multilevel cache
+
+### Improve Cache Performance
+
+- Reduce hit time: use smaller cache but may increase miss rate (capacity misses)
+
+- Reduce miss rate:
+	- Program dependent;
+	- Larger capacity (may decrease capacity miss but increase hit time and hardware cost);
+	- Higher associativity (may reduce conflict miss; but require extra considertaion for replacement policy and increase hardware cost)
+	- Larger cache blocks (may reduce compulsory miss; better spatial locality usage; but may harm temporal locality with recently-used data evicted)
+
+- Reduce miss penalty:
+	- Prefetch
+	- Increase level of cache
+	- Victim cache

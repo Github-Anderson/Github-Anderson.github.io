@@ -57,7 +57,9 @@ comments: true
 	- Aim: a recursive filtering algorithm of the form
 	- $P(X_{t+1} \mid e_{1:t+1}) = g(e_{t+1}, P(X_t \mid e_{1:t}) )$
 
-- $P(X_{t+1} \mid e_{1:t+1}) = \alpha P(e_{t+1} \mid X_{t+1}) \sum_{x_t} P(x_t \mid e_{1:t}) P(X_{t+1} \mid x_t)\\\alpha = 1 / P(e_{t+1} \mid e_{1:t})$
+$$
+P(X_{t+1} \mid e_{1:t+1}) = \alpha P(e_{t+1} \mid X_{t+1}) \sum_{x_t} P(x_t \mid e_{1:t}) P(X_{t+1} \mid x_t)\\\alpha = 1 / P(e_{t+1} \mid e_{1:t})
+$$
 
 ### MLE: Viterbi Algorithm
 
