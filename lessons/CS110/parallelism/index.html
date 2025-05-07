@@ -2346,18 +2346,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#intel-sse-simd-instructions" class="md-nav__link">
+  <a href="#simd-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Intel SSE SIMD Instructions
+      SIMD Architecture
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sse-instructions-in-c" class="md-nav__link">
+  <a href="#loop-unrolling" class="md-nav__link">
     <span class="md-ellipsis">
-      SSE Instructions in C
+      Loop Unrolling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risc-v-vector-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      RISC-V Vector Extension
     </span>
   </a>
   
@@ -3170,18 +3179,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#intel-sse-simd-instructions" class="md-nav__link">
+  <a href="#simd-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Intel SSE SIMD Instructions
+      SIMD Architecture
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sse-instructions-in-c" class="md-nav__link">
+  <a href="#loop-unrolling" class="md-nav__link">
     <span class="md-ellipsis">
-      SSE Instructions in C
+      Loop Unrolling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risc-v-vector-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      RISC-V Vector Extension
     </span>
   </a>
   
@@ -3274,8 +3292,58 @@
 </li>
 </ul>
 <h2 id="simd">SIMD<a class="headerlink" href="#simd" title="Permanent link">&para;</a></h2>
-<h3 id="intel-sse-simd-instructions">Intel SSE SIMD Instructions<a class="headerlink" href="#intel-sse-simd-instructions" title="Permanent link">&para;</a></h3>
-<h3 id="sse-instructions-in-c">SSE Instructions in C<a class="headerlink" href="#sse-instructions-in-c" title="Permanent link">&para;</a></h3>
+<h3 id="simd-architecture">SIMD Architecture<a class="headerlink" href="#simd-architecture" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Instruction</strong>: One instructinon is fetched &amp; decoded for entire operation</li>
+<li><strong>Register</strong>: Use registers (128-bit XMM, 256-bit YMM, 512-bit ZMM) to store multiple data</li>
+<li><strong>Pipelining &amp; Parallelism</strong>: Data loading, ALU operation, and data storing are pipelined and parallelized</li>
+<li><strong>Special Operation Unit</strong>: Use vector operation unit to perform SIMD operations (SSE/AVX, ARM NEON, RISC-V Vector)</li>
+</ul>
+<h3 id="loop-unrolling">Loop Unrolling<a class="headerlink" href="#loop-unrolling" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Unroll loop and adjust iteration rate to reveal more DLP than available in a single iteration of a loop.</li>
+</ul>
+<div class="language-c highlight"><span class="filename">C</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-c highlight"><span class="filename">C</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="mi">-1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="mi">-2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="mi">-2</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="mi">-3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="mi">-3</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li>Given a loop with <span class="arithmatex">\(n\)</span> iterations, <span class="arithmatex">\(k\)</span> copies of the body of the loop, and assume <span class="arithmatex">\(n \text{ mod } k \neq 0\)</span>,</li>
+<li>Then we will run the loop with 1 copy of the body <span class="arithmatex">\(n \text{ mod } k\)</span> times, and with <span class="arithmatex">\(k\)</span> copies of the body $\left\lfloor \frac{n}{k} \right\rfloor $ times.</li>
+</ul>
+<h3 id="risc-v-vector-extension">RISC-V Vector Extension<a class="headerlink" href="#risc-v-vector-extension" title="Permanent link">&para;</a></h3>
+<ul>
+<li>32 vector registers</li>
+<li>Need to setup length of data and number of parallel
+registers to work on before usage (<code>vconfig</code>)!</li>
+<li><code>vflw.s</code>: vector float load word . stride: load a single word,
+put in v1 ‘vector length’ times</li>
+<li><code>vsetvl</code>: ask for certain vector length – hardware knows
+what it can do (<code>maxvl</code>)!</li>
+</ul>
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    # assume x1 contains size of array
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    # assume t1 contains address of array
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    # assume x4 contains address of scalar s
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    vconfig 0x63        # 4 vregs, 32b data(float)
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    vflw.s v1.s, 0(x4)  # load scalar value to v1
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>loop:
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    vsetvl x2, x1       # will set vl and x2 both to min(maxvl, x1)
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    vflw v0, 0(t1)      # will load `vl` elements out of `vec`
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    vfadd.s v2, v1, v0  # do the add
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    vsw v2, 0(t1)       # store result back to `vec`
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    slli x5, x2, 2      # bytes consumed from `vec` (x2 * sizeof(float))
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    add t1, t1, x5      # increment `vec` pointer
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    sub x1, x1, x2      # subtract from total (x1) work done this iteration
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    bne x1, x0, loop    # if x1 not yet zero, still work to do
+</span></code></pre></div>
 
 
 
@@ -3298,7 +3366,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年4月29日 02:02:00"><span class="timeago" datetime="2025-04-29T02:02:00+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年4月29日 02:02:00">2025-04-29</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年5月7日 07:43:10"><span class="timeago" datetime="2025-05-07T07:43:10+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月7日 07:43:10">2025-05-07</span>
   </span>
 
     
