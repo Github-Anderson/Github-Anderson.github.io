@@ -181,6 +181,8 @@ The data can only be stored at one index, but there are multiple slots/blocks.
 	- Store instructions write to memory, which changes values.
 	- Hardware needs to ensure that cache and memory have consistent information.
 
+	Write hit:
+
 	=== "Write-Through"
 		- Write to both cache and memory at the same time.
 		- (more writes to memory $\to$ longer time)
@@ -190,6 +192,8 @@ The data can only be stored at one index, but there are multiple slots/blocks.
 		- Write data in cache and set a dirty bit to 1.
 		- When this block gets replaced from the cache (and "back" to memory), write to memory.
 
+	Write miss:
+
 	=== "Write-Allocate"
 		- Allocate in cache a space to deal with this write (cache block replacement)
 		- Update LRU
@@ -198,7 +202,7 @@ The data can only be stored at one index, but there are multiple slots/blocks.
 	=== "No-Write-Allocate"
 		- The data is directly written to the main memory without loading it into the cache.
 
-## Cache Performance \& Metrics
+## Cache Performance & Metrics
 
 - Hit rate: fraction of accesses that hit in the cache
 - Miss rate: 1 – Hit rate
