@@ -39,24 +39,32 @@ comments: true
 - Instead the core asks the caches for data with improved speed;
 - A hardware cache controller is deviced to provide the desired data
 
-=== ":material-lightbulb: Memory without Cache"
+!!! example "Example"
 
-	1. Processor issues address `0x12F0` to memory
-	2. Memory reads `1234` @ address `0x12F0`
-	3. Memory sends `1234` to Processor
-	4. Processor loads `1234` into register `t0`
+	Load word instruction `lw t0, 0(t1)`,
 
-=== ":material-lightbulb-on: Memory with Cache"
+	`t0` : `1234` in memory address `0x12F0`
+	
+	`t1` : `0x12F0`
 
-	1. Processor issues address `0x12F0` to memory
-	2. Cache checks if data @address `0x12F0` is in it
-		- if it is in the cache, cache hit and read `1234`
-		- if not matched, called cache miss and
-			- Cache sends address `0x12F0` to memory
-			- Memory read address `0x12F0` and send `1234` to cache
-			- Due to limited size, cache replaces some data with `1234`
-	3. Cache sends `1234` to Processor
-	4. Processor loads `1234` into register `t0`
+	=== ":material-lightbulb: Memory without Cache"
+
+		1. Processor issues address `0x12F0` to memory
+		2. Memory reads `1234` @ address `0x12F0`
+		3. Memory sends `1234` to Processor
+		4. Processor loads `1234` into register `t0`
+
+	=== ":material-lightbulb-on: Memory with Cache"
+
+		1. Processor issues address `0x12F0` to memory
+		2. Cache checks if data @address `0x12F0` is in it
+			- if it is in the cache, cache hit and read `1234`
+			- if not matched, called cache miss and
+				- Cache sends address `0x12F0` to memory
+				- Memory read address `0x12F0` and send `1234` to cache
+				- Due to limited size, cache replaces some data with `1234`
+		3. Cache sends `1234` to Processor
+		4. Processor loads `1234` into register `t0`
 
 #### Typical Values
 
@@ -104,7 +112,7 @@ comments: true
 
 - Replace the entry that has not been used for the longest time, i.e. has the oldest previous access.
 
-- Pro: Temproal locality!
+- Pro: Temporal locality!
 	- Recent past use implies likely future use
 
 - Cons: Complicated hardware to keep track of access history
