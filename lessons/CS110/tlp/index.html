@@ -12,26 +12,28 @@
         <meta name="author" content="Anderson_Yang">
       
       
-        <link rel="canonical" href="https://Github-Anderson.github.io/blog/">
+        <link rel="canonical" href="https://Github-Anderson.github.io/lessons/CS110/tlp/">
       
       
+        <link rel="prev" href="../parallelism/">
       
-        <link rel="next" href="mkdocs/first/">
+      
+        <link rel="next" href="../../CS181/">
       
       
-      <link rel="icon" href="../assets/icon/favicon.ico">
+      <link rel="icon" href="../../../assets/icon/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
     
     
       
-        <title>博客 - Anderson_Yang 的个人网站</title>
+        <title>Thread-Level Parallelism - Anderson_Yang 的个人网站</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,15 +52,15 @@
       
     
     
-      <link rel="stylesheet" href="../css/timeago.css">
+      <link rel="stylesheet" href="../../../css/timeago.css">
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
-      <link rel="stylesheet" href="../mkdocs/css/unordered-list-symbols.css">
+      <link rel="stylesheet" href="../../../mkdocs/css/unordered-list-symbols.css">
     
-      <link rel="stylesheet" href="../mkdocs/css/extra.css">
+      <link rel="stylesheet" href="../../../mkdocs/css/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -86,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#thread-level-parallelism" class="md-skip">
           跳转至
         </a>
       
@@ -100,7 +102,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="Anderson_Yang 的个人网站" class="md-header__button md-logo" aria-label="Anderson_Yang 的个人网站" data-md-component="logo">
+    <a href="../../.." title="Anderson_Yang 的个人网站" class="md-header__button md-logo" aria-label="Anderson_Yang 的个人网站" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg>
@@ -120,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              博客
+              Thread-Level Parallelism
             
           </span>
         </div>
@@ -241,13 +243,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
           
   
   
@@ -265,11 +265,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../lessons/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -291,7 +293,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../essay/" class="md-tabs__link">
+        <a href="../../../essay/" class="md-tabs__link">
           
   
   
@@ -313,7 +315,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../about/" class="md-tabs__link">
+        <a href="../../../about/" class="md-tabs__link">
           
   
   
@@ -338,8 +340,6 @@
           
             
               
-                
-              
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -351,7 +351,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Anderson_Yang 的个人网站" class="md-nav__button md-logo" aria-label="Anderson_Yang 的个人网站" data-md-component="logo">
+    <a href="../../.." title="Anderson_Yang 的个人网站" class="md-nav__button md-logo" aria-label="Anderson_Yang 的个人网站" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25Zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25ZM7.25 8a.75.75 0 0 1-.22.53l-2.25 2.25a.749.749 0 0 1-1.275-.326.75.75 0 0 1 .215-.734L5.44 8 3.72 6.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.25 2.25c.141.14.22.331.22.53m1.5 1.5h3a.75.75 0 0 1 0 1.5h-3a.75.75 0 0 1 0-1.5"/></svg>
@@ -378,8 +378,6 @@
       
   
   
-    
-  
   
   
     
@@ -397,21 +395,18 @@
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../../blog/" class="md-nav__link ">
               
   
   
@@ -424,13 +419,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             博客
@@ -493,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mkdocs/first/" class="md-nav__link">
+      <a href="../../../blog/mkdocs/first/" class="md-nav__link">
         
   
   
@@ -516,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mkdocs/extra/" class="md-nav__link">
+      <a href="../../../blog/mkdocs/extra/" class="md-nav__link">
         
   
   
@@ -596,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="other/env/" class="md-nav__link">
+      <a href="../../../blog/other/env/" class="md-nav__link">
         
   
   
@@ -619,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="other/markdown/" class="md-nav__link">
+      <a href="../../../blog/other/markdown/" class="md-nav__link">
         
   
   
@@ -642,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="other/cs2onmac/" class="md-nav__link">
+      <a href="../../../blog/other/cs2onmac/" class="md-nav__link">
         
   
   
@@ -677,6 +672,8 @@
       
   
   
+    
+  
   
   
     
@@ -712,18 +709,21 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../lessons/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -736,13 +736,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             课程
@@ -805,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/SI100B/SI100B-report/" class="md-nav__link">
+      <a href="../../SI100B/SI100B-report/" class="md-nav__link">
         
   
   
@@ -828,7 +828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/SI100B/fb/" class="md-nav__link">
+      <a href="../../SI100B/fb/" class="md-nav__link">
         
   
   
@@ -920,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/GEMA10XX/links/" class="md-nav__link">
+      <a href="../../GEMA10XX/links/" class="md-nav__link">
         
   
   
@@ -943,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/GEMA10XX/int/" class="md-nav__link">
+      <a href="../../GEMA10XX/int/" class="md-nav__link">
         
   
   
@@ -966,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/GEMA10XX/int-application/" class="md-nav__link">
+      <a href="../../GEMA10XX/int-application/" class="md-nav__link">
         
   
   
@@ -989,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/GEMA10XX/ode/" class="md-nav__link">
+      <a href="../../GEMA10XX/ode/" class="md-nav__link">
         
   
   
@@ -1012,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/GEMA10XX/dint/" class="md-nav__link">
+      <a href="../../GEMA10XX/dint/" class="md-nav__link">
         
   
   
@@ -1035,7 +1035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/GEMA10XX/iint/" class="md-nav__link">
+      <a href="../../GEMA10XX/iint/" class="md-nav__link">
         
   
   
@@ -1058,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/GEMA10XX/oint/" class="md-nav__link">
+      <a href="../../GEMA10XX/oint/" class="md-nav__link">
         
   
   
@@ -1081,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/GEMA10XX/fourier/" class="md-nav__link">
+      <a href="../../GEMA10XX/fourier/" class="md-nav__link">
         
   
   
@@ -1104,7 +1104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/GEMA10XX/int-infty/" class="md-nav__link">
+      <a href="../../GEMA10XX/int-infty/" class="md-nav__link">
         
   
   
@@ -1182,7 +1182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/MATH1112/links/" class="md-nav__link">
+      <a href="../../MATH1112/links/" class="md-nav__link">
         
   
   
@@ -1205,7 +1205,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/MATH1112/ele/" class="md-nav__link">
+      <a href="../../MATH1112/ele/" class="md-nav__link">
         
   
   
@@ -1281,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/ARTS1701/main/" class="md-nav__link">
+      <a href="../../ARTS1701/main/" class="md-nav__link">
         
   
   
@@ -1337,7 +1337,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../lessons/SI120/" class="md-nav__link ">
+            <a href="../../SI120/" class="md-nav__link ">
               
   
   
@@ -1372,7 +1372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/SI120/code/" class="md-nav__link">
+      <a href="../../SI120/code/" class="md-nav__link">
         
   
   
@@ -1395,7 +1395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/SI120/chsh/" class="md-nav__link">
+      <a href="../../SI120/chsh/" class="md-nav__link">
         
   
   
@@ -1471,7 +1471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/GEHA1050/notes/" class="md-nav__link">
+      <a href="../../GEHA1050/notes/" class="md-nav__link">
         
   
   
@@ -1557,7 +1557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/GAMES101/env/" class="md-nav__link">
+      <a href="../../GAMES101/env/" class="md-nav__link">
         
   
   
@@ -1580,7 +1580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/GAMES101/overview/" class="md-nav__link">
+      <a href="../../GAMES101/overview/" class="md-nav__link">
         
   
   
@@ -1603,7 +1603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/GAMES101/review-la/" class="md-nav__link">
+      <a href="../../GAMES101/review-la/" class="md-nav__link">
         
   
   
@@ -1626,7 +1626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/GAMES101/rasterization/" class="md-nav__link">
+      <a href="../../GAMES101/rasterization/" class="md-nav__link">
         
   
   
@@ -1649,7 +1649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/GAMES101/geometry/" class="md-nav__link">
+      <a href="../../GAMES101/geometry/" class="md-nav__link">
         
   
   
@@ -1672,7 +1672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/GAMES101/ray-tracing/" class="md-nav__link">
+      <a href="../../GAMES101/ray-tracing/" class="md-nav__link">
         
   
   
@@ -1740,7 +1740,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../lessons/CS101/" class="md-nav__link ">
+            <a href="../../CS101/" class="md-nav__link ">
               
   
   
@@ -1775,7 +1775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS101/abt/" class="md-nav__link">
+      <a href="../../CS101/abt/" class="md-nav__link">
         
   
   
@@ -1798,7 +1798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS101/algo-analysis/" class="md-nav__link">
+      <a href="../../CS101/algo-analysis/" class="md-nav__link">
         
   
   
@@ -1821,7 +1821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS101/sorting/" class="md-nav__link">
+      <a href="../../CS101/sorting/" class="md-nav__link">
         
   
   
@@ -1844,7 +1844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS101/divide-and-conquer/" class="md-nav__link">
+      <a href="../../CS101/divide-and-conquer/" class="md-nav__link">
         
   
   
@@ -1867,7 +1867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS101/greedy/" class="md-nav__link">
+      <a href="../../CS101/greedy/" class="md-nav__link">
         
   
   
@@ -1890,7 +1890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS101/graph/" class="md-nav__link">
+      <a href="../../CS101/graph/" class="md-nav__link">
         
   
   
@@ -1913,7 +1913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS101/dp/" class="md-nav__link">
+      <a href="../../CS101/dp/" class="md-nav__link">
         
   
   
@@ -1936,7 +1936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS101/pnp/" class="md-nav__link">
+      <a href="../../CS101/pnp/" class="md-nav__link">
         
   
   
@@ -1964,6 +1964,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1998,15 +2000,15 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../lessons/CS110/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -2025,7 +2027,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_10">
             <span class="md-nav__icon md-icon"></span>
             计算机体系结构 I CS110
@@ -2041,7 +2043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS110/number/" class="md-nav__link">
+      <a href="../number/" class="md-nav__link">
         
   
   
@@ -2064,7 +2066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS110/c/" class="md-nav__link">
+      <a href="../c/" class="md-nav__link">
         
   
   
@@ -2087,7 +2089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS110/risc-v/" class="md-nav__link">
+      <a href="../risc-v/" class="md-nav__link">
         
   
   
@@ -2110,7 +2112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS110/call/" class="md-nav__link">
+      <a href="../call/" class="md-nav__link">
         
   
   
@@ -2133,7 +2135,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS110/circuit/" class="md-nav__link">
+      <a href="../circuit/" class="md-nav__link">
         
   
   
@@ -2156,7 +2158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS110/pipeline/" class="md-nav__link">
+      <a href="../pipeline/" class="md-nav__link">
         
   
   
@@ -2179,7 +2181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS110/cache/" class="md-nav__link">
+      <a href="../cache/" class="md-nav__link">
         
   
   
@@ -2202,7 +2204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS110/parallelism/" class="md-nav__link">
+      <a href="../parallelism/" class="md-nav__link">
         
   
   
@@ -2222,10 +2224,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../lessons/CS110/tlp/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Thread-Level Parallelism
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2236,6 +2260,176 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Threads
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fork-join-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fork-Join Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenMP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenMP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openmp-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenMP: Threads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openmp-sharedprivate-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenMP: Shared/Private Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-race" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Race
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openmp-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenMP Synchronization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenMP Synchronization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#critical-sections-with-openmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical Sections with OpenMP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lock-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lock Synchronization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lock-synchronization-realization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lock Synchronization Realization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lock Synchronization Realization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware Synchronization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risc-v-two-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      RISC-V: Two solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RISC-V: Two solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-readwrite-pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 1: Read/Write Pairs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-risc-v-atomic-memory-operations-amos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2: RISC-V Atomic Memory Operations (AMOs)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2293,7 +2487,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../lessons/CS181/" class="md-nav__link ">
+            <a href="../../CS181/" class="md-nav__link ">
               
   
   
@@ -2328,7 +2522,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS181/search/" class="md-nav__link">
+      <a href="../../CS181/search/" class="md-nav__link">
         
   
   
@@ -2351,7 +2545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS181/csp/" class="md-nav__link">
+      <a href="../../CS181/csp/" class="md-nav__link">
         
   
   
@@ -2374,7 +2568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS181/adversarial-search/" class="md-nav__link">
+      <a href="../../CS181/adversarial-search/" class="md-nav__link">
         
   
   
@@ -2397,7 +2591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS181/logic/" class="md-nav__link">
+      <a href="../../CS181/logic/" class="md-nav__link">
         
   
   
@@ -2420,7 +2614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS181/bayesian-nets/" class="md-nav__link">
+      <a href="../../CS181/bayesian-nets/" class="md-nav__link">
         
   
   
@@ -2443,7 +2637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS181/probabilistic-temporal-models/" class="md-nav__link">
+      <a href="../../CS181/probabilistic-temporal-models/" class="md-nav__link">
         
   
   
@@ -2466,7 +2660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS181/markov-decision/" class="md-nav__link">
+      <a href="../../CS181/markov-decision/" class="md-nav__link">
         
   
   
@@ -2489,7 +2683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS181/reinforcement/" class="md-nav__link">
+      <a href="../../CS181/reinforcement/" class="md-nav__link">
         
   
   
@@ -2547,7 +2741,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../lessons/CS182/" class="md-nav__link ">
+            <a href="../../CS182/" class="md-nav__link ">
               
   
   
@@ -2582,7 +2776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS182/superivsed-classification/" class="md-nav__link">
+      <a href="../../CS182/superivsed-classification/" class="md-nav__link">
         
   
   
@@ -2605,7 +2799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS182/regression/" class="md-nav__link">
+      <a href="../../CS182/regression/" class="md-nav__link">
         
   
   
@@ -2628,7 +2822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lessons/CS182/feature-engineering/" class="md-nav__link">
+      <a href="../../CS182/feature-engineering/" class="md-nav__link">
         
   
   
@@ -2689,7 +2883,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../essay/" class="md-nav__link ">
+            <a href="../../../essay/" class="md-nav__link ">
               
   
   
@@ -2771,7 +2965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../essay/thoughts/230828-from-mac-to-mac/" class="md-nav__link">
+      <a href="../../../essay/thoughts/230828-from-mac-to-mac/" class="md-nav__link">
         
   
   
@@ -2794,7 +2988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../essay/thoughts/231002-refl-online/" class="md-nav__link">
+      <a href="../../../essay/thoughts/231002-refl-online/" class="md-nav__link">
         
   
   
@@ -2855,7 +3049,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../about/" class="md-nav__link ">
+            <a href="../../../about/" class="md-nav__link ">
               
   
   
@@ -2890,7 +3084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/contact/" class="md-nav__link">
+      <a href="../../../about/contact/" class="md-nav__link">
         
   
   
@@ -2921,8 +3115,6 @@
             
             
               
-                
-              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -2935,6 +3127,164 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      Threads
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fork-join-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fork-Join Model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenMP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenMP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openmp-threads" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenMP: Threads
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openmp-sharedprivate-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenMP: Shared/Private Variables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-race" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Race
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openmp-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenMP Synchronization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenMP Synchronization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#critical-sections-with-openmp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Critical Sections with OpenMP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lock-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lock Synchronization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lock-synchronization-realization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lock Synchronization Realization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lock Synchronization Realization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hardware Synchronization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risc-v-two-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      RISC-V: Two solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RISC-V: Two solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-readwrite-pairs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 1: Read/Write Pairs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-risc-v-atomic-memory-operations-amos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2: RISC-V Atomic Memory Operations (AMOs)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2946,12 +3296,10 @@
               <article class="md-content__inner md-typeset">
                 
                   
-  
-
 
 
   
-    <a href="https://github.com/Github-Anderson/Github-Anderson.github.io/edit/main/docs/blog/index.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Github-Anderson/Github-Anderson.github.io/edit/main/docs/lessons/CS110/tlp.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2959,11 +3307,323 @@
   
 
 
-<h1 id="_1">博客<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>欢迎来到我的博客，在这里我会分享一些教程、专业知识和个人见解等内容。</p>
-<blockquote>
-<p>点击左侧目录打开文章！</p>
-</blockquote>
+<h1 id="thread-level-parallelism">Thread-Level Parallelism<a class="headerlink" href="#thread-level-parallelism" title="Permanent link">&para;</a></h1>
+<h4 id="threads">Threads<a class="headerlink" href="#threads" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Threads (short for thread of execution) is a single stream of instructions.</p>
+</li>
+<li>
+<p>Each thread has:</p>
+<ul>
+<li>Its own registers (including stack pointer)</li>
+<li>Its own program counter (PC)</li>
+<li>Shared memory (heap, global variables) with other threads</li>
+</ul>
+</li>
+<li>
+<p>Each processor provides one (or more) hardware threads (through multi-core or single-core multithreading, later) that actively execute instructions</p>
+</li>
+<li>
+<p>Within a given program’s process, threads can run concurrently.</p>
+</li>
+<li>
+<p>Operating system (OS) multiplexes multiple <strong>software</strong> threads onto the available hardware threads</p>
+</li>
+</ul>
+<h4 id="fork-join-model">Fork-Join Model<a class="headerlink" href="#fork-join-model" title="Permanent link">&para;</a></h4>
+<p>Fork-Join model: A program / process can split, or fork itself into separate threads, which can (in theory) execute concurrently.</p>
+<ul>
+<li>Main thread executes sequentially until first parallel task region.</li>
+<li>Fork: Main thread then creates a team of parallel subthreads.</li>
+<li>Join: When subthreads complete their parallel task region, they synchronize and terminate, leaving only the main thread.</li>
+</ul>
+<h2 id="openmp">OpenMP<a class="headerlink" href="#openmp" title="Permanent link">&para;</a></h2>
+<h3 id="openmp-threads">OpenMP: Threads<a class="headerlink" href="#openmp-threads" title="Permanent link">&para;</a></h3>
+<div class="language-c highlight"><span class="filename">C</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;omp.h&gt;</span>
+</span></code></pre></div>
+<div class="language-c highlight"><span class="filename">C</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#pragma omp parallel</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="c1">// This code is executed by all threads</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>OpenMP creates as many threads as specified in the environment variable <code>OMP_NUM_THREADS</code>.</p>
+<ul>
+<li>Set this variable to max number of threads you want to use</li>
+<li>Generally, default: (# physical cores) * (# threads/core). Use <code>lscpu</code> command to obtain the numbers (e.g. 6 physical cores * 2 threads/core = <strong>12 threads</strong>)</li>
+</ul>
+<p>OpenMP threads are OS (software) threads, which are then multiplexed onto available hardware threads.</p>
+<table>
+<thead>
+<tr>
+<th>OpenMP Intrinsic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>omp_set_num_threads(x)</code></td>
+<td>Set number of threads to <code>x</code>.</td>
+</tr>
+<tr>
+<td><code>num_th = omp_get_num_threads()</code></td>
+<td>Get number of threads.</td>
+</tr>
+<tr>
+<td><code>th_ID = omp_get_thread_num()</code></td>
+<td>Get thread ID number.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="openmp-sharedprivate-variables">OpenMP: Shared/Private Variables<a class="headerlink" href="#openmp-sharedprivate-variables" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Shared variables: All threads read/write the same variable.</p>
+<ul>
+<li>Variable declared outside of parallel region</li>
+<li>Heap-allocated variables</li>
+<li>Static variables</li>
+</ul>
+</li>
+<li>
+<p>Private variables: Each thread has its own copy of the variable.</p>
+<ul>
+<li>Variables declared inside parallel region (recall separate stack frames)</li>
+</ul>
+</li>
+</ul>
+<div class="language-c highlight"><span class="filename">C</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">var1</span><span class="p">,</span><span class="w"> </span><span class="n">var2</span><span class="p">;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">var3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">malloc</span><span class="p">(...);</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="cp">#pragma omp parallel private(var2)</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">var4</span><span class="p">;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="c1">// var1 shared (default)</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="c1">// var2 private</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="c1">// var3 shared (heap)</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="c1">// var4 private (thread’s stack)</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="p">...</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="data-race">Data Race<a class="headerlink" href="#data-race" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Two memory accesses form a data race if:</p>
+<ul>
+<li>They are from different threads to the same location</li>
+<li>At least one is a write, and</li>
+<li>They occur one after another.</li>
+</ul>
+</li>
+<li>
+<p>Recall thread model: <strong>shared memory</strong>.</p>
+<ul>
+<li>For a given thread, these two operations don't necessarily happen together...! Thread scheduling is <em>non-deterministic</em>.<ul>
+<li>Read current value of <code>x</code></li>
+<li>Write new value of <code>x</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Not a data hazard!</p>
+<ul>
+<li>
+<p>Data hazard: Sequential instructions have data dependencies during concurrent execution (instruction-level parallelism via pipelining).</p>
+</li>
+<li>
+<p>Here, even with no ILP, can have nondeterministic results. This results from lack of synchronization on which thread accesses memory first.</p>
+</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Data Race Example</p>
+<div class="language-c highlight"><span class="filename">C</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cp">#pragma omp parallel</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">{</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<p><code>x</code> could be <code>0</code>~ # threads.</p>
+</div>
+<h2 id="openmp-synchronization">OpenMP Synchronization<a class="headerlink" href="#openmp-synchronization" title="Permanent link">&para;</a></h2>
+<ul>
+<li>To enforce multithreaded program correctness, we often need to <strong>synchronize</strong> threads, i.e., coordinate their execution.<ul>
+<li>Most commonly, know when one task is finished writing so that it is safe for another to read.</li>
+</ul>
+</li>
+</ul>
+<h3 id="critical-sections-with-openmp">Critical Sections with OpenMP<a class="headerlink" href="#critical-sections-with-openmp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A critical section is a segment of code that must be executed by a single thread at a time, thereby enforcing synchronization.</li>
+</ul>
+<div class="language-c highlight"><span class="filename">C</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">#pragma omp barrier</span>
+</span></code></pre></div>
+<ul>
+<li>Forces all threads to wait until all threads have hit the barrier.</li>
+</ul>
+<div class="language-c highlight"><span class="filename">C</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#pragma omp critical</span>
+</span></code></pre></div>
+<ul>
+<li>Creates a critical section within a parallel code segment; only one thread can run a critical section at a time.</li>
+</ul>
+<p>OpenMP has very restrictive parallelism.</p>
+<ul>
+<li>Really only good for parallelizing loops<ul>
+<li>If your critical section is too large, then effectively serial program → Amdahl's law quickly rears its ugly head</li>
+<li>If critical sections not defined well, can run into <strong>deadlock</strong>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="lock-synchronization">Lock Synchronization<a class="headerlink" href="#lock-synchronization" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Use a “Lock” to grant access to a region (critical section) so that only one thread can have the lock and operate at a time</p>
+<ul>
+<li>Need all processors to be able to access the lock, so use a location in shared memory as the <strong>lock</strong></li>
+</ul>
+</li>
+<li>
+<p>Processors read lock and either wait (if locked) or set lock and go into critical section</p>
+<ul>
+<li><code>0</code> means lock is free / open / unlocked / lock off</li>
+<li><code>1</code> means lock is set / closed / locked / lock on</li>
+</ul>
+</li>
+<li>
+<p>Locks are one approach to implementing thread synchronization.</p>
+</li>
+<li>
+<p>Suppose lock in shared memory @ <code>0x5555 0000</code></p>
+</li>
+<li>
+<p>Pseudocode:</p>
+</li>
+</ul>
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Check lock @ 0x5555 0000
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Set lock @ 0x5555 0000
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Critical section (e.g. change shared variables)
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Unset lock @ 0x5555 0000
+</span></code></pre></div>
+<ul>
+<li>Two operations, formally:<ul>
+<li>Acquire: try to acquire the lock. If successful, keep going. Otherwise, wait and try later;</li>
+<li>Release: Unlock and continue (only works if we originally had the lock)</li>
+</ul>
+</li>
+</ul>
+<h2 id="lock-synchronization-realization">Lock Synchronization Realization<a class="headerlink" href="#lock-synchronization-realization" title="Permanent link">&para;</a></h2>
+<h3 id="hardware-synchronization">Hardware Synchronization<a class="headerlink" href="#hardware-synchronization" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Hardware support required to prevent an interloper (another thread) from changing the value</p>
+<ul>
+<li><strong>Atomic</strong> read/write memory operation (all other operations must to happen strictly before/after the read/write)</li>
+<li>No other access to the location allowed between the read and write</li>
+</ul>
+</li>
+<li>
+<p>How to implement in software?</p>
+<ul>
+<li>Single instruction: atomic swap of register ↔ memory through atomic instructions;</li>
+<li>Pair of instructions: one for read (and lock), one for write (and unlock);</li>
+</ul>
+</li>
+<li>
+<p>Needed even on uniprocessor systems</p>
+<ul>
+<li>Interrupts can happen: can trigger thread context switches...</li>
+</ul>
+</li>
+</ul>
+<h3 id="risc-v-two-solutions">RISC-V: Two solutions<a class="headerlink" href="#risc-v-two-solutions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Option 1: Read/Write Pairs</p>
+<ul>
+<li>Pair of instructions for “linked” read and write</li>
+<li>Load-reserved and Store-conditional</li>
+<li>No other access permitted between read and write</li>
+<li>Must use shared memory (multiprocessing)</li>
+</ul>
+</li>
+<li>
+<p>Option 2: Atomic Memory Operations</p>
+<ul>
+<li>Atomic swap of register ↔ memory</li>
+</ul>
+</li>
+</ul>
+<h4 id="option-1-readwrite-pairs">Option 1: Read/Write Pairs<a class="headerlink" href="#option-1-readwrite-pairs" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Load-reserved instruction: <code>lr rd, rs</code></p>
+<ul>
+<li>Load the word (doubleword) pointed to by <code>rs</code> into <code>rd</code>, and register a (hardware thread) reservation set <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.4 6 14 4H5v17h2v-7h5.6l.4 2h7V6z"/></svg></span></li>
+</ul>
+</li>
+<li>
+<p>Store-conditional: <code>sc rd, rs1, rs2</code></p>
+<ul>
+<li>Store the value in rs2 into the memory location pointed to by rs1, only if the reservation is still valid and set the status in <code>rd</code><ul>
+<li>Returns 0 (success) to <code>rd</code> if location has not changed since the lr</li>
+<li>Returns nonzero (failure) to <code>rd</code> if location has changed: Actual store will not take place</li>
+</ul>
+</li>
+<li>Invalid the (hardware thread) reservation whether success or not <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.36 6 .4 2H18v6h-3.36l-.4-2H7V6zM14 4H5v17h2v-7h5.6l.4 2h7V6h-5.6"/></svg></span></li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../img/lrsc.jpeg" /></p>
+<div class="grid">
+<div class="language-c highlight"><span class="filename">C</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">    </span><span class="n">li</span><span class="w"> </span><span class="n">t2</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nl">Try</span><span class="p">:</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">lr</span><span class="w"> </span><span class="n">t1</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="n">bne</span><span class="w"> </span><span class="n">t1</span><span class="p">,</span><span class="w"> </span><span class="n">zero</span><span class="p">,</span><span class="w"> </span><span class="n">Try</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="n">sc</span><span class="w"> </span><span class="n">t0</span><span class="p">,</span><span class="w"> </span><span class="n">s1</span><span class="p">,</span><span class="w"> </span><span class="n">t2</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="nl">Locked</span><span class="p">:</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="cp"># critical section</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="nl">Unlocked</span><span class="p">:</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="n">sw</span><span class="w"> </span><span class="n">zero</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">(</span><span class="n">s1</span><span class="p">)</span>
+</span></code></pre></div>
+<p><img alt="" src="../img/rwpairs.png" /></p>
+</div>
+<h4 id="option-2-risc-v-atomic-memory-operations-amos">Option 2: RISC-V Atomic Memory Operations (AMOs)<a class="headerlink" href="#option-2-risc-v-atomic-memory-operations-amos" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Encoded with an R-type instruction format</p>
+<ul>
+<li><code>swap</code>, <code>add</code>, <code>and</code>, <code>or</code>, <code>xor</code>, <code>max</code>, <code>min</code></li>
+<li><code>AMOSWAP rd, rs2, (rs1)</code></li>
+<li><code>AMOADD rd, rs2, (rs1)</code></li>
+</ul>
+</li>
+<li>
+<p>Take the value pointed to by <code>rs1</code></p>
+<ul>
+<li>Load it into <code>rd</code></li>
+<li>Apply the operation to that value with the contents in <code>rs2</code><ul>
+<li>If <code>rs2</code> = <code>rd</code>, use the old value in <code>rd</code></li>
+</ul>
+</li>
+<li>Store the result back to where <code>rs1</code> is pointed to</li>
+</ul>
+</li>
+<li>
+<p>This allows atomic swap as a primitive</p>
+<ul>
+<li>It also allows "reduction operations" that are common to be efficiently implemented</li>
+</ul>
+</li>
+</ul>
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>    li t0, 1
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Try:
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    amoswap.w.aq t1, t0, 0(a0)
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    bnez t1, Try
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    # critical section
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>Unlocked:
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    amoswap.w.rl zero, zero, 0(a0)
+</span></code></pre></div>
 
 
 
@@ -2972,16 +3632,90 @@
 
 
   
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="最后更新">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年5月11日 17:13:30"><span class="timeago" datetime="2025-05-11T17:13:30+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月11日 17:13:30">2025-05-11</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="创建日期">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年5月11日 17:13:30"><span class="timeago" datetime="2025-05-11T17:13:30+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月11日 17:13:30">2025-05-11</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
   
 
 
 
-  
 
+  <h2 id="__comments">评论</h2>
+  <script src="https://giscus.app/client.js"
+        data-repo="Github-Anderson/Github-Anderson.github.io"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzNjk3MjcwNTc="
+        data-category="Announcements"
+        data-category-id="DIC_kwDOFgmWUc4Ce_DC"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
 
-  
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
 
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
 
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
                 
               </article>
@@ -3003,19 +3737,33 @@
   
     
       
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
-      
-      <nav class="md-footer__inner md-grid" aria-label="页脚" hidden>
+          
+          <a href="../parallelism/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Parallelism">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Parallelism
+              </div>
+            </div>
+          </a>
         
         
           
-          <a href="mkdocs/first/" class="md-footer__link md-footer__link--next" aria-label="下一页: 使用 Material for MkDocs 建立你的个人网站">
+          <a href="../../CS181/" class="md-footer__link md-footer__link--next" aria-label="下一页: Artificial Intelligence I">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                使用 Material for MkDocs 建立你的个人网站
+                Artificial Intelligence I
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -3083,16 +3831,16 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit", "content.tooltips", "navigation.footer"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit", "content.tooltips", "navigation.footer"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
-        <script src="../js/timeago.min.js"></script>
+        <script src="../../../js/timeago.min.js"></script>
       
-        <script src="../js/timeago_mkdocs_material.js"></script>
+        <script src="../../../js/timeago_mkdocs_material.js"></script>
       
-        <script src="../mkdocs/javascripts/katex.js"></script>
+        <script src="../../../mkdocs/javascripts/katex.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
       
