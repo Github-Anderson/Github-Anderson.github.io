@@ -12,13 +12,13 @@
         <meta name="author" content="Anderson_Yang">
       
       
-        <link rel="canonical" href="https://Github-Anderson.github.io/lessons/CS101/dp/">
+        <link rel="canonical" href="https://Github-Anderson.github.io/lessons/CS110/vm/">
       
       
-        <link rel="prev" href="../graph/">
+        <link rel="prev" href="../os/">
       
       
-        <link rel="next" href="../pnp/">
+        <link rel="next" href="../../CS181/">
       
       
       <link rel="icon" href="../../../assets/icon/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Dynamic Programming - Anderson_Yang 的个人网站</title>
+        <title>Virtual Memory - Anderson_Yang 的个人网站</title>
       
     
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dynamic-programming" class="md-skip">
+        <a href="#virtual-memory" class="md-skip">
           跳转至
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dynamic Programming
+              Virtual Memory
             
           </span>
         </div>
@@ -1700,6 +1700,270 @@
                 
   
   
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../CS101/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    算法与数据结构 CS101
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            算法与数据结构 CS101
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS101/abt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Abstruct Data Type
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS101/algo-analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Algorithm Analysis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS101/sorting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sorting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS101/divide-and-conquer/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Divide and Conquer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS101/greedy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Greedy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS101/graph/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Graph
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS101/dp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Dynamic Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CS101/pnp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reductions, P and NP
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1709,6 +1973,12 @@
       
         
           
+        
+      
+        
+      
+        
+      
         
       
         
@@ -1738,7 +2008,7 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" checked>
         
           
           <div class="md-nav__link md-nav__container">
@@ -1747,7 +2017,7 @@
   
   
   <span class="md-ellipsis">
-    算法与数据结构 CS101
+    计算机体系结构 I CS110
     
   </span>
   
@@ -1755,16 +2025,16 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_2_9" id="__nav_2_9_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_10">
             <span class="md-nav__icon md-icon"></span>
-            算法与数据结构 CS101
+            计算机体系结构 I CS110
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1777,12 +2047,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../abt/" class="md-nav__link">
+      <a href="../number/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Abstruct Data Type
+    Everything is a Number
     
   </span>
   
@@ -1800,12 +2070,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../algo-analysis/" class="md-nav__link">
+      <a href="../c/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Algorithm Analysis
+    C Language
     
   </span>
   
@@ -1823,12 +2093,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../sorting/" class="md-nav__link">
+      <a href="../risc-v/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Sorting
+    RISC-V
     
   </span>
   
@@ -1846,12 +2116,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../divide-and-conquer/" class="md-nav__link">
+      <a href="../call/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Divide and Conquer
+    CALL
     
   </span>
   
@@ -1869,12 +2139,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../greedy/" class="md-nav__link">
+      <a href="../circuit/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Greedy
+    Digital Circuits and Systems
     
   </span>
   
@@ -1892,12 +2162,104 @@
   
   
     <li class="md-nav__item">
-      <a href="../graph/" class="md-nav__link">
+      <a href="../pipeline/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Graph
+    Pipeline &amp; Multi-Issue
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cache/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cache
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parallelism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Parallelism
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tlp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Thread-Level Parallelism
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operating System
     
   </span>
   
@@ -1929,7 +2291,7 @@
   
   
   <span class="md-ellipsis">
-    Dynamic Programming
+    Virtual Memory
     
   </span>
   
@@ -1942,7 +2304,7 @@
   
   
   <span class="md-ellipsis">
-    Dynamic Programming
+    Virtual Memory
     
   </span>
   
@@ -1965,73 +2327,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#definition" class="md-nav__link">
+  <a href="#intro-to-virtual-memory" class="md-nav__link">
     <span class="md-ellipsis">
-      Definition
+      Intro. to Virtual Memory
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#solve" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solve
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Solve">
+    <nav class="md-nav" aria-label="Intro. to Virtual Memory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-problem-analysis" class="md-nav__link">
+  <a href="#motivation" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Problem Analysis
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-define-state-and-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Define State and Variables
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#establish-state-transition-relationship" class="md-nav__link">
-    <span class="md-ellipsis">
-      Establish State Transition Relationship
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initialize-states" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initialize States
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bottom-up-iteration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bottom-Up Iteration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#return-the-result" class="md-nav__link">
-    <span class="md-ellipsis">
-      Return the Result
+      Motivation
     </span>
   </a>
   
@@ -2043,56 +2351,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#address-translation" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      Address Translation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Examples">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#page-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Page Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Page Table">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#weighted-interval-scheduling" class="md-nav__link">
+  <a href="#status-bits" class="md-nav__link">
     <span class="md-ellipsis">
-      Weighted Interval Scheduling
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Weighted Interval Scheduling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      Description
+      Status Bits
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#solve-brute-force" class="md-nav__link">
+  <a href="#dirty-bit" class="md-nav__link">
     <span class="md-ellipsis">
-      Solve: Brute Force
+      Dirty Bit
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#solve-memoization-top-down" class="md-nav__link">
+  <a href="#protection" class="md-nav__link">
     <span class="md-ellipsis">
-      Solve: Memoization (Top-down)
+      Protection
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#solve-bottom-up" class="md-nav__link">
+  <a href="#multi-level-page-tables" class="md-nav__link">
     <span class="md-ellipsis">
-      Solve: Bottom-up
+      Multi-Level Page Tables
     </span>
   </a>
   
@@ -2102,84 +2409,13 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#segmented-least-squares" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#tlb" class="md-nav__link">
     <span class="md-ellipsis">
-      Segmented Least Squares
+      TLB
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Segmented Least Squares">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Definition
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#solve_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solve
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#knapsack-problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      Knapsack Problem
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Knapsack Problem">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Definition
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#solve_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solve
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#drop-an-egg" class="md-nav__link">
-    <span class="md-ellipsis">
-      Drop an Egg
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2187,368 +2423,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pnp/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Reductions, P and NP
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../CS110/" class="md-nav__link ">
-              
-  
-  
-  <span class="md-ellipsis">
-    计算机体系结构 I CS110
-    
-  </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_10">
-            <span class="md-nav__icon md-icon"></span>
-            计算机体系结构 I CS110
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../CS110/number/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Everything is a Number
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../CS110/c/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    C Language
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../CS110/risc-v/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    RISC-V
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../CS110/call/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    CALL
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../CS110/circuit/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Digital Circuits and Systems
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../CS110/pipeline/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Pipeline &amp; Multi-Issue
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../CS110/cache/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Cache
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../CS110/parallelism/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Parallelism
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../CS110/tlp/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Thread-Level Parallelism
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../CS110/os/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Operating System
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../CS110/vm/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Virtual Memory
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -3253,73 +3127,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#definition" class="md-nav__link">
+  <a href="#intro-to-virtual-memory" class="md-nav__link">
     <span class="md-ellipsis">
-      Definition
+      Intro. to Virtual Memory
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#solve" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solve
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Solve">
+    <nav class="md-nav" aria-label="Intro. to Virtual Memory">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-problem-analysis" class="md-nav__link">
+  <a href="#motivation" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Problem Analysis
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-define-state-and-variables" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Define State and Variables
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#establish-state-transition-relationship" class="md-nav__link">
-    <span class="md-ellipsis">
-      Establish State Transition Relationship
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#initialize-states" class="md-nav__link">
-    <span class="md-ellipsis">
-      Initialize States
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bottom-up-iteration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bottom-Up Iteration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#return-the-result" class="md-nav__link">
-    <span class="md-ellipsis">
-      Return the Result
+      Motivation
     </span>
   </a>
   
@@ -3331,56 +3151,55 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
+  <a href="#address-translation" class="md-nav__link">
     <span class="md-ellipsis">
-      Examples
+      Address Translation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Examples">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#page-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Page Table
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Page Table">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#weighted-interval-scheduling" class="md-nav__link">
+  <a href="#status-bits" class="md-nav__link">
     <span class="md-ellipsis">
-      Weighted Interval Scheduling
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Weighted Interval Scheduling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#description" class="md-nav__link">
-    <span class="md-ellipsis">
-      Description
+      Status Bits
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#solve-brute-force" class="md-nav__link">
+  <a href="#dirty-bit" class="md-nav__link">
     <span class="md-ellipsis">
-      Solve: Brute Force
+      Dirty Bit
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#solve-memoization-top-down" class="md-nav__link">
+  <a href="#protection" class="md-nav__link">
     <span class="md-ellipsis">
-      Solve: Memoization (Top-down)
+      Protection
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#solve-bottom-up" class="md-nav__link">
+  <a href="#multi-level-page-tables" class="md-nav__link">
     <span class="md-ellipsis">
-      Solve: Bottom-up
+      Multi-Level Page Tables
     </span>
   </a>
   
@@ -3390,84 +3209,13 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#segmented-least-squares" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#tlb" class="md-nav__link">
     <span class="md-ellipsis">
-      Segmented Least Squares
+      TLB
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Segmented Least Squares">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Definition
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#solve_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solve
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#knapsack-problem" class="md-nav__link">
-    <span class="md-ellipsis">
-      Knapsack Problem
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Knapsack Problem">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#definition_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Definition
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#solve_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      Solve
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#drop-an-egg" class="md-nav__link">
-    <span class="md-ellipsis">
-      Drop an Egg
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -3487,7 +3235,7 @@
 
 
   
-    <a href="https://github.com/Github-Anderson/Github-Anderson.github.io/edit/main/docs/lessons/CS101/dp.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/Github-Anderson/Github-Anderson.github.io/edit/main/docs/lessons/CS110/vm.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3495,225 +3243,171 @@
   
 
 
-<h1 id="dynamic-programming">Dynamic Programming<a class="headerlink" href="#dynamic-programming" title="Permanent link">&para;</a></h1>
-<div class="admonition quote">
-<p class="admonition-title">Fibonacci Numbers</p>
-<p>Consider this function</p>
-<p><div class="language-cpp highlight"><span class="filename">C++</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">double</span><span class="w"> </span><span class="nf">F</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">1.0</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">F</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span>
-</span></code></pre></div>
-The run-time of this algorithm is</p>
-<div class="arithmatex">\[
-T(n) = 
-\begin{cases}
-\Theta(1), &amp;n \leq 1 \\
-T(n - 1) + T(n - 2) + \Theta(1), &amp;n &gt; 1
-\end{cases}
-\]</div>
-<p>So <span class="arithmatex">\(T(n) = O(2^n)\)</span>.</p>
-<p>The problem is we need to call the function with some small inputs for millions of times.</p>
-<p>And here is a possible solution:</p>
-<ul>
-<li>To avoid calculating values multiple times, store intermediate calculations in a table.</li>
-<li>When storing intermediate results, this process is called <em>memoization</em> (The root is <em>memo</em>).</li>
-<li>We save (memoize) computed answers for possible later reuse, rather than re-computing the answer multiple times.</li>
-</ul>
-</div>
-<h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h2>
-<p>In solving optimization problems, the top-down approach may require repeatedly obtaining optimal solutions for the same sub-problem.</p>
-<p>Dynamic programming is distinct from divide-and-conquer, as the divide-and-conquer approach works well if the sub-problems are essentially unique.
-- Storing intermediate results would only waste memory.</p>
-<p>If sub-problems re-occur, the problem is said to have overlapping sub-problems.</p>
-<ul>
-<li>Break up a problem into a series of overlapping subproblems.</li>
-<li>Combine solutions to smaller subproblems to form solution to large subproblem.</li>
-</ul>
-<h2 id="solve">Solve<a class="headerlink" href="#solve" title="Permanent link">&para;</a></h2>
-<h4 id="1-problem-analysis">1. Problem Analysis<a class="headerlink" href="#1-problem-analysis" title="Permanent link">&para;</a></h4>
+<h1 id="virtual-memory">Virtual Memory<a class="headerlink" href="#virtual-memory" title="Permanent link">&para;</a></h1>
+<h2 id="intro-to-virtual-memory">Intro. to Virtual Memory<a class="headerlink" href="#intro-to-virtual-memory" title="Permanent link">&para;</a></h2>
+<h3 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>Understand the problem requirements: identify the goal and find the optimal solution.</p>
-</li>
-<li>
-<p>Analyze the problem scale and break it into subproblems.</p>
-</li>
-<li>
-<p>Ensure the problem satisfies these two properties:</p>
-<ol>
-<li>
-<p>Optimal Substructure: The solution of a problem can be composed of the solutions of its subproblems.</p>
-</li>
-<li>
-<p>Overlapping Subproblems: Subproblems are solved multiple times.</p>
-</li>
-</ol>
-</li>
-</ul>
-<h4 id="2-define-state-and-variables">2. Define State and Variables<a class="headerlink" href="#2-define-state-and-variables" title="Permanent link">&para;</a></h4>
+<p>Adding disks to memory hierarchy</p>
 <ul>
-<li>
-<p>Clearly define the <code>dp[i]</code> state.</p>
-<ul>
-<li>Example: <code>dp[i]</code> represents the number of ways to reach the ith step.</li>
+<li>Need to devise a mechanism to “connect” memory and disk in the memory hierarchy</li>
 </ul>
 </li>
 <li>
-<p>Determine the valid range of states (boundary conditions).</p>
-</li>
-</ul>
-<h4 id="establish-state-transition-relationship">Establish State Transition Relationship<a class="headerlink" href="#establish-state-transition-relationship" title="Permanent link">&para;</a></h4>
+<p>Simplifying memory for applications</p>
 <ul>
-<li>
-<p>Derive the recursive relationship to transition from smaller problems to larger ones.</p>
-<ul>
-<li>Example: <code>dp[i]</code> = <code>dp[i-1]</code> + <code>dp[i-2]</code> (Frog jump problem).</li>
-</ul>
-</li>
-</ul>
-<h4 id="initialize-states">Initialize States<a class="headerlink" href="#initialize-states" title="Permanent link">&para;</a></h4>
-<ul>
-<li>
-<p>Initialize the dp table or variables based on the base cases.</p>
-<ul>
-<li>Example: <code>dp[0] = 1</code>, <code>dp[1] = 1</code>.</li>
-</ul>
-</li>
-</ul>
-<h4 id="bottom-up-iteration">Bottom-Up Iteration<a class="headerlink" href="#bottom-up-iteration" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Solve the problem iteratively starting from the smallest subproblem.
-Avoid redundant calculations by storing the results of subproblems in a table or array.</li>
-</ul>
-<h4 id="return-the-result">Return the Result<a class="headerlink" href="#return-the-result" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Output the result based on the final <code>dp</code> value(s).</li>
-</ul>
-<h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<h3 id="weighted-interval-scheduling">Weighted Interval Scheduling<a class="headerlink" href="#weighted-interval-scheduling" title="Permanent link">&para;</a></h3>
-<h4 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Job <span class="arithmatex">\(j\)</span> starts at <span class="arithmatex">\(s_j\)</span>, finishes at <span class="arithmatex">\(f_j\)</span>, and has weight <span class="arithmatex">\(w_j  &gt; 0\)</span>.</li>
-<li>Two jobs are <strong>compatible</strong> if they don’t overlap.</li>
-<li>Goal: find max-weight subset of mutually compatible jobs.</li>
-</ul>
-<h4 id="solve-brute-force">Solve: Brute Force<a class="headerlink" href="#solve-brute-force" title="Permanent link">&para;</a></h4>
-<p>Define $p(j) = $ largest index <span class="arithmatex">\(i &lt; j\)</span> such that job <span class="arithmatex">\(i\)</span> is compatible with <span class="arithmatex">\(j\)</span>, $\text{OPT}(j) = $ max weight of any subset of mutually compatible jobs for subproblem consisting only of jobs <span class="arithmatex">\(1, 2, \dots, j\)</span>.</p>
-<ul>
-<li>
-<p>Case 1: <span class="arithmatex">\(\text{OPT}(j)\)</span> does not select job <span class="arithmatex">\(j\)</span>.</p>
-<div class="arithmatex">\[
-\text{OPT}(j) = \text{OPT}(j-1)
-\]</div>
-</li>
-<li>
-<p>Case 2: <span class="arithmatex">\(\text{OPT}(j)\)</span> selects job <span class="arithmatex">\(j\)</span>.</p>
-<ul>
-<li>Collect profit <span class="arithmatex">\(w_j\)</span>.</li>
-<li>Can't use incompatible jobs <span class="arithmatex">\(\{p(j) + 1, p(j) + 2, \dots, j -1\}\)</span></li>
-<li>Must include optimal solution to problem consisting of remaining compatible jobs <span class="arithmatex">\(1, 2, \dots, p(j)\)</span>.</li>
-</ul>
-<div class="arithmatex">\[
-\text{OPT}(j) = w_j + \text{OPT}(p(j)
-\]</div>
-</li>
-</ul>
-<p>So</p>
-<div class="arithmatex">\[
-\text{OPT}(j) = \max{(\text{OPT}(j-1), w_j + \text{OPT}(p(j)))}
-\]</div>
-<h4 id="solve-memoization-top-down">Solve: Memoization (Top-down)<a class="headerlink" href="#solve-memoization-top-down" title="Permanent link">&para;</a></h4>
-<p><img alt="" src="../img/top-down.png" /></p>
-<ul>
-<li>Cache result of subproblem <span class="arithmatex">\(j\)</span> in <span class="arithmatex">\(M[j]\)</span>.</li>
-<li>
-<p>Use <span class="arithmatex">\(M[j]\)</span> to avoid solving subproblem <span class="arithmatex">\(j\)</span> more than once.</p>
-</li>
-<li>
-<p>Time Complexity: <span class="arithmatex">\(O(n)\)</span></p>
-</li>
-</ul>
-<h4 id="solve-bottom-up">Solve: Bottom-up<a class="headerlink" href="#solve-bottom-up" title="Permanent link">&para;</a></h4>
-<p><img alt="" src="../img/bottom-up.png" /></p>
-<ul>
-<li>Time Complexity: <span class="arithmatex">\(O(n \log n)\)</span></li>
-</ul>
-<h3 id="segmented-least-squares">Segmented Least Squares<a class="headerlink" href="#segmented-least-squares" title="Permanent link">&para;</a></h3>
-<h4 id="definition_1">Definition<a class="headerlink" href="#definition_1" title="Permanent link">&para;</a></h4>
-<div class="admonition quote">
-<p class="admonition-title">Least Squares</p>
-<ul>
-<li>Given <span class="arithmatex">\(n\)</span> points in the plane: <span class="arithmatex">\((x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)\)</span>.</li>
-<li>Find a line <span class="arithmatex">\(y = ax + b\)</span> that minimizes the sum of the squared error:</li>
-</ul>
-<div class="arithmatex">\[
-\text{SSE} = \sum_{i=1}^n (y_i - ax_i - b)^2
-\]</div>
-</div>
-<ul>
-<li>Points lie roughly on a sequence of several line segments.</li>
-<li>Given <span class="arithmatex">\(n\)</span> points in the plane: <span class="arithmatex">\((x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)\)</span> with <span class="arithmatex">\(x_1 &lt; x_2 &lt; \cdots &lt; x_n\)</span> find a sequence of lines that minimizes <span class="arithmatex">\(f(x)\)</span>.</li>
-</ul>
-<div class="admonition question">
-<p class="admonition-title">What is a reasonable choice for <span class="arithmatex">\(f(x)\)</span> to balance accuracy and parsimony?</p>
-</div>
-<ul>
-<li>
-<p>Goal: Minimize <span class="arithmatex">\(f(x) = E + cL\)</span> for some constant <span class="arithmatex">\(c &gt; 0\)</span>, where</p>
-<ul>
-<li>$E = $ sum of the sums of the squared errors in each segment.</li>
-<li>$L = $ number of lines.</li>
-</ul>
-</li>
-</ul>
-<h4 id="solve_1">Solve<a class="headerlink" href="#solve_1" title="Permanent link">&para;</a></h4>
-<p>Define <span class="arithmatex">\(\text{OPT}(j) =\)</span> minimum cost for points <span class="arithmatex">\(p_1, p_2, \dots, p_j\)</span>, <span class="arithmatex">\(e_{ij} =\)</span> SSE for points <span class="arithmatex">\(p_i, p_{i+1}, \dots, p_j\)</span>.</p>
-<div class="arithmatex">\[
-\text{OPT}(j) = 
-\begin{cases}
-    0, &amp;\text{if }j = 0 \\
-    \displaystyle \min_{1 \leq i \leq j} 
-    \{e_{ij} + c + \text{OPT}(i - 1)\}, &amp; \text{if }j&gt;0
-\end{cases}
-\]</div>
-<h3 id="knapsack-problem">Knapsack Problem<a class="headerlink" href="#knapsack-problem" title="Permanent link">&para;</a></h3>
-<h4 id="definition_2">Definition<a class="headerlink" href="#definition_2" title="Permanent link">&para;</a></h4>
-<ul>
-<li>
-<p>Goal: Pack knapsack so as to maximize total value.</p>
-<ul>
-<li>There are <span class="arithmatex">\(n\)</span> items: item <span class="arithmatex">\(i\)</span> provides value <span class="arithmatex">\(v_i &gt; 0\)</span> and weighs </li>
-<li>Knapsack has weight capacity of <span class="arithmatex">\(W\)</span>.</li>
-</ul>
-</li>
-</ul>
-<h4 id="solve_2">Solve<a class="headerlink" href="#solve_2" title="Permanent link">&para;</a></h4>
-<p>Define $\text{OPT}(i, w) =  $max-profit subset of items <span class="arithmatex">\(1, \dots, i\)</span> with weight limit <span class="arithmatex">\(w\)</span>.</p>
-<ul>
-<li>
-<p>Case 1: <span class="arithmatex">\(\text{OPT}(i, w)\)</span> does not select item <span class="arithmatex">\(i\)</span>.</p>
-<ul>
-<li><span class="arithmatex">\(\text{OPT}\)</span> selects best of <span class="arithmatex">\(\{1, 2, \dots, i-1\}\)</span> using weight limit <span class="arithmatex">\(w\)</span>.</li>
+<li>Applications should see the straightforward memory layout we saw earlier -&gt;</li>
+<li>User-space applications should think they own all of memory</li>
+<li>So we give them a virtual view of memory</li>
 </ul>
 </li>
 <li>
-<p>Case 2: <span class="arithmatex">\(\text{OPT}(i, w)\)</span> selects item <span class="arithmatex">\(i\)</span>.</p>
+<p>Protection between processes</p>
 <ul>
-<li>Collect value <span class="arithmatex">\(v_i\)</span>.</li>
-<li>New weight limit <span class="arithmatex">\(= w - w_i\)</span>.</li>
-<li><span class="arithmatex">\(\text{OPT}(i, w)\)</span> selects best of <span class="arithmatex">\(\{1, 2, \dots, i-1\}\)</span> using this new weight limit.</li>
+<li>With a bare system, addresses issued with loads/stores are real physical addresses</li>
+<li>This means any program can issue any address, therefore can access any part of memory, even areas which it doesn't own</li>
+</ul>
+</li>
+<li>
+<p>Memory fragmentation</p>
+<ul>
+<li>As programs come and go, the storage is "fragmented".</li>
+<li>Therefore, at some stage programs have to be moved around to compact the storage.</li>
 </ul>
 </li>
 </ul>
-<div class="arithmatex">\[
-\text{OPT}(i, w) = 
-\begin{cases}
-    0, &amp;\text{if } i=0 \\
-    \text{OPT}(i-1, w), &amp;\text{if }w_i &gt; w \\
-    \max \{\text{OPT}(i-1, w), v_i + \text{OPT}(i-1, w-w_i)\}, &amp;\text{otherwise}
-\end{cases}
-\]</div>
-<h3 id="drop-an-egg">Drop an Egg<a class="headerlink" href="#drop-an-egg" title="Permanent link">&para;</a></h3>
+<h2 id="address-translation">Address Translation<a class="headerlink" href="#address-translation" title="Permanent link">&para;</a></h2>
+<p>We want to translate virtual addresses to physical addresses.</p>
+<p><img alt="" src="../img/page-hit.png" /></p>
+<p><img alt="" src="../img/page-fault.png" /></p>
+<h2 id="page-table">Page Table<a class="headerlink" href="#page-table" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>VPN</th>
+<th>PPN</th>
+<th>Status</th>
+<th>Dirty</th>
+<th>Protection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0xFFFF F004</td>
+<td>PPN/DPN</td>
+<td>-</td>
+<td>0/1</td>
+<td>-</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<h3 id="status-bits">Status Bits<a class="headerlink" href="#status-bits" title="Permanent link">&para;</a></h3>
+<p>On each memory access, first check if page table entry is “valid”.</p>
+<ul>
+<li>
+<p>Valid/on → In main memory, read/write data as directed by process.</p>
+</li>
+<li>
+<p>Not Valid/off → On disk</p>
+<ul>
+<li>Trigger page fault exception, OS intervenes to allocate the page into DRAM (trap handler);</li>
+<li>If out of memory, select a page to replace in DRAM</li>
+<li>Store outgoing page to disk, and page table entry that maps that VPN-&gt;PPN is marked as invalid/DPN</li>
+<li>Read requested page from disk into DRAM and update with a valid PPN</li>
+<li>Finally, read/write data as directed by process.</li>
+</ul>
+</li>
+</ul>
+<h3 id="dirty-bit">Dirty Bit<a class="headerlink" href="#dirty-bit" title="Permanent link">&para;</a></h3>
+<p>When a page gets replaced:
+- Dirty bit on: Write outgoing page back to disk.
+- Dirty bit off: No disk write.</p>
+<h3 id="protection">Protection<a class="headerlink" href="#protection" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../img/protection.png" /></p>
+<h3 id="multi-level-page-tables">Multi-Level Page Tables<a class="headerlink" href="#multi-level-page-tables" title="Permanent link">&para;</a></h3>
+<p><img alt="" src="../img/multi-level-pt.png" /></p>
+<h2 id="tlb">TLB<a class="headerlink" href="#tlb" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Address</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Virtual Address</td>
+<td><span class="arithmatex">\(A_{\text{virt}}\)</span></td>
+</tr>
+<tr>
+<td>Physical Address</td>
+<td><span class="arithmatex">\(A_{\text{phys}}\)</span></td>
+</tr>
+<tr>
+<td>Page Size</td>
+<td><span class="arithmatex">\(P = 2^{o}\)</span></td>
+</tr>
+<tr>
+<td>Associative</td>
+<td><span class="arithmatex">\(A_{\text{assoc}}\)</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Address</th>
+<th>Width</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VPN</td>
+<td><span class="arithmatex">\(A_{\text{virt}} - o\)</span></td>
+</tr>
+<tr>
+<td>PPN</td>
+<td><span class="arithmatex">\(A_{\text{phys}} - o\)</span></td>
+</tr>
+<tr>
+<td>Offset</td>
+<td><span class="arithmatex">\(o\)</span></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameters</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td># Virtual Pages</td>
+<td><span class="arithmatex">\(2^{A_{\text{virt}} - o}\)</span></td>
+</tr>
+<tr>
+<td># Physical Pages</td>
+<td><span class="arithmatex">\(2^{A_{\text{phys}} - o}\)</span></td>
+</tr>
+<tr>
+<td># TLB Entries</td>
+<td><span class="arithmatex">\(2^{A_{\text{virt}} - o} / A_{\text{assoc}}\)</span></td>
+</tr>
+<tr>
+<td># Page Table Entries</td>
+<td><span class="arithmatex">\(2^{A_{\text{virt}} - o}\)</span></td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -3736,7 +3430,7 @@ Avoid redundant calculations by storing the results of subproblems in a table or
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2024年12月27日 03:50:28 UTC"><span class="timeago" datetime="2024-12-27T03:50:28+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2024年12月27日 03:50:28 UTC">2024-12-27</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年5月27日 01:55:42 UTC"><span class="timeago" datetime="2025-05-27T01:55:42+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月27日 01:55:42 UTC">2025-05-27</span>
   </span>
 
     
@@ -3746,7 +3440,7 @@ Avoid redundant calculations by storing the results of subproblems in a table or
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2024年12月11日 06:08:40 UTC"><span class="timeago" datetime="2024-12-11T06:08:40+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2024年12月11日 06:08:40 UTC">2024-12-11</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年5月27日 01:55:42 UTC"><span class="timeago" datetime="2025-05-27T01:55:42+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月27日 01:55:42 UTC">2025-05-27</span>
   </span>
 
     
@@ -3830,7 +3524,7 @@ Avoid redundant calculations by storing the results of subproblems in a table or
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../graph/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Graph">
+          <a href="../os/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Operating System">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3840,20 +3534,20 @@ Avoid redundant calculations by storing the results of subproblems in a table or
                 上一页
               </span>
               <div class="md-ellipsis">
-                Graph
+                Operating System
               </div>
             </div>
           </a>
         
         
           
-          <a href="../pnp/" class="md-footer__link md-footer__link--next" aria-label="下一页: Reductions, P and NP">
+          <a href="../../CS181/" class="md-footer__link md-footer__link--next" aria-label="下一页: Artificial Intelligence I">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Reductions, P and NP
+                Artificial Intelligence I
               </div>
             </div>
             <div class="md-footer__button md-icon">

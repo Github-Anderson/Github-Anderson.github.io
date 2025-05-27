@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../../assets/icon/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -1993,6 +1993,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -2518,6 +2522,52 @@
   
   <span class="md-ellipsis">
     Thread-Level Parallelism
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../os/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Operating System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Virtual Memory
     
   </span>
   
@@ -3828,6 +3878,87 @@
 </ul>
 </li>
 </ul>
+<h1 id="advanced-cache">Advanced Cache<a class="headerlink" href="#advanced-cache" title="Permanent link">&para;</a></h1>
+<h2 id="processors-with-shared-memory">Processors with Shared Memory<a class="headerlink" href="#processors-with-shared-memory" title="Permanent link">&para;</a></h2>
+<h3 id="multiprocessor-with-shared-memory">Multiprocessor with Shared Memory<a class="headerlink" href="#multiprocessor-with-shared-memory" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A multiprocessor with shared-memory offers multiple cores/processors a single, shared, coherent memory.<ul>
+<li>Should be called shared-address multiprocessor, because all processors share single physical address space (more later, VM)</li>
+</ul>
+</li>
+</ul>
+<h3 id="multiprocessor-cache">Multiprocessor Cache<a class="headerlink" href="#multiprocessor-cache" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Memory is a performance bottleneck even with one processor.</p>
+</li>
+<li>
+<p>Use private caches to reduce bandwidth demands on main memory!</p>
+</li>
+<li>
+<p>Only cache misses have to access the shared common memory</p>
+<ul>
+<li>Each core/processor has its own cache</li>
+<li>All cores communicate with each other and memory through a bus</li>
+<li>One memory shared by all cores</li>
+</ul>
+</li>
+</ul>
+<h2 id="cache-coherence">Cache Coherence<a class="headerlink" href="#cache-coherence" title="Permanent link">&para;</a></h2>
+<h3 id="cache-coherence_1">Cache Coherence<a class="headerlink" href="#cache-coherence_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Coherent: any read of a data item returns the most recently written value of that data item</p>
+</li>
+<li>
+<p>Because there is shared memory, a computer architect must design the system to keep cache values coherent.</p>
+</li>
+<li>
+<p>Idea: When any processor has cache miss or writes, use the bus to notify other processors.</p>
+<ul>
+<li>If only reading, many processors can have copies</li>
+<li>If a processor writes, invalidate any other copies.</li>
+</ul>
+</li>
+<li>
+<p>One cache coherence protocol: Each cache controller "snoops" for write transactions on the common bus</p>
+<ul>
+<li>Bus is a broadcast medium</li>
+<li>On any block request to the bus, check if own cache has a copy<ul>
+<li>If exists, then invalidate own cache's copy</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="coherence-miss">Coherence Miss<a class="headerlink" href="#coherence-miss" title="Permanent link">&para;</a></h3>
+<p>New cache miss type: coherence miss (a.k.a. communication miss), caused by writes to shared data made by other processors.</p>
+<ul>
+<li>For some parallel programs, coherence misses can dominate total misses;</li>
+<li>The 4th "C" of cache misses</li>
+</ul>
+<h2 id="snoopy-cache">Snoopy Cache<a class="headerlink" href="#snoopy-cache" title="Permanent link">&para;</a></h2>
+<h4 id="write-invalidate">Write Invalidate<a class="headerlink" href="#write-invalidate" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Processor <span class="arithmatex">\(k\)</span> wanting to write to an address, grabs a bus cycle and sends a "write invalidate" message</li>
+<li>All the other snooping caches invalidate their copy of appropriate cache line</li>
+<li>Processor <span class="arithmatex">\(k\)</span> writes to its cached copy (assume for now that it also writes through to memory)</li>
+<li>Any shared read in the other processors will now miss in cache and refetch new data.</li>
+</ul>
+<h4 id="write-update">Write Update<a class="headerlink" href="#write-update" title="Permanent link">&para;</a></h4>
+<ul>
+<li>CPU wanting to write grabs bus cycle and broadcasts new data as it updates its own copy</li>
+<li>All snooping caches update their copy</li>
+</ul>
+<h2 id="advanced-cache_1">Advanced Cache<a class="headerlink" href="#advanced-cache_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Inclusiveness of multi-level caches</p>
+</li>
+<li>
+<p>If all blocks in the higher level cache are also present in the lower level cache, then the lower level cache is said to be inclusive of the higher level cache.</p>
+</li>
+</ul>
 
 
 
@@ -3850,7 +3981,7 @@
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年5月11日 17:13:30"><span class="timeago" datetime="2025-05-11T17:13:30+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月11日 17:13:30">2025-05-11</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年5月27日 01:55:42 UTC"><span class="timeago" datetime="2025-05-27T01:55:42+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月27日 01:55:42 UTC">2025-05-27</span>
   </span>
 
     
@@ -3860,7 +3991,7 @@
     <span class="md-icon" title="创建日期">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年4月16日 05:12:12"><span class="timeago" datetime="2025-04-16T05:12:12+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年4月16日 05:12:12">2025-04-16</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年4月16日 05:12:12 UTC"><span class="timeago" datetime="2025-04-16T05:12:12+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年4月16日 05:12:12 UTC">2025-04-16</span>
   </span>
 
     
