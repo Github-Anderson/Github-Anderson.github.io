@@ -254,3 +254,67 @@ The data can only be stored at one index, but there are multiple slots/blocks.
 	- Prefetch
 	- Increase level of cache
 	- Victim cache
+
+# Advanced Cache
+
+## Processors with Shared Memory
+
+### Multiprocessor with Shared Memory
+
+- A multiprocessor with shared-memory offers multiple cores/processors a single, shared, coherent memory.
+	- Should be called shared-address multiprocessor, because all processors share single physical address space (more later, VM)
+
+### Multiprocessor Cache
+
+- Memory is a performance bottleneck even with one processor.
+
+- Use private caches to reduce bandwidth demands on main memory!
+
+- Only cache misses have to access the shared common memory
+	- Each core/processor has its own cache
+	- All cores communicate with each other and memory through a bus
+	- One memory shared by all cores
+
+## Cache Coherence
+
+### Cache Coherence
+
+- Coherent: any read of a data item returns the most recently written value of that data item
+
+- Because there is shared memory, a computer architect must design the system to keep cache values coherent.
+
+- Idea: When any processor has cache miss or writes, use the bus to notify other processors.
+	- If only reading, many processors can have copies
+	- If a processor writes, invalidate any other copies.
+
+- One cache coherence protocol: Each cache controller "snoops" for write transactions on the common bus
+	- Bus is a broadcast medium
+	- On any block request to the bus, check if own cache has a copy
+		- If exists, then invalidate own cache's copy
+
+### Coherence Miss
+
+New cache miss type: coherence miss (a.k.a. communication miss), caused by writes to shared data made by other processors.
+
+- For some parallel programs, coherence misses can dominate total misses;
+- The 4th "C" of cache misses
+
+## Snoopy Cache
+
+#### Write Invalidate
+
+- Processor $k$ wanting to write to an address, grabs a bus cycle and sends a "write invalidate" message
+- All the other snooping caches invalidate their copy of appropriate cache line
+- Processor $k$ writes to its cached copy (assume for now that it also writes through to memory)
+- Any shared read in the other processors will now miss in cache and refetch new data.
+
+#### Write Update
+
+- CPU wanting to write grabs bus cycle and broadcasts new data as it updates its own copy
+- All snooping caches update their copy
+
+## Advanced Cache
+
+- Inclusiveness of multi-level caches
+
+- If all blocks in the higher level cache are also present in the lower level cache, then the lower level cache is said to be inclusive of the higher level cache.

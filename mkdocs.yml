@@ -269,6 +269,8 @@ nav:
       - lessons/CS110/cache.md
       - lessons/CS110/parallelism.md
       - lessons/CS110/tlp.md
+      - lessons/CS110/os.md
+      - lessons/CS110/vm.md
     - 人工智能 I CS181:
       - lessons/CS181/index.md
       - lessons/CS181/search.md
