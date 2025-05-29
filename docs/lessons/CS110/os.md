@@ -113,3 +113,11 @@ Polling mouse little impact on processor
 - No instructions after the faulting one have made any changes.
 
 ## Process Management
+
+# More I/O
+
+## DMA
+
+## SSD
+
+## Networking

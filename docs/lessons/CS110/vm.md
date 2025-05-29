@@ -70,6 +70,8 @@ When a page gets replaced:
 
 ## TLB
 
+![](img/tlb.png)
+
 | Address | Value |
 |--|--|
 | Virtual Address | $A_{\text{virt}}$ |
