@@ -118,6 +118,60 @@ Polling mouse little impact on processor
 
 ## DMA
 
+Allow I/O devices to directly read/write main memory
+
+- New hardware: the DMA engine, contains registers written by CPU
+
+![](img/dma.png)
+
+### DMA Incoming Data
+
+- Receive interrupt from device
+
+- CPU takes interrupt, begins transfer
+	- Instructs DMA engine/device to place data @ certain address
+
+- Device/DMA engine handle the transfer
+	- CPU is free to execute other things
+
+- Upon completion, Device/DMA engine interrupt the CPU again
+
+### DMA Outgoing Data
+
+- CPU decides to initiate transfer, confirms that external device is ready
+
+- CPU begins transfer
+	- Instructs DMA engine/device that data is available @ certain address
+
+- Device/DMA engine handle the transfer
+	- CPU is free to execute other things
+	
+- Device/DMA engine interrupt the CPU again to signal completion
+
+### DMA Problems
+
+!!! question "Where in the memory hierarchy do we plug in the DMA engine?"
+
+	- Between CPU and L1:
+		- Pro: Free coherency
+		- Con: Thrash the CPU’s working set with transferred data
+
+	- Between Last-level cache and main memory:
+		- Pro: Don’t mess with caches
+		- Con: Need to explicitly manage coherency
+
+!!! question "How do we arbitrate between CPU and DMA Engine/Device access to memory?"
+
+	- Burst Mode
+		- Start transfer of data block, CPU cannot access memory in the meantime
+
+	- Cycle Stealing Mode
+		- DMA engine transfers a byte, releases control, then repeats - interleaves
+	processor/DMA engine accesses
+
+	- Transparent Mode
+		- DMA transfer only occurs when CPU is not using the system bus
+
 ## SSD
 
 ## Networking
