@@ -3481,6 +3481,97 @@ after firmware/bootloader)</p>
 <h2 id="process-management">Process Management<a class="headerlink" href="#process-management" title="Permanent link">&para;</a></h2>
 <h1 id="more-io">More I/O<a class="headerlink" href="#more-io" title="Permanent link">&para;</a></h1>
 <h2 id="dma">DMA<a class="headerlink" href="#dma" title="Permanent link">&para;</a></h2>
+<p>Allow I/O devices to directly read/write main memory</p>
+<ul>
+<li>New hardware: the DMA engine, contains registers written by CPU</li>
+</ul>
+<p><img alt="" src="../img/dma.png" /></p>
+<h3 id="dma-incoming-data">DMA Incoming Data<a class="headerlink" href="#dma-incoming-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Receive interrupt from device</p>
+</li>
+<li>
+<p>CPU takes interrupt, begins transfer</p>
+<ul>
+<li>Instructs DMA engine/device to place data @ certain address</li>
+</ul>
+</li>
+<li>
+<p>Device/DMA engine handle the transfer</p>
+<ul>
+<li>CPU is free to execute other things</li>
+</ul>
+</li>
+<li>
+<p>Upon completion, Device/DMA engine interrupt the CPU again</p>
+</li>
+</ul>
+<h3 id="dma-outgoing-data">DMA Outgoing Data<a class="headerlink" href="#dma-outgoing-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>CPU decides to initiate transfer, confirms that external device is ready</p>
+</li>
+<li>
+<p>CPU begins transfer</p>
+<ul>
+<li>Instructs DMA engine/device that data is available @ certain address</li>
+</ul>
+</li>
+<li>
+<p>Device/DMA engine handle the transfer</p>
+<ul>
+<li>CPU is free to execute other things</li>
+</ul>
+</li>
+<li>
+<p>Device/DMA engine interrupt the CPU again to signal completion</p>
+</li>
+</ul>
+<h3 id="dma-problems">DMA Problems<a class="headerlink" href="#dma-problems" title="Permanent link">&para;</a></h3>
+<div class="admonition question">
+<p class="admonition-title">Where in the memory hierarchy do we plug in the DMA engine?</p>
+<ul>
+<li>
+<p>Between CPU and L1:</p>
+<ul>
+<li>Pro: Free coherency</li>
+<li>Con: Thrash the CPU’s working set with transferred data</li>
+</ul>
+</li>
+<li>
+<p>Between Last-level cache and main memory:</p>
+<ul>
+<li>Pro: Don’t mess with caches</li>
+<li>Con: Need to explicitly manage coherency</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How do we arbitrate between CPU and DMA Engine/Device access to memory?</p>
+<ul>
+<li>
+<p>Burst Mode</p>
+<ul>
+<li>Start transfer of data block, CPU cannot access memory in the meantime</li>
+</ul>
+</li>
+<li>
+<p>Cycle Stealing Mode</p>
+<ul>
+<li>DMA engine transfers a byte, releases control, then repeats - interleaves
+processor/DMA engine accesses</li>
+</ul>
+</li>
+<li>
+<p>Transparent Mode</p>
+<ul>
+<li>DMA transfer only occurs when CPU is not using the system bus</li>
+</ul>
+</li>
+</ul>
+</div>
 <h2 id="ssd">SSD<a class="headerlink" href="#ssd" title="Permanent link">&para;</a></h2>
 <h2 id="networking">Networking<a class="headerlink" href="#networking" title="Permanent link">&para;</a></h2>
 
@@ -3505,7 +3596,7 @@ after firmware/bootloader)</p>
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年5月29日 00:46:10 UTC"><span class="timeago" datetime="2025-05-29T00:46:10+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月29日 00:46:10 UTC">2025-05-29</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="2025年6月10日 07:02:07 UTC"><span class="timeago" datetime="2025-06-10T07:02:07+00:00" locale="zh"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年6月10日 07:02:07 UTC">2025-06-10</span>
   </span>
 
     
