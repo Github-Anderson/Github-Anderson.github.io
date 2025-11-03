@@ -89,8 +89,12 @@ extra:
     - name: Bilibili
       icon: fontawesome/brands/bilibili
       link: https://space.bilibili.com/24705427
-    - icon: material/email
+    - name: Mail
+      icon: material/email
       link: mailto:aytoolman@outlook.com
+    - name: RSS
+      icon: material/rss
+      link: feed_rss_created.xml
 
   # consent:
   #   actions:
@@ -132,6 +136,12 @@ plugins:
         - lessons/index.md
         - about/index.md
       type: timeago
+
+  - rss:
+        match_path: "blog/.*"
+        date_from_meta:
+          as_creation: date.created
+          as_update: date.updated
 
 markdown_extensions:
   - pymdownx.critic
@@ -286,6 +296,12 @@ nav:
       - lessons/CS182/superivsed-classification.md
       - lessons/CS182/regression.md
       - lessons/CS182/feature-engineering.md
+    - Introduction to Computer System CS 340:
+      - lessons/CS340/index.md
+    - System Programming CS 341:
+      - lessons/CS341/index.md
+    - Applied Machine Learning CS 441:
+      - lessons/CS441/index.md
   - 随笔:
     - essay/index.md
     - 文章:
