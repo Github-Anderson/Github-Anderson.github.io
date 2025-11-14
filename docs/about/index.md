@@ -3,8 +3,8 @@ hide:
   - footer
 ---
 
-# 关于
+# About
 
-这里是 Anderson_Yang 的个人网站。
+This is Anderson_Yang's personal website.
 
-本网站已开源至 [:fontawesome-brands-github: Github](https://github.com/Github-Anderson/Github-Anderson.github.io)
+This website is open-sourced on [:fontawesome-brands-github: Github](https://github.com/Github-Anderson/Github-Anderson.github.io)

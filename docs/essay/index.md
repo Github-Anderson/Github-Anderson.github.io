@@ -1,5 +1,10 @@
-# 随笔
+---
+hide:
+  - footer
+---
 
-欢迎来到我的随笔，在这里我会分享一些对我个人生活、时事的感悟和看法。
+# Essay
 
-> 点击左侧目录打开文章！
+Welcome to my essay section, where I share in-depth articles and reflections.
+
+> Click the directory on the left to open an article!

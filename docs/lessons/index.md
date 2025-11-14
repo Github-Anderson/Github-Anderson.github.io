@@ -3,9 +3,9 @@ hide:
   - footer
 ---
 
-# 课程
+# Lessons
 
-欢迎来到我的课程，在这里我会分享一些课程笔记等内容。
+Welcome to my lessons section, where I share course notes and other related content.
 
-> 点击左侧目录打开文章！
+> Click the directory on the left to open an article!
 

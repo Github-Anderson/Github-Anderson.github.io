@@ -2,4 +2,4 @@
 template: home.html
 ---
 
-# 你好。
+# Hi there! :wave:

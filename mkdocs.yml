@@ -1,8 +1,8 @@
 # [Info]
-site_name: Anderson_Yang 的个人网站
+site_name: Anderson_Yang's Personal Site
 site_url: https://Github-Anderson.github.io
 site_author: Anderson_Yang
-site_description: Anderson_Yang 的个人网站
+site_description: Anderson_Yang's Personal Site
 
 # [UI]
 theme:
@@ -12,76 +12,61 @@ theme:
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/link
-        name: 切换至日间模式
+        name: Switch to light mode
 
     - media: "(prefers-color-scheme: light)"
-      scheme: dsefault
+      scheme: default
       accent: blue
       primary: white
       toggle:
         icon: material/toggle-switch-off-outline
-        name: 切换至暗黑模式
+        name: Switch to dark mode
 
     - media: "(prefers-color-scheme: dark)"
       primary: black
       scheme: slate
       toggle:
         icon: material/toggle-switch
-        name: 切换至系统默认
+        name: Switch to system default
       
   features:
-    # 使用 Tab 来进行分类
     - navigation.tabs
-    # 返回顶部的按钮，在上滑时出现
     - navigation.top
-    # 给每个 Tab 添加一个 index.md，且在点击 Tab 时打开
     - navigation.indexes
-    # 打开 Tab 时左侧目录全部展开
     # - navigation.expand
-    # 搜索输入一些字母时推荐补全整个单词
     - search.suggest
-    # 搜索的关键词文章加入高亮
     - search.highlight
-    # 可以通过按钮复制代码
     - content.code.copy
-    # [点击按钮跳转至 GitHub 修改 Markdown 源文件]
     - content.action.edit
     - content.tooltips
     - navigation.footer
 
-  language: zh # 一些提示性的文字会变成中文
+  language: en
   icon:
     logo: octicons/terminal-16
-    # [添加 GitHub 仓库]
     repo: fontawesome/brands/github
-  favicon: assets/icon/favicon.ico
-  
-# [点击按钮跳转至 GitHub 修改 Markdown 源文件]
+  favicon: assets/icon/terminal-16-dark.ico
+
 edit_uri: edit/main/docs/
-# [GitHub 仓库]
 repo_url: https://github.com/Github-Anderson/Github-Anderson.github.io
 repo_name: Github-Anderson.github.io
-# [版权说明]
 copyright: Copyright &copy; Anderson_Yang
 
 extra:
   analytics: 
-    # [评论区]
     comments: true
-    # [文章末尾表情反馈]
     # feedback:
-    #   title: 这篇文章有用吗？
+    #   title: Is this page helpful?
     #   ratings:
     #     - icon: material/emoticon-happy-outline
-    #       name: 有用！
+    #       name: Yes
     #       data: 1
-    #       note: 很高兴能帮到你！
+    #       note: I'm glad I could help!
     #     - icon: material/emoticon-sad-outline
-    #       name: 需要改善
+    #       name: No
     #       data: 0
-    #       note: 感谢反馈！我会尽量改善此页面！<a href="https://github.com/Github-Anderson/Github-Anderson.github.io/issues" target="_blank" rel="noopener">我要吐槽</a>
+    #       note: Thanks for your feedback! <a href="https://github.com/Github-Anderson/Github-Anderson.github.io/issues" target="_blank" rel="noopener">I'm mad</a>
 
-  # [社交网络图标和链接]
   social: # icons
     - name: GitHub
       icon: fontawesome/brands/github
@@ -102,11 +87,12 @@ extra:
   #     - accept
   #     - reject
   #   analytics: false
-  #   title: Cookie 选项
-  #   description: 我们使用 Cookies 来识别您的重复访问和偏好设置，以及衡量我们文档的有效性和用户是否找到他们正在搜索的内容。您的同意有助于我们改善我们的文档。
+  #   title: Cookie Consent
+  #   description: This website uses cookies to enhance the user experience.
   
   status:
-    star: 最近更新
+    star: Latest
+    ongoing: In Progress
 
   template:
     home: overrides/home.html
@@ -114,14 +100,12 @@ extra:
 
 
 plugins:
-  # [搜索功能]
   - search:
       lang:
         - zh
         - en
         - ja
   
-  # [给单篇文章添加标签]
   # - tags
 
   # - social
@@ -149,25 +133,18 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
-  # [数学公式支持]
   - pymdownx.arithmatex:
       generic: true
-  # [图片功能支持]
   - abbr
   - attr_list
-  # [表情图标支持]
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - md_in_html
-  # [给标题添加链接]
   - toc:
-      permalink: true # 固定标题位置为当前位置
-  # [代码语法高亮]
+      permalink: true
   - pymdownx.highlight:
-      # 显示行号
       # linenums: true
-      # 显示编程语言名称
       auto_title: true
       anchor_linenums: true
       line_spans: __span
@@ -178,14 +155,11 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-  # [Markdown 提示]
   - admonition
   - pymdownx.details
-  # [Markdown footnote 语法支持]
   - footnotes
 
 extra_javascript:
-  # [数学公式支持MathJax/KaTeX(JS)]
   # - mkdocs/javascripts/mathjax.js
   # - https://polyfill.io/v3/polyfill.min.js?features=es6
   # - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -194,37 +168,31 @@ extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
   
-  # [表情反馈模块]
   # - mkdocs/javascripts/feedback.js
-  # [评论区支持]
   - 'https://utteranc.es/client.js'
   # - mkdocs/javascripts/comment.js
+  - mkdocs/javascripts/favicon-theme.js
 extra_css:
-  # [数学公式支持(CSS)]
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
-  # [不使用底部的翻页]
   # - mkdocs/css/no-footer.css
-  # [无序列表符号自定义]
   - mkdocs/css/unordered-list-symbols.css
-  # [使用旧版注意标识]
   # - mkdocs/css/classic.css
   - mkdocs/css/extra.css
 
 # [Navigtion]
 nav:
-  # - 你好: index.md
-  - 博客:
+  - Blog:
     - blog/index.md
     - Material for MkDocs:
       - blog/mkdocs/first.md
       - blog/mkdocs/extra.md
-    - 杂七杂八的内容:
+    - Misc:
       - blog/other/env.md
       # - blog/other/tips.md
       - blog/other/markdown.md
       - blog/other/cs2onmac.md
       # - blog/other/bili.md
-  - 课程:
+  - Lessons:
     - lessons/index.md
     - 信息科技导论 SI100B:
       - lessons/SI100B/SI100B-report.md
@@ -302,17 +270,17 @@ nav:
       - lessons/CS341/index.md
     - Applied Machine Learning CS 441:
       - lessons/CS441/index.md
-  - 随笔:
+  - Essays:
     - essay/index.md
-    - 文章:
+    - Articles:
       - essay/thoughts/230828-from-mac-to-mac.md
       - essay/thoughts/231002-refl-online.md
-    # - 记录:
+    # - Logs:
     #   - essay/logs/240127.md
     #   - essay/logs/240206.md
     #   - essay/logs/240303.md
     #   - essay/logs/240420.md
-  - 关于:
+  - About:
     - about/index.md
     # - about/me.md
     - about/contact.md

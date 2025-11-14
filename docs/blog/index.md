@@ -3,9 +3,9 @@ hide:
   - footer
 ---
 
-# 博客
+# Blog
 
-欢迎来到我的博客，在这里我会分享一些教程、专业知识和个人见解等内容。
+Welcome to my blog, where I share tutorials, expertise, and personal insights.
 
-> 点击左侧目录打开文章！
+> Click the directory on the left to open an article!
 
