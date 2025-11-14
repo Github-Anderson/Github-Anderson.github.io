@@ -33,7 +33,7 @@ theme:
     - navigation.tabs
     - navigation.top
     - navigation.indexes
-    # - navigation.expand
+    - navigation.path
     - search.suggest
     - search.highlight
     - content.code.copy
