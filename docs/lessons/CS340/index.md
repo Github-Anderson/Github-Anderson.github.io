@@ -1,5 +1,6 @@
 ---
 comments: true
+status: ongoing
 ---
 
 # Introduction to Computer Systems

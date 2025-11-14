@@ -91,7 +91,7 @@ extra:
   #   description: This website uses cookies to enhance the user experience.
   
   status:
-    star: Latest
+    featured: Featured
     ongoing: In Progress
 
   template:
