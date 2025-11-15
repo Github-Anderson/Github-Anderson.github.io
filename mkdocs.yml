@@ -47,6 +47,8 @@ theme:
     repo: fontawesome/brands/github
   favicon: assets/icon/terminal-16-dark.ico
 
+  font: false
+
 edit_uri: edit/main/docs/
 repo_url: https://github.com/Github-Anderson/Github-Anderson.github.io
 repo_name: Github-Anderson.github.io
@@ -100,6 +102,8 @@ extra:
 
 
 plugins:
+  - blog
+  - meta
   - search:
       lang:
         - zh
@@ -212,7 +216,7 @@ nav:
       - lessons/MATH1112/ele.md
     - 设计思维 ARTS1701:
       - lessons/ARTS1701/main.md
-      # - blog/ARTS1701/notes.md
+      # - lessons/ARTS1701/notes.md
     - 离散数学 SI120:
       - lessons/SI120/index.md
       - lessons/SI120/code.md
@@ -270,7 +274,7 @@ nav:
       - lessons/CS341/index.md
     - Applied Machine Learning CS 441:
       - lessons/CS441/index.md
-  - Essays:
+  - Essay:
     - essay/index.md
     - Articles:
       - essay/thoughts/230828-from-mac-to-mac.md

@@ -67,9 +67,9 @@
     color: white;
     font-size: 0.75rem;
     font-weight: normal;
-    width: 170px;
+    width: 160px;
     height: 65px;
-    padding: 11px 0px 12px 35px;
+    padding: 10px 0px 12px 35px;
     border: none;
     border-radius: 40px;
     text-decoration: none;
@@ -81,6 +81,11 @@
     transition: all 0.3s ease;
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.1);
+    border: 0.5px solid rgba(63, 63, 63, 0.6);
+    box-shadow: 
+      0px 6px 12px rgba(0, 0, 0, 0.25),
+      inset 0 0 0 0.75px rgba(255, 255, 255, 0.2),
+      inset 0 0 0 1.5px rgba(255, 255, 255, 0.1);
   }
 
   .mdx-hero-button:hover,
@@ -91,7 +96,17 @@
     background-color: rgba(255, 255, 255, 0.15);
   }
 
-  .mdx-hero-button svg,
+  .mdx-hero-button svg {
+    fill: white;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 23px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+  }
+
   .mdx-hero-repo-button svg {
     fill: white;
     width: 22px;
@@ -120,7 +135,14 @@
 
   .mdx-hero-button:hover::before,
   .mdx-hero-repo-button:hover::before {
-    background-color: rgba(255, 255, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .mdx-hero-button:hover svg {
+    fill: #007bff;
+  }
+  .mdx-hero-repo-button:hover svg {
+    fill: #b14aff;
   }
 
   .mdx-hero-container {
@@ -141,6 +163,11 @@
     border-radius: 50px;
     z-index: 1;
     transition: all 0.3s ease;
+    border: 0.5px solid rgba(63, 63, 63, 0.6);
+    box-shadow: 
+      0px 6px 12px rgba(0, 0, 0, 0.25),
+      inset 0 0 0 0.75px rgba(255, 255, 255, 0.2),
+      inset 0 0 0 1.5px rgba(255, 255, 255, 0.1);
   }
   
   .mdx-hero-container:hover .mdx-hero-bg {
@@ -170,7 +197,9 @@
     
     <div class="mdx-hero-buttons">
       <a href="lessons/" class="mdx-hero-button">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>book-open-variant-outline</title><path d="M12 21.5C10.65 20.65 8.2 20 6.5 20C4.85 20 3.15 20.3 1.75 21.05C1.65 21.1 1.6 21.1 1.5 21.1C1.25 21.1 1 20.85 1 20.6V6C1.6 5.55 2.25 5.25 3 5C4.11 4.65 5.33 4.5 6.5 4.5C8.45 4.5 10.55 4.9 12 6C13.45 4.9 15.55 4.5 17.5 4.5C18.67 4.5 19.89 4.65 21 5C21.75 5.25 22.4 5.55 23 6V20.6C23 20.85 22.75 21.1 22.5 21.1C22.4 21.1 22.35 21.1 22.25 21.05C20.85 20.3 19.15 20 17.5 20C15.8 20 13.35 20.65 12 21.5M11 7.5C9.64 6.9 7.84 6.5 6.5 6.5C5.3 6.5 4.1 6.65 3 7V18.5C4.1 18.15 5.3 18 6.5 18C7.84 18 9.64 18.4 11 19V7.5M13 19C14.36 18.4 16.16 18 17.5 18C18.7 18 19.9 18.15 21 18.5V7C19.9 6.65 18.7 6.5 17.5 6.5C16.16 6.5 14.36 6.9 13 7.5V19Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.7871 20.9277">
+          <path d="M2.99805 20.9277L15.6445 20.9277C16.0742 20.9277 16.4258 20.5859 16.4258 20.1465C16.4258 19.8047 16.1914 19.502 15.8789 19.3945C14.6484 18.9062 14.3945 17.3145 15.6055 16.0938C15.9766 15.7227 16.4258 15.2441 16.4258 14.2676L16.4258 3.06641C16.4258 1.03516 15.4199 0 13.3984 0L3.02734 0C1.00586 0 0 1.02539 0 3.06641L0 17.9102C0 19.9219 1.01562 20.9277 2.99805 20.9277ZM3.08594 19.3555C2.09961 19.3555 1.57227 18.8281 1.57227 17.9004C1.57227 17.0215 2.19727 16.4551 3.17383 16.4551L13.1934 16.4551C13.3203 16.4551 13.4375 16.4453 13.5352 16.4258C13.0762 17.4414 13.1543 18.5156 13.6719 19.3555ZM2.79297 14.9707C2.49023 14.9707 2.23633 14.7168 2.23633 14.4043L2.23633 2.07031C2.23633 1.75781 2.49023 1.51367 2.79297 1.51367C3.0957 1.51367 3.35938 1.75781 3.35938 2.07031L3.35938 14.4043C3.35938 14.7168 3.0957 14.9707 2.79297 14.9707Z"/>
+        </svg>
           Documents
       </a>
 
